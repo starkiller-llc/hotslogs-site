@@ -1,0 +1,33 @@
+.role-RangedAssassin {
+  background-color: #ef476f;
+}
+
+.role-MeleeAssassin {
+  background-color: #f78c6b;
+}
+
+.role-Tank {
+  background-color: #ffd166;
+}
+
+.role-Bruiser {
+  background-color: #06d6a0;
+}
+
+.role-Healer {
+  background-color: #118ab2;
+}
+
+.role-Support {
+  background-color: #073b4c;
+}
+
+.hero {
+  background-color: #ffd166;
+}
+
+@media (min-width: 700px) {
+  .role {
+    min-width: 85px;
+  }
+}

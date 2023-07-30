@@ -1,0 +1,27 @@
+<app-title>{{title.getTitle()}}</app-title>
+<a *ngIf="user && user.mainPlayerId!==playerId && user.isPremium"
+  class="btn btn-border btn-ar btn-sm btn-primary buttonViewMatchHistoryTogether" routerLink="/Player/MatchHistory"
+  [queryParams]="{PlayerID:user.mainPlayerId,OtherPlayerIDs:playerId}">
+  View Match History Together
+</a>
+<app-player-nav-menu *ngIf="playerId" [playerId]="playerId"></app-player-nav-menu>
+<div class="flex" *ngIf="!eventId">
+  <mat-form-field>
+    <mat-select #slct panelClass="aviad-select" value="table" [(value)]="gameMode" (selectionChange)="sel()">
+      <mat-option value="8">Storm League</mat-option>
+      <mat-option value="6">Unranked Draft</mat-option>
+      <mat-option value="3">Quick Match</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<p>
+  <span localize="MatchHistoryMessageLine1"></span>
+</p>
+<p *ngIf="result && !result.HideMessageLineVersion2">
+  <span localize="MatchHistoryMessageLine2Version2"></span>
+</p>
+<ng-container *ngIf="data$ | async as data">
+  <app-history-table [stats]="result.Stats" (filterChange)="filterChange($event)" (page)="pageChange($event)"
+    (sortChange)="sortChange($event)" [total]="result.Total" (voteDown)="voteDown($event)" (voteUp)="voteUp($event)">
+  </app-history-table>
+</ng-container>

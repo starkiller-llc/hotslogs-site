@@ -1,0 +1,33 @@
+﻿syntax = "proto2";
+
+service HotsSvcHost {
+	rpc AddServiceOutput(LogMessage) returns (VoidMsg) {}
+	rpc ClientShutdown(VoidMsg) returns (VoidMsg) {}
+	rpc ClientError(VoidMsg) returns (VoidMsg) {}
+	rpc PassComplete(VoidMsg) returns (VoidMsg) {}
+	rpc PassStarted(VoidMsg) returns (VoidMsg) {}
+}
+
+service HotsSvcService {
+	rpc SetNotifyDiscord(BoolMsg) returns (VoidMsg) {}
+	rpc SetKeepRunning(BoolMsg) returns (VoidMsg) {}
+	rpc SetConnectionString(StringMsg) returns (VoidMsg) {}
+	rpc Shutdown(VoidMsg) returns (VoidMsg) {}
+	rpc Start(VoidMsg) returns (VoidMsg) {}
+}
+
+message VoidMsg {
+
+}
+
+message BoolMsg {
+	required bool v = 1;
+}
+
+message StringMsg {
+	required string str = 1;
+}
+
+message LogMessage {
+	required string msg = 1;
+}

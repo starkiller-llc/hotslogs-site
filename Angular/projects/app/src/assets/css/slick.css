@@ -1,0 +1,57 @@
+.talentBuildCard {
+  width: 300px;
+  border: 5px outset lightskyblue;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #b8e1fc 0, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%);
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.talentBuildCard table {
+  width: 100%;
+}
+
+.talentBuildCard td {
+  padding: 5px;
+  color: black;
+}
+
+.talentBuildCard td:first-child {
+  font-weight: bold;
+}
+
+.talentBuildCard .talentBuildCardHeader td {
+  width: 50%;
+  text-align: center;
+}
+
+.talentBuildCard .talentBuildCardContent td {
+  border-top: 2px groove lightskyblue;
+}
+
+.talentBuildCard td img {
+  height: 30px;
+  width: 30px;
+  border-radius: 3px;
+}
+
+.slick-next,
+.slick-prev {
+  z-index: 99;
+  width: 30px;
+  height: 30px;
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: dodgerblue;
+  font-size: 30px;
+}

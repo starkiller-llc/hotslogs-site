@@ -1,0 +1,116 @@
+<app-title>{{title.getTitle()}} | HOTS Logs</app-title>
+<app-player-nav-menu *ngIf="playerId" [playerId]="playerId"></app-player-nav-menu>
+
+<div class="custom-team" *ngIf="false">
+  <textarea class="team-members" rows="8" placeholder="Enter player links or battle tags, one per line. Both HOTSLogs and HeroesProfile links are accepted.
+You may also copy & paste a full team page from Heroeslounge.gg
+
+E.g:
+https://www.hotslogs.com/Player/Profile?PlayerID=12345678
+Player#12345
+https://heroesprofile.com/Profile/?blizz_id=1234567&battletag=Player&region=2"></textarea>
+  <br />
+  <div class="dt-buttons">
+    <button id="SubmitTeam" class="dt-button btn btn-primary">Submit Custom Team</button>
+    <button id="ClearTeam" class="dt-button btn btn-primary">Clear Team</button>
+  </div>
+</div>
+<div *ngIf="result?.IsTruncated" class="divImportantNote alert alert-info" style="margin-top: 20px;">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+  <h4>Information</h4>
+  Wow! You have a lot of games played with friends! Unfortunately we've had to limit the games included in this page to
+  the most recent <%= MaxReplayIDsForQuery %> games, as it is currently too much for our database to handle. Hopefully
+    we can improve this in the future.
+</div>
+
+
+<div class="flex">
+  <lib-dropdown [items]="gameModeFilter" caption="Game Mode" [(value)]="gameMode" (selectionchanged)="sel()">
+  </lib-dropdown>
+  <lib-dropdown [items]="timeFilter" caption="Times" [(value)]="time" (selectionchanged)="sel()"></lib-dropdown>
+  <lib-dropdown [items]="gamesTogetherFilter" caption="Games Together" [(value)]="gamesTogether"
+    (selectionchanged)="sel()"></lib-dropdown>
+  <lib-dropdown *ngIf="!heroOverview" [items]="partySizeFilter" caption="Party Size" [(value)]="partySize"
+    (selectionchanged)="sel()">
+  </lib-dropdown>
+</div>
+<div>
+  <ul id="nav1" class="nav nav-tabs">
+    <li *ngFor="let tab of tabs" class="tab" [class.active]="activeTab[0]===tab.value">
+      <a (click)="tabClick(0, tab)">{{tab.key | localize}}</a>
+  </ul>
+</div>
+<div *ngIf="getTab(activeTab[0]).tabs">
+  <ul id="nav1" class="nav nav-tabs">
+    <li *ngFor="let subTab of getTab(activeTab[0]).tabs" class="tab" [class.active]="activeTab[1]===subTab.value">
+      <a (click)="tabClick(1, subTab)">{{subTab.key | localize}}</a>
+  </ul>
+</div>
+<ng-container *ngIf="data$ | async as data">
+  <ng-container [ngSwitch]="activeTab[0]">
+    <div *ngSwitchCase="0">
+      <app-overview-score-table *ngIf="result.MatchStats; else nodata" [stats]="result.MatchStats"
+        [exclude]="['KDRatio','Assists']">
+      </app-overview-score-table>
+    </div>
+    <div *ngSwitchCase="1" [style.min-height.px]="300">
+      <ng-container [ngSwitch]="activeTab[1]">
+        <div *ngSwitchCase="0">
+          <app-overview-score-table *ngIf="result.RoleStats?.['Tank']; else nodata" [stats]="result.RoleStats?.['Tank']"
+            [exclude]="['KDRatio','Assists','Length','SoloKills','Healing']"></app-overview-score-table>
+        </div>
+        <div *ngSwitchCase="1">
+          <app-overview-score-table *ngIf="result.RoleStats?.['Bruiser']; else nodata"
+            [stats]="result.RoleStats?.['Bruiser']" [exclude]="['KDRatio','Assists','Length','SoloKills','Healing']">
+          </app-overview-score-table>
+        </div>
+        <div *ngSwitchCase="2">
+          <app-overview-score-table *ngIf="result.RoleStats?.['Healer']; else nodata"
+            [stats]="result.RoleStats?.['Healer']" [exclude]="['KDRatio','Assists','Length','SoloKills','DamageTaken']">
+          </app-overview-score-table>
+        </div>
+        <div *ngSwitchCase="3">
+          <app-overview-score-table *ngIf="result.RoleStats?.['Support']; else nodata"
+            [stats]="result.RoleStats?.['Support']"
+            [exclude]="['KDRatio','Assists','Length','SoloKills','DamageTaken']"></app-overview-score-table>
+        </div>
+        <div *ngSwitchCase="4">
+          <app-overview-score-table *ngIf="result.RoleStats?.['Melee Assassin']; else nodata"
+            [stats]="result.RoleStats?.['Melee Assassin']" [exclude]="['DamageTaken','Length','Healing']">
+          </app-overview-score-table>
+        </div>
+        <div *ngSwitchCase="5">
+          <app-overview-score-table *ngIf="result.RoleStats?.['Ranged Assassin']; else nodata"
+            [stats]="result.RoleStats?.['Ranged Assassin']" [exclude]="['DamageTaken','Length','Healing']">
+          </app-overview-score-table>
+        </div>
+      </ng-container>
+    </div>
+    <div *ngSwitchCase="2">
+      <ng-container [ngSwitch]="activeTab[1]">
+        <div *ngSwitchCase="0">
+          <app-hero-table [stats]="result.HeroStats" (detailsRequested)="expandHero($event)"></app-hero-table>
+        </div>
+        <div *ngSwitchCase="1">
+          <app-map-table [stats]="result.MapStats" (detailsRequested)="expandMap($event)"></app-map-table>
+        </div>
+      </ng-container>
+    </div>
+    <div *ngSwitchCase="3">
+      <ng-container [ngSwitch]="activeTab[1]">
+        <div *ngSwitchCase="0">
+          <app-upgrade-table *ngIf="result.NovaStats?.length; else nodata" [stats]="result.NovaStats">
+          </app-upgrade-table>
+        </div>
+        <div *ngSwitchCase="1">
+          <app-upgrade-table *ngIf="result.GallStats?.length; else nodata" [stats]="result.GallStats">
+          </app-upgrade-table>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</ng-container>
+
+<ng-template #nodata>
+  <h3>No Data</h3>
+</ng-template>

@@ -1,0 +1,17 @@
+check table DataUpdate;
+check table HeroTalentInformation;
+check table LeaderboardOptOut;
+check table LeaderboardRanking;
+check table League;
+check table LocalizationAlias;
+check table LogError;
+check table my_aspnet_membership;
+check table my_aspnet_profiles;
+check table my_aspnet_users;
+check table Player;
+check table PlayerMMRMilestoneV3;
+check table Replay;
+check table ReplayCharacter;
+check table ReplayCharacterTalent;
+check table ReplayShare;
+check table User;

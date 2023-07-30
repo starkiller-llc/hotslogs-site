@@ -1,0 +1,9 @@
+.link {
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.col {
+    padding: 15px;
+}

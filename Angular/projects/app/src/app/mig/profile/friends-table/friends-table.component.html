@@ -1,0 +1,55 @@
+<div class="aspGrid RadGrid RadGrid_Black">
+  <table #tbl="migSort" mat-table matSort [migSort]="stats">
+    <ng-container matColumnDef="heroImg">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let d" class="ImageGradientBorder">
+        <app-portrait-sprite [hero]="d.FavoriteHeroURL"></app-portrait-sprite>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="PlayerName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> <span localize>Player</span> </th>
+      <td mat-cell *matCellDef="let d">
+        <a routerLink="/Player/Profile" [queryParams]="{PlayerID:d.PlayerID}">{{d.PlayerName}}</a>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="FavoriteHero">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> <span localize>Favorite Hero</span> </th>
+      <td mat-cell *matCellDef="let d"> <a routerLink="/Sitewide/TalentDetails"
+          [queryParams]="{Hero:d.FavoriteHero}">{{d.FavoriteHero}}</a>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="GamesPlayedWith">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        <span localize *ngIf="!rivals">Games Played Together</span>
+        <span localize *ngIf="rivals">Games Played Against</span>
+      </th>
+      <td mat-cell *matCellDef="let d"><span [innerHTML]="d.GamesPlayedWith | safeHtml"></span></td>
+    </ng-container>
+
+    <ng-container matColumnDef="WinPercent">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Win Percent</span> </th>
+      <td mat-cell *matCellDef="let d">
+        <div [innerHTML]="d.WinPercent | safeHtml"></div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="MMRBefore">
+      <th mat-header-cell *matHeaderCellDef> <span localize>MMR</span> </th>
+      <td mat-cell *matCellDef="let d">{{d.MMRBefore|number:'0.0-0'}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="MatchHistory">
+      <th mat-header-cell *matHeaderCellDef> <span localize>Match History</span> </th>
+      <td mat-cell *matCellDef="let d">
+        <a routerLink="/Player/MatchHistory" [queryParams]="{PlayerID:d.PID}">View Match History</a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns">
+    </tr>
+    <tr mat-row class="rgRow" *matRowDef="let row; columns: columns;">
+  </table>
+</div>

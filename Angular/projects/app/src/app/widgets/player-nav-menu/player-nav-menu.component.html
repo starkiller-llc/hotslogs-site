@@ -1,0 +1,8 @@
+<ul class="nav nav-pills nav-justified margin-bottom">
+  <li *ngFor="let l of links" [class.active]="isActive(l[0])">
+    <a *ngIf="l[2] && !playerId" [routerLink]="l[0]">{{l[1]}}</a>
+    <a *ngIf="l[2] && playerId" [routerLink]="l[0]" [queryParams]="{PlayerID:playerId}">{{l[1]}}</a>
+    <a *ngIf="!l[2] && !playerId" [href]="l[0]">{{l[1]}}</a>
+    <a *ngIf="!l[2] && playerId" [href]="l[0]+'?PlayerID='+playerId">{{l[1]}}</a>
+  </li>
+</ul>

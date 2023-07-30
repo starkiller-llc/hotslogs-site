@@ -1,0 +1,52 @@
+<div *ngIf="data$ | async" [class.hide]="!newsReady">
+  <div class="divImportantNote alert alert-info" style="margin-top: 20px;" *ngIf="data.ImportantNoteVisible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <h4>Information</h4>
+    <div [innerHTML]="data.ImportantNote | safeHtml"></div>
+  </div>
+
+  <div class="header-container">
+    <h1 class="mt-0">
+      <div [innerHTML]="data.Constants.Header | safeHtml"></div>
+    </h1>
+    <div>
+      <div [innerHTML]="data.Constants.Intro | safeHtml"></div>
+      <span [innerHTML]="data.TotalGamesPlayedMessage | safeHtml"></span>
+    </div>
+    <p>
+      <br />
+    </p>
+    <table>
+      <tbody>
+        <tr>
+          <td></td>
+          <td width="100"></td>
+          <td width="800">
+            <!-- <panel></panel> -->
+            <lib-hotslogs-news tags="main" (ready)="newsReady=true"></lib-hotslogs-news>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <br />
+    </p>
+    <h2>
+      <span *ngIf="data.NumberOfPatchesShown===1">Sitewide Hero Statistics over the last patch</span>
+      <div *ngIf="data.NumberOfPatchesShown!==1" [innerHTML]="data.Constants.SitewideHeroStatistics | safeHtml"></div>
+    </h2>
+    <p>
+      <strong>Note: </strong>Includes Storm League matches.
+      <span>{{data.LastUpdated}}</span>.
+      <a routerLink="/Sitewide/HeroAndMapStatistics">Additional Filters Available Here</a>.
+    </p>
+  </div>
+
+  <div *ngIf="data.Constants.MonkeyBrokerScriptVisible" id="advertisementBannerMonkeyBrokerTopReplacement"
+    class="advertisementBanner advertisementBannerMonkeyBrokerTop" style="margin: 15px 0;" runat="server">
+    {{data.Constants.MonkeyBrokerScript}}
+  </div>
+
+  <app-default-stats #tbl [stats]="data?.DataSource" (filterChange)="setQueryString()" (sortChange)="setQueryString()">
+  </app-default-stats>
+</div>

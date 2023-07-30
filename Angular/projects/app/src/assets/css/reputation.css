@@ -1,0 +1,63 @@
+#dialog-message {
+  display: none;
+}
+
+.vote {
+  float: right;
+  padding: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+  .vote:hover {
+      border-radius: 50%;
+  }
+
+.vote-up:hover {
+  background-color: #09d079;
+  box-shadow: 0 0 3px 3px #09d079;
+}
+
+.vote-down:hover {
+  background-color: #e07788;
+  box-shadow: 0 0 3px 3px #e07788;
+}
+
+.vote.vote-up.active {
+  color: green;
+}
+
+.vote.vote-down.active {
+  color: red;
+}
+
+.nametag.winner, .rgRow .nametag.winner {
+  color: #64CC00;
+}
+
+@keyframes shadowPulse {
+  0% {
+      box-shadow: 0px 0px 10px 0px #55ff00;
+      box-shadow: 0px 0px 10px 0px hsla(100, 100%, 50%, 1);
+  }
+
+  50% {
+      box-shadow: 0px 0px 5px 0px #55ff00;
+      box-shadow: 0px 0px 5px 0px hsla(100, 100%, 50%, 1);
+  }
+
+  100% {
+      box-shadow: 0px 0px 10px 0px #55ff00;
+      box-shadow: 0px 0px 10px 0px hsla(100, 100%, 50%, 1);
+  }
+}
+
+.shadow-pulse {
+  animation-name: shadowPulse;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  padding: 3px;
+  border-radius: 10px;
+  text-align: center;
+}

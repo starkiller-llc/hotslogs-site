@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TalentsCli": {
+      "commandName": "Project",
+      "commandLineArgs": "new-build -i \"C:\\MyProjects\\hotslogs\\CASCExplorer\\TalentInfoExtractor\\talentInfo.xml\" -d true"
+    }
+  }
+}

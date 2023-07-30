@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\SignatureTemplateBanner.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\SignatureTemplateBanner.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2022.3.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+    <PackageReference Include="SkiaSharp" Version="2.88.3" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Win32" Version="2.88.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HelperCore\HelperCore.csproj" />
+    <ProjectReference Include="..\HotsLogsApi.Models\HotsLogsApi.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\LocalizedText.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LocalizedText.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\LocalizedText.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizedText.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

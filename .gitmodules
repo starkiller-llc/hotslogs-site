@@ -1,0 +1,9 @@
+[submodule "Heroes.ReplayParser"]
+	path = Heroes.ReplayParser
+	url = https://github.com/starkiller-llc/hotslogs-replay-parser.git
+[submodule "Skills"]
+	path = Skills
+	url = https://github.com/starkiller-llc/hotslogs-skills.git
+[submodule "Pomelo.EntityFrameworkCore.MySql"]
+	path = Pomelo.EntityFrameworkCore.MySql
+	url = https://github.com/paviad/Pomelo.EntityFrameworkCore.MySql.git

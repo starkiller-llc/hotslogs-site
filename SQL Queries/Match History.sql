@@ -1,0 +1,1 @@
+select r.ReplayID, r.ReplayBuild, r.Map, r.ReplayLength, r.TimestampReplay, p.Name, rc.Character, rc.IsWinner, rc.MMRBefore, rc.MMRChange from Replay r join ReplayCharacter rc on rc.ReplayID = r.ReplayID join Player p on p.PlayerID = rc.PlayerID where r.ReplayID in (select innerRC.ReplayID from ReplayCharacter innerRC where innerRC.PlayerID = 165992)

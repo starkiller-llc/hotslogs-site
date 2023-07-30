@@ -1,0 +1,19 @@
+<app-title>Heroes of the Storm Popular Team Compositions | HOTS Logs</app-title>
+<p>View hero team composition win rate and balance statistics, with filtering options for specific heroes and maps.</p>
+<p>Results shown are gathered from the most recent 60 days of Storm League data. When grouping by hero role, role mirror
+  matchups are excluded. When grouping by hero role, compositions with less than 200 games played are excluded.</p>
+<div class="flex">
+  <mat-form-field>
+    <mat-select #slct panelClass="aviad-select" value="table" [(value)]="grouping" (selectionChange)="sel()">
+      <mat-option [value]="1">Group by Hero Role</mat-option>
+      <mat-option [value]="2">Group by Hero</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <lib-dropdown [items]="mapFilter" caption="Maps" [(value)]="map" (selectionchanged)="sel()"></lib-dropdown>
+  <lib-dropdown *ngIf="slct.value===2" [items]="heroFilter" caption="Hero" [(value)]="hero" (selectionchanged)="sel()">
+  </lib-dropdown>
+</div>
+<ng-container *ngIf="data$ | async as data">
+  <app-compositions-table [stats]="result.Stats" [roles]="grouping===1">
+  </app-compositions-table>
+</ng-container>

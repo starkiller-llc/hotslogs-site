@@ -1,0 +1,27 @@
+<div class="aspGrid RadGrid RadGrid_Black">
+  <app-table-filter [showRoles]="false" (filterChange)="filterChange.emit($event)"></app-table-filter>
+  <table #tbl="migSort" mat-table matSort [migSort]="stats" [paginator]="pagi" [total]="total" [serverSort]="true"
+    (matSortChange)="sortChange.emit($event)">
+
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> <span localize>Player</span> </th>
+      <td mat-cell *matCellDef="let d">
+        <img *ngIf="d.TSS" class="imageGoldStar" title="HOTS Logs Supporter since {{d.TSS|date:'shortDate'}}"
+          src="/assets/Images/GoldStar.png">
+        <a routerLink="/Player/Profile" [queryParams]="{PlayerID:d.PlayerId}">{{d.Name}}</a>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Reputation">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Reputation</span> </th>
+      <td mat-cell *matCellDef="let d">{{d.Reputation|number:'0.0-0'}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns">
+    </tr>
+    <tr mat-row class="rgRow" *matRowDef="let row; columns: columns;">
+  </table>
+
+  <mat-paginator #pagi [pageSizeOptions]="[20, 50, 100]" showFirstLastButtons (page)="page.emit($event)"
+    [length]="total"></mat-paginator>
+</div>

@@ -1,0 +1,4 @@
+<div class="tournament-bracket-round">
+    <div *ngFor="let m of matches; let i = index">
+    <app-tournament-bracket-match style="height: 100%; display: flex; flex-grow: 1; align-items: center;;" [match]="m" [odd]="i % 2 === 1"></app-tournament-bracket-match>
+</div>

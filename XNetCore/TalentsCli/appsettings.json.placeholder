@@ -1,0 +1,6 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "server=********;port=3306;user id=********;password=********;persistsecurityinfo=True;database=HeroesData",
+    "RedisDefaultConnection": "localhost"
+  }
+}

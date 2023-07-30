@@ -1,0 +1,57 @@
+<div class="player-tournament-table">
+    <h1>Tournaments</h1>
+    <div *ngIf="playerTournaments.length > 0; else elseBlock">
+      <div class="RadGrid RadGrid_Black">
+      <table class="table rgMasterTable dataTable no-footer">
+        <thead>
+          <tr role="row">
+            <th class="rgHeader" scope="col" colspan="1">Tournament</th>
+            <th class="rgHeader" scope="col" colspan="1">Team</th>
+            <th class="rgHeader" scope="col" colspan="1">Opp</th>
+            <th class="rgHeader" scope="col" colspan="1">Round</th>
+            <th class="rgHeader" scope="col" colspan="1">Match Deadline</th>
+            <th class="rgHeader text-align-center" scope="col" colspan="1">Result</th>
+            <th class="rgHeader text-align-center" scope="col" colspan="1">Replay Upload</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let t of playerTournaments" (click)="navigate($event, t.tournamentId)">
+            <td scope="row">{{t.tournamentName}}</td>
+            <td>{{t.teamName}}</td>
+            <td>{{t.oppTeamName}}</td>
+            <td>{{t.roundNum}}</td>
+            <td>{{t.matchDeadline.toLocaleString()}}</td>
+            <td class="text-align-center">
+              <ng-container *ngIf="t.wonMatch === 1">Win</ng-container>
+              <ng-container *ngIf="t.wonMatch === 0">Loss</ng-container>
+              <ng-container *ngIf="t.wonMatch === null">
+                <span class="select-container">
+                  <select class="selectpicker" title="Who won?" (change)="setMatchWinner($event, t.matchId)">
+                    <option value="" disabled selected hidden>Select the Winner</option>
+                    <option [value]="t.teamId">We won!</option>
+                    <option [value]="t.oppTeamId">We lost :(</option>
+                  </select>
+                </span>
+              </ng-container>
+            </td>
+            <td class="text-align-center">
+              <ng-container *ngIf="t.replayId === null; else replayIdBlock">
+                <div class="padding-left inline-block">
+                  <app-upload-replay [match_id]="t.matchId" [multiple]="false"></app-upload-replay>
+                </div>
+              </ng-container>
+              <ng-template #replayIdBlock>
+                <span class="glyphicon glyphicon-check padding-right-10"></span>
+              </ng-template>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="padding-top-10">If any results are incorrect, please email bugreport@hotslogs.com or reach out on the hotslogs discord.</div>
+    </div>
+    <ng-template #elseBlock>
+      Not entered in any tournaments
+    </ng-template>
+  </div>
+  

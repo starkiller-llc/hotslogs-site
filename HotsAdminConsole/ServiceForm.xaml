@@ -1,0 +1,48 @@
+﻿<Window x:Class="HotsAdminConsole.ServiceForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HotsAdminConsole" Activated="ServiceForm_OnActivated"
+        mc:Ignorable="d" Closing="ServiceForm_OnClosing" Deactivated="ServiceForm_OnDeactivated"
+        Title="ServiceForm" Height="350" Width="700" d:DataContext="{d:DesignInstance local:ServiceForm}">
+  <Window.Resources>
+    <Style TargetType="Label">
+      <Setter Property="Foreground" Value="DarkGray" />
+      <Setter Property="VerticalAlignment" Value="Center" />
+      <Setter Property="Margin" Value="0,0,5,0" />
+    </Style>
+    <Style TargetType="TextBlock">
+      <Setter Property="Foreground" Value="DarkGray" />
+      <Setter Property="VerticalAlignment" Value="Center" />
+      <Setter Property="Margin" Value="0,0,5,0" />
+    </Style>
+    <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+      <Setter Property="MinWidth" Value="20" />
+    </Style>
+  </Window.Resources>
+  <Grid>
+    <DockPanel Margin="5">
+      <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5">
+        <CheckBox x:Name="chkRun" Content="Keep Running?" Margin="0,0,15,0" VerticalAlignment="Center" />
+        <CheckBox x:Name="chkNotifyDiscord" Content="Notify Discord?" Margin="0,0,15,0" VerticalAlignment="Center" />
+        <Button x:Name="BtnAutoScroll" Content="Auto Scroll" Click="BtnAutoScroll_OnClick" Padding="3" />
+        <Label Content="Complete:" />
+        <TextBox Text="{Binding PassesComplete}" IsReadOnly="True" />
+        <Label Content="Last:" />
+        <TextBox Text="{Binding LastPassDuration, StringFormat=N1}" IsReadOnly="True" />
+        <TextBlock Text="min." />
+        <Label Content="Start:" />
+        <TextBox Text="{Binding PassStart, StringFormat=HH:mm}" IsReadOnly="True" />
+        <Label Content="Time:" />
+        <TextBox Text="{Binding Elapsed, StringFormat=N1}" IsReadOnly="True" />
+        <TextBlock Text="min." />
+      </StackPanel>
+      <Grid>
+        <TextBox x:Name="txtOutput" Style="{StaticResource Output}" />
+        <Grid x:Name="InactiveOverlay" IsHitTestVisible="False" Background="Transparent" />
+      </Grid>
+    </DockPanel>
+    <Grid x:Name="GridOverlay" IsHitTestVisible="False" Background="#4CFFFFFF" Visibility="Hidden" />
+  </Grid>
+</Window>

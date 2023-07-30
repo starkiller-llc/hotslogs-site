@@ -1,0 +1,62 @@
+<app-title>Login</app-title>
+<p></p>
+<table>
+  <tbody>
+    <tr>
+      <td></td>
+      <td width="100"></td>
+      <td width="800">
+        <lib-hotslogs-news tags="login"></lib-hotslogs-news>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<section id="loginForm">
+  <p class="text-danger" *ngIf="error">
+    {{error}}
+  </p>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <fieldset>
+      <div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-user"></i></span>
+          <input type="text" class="form-control" autocomplete="username" formControlName="Username">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+          <input type="password" class="form-control" autocomplete="current-password" formControlName="Password">
+        </div>
+        <div class="form-group">
+          <div class="col-md-offset-2 col-md-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" formControlName="RememberMe"> Remember me
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Login" class="btn btn-default">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  <p><a routerLink="/PasswordRecovery"><span localize="LogInForgotPassword"></span></a></p>
+  <p><a routerLink="/Register"><span localize="LogInNewUser"></span></a></p>
+</section>
+
+<!-- Once upon a time we had a recaptcha - it hasn't been working forever, one day we can reinstate it if necessary
+       -- Aviad, 24-Oct-2022 -->
+
+<!-- <div ID="LiteralGoogleRecaptcha" runat="server" visible="false">
+  <script type="text/javascript">
+    var grecaptchaCallback = function () {
+      grecaptcha.render("googleRecaptcha", {
+        "sitekey": "<%= ZAMAuth.GetRecaptchaKey() %>"
+      });
+    };
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=grecaptchaCallback&render=explicit" async defer></script>
+</div> -->

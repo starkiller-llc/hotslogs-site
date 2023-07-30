@@ -1,0 +1,6 @@
+<div class="inline" *ngIf="isAdmin; else team1ro">
+  <span *ngIf="teamId && !assign" (click)="startEdit()">{{teamsMap[teamId].name}}</span>
+  <button mat-stroked-button *ngIf="!teamId && !assign" (click)="startEdit()">Assign...</button>
+  <input #inp name="teams" *ngIf="assign" list="teams-list" type="text" matInput (blur)="stopEdit()" [(ngModel)]="teamName">
+</div>
+<ng-template #team1ro><span>{{teamsMap[teamId]?.name || 'Unassigned' }}</span></ng-template>

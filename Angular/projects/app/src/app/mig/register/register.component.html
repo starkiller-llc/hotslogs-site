@@ -1,0 +1,11 @@
+<app-title>Register</app-title>
+<h2><span localize="RegisterMessageLine1"></span></h2>
+
+<p><strong>Important: </strong>Hotslogs is no longer part of the ZAM Network. Registering here will create a HOTSlogs
+  account for you.</p>
+<p>Password must contain at least one uppercase letter, one lowercase letter, one number, one special character, and be
+  at least 8 characters long.</p>
+
+<app-register-password [captcha]="captchaResponse" (failed)="cap.reset()"></app-register-password>
+<br />
+<re-captcha #cap (resolved)="resolved($event)" [siteKey]="captchaKey"></re-captcha>

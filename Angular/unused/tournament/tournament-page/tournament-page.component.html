@@ -1,0 +1,32 @@
+<div *ngIf="tournament" class="tournament-page">
+    <h1>{{tournament.tournamentName}}</h1>
+    <h4>{{tournament.tournamentDescription}}</h4>
+    <div class="rules">
+        <h2>Rules</h2>
+        <ul>
+            <li *ngIf="tournament.entryFee > 0">
+                Teams must pay an entry fee of ${{tournament.entryFee}} to TODO: HOTSLOGS_PAYPAL_EMAIL. 75% of the entry fees will go to 1st place and 25% will go to 2nd.
+            </li>
+            <li>
+                A player can only be on 1 team per tournament.
+            </li>
+            <li>
+                Teams must coordinate with their oppoents to schedule their match each week. We will email contact info once the matchup is set each week.
+            </li>
+            <li>
+                Teams have until 11:59pm PT Sunday each week to complete their match and upload the results to the site.
+            </li>
+            <li>
+                Additional updates can be found in the #tournaments channel on our <a href="https://discord.gg/aK4xqaaT" target="_blank" rel="noopener noreferrer">discord</a>.
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="registrationActive; else elseBlock" class="bracket">
+        <app-tournament-registration-form [registration_deadline]="tournament.registrationDeadline.toLocaleString()" [tournament_id]="tournament.tournamentId" [entry_fee]="tournament.entryFee">
+        </app-tournament-registration-form>
+    </div>
+    <ng-template #elseBlock>
+        <app-tournament-bracket [tournament_id]="tournament.tournamentId">
+        </app-tournament-bracket>
+    </ng-template>
+</div>

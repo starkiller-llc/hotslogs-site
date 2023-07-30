@@ -1,0 +1,4 @@
+<div *ngFor="let n of newsItems$ | async">
+    <div [innerHTML]="n.Html"></div>
+    <br/>
+</div>

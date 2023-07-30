@@ -1,0 +1,15 @@
+<div [ngSwitch]="ok">
+  <div *ngSwitchCase="0">
+    Please wait...
+  </div>
+  <div *ngSwitchCase="1" class="good">
+    <h2>Recording premium status...</h2>
+  </div>
+  <div *ngSwitchCase="2" class="success">
+    <h1>Thank you for subscribing!</h1>
+    <h3><a routerLink="/">Back Home</a></h3>
+  </div>
+  <div *ngSwitchCase="3">
+    An error occurred.
+  </div>
+</div>

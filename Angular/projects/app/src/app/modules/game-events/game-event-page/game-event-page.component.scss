@@ -1,0 +1,44 @@
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
+mat-card {
+  margin: 10px;
+}
+
+table[mat-table] {
+  width: 100%;
+}
+
+.result {
+  background-color: rgba(152, 0, 0, 0.259);
+  &.win {
+    background-color: rgba(0, 128, 0, 0.341);
+  }
+}
+
+.team-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    background-image: linear-gradient(#5f0ba0, #441180);
+    img {
+      width: 360px;
+      margin: auto;
+    }
+  }
+}
+
+.show-matches-spoiler {
+  display: flex;
+  justify-content: center;
+  button {
+    font-size: x-large;
+    line-height: 50px;
+    font-weight: bold;
+    width: 360px;
+  }
+}

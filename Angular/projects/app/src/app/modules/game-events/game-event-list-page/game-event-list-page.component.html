@@ -1,0 +1,15 @@
+<h1>Events</h1>
+<a routerLink="/Event/List">Create New Events & Upload Games</a>
+<h2>Show Unassigned Games</h2>
+<ul>
+  <li *ngFor="let e of gameEvents$ | async">
+    <a routerLink="/event/{{e.id}}">
+      <span *ngIf="e.parentId">
+        {{e.parentName}} / {{e.name}}
+      </span>
+      <span *ngIf="!e.parentId">
+        {{e.name}}
+      </span>
+    </a>
+  </li>
+</ul>

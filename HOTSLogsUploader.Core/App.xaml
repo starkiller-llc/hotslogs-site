@@ -1,0 +1,76 @@
+﻿<Application x:Class="HOTSLogsUploader.Core.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:HOTSLogsUploader.Core"
+             Exit="Application_Exit">
+    <Application.Resources>
+        <SolidColorBrush x:Key="BackgroundDark" Color="#1A1537" />
+        <SolidColorBrush x:Key="BackgroundMedium" Color="#200C3B" />
+        <SolidColorBrush x:Key="BackgroundLight" Color="#4A307F" />
+        <SolidColorBrush x:Key="DefaultFontColor" Color="White" />
+        <SolidColorBrush x:Key="SelectedRow" Color="#593A99" />
+        <SolidColorBrush x:Key="RowLine" Color="#37254F" />
+        <FontFamily x:Key="DefaultFont">Ubuntu</FontFamily>
+
+        <!--Window-->
+        <Style TargetType="{x:Type Window}">
+            <Setter Property="Background" Value="{StaticResource BackgroundDark}"/>
+            <Setter Property="FontFamily" Value="{StaticResource DefaultFont}"/>
+        </Style>
+
+        <!--Button-->
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="23" />
+            <Setter Property="Margin" Value="6, 0, 6, 12" />
+            <Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+            <Setter Property="Background" Value="{StaticResource BackgroundLight}" />
+            <Setter Property="BorderBrush" Value="{StaticResource SelectedRow}" />
+        </Style>
+        
+        <!--Checkbox-->
+        <Style TargetType="{x:Type CheckBox}">
+            <Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+            <Setter Property="Margin" Value="6,0,0,0" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+        
+        <!--Groupbox-->
+        <Style TargetType="{x:Type GroupBox}">
+            <Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+            <Setter Property="BorderBrush" Value="{StaticResource RowLine}" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+
+        <Style TargetType="{x:Type Control}">
+            <Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+        </Style>
+        
+        <!--Custom Groupbox Template-->
+        <BorderGapMaskConverter x:Key="BorderGapMaskConverter"/>
+        <ControlTemplate x:Key="CustomGroupBoxTemplate" TargetType="{x:Type GroupBox}">
+            <Grid SnapsToDevicePixels="true">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="6"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="6"/>
+                </Grid.RowDefinitions>
+                <Border Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="Transparent" CornerRadius="0" Grid.ColumnSpan="4" Grid.Column="0" Grid.RowSpan="3" Grid.Row="1"/>
+                <Border BorderThickness="1" BorderBrush="{StaticResource BackgroundLight}" CornerRadius="0" Grid.ColumnSpan="4" Grid.RowSpan="3" Grid.Row="1" />
+                <Border x:Name="Header" Grid.Column="1" Padding="3,1,3,0" Grid.RowSpan="2" Grid.Row="0" Background="{StaticResource BackgroundDark}">
+                    <ContentPresenter ContentSource="Header" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                </Border>
+                <ContentPresenter Grid.ColumnSpan="2" Grid.Column="1" Margin="{TemplateBinding Padding}" Grid.Row="2" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+            </Grid>
+        </ControlTemplate>       
+       
+        <!--ContextMenu-->
+        
+    </Application.Resources>
+</Application>

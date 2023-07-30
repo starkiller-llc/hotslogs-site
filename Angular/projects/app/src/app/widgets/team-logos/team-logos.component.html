@@ -1,0 +1,10 @@
+<div class="team-logos-outer">
+  <div class="team-logos">
+    <a *ngFor="let team of teams" class="team-logo" [routerLink]="['/event', team.EventId, team.Id]">
+      <div class="imgdiv-360" [style.background-image]="'url(' + team.LogoUrl + ')'"></div>
+      <span class="team-name">
+        {{team.Name}}
+      </span>
+    </a>
+  </div>
+</div>

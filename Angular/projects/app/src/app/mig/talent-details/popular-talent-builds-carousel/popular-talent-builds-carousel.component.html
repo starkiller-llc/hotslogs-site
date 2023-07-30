@@ -1,0 +1,24 @@
+<div id="divSlickTalentBuildCards" class="slickTalentBuildCards" libSlick>
+  <div *ngFor="let d of stats" class="slick-item talentBuildCard">
+    <table class="talentBuildCardHeader">
+      <tr>
+        <td>Win Percent</td>
+        <td>{{d.WinPercent | percent:'0.0-1'}}</td>
+      </tr>
+      <tr>
+        <td>Games Played</td>
+        <td>{{d.GamesPlayed}}</td>
+      </tr>
+    </table>
+    <table class="talentBuildCardContent">
+      <tr *ngFor="let j of js">
+        <td>{{tiers[j]}}</td>
+        <td>
+          <app-talent-sprite [hero]="hero" [talent]="d.TalentName[j]" [tooltip]="d.TalentNameDescription[j]">
+          </app-talent-sprite>
+        </td>
+        <td>{{d.TalentName[j]}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="aspGrid RadGrid RadGrid_Black">
+  <table #tbl="migSort" mat-table matSort [migSort]="stats">
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let d" class="details-control" (click)="expand(d)"></td>
+    </ng-container>
+
+    <ng-container matColumnDef="mapImg">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let d">
+        <app-map-sprite [map]="d.MapImageURL"></app-map-sprite>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="MapNameLocalized">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> <span localize>Map Name</span> </th>
+      <td mat-cell *matCellDef="let d"> {{d.MapNameLocalized}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="GamesPlayed">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Games Played</span> </th>
+      <td mat-cell *matCellDef="let d"><span [innerHTML]="d.GamesPlayed | safeHtml"></span></td>
+    </ng-container>
+
+    <ng-container matColumnDef="AverageLength">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Average Length</span> </th>
+      <td mat-cell *matCellDef="let d">
+        {{d.AverageLength|date:'H:mm:ss'}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="WinPercent">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Win Percent</span> </th>
+      <td mat-cell *matCellDef="let d">
+        <div [innerHTML]="d.WinPercent | safeHtml"></div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns">
+    </tr>
+    <tr mat-row class="rgRow" *matRowDef="let row; columns: columns;" [class.shown]="row.Summary"
+      [appMatchSummary]="row.Summary" [loading]="row.SummaryLoading" [detailsView]="detailsView">
+  </table>
+</div>
+
+<ng-template #detailsView let-result="result" let-loading="loading">
+  <tr *ngIf="loading">
+    <td colspan="6">
+      Loading...
+    </td>
+  </tr>
+  <tr *ngIf="!loading">
+    <td colspan="6" style="padding: 10px;">
+      <app-map-details-table [stats]="result"></app-map-details-table>
+    </td>
+  </tr>
+</ng-template>

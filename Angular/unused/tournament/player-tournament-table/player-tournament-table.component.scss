@@ -1,0 +1,38 @@
+
+.player-tournament-table {
+    font-size: 14px;
+    .padding-left {
+        padding-left: 10px;
+    }
+    .inline-block {
+        display: inline-block;
+    }
+    .text-align-center {
+        text-align: center;
+    }
+    .padding-top-10 {
+        padding-top: 10px;
+    }
+    .table {
+        width: 100%;
+        margin: 0;
+        th {
+            font-weight: bold;
+        }
+        td {
+            height: 35px;
+            vertical-align: middle;
+        }
+        tbody > tr:hover {
+            cursor: pointer;
+            background-color: #4a307f;
+        }
+        .select-container {
+            padding-left: 10px;
+            .selectpicker {
+                // height: 20px;
+                // padding: 6px;
+            }
+        }
+    }
+}

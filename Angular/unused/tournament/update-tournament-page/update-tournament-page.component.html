@@ -1,0 +1,9 @@
+<div class="update-tournament-page">
+    <h1>Update a Tournament</h1>
+    <form [formGroup]="tournamentForm">
+        <input type="text" class="form-control" id="tournamentId" formControlName="tournamentId" />
+        <button (click)="updateTournamentRegistrationDeadline()" class="btn btn-success" >Update tournament registration_deadline</button>
+        <button (click)="updateTournamenMatchDeadline()" class="btn btn-success" >Update tournament match_deadline</button>
+        <button (click)="createTournamentMatches()" class="btn btn-success" >Create new matches</button>
+    </form>
+</div>

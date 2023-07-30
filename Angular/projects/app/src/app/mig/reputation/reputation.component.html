@@ -1,0 +1,18 @@
+<app-title>Heroes of the Storm Leaderboard | HOTS Logs</app-title>
+<a routerLink="/Info/Reputation" class="HeroRoleInfoLink btn btn-info" style="float: right; color: white;"
+  target="_blank"><i class="fa fa-question"></i>Reputation Info</a>
+<div class="flex">
+  <mat-form-field>
+    <mat-select #slct panelClass="aviad-select" value="table" [(value)]="region" (selectionChange)="sel()">
+      <mat-option [value]="1">US Region</mat-option>
+      <mat-option [value]="2">EU Region</mat-option>
+      <mat-option [value]="3">KR Region</mat-option>
+      <mat-option [value]="5">CN Region</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<ng-container *ngIf="data$ | async as data">
+  <app-reputation-table [stats]="result.Stats" (filterChange)="filterChange($event)" (page)="pageChange($event)"
+    (sortChange)="sortChange($event)" [total]="result.Total">
+  </app-reputation-table>
+</ng-container>

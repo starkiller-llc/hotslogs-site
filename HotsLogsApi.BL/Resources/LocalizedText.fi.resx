@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutMessageLine1" xml:space="preserve">
+    <value>Minun nimeni on Ben Barrett, olen sovelluskehittäjä päivisin ja innokas pelaaja iltaisin.</value>
+  </data>
+  <data name="AboutMessageLine2" xml:space="preserve">
+    <value>Minun ensisijainen tavoitteeni tällä projektilla on täyttää aukko pelin sisäisessä profiilissa, mutta uskon että HotS on todella suosittu tulevaisuudessa, joten haluan laajentaa HOTS Logs:in sisältämään yksityiskohtaisempaa analyysia uusinnoista. Haluan tämän sivun inspiroivan pelaajia pelaamaan paremmin ja oppimaan jotain heidän pelityyleistään tai joukkueen kokoonpanosta.</value>
+  </data>
+  <data name="AboutMessageLine3" xml:space="preserve">
+    <value>Ehdotukset ja Tuki:</value>
+  </data>
+  <data name="ChooseBattleNetIdErrorMessage1" xml:space="preserve">
+    <value>Sori, emme voineet löytää battle.net:in HotS tunnustasi tuosta.  Sen pitäisi olla tässä muodossa: '##-Hero-#-######'</value>
+  </data>
+  <data name="ChooseBattleNetIdErrorMessage2" xml:space="preserve">
+    <value>Yhtään uusintaa ei löytynyt tällä battle.net tunnuksella.  Painaisitko tästä linkistä lähettääksesi uusinnan?.</value>
+  </data>
+  <data name="ChooseBattleNetIdMessageLine1" xml:space="preserve">
+    <value>Kirjoita Heroes of the Storm BattleTag:</value>
+  </data>
+  <data name="ChooseBattleNetIdTextBox" xml:space="preserve">
+    <value>Kirjoita pelin sisäinen nimesi</value>
+  </data>
+  <data name="ChooseBattleNetIdTitle" xml:space="preserve">
+    <value>Valitse Battle.net tunnuksesi</value>
+  </data>
+  <data name="DefaultHeader" xml:space="preserve">
+    <value>Tervetuloa HOTS logs:iin!</value>
+  </data>
+  <data name="DefaultIntroMessageLine1" xml:space="preserve">
+    <value>Tämä on ensimmäinen sivu, joka analysoi Heroes of the Stormin peliuusintoja.</value>
+  </data>
+  <data name="DefaultIntroMessageLine2" xml:space="preserve">
+    <value>Sivu on yhä alkuvaiheessa, mutta täältä löytyy paljon tärkeää tietoa ja lisää on tulossa .</value>
+  </data>
+  <data name="DefaultIntroMessageLine3Part1" xml:space="preserve">
+    <value>Tarkasta yläpuolen valikko, sieltä löytyy tiedot mitkä on tällä hetkellä saatavissa.</value>
+  </data>
+  <data name="DefaultIntroMessageLine3Part2" xml:space="preserve">
+    <value>Registeröinti on ilmaista, joten liity ja aloita peliuusintojesi analysointi!</value>
+  </data>
+  <data name="DefaultIntroMessageTotalGames" xml:space="preserve">
+    <value>Kiitos kaikille osallistumisesta! Tähän mennessä palveluun on lähetetty {0} peliä!</value>
+  </data>
+  <data name="DefaultTitle" xml:space="preserve">
+    <value>Etusivu</value>
+  </data>
+  <data name="ErrorPageMessageLine1" xml:space="preserve">
+    <value>Tapahtui jotain mitä ei pitänyt! Järjestelmän ylläpitäjälle on lähetetty viesti, hän katsoo ongelmaa tulevaisuudessa.</value>
+  </data>
+  <data name="ErrorPageMessageLine2" xml:space="preserve">
+    <value>Yrittäisitkö uudelleen myöhemmin.</value>
+  </data>
+  <data name="ErrorPageTitle" xml:space="preserve">
+    <value>Hups!</value>
+  </data>
+  <data name="FAQMessageLine01" xml:space="preserve">
+    <value>Miksi jotkut uusinnat puuttuu peli historiastani?</value>
+  </data>
+  <data name="FAQMessageLine02" xml:space="preserve">
+    <value>Heroes of the Storm:issa on mahdollisuus tallentaa kaikki peliuusintasi, mutta jos et tiennyt siitä tai ottanut ominaisuutta käyttöön, valitettavasti vain uusimmat peliuusintasi on tallennettu.</value>
+  </data>
+  <data name="FAQMessageLine03" xml:space="preserve">
+    <value>Hyvä uutinen on kuitenkin, että jos toinen pelaaja on lähettänyt peliuusinnan missä olit mukana, se lisätään myös sinun profiiliin.</value>
+  </data>
+  <data name="FAQMessageLine04" xml:space="preserve">
+    <value>Milloin MMR lasketaan? Milloin sijoitustaulukko päivitetään?</value>
+  </data>
+  <data name="FAQMessageLine05" xml:space="preserve">
+    <value>MMR lasketaan jatkuvasti. Tässä on kaksi erillistä prioriteettia: {0} päivän kuluessa pelaamisesta ladatut toistot lasketaan yleensä muutamassa tunnissa. Äskettäin ladatut pelit, jotka pelattiin kahden edellisen kuukauden aikana, lasketaan yleensä parin viikon sisällä. Äskettäin ladattuihin peleihin, joita pelattiin yli kaksi kuukautta sitten, ei valitettavasti ole laskettu MMR: ää. Tämä johtuu siitä, että tällä hetkellä on liian vaativaa joutua laskemaan kaikki aiemmat pelit uudelleen. Tämä järjestelmä on asetettu pitämään MMR mahdollisimman tuoreena pelaajille, jotka käyttävät HOTS-lokit vähintään kerran kolmessa päivässä :)</value>
+  </data>
+  <data name="FAQMessageLine06" xml:space="preserve">
+    <value>Voivatko pelaajat lähettää vain voittonsa noustakseen sijoitustaulukolla?</value>
+  </data>
+  <data name="FAQMessageLine07" xml:space="preserve">
+    <value>Joo ja ei. Jos he lähettävät vain voittonsa, heidän MMR tulee nousemaan luonottomasti. Mutta Blizzard tietää paremmin ja jatkaa heidän sijoittamista peleihin oikein. Jos sinulla on vain voittoja pelaajia vastaan keillä on sinua pienempi MMR tulet saamaan vähemmän ja vähemmän MMR itse..</value>
+  </data>
+  <data name="FAQMessageLine08" xml:space="preserve">
+    <value>Mutta on myös 'hyviä uutisia', jos toiset pelaajat lähettää edes osan häviöistä, ne lisätään molempiin profiileihin..</value>
+  </data>
+  <data name="FAQMessageLine09" xml:space="preserve">
+    <value>Olen katsonut läpi monia profiileja, enkä onneksi ole löytänyt ketään jolla olisi luonnottoman suuri voittoputki.</value>
+  </data>
+  <data name="FAQMessageLine10" xml:space="preserve">
+    <value>Miksi jotkut lähettämäni peliuusinnat näyttävät kopioilta?</value>
+  </data>
+  <data name="FAQMessageLine11" xml:space="preserve">
+    <value>Tämä johtuu siitä että joku 9 muusta pelissä olleesta pelaajasta on lähettänyt peliuusinnan.  Mutta älä hätäile se lisätään kaikkien pelissä olleiden profiileihin, myös sinun.</value>
+  </data>
+  <data name="FAQTitle" xml:space="preserve">
+    <value>Usein kysytyt kysymykset</value>
+  </data>
+  <data name="GenericAboutUs" xml:space="preserve">
+    <value>Tietoja meistä</value>
+  </data>
+  <data name="GenericAllLeagues" xml:space="preserve">
+    <value>Kaikki liigat</value>
+  </data>
+  <data name="GenericAverageLength" xml:space="preserve">
+    <value>Keskimääräinen kesto</value>
+  </data>
+  <data name="GenericContactUs" xml:space="preserve">
+    <value>Ota yhteyttä meihin</value>
+  </data>
+  <data name="GenericDataCurrentlyUnavailable" xml:space="preserve">
+    <value>Tietoja ei saatavilla tällä hetkellä</value>
+  </data>
+  <data name="GenericDateTime" xml:space="preserve">
+    <value>Päivä ja aika</value>
+  </data>
+  <data name="GenericEmailAddress" xml:space="preserve">
+    <value>Sähköposti osoite</value>
+  </data>
+  <data name="GenericErrorConfirmPasswordDoesntMatch" xml:space="preserve">
+    <value>Salasana ja varmistus ei täsmää.</value>
+  </data>
+  <data name="GenericErrorConfirmPasswordRequired" xml:space="preserve">
+    <value>Salasana täytyy vahvistaa.</value>
+  </data>
+  <data name="GenericErrorEmailRequired" xml:space="preserve">
+    <value>Sähköposti osoite kenttä on täytettävä</value>
+  </data>
+  <data name="GenericErrorPasswordRequired" xml:space="preserve">
+    <value>Salasana kenttä on täytettävä</value>
+  </data>
+  <data name="GenericErrorUserNameRequired" xml:space="preserve">
+    <value>Käyttäjänimi kenttä on täytettävä</value>
+  </data>
+  <data name="GenericExcludingMirrorMatchupsAndTalentGatedHeroes" xml:space="preserve">
+    <value>Excluding Mirror Matchups and Talent Gated Heroes</value>
+  </data>
+  <data name="GenericExcludingTalentGatedGamesAndAutoSelectGames" xml:space="preserve">
+    <value>Excluding Talent Gated Games and Auto Select Games</value>
+  </data>
+  <data name="GenericGameLength" xml:space="preserve">
+    <value>Pelin kesto</value>
+  </data>
+  <data name="GenericGamesPlayed" xml:space="preserve">
+    <value>Pelatut pelit</value>
+  </data>
+  <data name="GenericGamesPlayedAgainst" xml:space="preserve">
+    <value>Pelejä pelattu vastaan</value>
+  </data>
+  <data name="GenericGetPremium" xml:space="preserve">
+    <value>Premium</value>
+  </data>
+  <data name="GenericHero" xml:space="preserve">
+    <value>Hahmo</value>
+  </data>
+  <data name="GenericHeroAbathur" xml:space="preserve">
+    <value>Abathur</value>
+  </data>
+  <data name="GenericHeroAnubarak" xml:space="preserve">
+    <value>Anub'arak</value>
+  </data>
+  <data name="GenericHeroArthas" xml:space="preserve">
+    <value>Arthas</value>
+  </data>
+  <data name="GenericHeroAutoSelect" xml:space="preserve">
+    <value>Auto Select</value>
+  </data>
+  <data name="GenericHeroAzmodan" xml:space="preserve">
+    <value>Azmodan</value>
+  </data>
+  <data name="GenericHeroBrightwing" xml:space="preserve">
+    <value>Brightwing</value>
+  </data>
+  <data name="GenericHeroChen" xml:space="preserve">
+    <value>Chen</value>
+  </data>
+  <data name="GenericHeroDiablo" xml:space="preserve">
+    <value>Diablo</value>
+  </data>
+  <data name="GenericHeroETC" xml:space="preserve">
+    <value>E.T.C.</value>
+  </data>
+  <data name="GenericHeroFalstad" xml:space="preserve">
+    <value>Falstad</value>
+  </data>
+  <data name="GenericHeroGazlowe" xml:space="preserve">
+    <value>Gazlowe</value>
+  </data>
+  <data name="GenericHeroIllidan" xml:space="preserve">
+    <value>Illidan</value>
+  </data>
+  <data name="GenericHeroJaina" xml:space="preserve">
+    <value>Jaina</value>
+  </data>
+  <data name="GenericHeroKerrigan" xml:space="preserve">
+    <value>Kerrigan</value>
+  </data>
+  <data name="GenericHeroLevel" xml:space="preserve">
+    <value>Hahmon taso</value>
+  </data>
+  <data name="GenericHeroLiLi" xml:space="preserve">
+    <value>Li Li</value>
+  </data>
+  <data name="GenericHeroMalfurion" xml:space="preserve">
+    <value>Malfurion</value>
+  </data>
+  <data name="GenericHeroMuradin" xml:space="preserve">
+    <value>Muradin</value>
+  </data>
+  <data name="GenericHeroMurky" xml:space="preserve">
+    <value>Murky</value>
+  </data>
+  <data name="GenericHeroNazeebo" xml:space="preserve">
+    <value>Nazeebo</value>
+  </data>
+  <data name="GenericHeroNova" xml:space="preserve">
+    <value>Nova</value>
+  </data>
+  <data name="GenericHeroRaynor" xml:space="preserve">
+    <value>Raynor</value>
+  </data>
+  <data name="GenericHeroRehgar" xml:space="preserve">
+    <value>Rehgar</value>
+  </data>
+  <data name="GenericHeroSgtHammer" xml:space="preserve">
+    <value>Sgt. Hammer</value>
+  </data>
+  <data name="GenericHeroSonya" xml:space="preserve">
+    <value>Sonya</value>
+  </data>
+  <data name="GenericHeroStatistics" xml:space="preserve">
+    <value>Hahmojen tilastot</value>
+  </data>
+  <data name="GenericHeroStitches" xml:space="preserve">
+    <value>Stitches</value>
+  </data>
+  <data name="GenericHeroTassadar" xml:space="preserve">
+    <value>Tassadar</value>
+  </data>
+  <data name="GenericHeroTheButcher" xml:space="preserve">
+    <value>The Butcher</value>
+  </data>
+  <data name="GenericHeroTheLostVikings" xml:space="preserve">
+    <value>The Lost Vikings</value>
+  </data>
+  <data name="GenericHeroThrall" xml:space="preserve">
+    <value>Thrall</value>
+  </data>
+  <data name="GenericHeroTychus" xml:space="preserve">
+    <value>Tychus</value>
+  </data>
+  <data name="GenericHeroTyrael" xml:space="preserve">
+    <value>Tyrael</value>
+  </data>
+  <data name="GenericHeroTyrande" xml:space="preserve">
+    <value>Tyrande</value>
+  </data>
+  <data name="GenericHeroUther" xml:space="preserve">
+    <value>Uther</value>
+  </data>
+  <data name="GenericHeroValla" xml:space="preserve">
+    <value>Valla</value>
+  </data>
+  <data name="GenericHeroZagara" xml:space="preserve">
+    <value>Zagara</value>
+  </data>
+  <data name="GenericHeroZeratul" xml:space="preserve">
+    <value>Zeratul</value>
+  </data>
+  <data name="GenericInformation" xml:space="preserve">
+    <value>Informaatio</value>
+  </data>
+  <data name="GenericLastUpdatedMinutesAgo" xml:space="preserve">
+    <value>Päivitetty viimeksi {0} minuutia sitten</value>
+  </data>
+  <data name="GenericLeaderboard" xml:space="preserve">
+    <value>Sijoitustaulukko</value>
+  </data>
+  <data name="GenericLeague" xml:space="preserve">
+    <value>Liiga</value>
+  </data>
+  <data name="GenericLeague0" xml:space="preserve">
+    <value>Master</value>
+  </data>
+  <data name="GenericLeague1" xml:space="preserve">
+    <value>Timantti</value>
+  </data>
+  <data name="GenericLeague2" xml:space="preserve">
+    <value>Platina</value>
+  </data>
+  <data name="GenericLeague3" xml:space="preserve">
+    <value>Kulta</value>
+  </data>
+  <data name="GenericLeague4" xml:space="preserve">
+    <value>Hopea</value>
+  </data>
+  <data name="GenericLeague5" xml:space="preserve">
+    <value>Pronssi</value>
+  </data>
+  <data name="GenericLeagueRank" xml:space="preserve">
+    <value>Liiga sijoitus</value>
+  </data>
+  <data name="GenericLogIn" xml:space="preserve">
+    <value>Kirjaudu sisään</value>
+  </data>
+  <data name="GenericLogOff" xml:space="preserve">
+    <value>Kirjaudu ulos</value>
+  </data>
+  <data name="GenericLose" xml:space="preserve">
+    <value>Häviö</value>
+  </data>
+  <data name="GenericLosingTeam" xml:space="preserve">
+    <value>Häviävä joukkue</value>
+  </data>
+  <data name="GenericMapName" xml:space="preserve">
+    <value>Kentän nimi</value>
+  </data>
+  <data name="GenericMapNameBattlefieldofEternity" xml:space="preserve">
+    <value>Battlefield of Eternity</value>
+  </data>
+  <data name="GenericMapNameBlackheartsBay" xml:space="preserve">
+    <value>Blackheart's Bay</value>
+  </data>
+  <data name="GenericMapNameCursedHollow" xml:space="preserve">
+    <value>Cursed Hollow</value>
+  </data>
+  <data name="GenericMapNameDragonShire" xml:space="preserve">
+    <value>Dragon Shire</value>
+  </data>
+  <data name="GenericMapNameGardenofTerror" xml:space="preserve">
+    <value>Garden of Terror</value>
+  </data>
+  <data name="GenericMapNameHauntedMines" xml:space="preserve">
+    <value>Haunted Mines</value>
+  </data>
+  <data name="GenericMapNameSkyTemple" xml:space="preserve">
+    <value>Sky Temple</value>
+  </data>
+  <data name="GenericMapStatistics" xml:space="preserve">
+    <value>kenttien tilastot</value>
+  </data>
+  <data name="GenericMatchHistory" xml:space="preserve">
+    <value>Pelihistoria</value>
+  </data>
+  <data name="GenericMMRBefore" xml:space="preserve">
+    <value>MMR Ennen</value>
+  </data>
+  <data name="GenericMMRChange" xml:space="preserve">
+    <value>MMR muutos</value>
+  </data>
+  <data name="GenericMMRMilestones" xml:space="preserve">
+    <value>MMR Milestones</value>
+  </data>
+  <data name="GenericMyAccount" xml:space="preserve">
+    <value>Tunnukseni</value>
+  </data>
+  <data name="GenericNews" xml:space="preserve">
+    <value>Uutiset</value>
+  </data>
+  <data name="GenericNextUpdateInMinutes" xml:space="preserve">
+    <value>Seuraava päivitys {0} minuutissa</value>
+  </data>
+  <data name="GenericOpposingHero" xml:space="preserve">
+    <value>Vastassa ollut hahmo</value>
+  </data>
+  <data name="GenericPassword" xml:space="preserve">
+    <value>Salasana</value>
+  </data>
+  <data name="GenericPlayer" xml:space="preserve">
+    <value>Pelaaja</value>
+  </data>
+  <data name="GenericPlayerSearchButton" xml:space="preserve">
+    <value>Etsi</value>
+  </data>
+  <data name="GenericPlayerSearchHelperText" xml:space="preserve">
+    <value>Etsi pelaajaa</value>
+  </data>
+  <data name="GenericProfile" xml:space="preserve">
+    <value>Profiili</value>
+  </data>
+  <data name="GenericRating" xml:space="preserve">
+    <value>Sijoitus (MMR)</value>
+  </data>
+  <data name="GenericRegion" xml:space="preserve">
+    <value>Maakunta</value>
+  </data>
+  <data name="GenericResult" xml:space="preserve">
+    <value>Tulos</value>
+  </data>
+  <data name="GenericSitewide" xml:space="preserve">
+    <value>Kaikki data</value>
+  </data>
+  <data name="GenericSpecialThanks" xml:space="preserve">
+    <value>Erityiskiitokset</value>
+  </data>
+  <data name="GenericSubmitButton" xml:space="preserve">
+    <value>Lähetä</value>
+  </data>
+  <data name="GenericTeam" xml:space="preserve">
+    <value>Joukkue</value>
+  </data>
+  <data name="GenericTimeSpanDay" xml:space="preserve">
+    <value>{0} Päivää</value>
+  </data>
+  <data name="GenericTimeSpanDayPlural" xml:space="preserve">
+    <value>{0} Päivää</value>
+  </data>
+  <data name="GenericTimeSpanHour" xml:space="preserve">
+    <value>{0} Tuntia</value>
+  </data>
+  <data name="GenericTimeSpanHourPlural" xml:space="preserve">
+    <value>{0} Tuntia</value>
+  </data>
+  <data name="GenericTimeSpanMinute" xml:space="preserve">
+    <value>{0} Minuuttia</value>
+  </data>
+  <data name="GenericTimeSpanMinutePlural" xml:space="preserve">
+    <value>{0} Minuuttia</value>
+  </data>
+  <data name="GenericUserName" xml:space="preserve">
+    <value>Käyttäjä nimi</value>
+  </data>
+  <data name="GenericViewMatchHistory" xml:space="preserve">
+    <value>Katso peli historia</value>
+  </data>
+  <data name="GenericViewProfile" xml:space="preserve">
+    <value>Katso profiili</value>
+  </data>
+  <data name="GenericWeekOfDate" xml:space="preserve">
+    <value>Viikko {0}</value>
+  </data>
+  <data name="GenericWin" xml:space="preserve">
+    <value>Voitto</value>
+  </data>
+  <data name="GenericWinningTeam" xml:space="preserve">
+    <value>Voittaja joukkue</value>
+  </data>
+  <data name="GenericWinPercent" xml:space="preserve">
+    <value>Voittoprosentti</value>
+  </data>
+  <data name="HeroDetailsMessageLine1" xml:space="preserve">
+    <value>Hahmon voitto prosentti tällä viikolla</value>
+  </data>
+  <data name="HeroDetailsTitle" xml:space="preserve">
+    <value>Hahmojen tilastot</value>
+  </data>
+  <data name="HeroDetailsWinRateVsOtherHeroes" xml:space="preserve">
+    <value>Voitto prosentti muita hahmoja vastaan</value>
+  </data>
+  <data name="LeaderboardCurrentPlayerRank" xml:space="preserve">
+    <value>Tämän hetkinen liiga sijoituksesi: {0}</value>
+  </data>
+  <data name="LeaderboardLeagueGamesPlayedRequirement" xml:space="preserve">
+    <value>Tämä liiga vaatii että pelaaja lähettää vähintään {0} uusintaa</value>
+  </data>
+  <data name="LeaderboardMMRInfoLink" xml:space="preserve">
+    <value>Jos haluat lisää tietoa siitä miten lasken MMR:n , olen kirjoittanut pienen selityksen sitä tänne.</value>
+  </data>
+  <data name="LogInCheckboxRememberMe" xml:space="preserve">
+    <value>Muista minut?</value>
+  </data>
+  <data name="LogInForgotPassword" xml:space="preserve">
+    <value>Unohditko salasanan? Paina tästä vaihtaaksesi tunnuksesi.</value>
+  </data>
+  <data name="LogInNewUser" xml:space="preserve">
+    <value>Rekisteröidy, jos sinulla ei ole vielä tunnuksia.</value>
+  </data>
+  <data name="ManageAccountChangePasswordMessage" xml:space="preserve">
+    <value>Vaihda salasanasi</value>
+  </data>
+  <data name="ManageAccountChangePasswordSuccess" xml:space="preserve">
+    <value>Salasanasi on vaihdettu.</value>
+  </data>
+  <data name="ManageAccountCurrentPassword" xml:space="preserve">
+    <value>Tämän hetkinen salasana</value>
+  </data>
+  <data name="ManageAccountErrorCurrentPasswordRequired" xml:space="preserve">
+    <value>Nykyinen salasana "kenttä" pitää täyttää.</value>
+  </data>
+  <data name="ManageAccountErrorNewPasswordRequired" xml:space="preserve">
+    <value>Uusi salasana vaaditaan.</value>
+  </data>
+  <data name="ManageAccountNewPassword" xml:space="preserve">
+    <value>Uusi salasana</value>
+  </data>
+  <data name="ManageAccountTitle" xml:space="preserve">
+    <value>Hallitse tunnuksiasi</value>
+  </data>
+  <data name="MatchHistoryMessageLine1" xml:space="preserve">
+    <value>Paina nuolta rivin vasemmasta reunasta laajentaaksesi pelin tiedot ja nähdäksesi pelaajien yksityiskohdat</value>
+  </data>
+  <data name="MatchHistoryMessageLine2" xml:space="preserve">
+    <value>Peli historian MMR:rää lasketaan kokoajan, mutta riippuen ajankohdasta joidenkin pelien kohdalla siinä voi kestää 1-2 päivää.</value>
+  </data>
+  <data name="MMRInfoMessageLine01" xml:space="preserve">
+    <value>Miten MMR lasketaan?</value>
+  </data>
+  <data name="MMRInfoMessageLine02" xml:space="preserve">
+    <value>Käytän samankaltaista algorytmiä kuin Microsoftin TrueSkill, se on laajalti hyväksytty olevan parempi kuin ELO joukkue pohjaisille peleille.</value>
+  </data>
+  <data name="MMRInfoMessageLine03" xml:space="preserve">
+    <value>MMR kertoo taitosi verrattuna muihin pelaajiin. Koska se kuvastaa taitoa, MMR ei nouse itsestään pelaamalla enemmän pelejä. Jos haluat kasvattaa sitä, sinun pitää tulla paremmaksi :)</value>
+  </data>
+  <data name="MMRInfoMessageLine04" xml:space="preserve">
+    <value>MMR päivittää jokaisen pelin tuloksien mukaan, samoinkuin joukkueen keskimääräinen MMR.</value>
+  </data>
+  <data name="MMRInfoMessageLine05" xml:space="preserve">
+    <value>Jos joudut peliin missä vastustajiesi MMR on korkeampi kuin sinun ja voitat sen, sinun MMR nousee enemmän kuin normaalisti. Samoin jos joudut huonompia vastustajia vastaan ja häviät, menetät enemmän MMR:rä kuin normaalisti. </value>
+  </data>
+  <data name="MMRInfoMessageLine06" xml:space="preserve">
+    <value>Koska MMR kehittyy näin, sinun pitäisi olla lähellä omaa MMR:ää ja 50% voittosuhdetta, kun olet pelannut jonkun aikaa.</value>
+  </data>
+  <data name="MMRInfoMessageLine07" xml:space="preserve">
+    <value>Liigat</value>
+  </data>
+  <data name="MMRInfoMessageLine08" xml:space="preserve">
+    <value>Olen laittanut kokoon eri "liigat", mikä jakaa johtotaulukot. Haluan kaikkien pelaajien hyötyvän tästä sivusta, ja jos olisi vain yksi johtotaulu se olisi aika masentavaa aloittaa pohjalta. Liigat antaa sinulle jotain mihin asettaa rima ja minkä eteen tehdä töitä.</value>
+  </data>
+  <data name="MMRInfoMessageLine09" xml:space="preserve">
+    <value>Eri liigat tarkoittaa myös sitä että voin asettaa erilaisia vaatimuksia niihin. Kun aikaa kuluu ja enemmän peliuusintoja lähetetään, lisään luultavasti rajan kuinka monta peliä pitää olla pelattu ennenkuin pääsee tiettyyn liigaan. Pidän vaatimukset alemman tason liigoihin pienenä jotta kaikki pääsisivät sinne nopeasti.</value>
+  </data>
+  <data name="MMRInfoMessageLine10" xml:space="preserve">
+    <value>Liigat erottavat pelaajat MMR perusteella eri ryhmiin. Kun unohdetaan pelaajat keillä on alle 10 peliä, Master liigassa on parhaat 1% ja Timantti liigassa seuraavat 9%. Näiden kahden jälkeen Liigoissa on enemmän jakaumia.</value>
+  </data>
+  <data name="MMRInfoMessageLine11" xml:space="preserve">
+    <value>Etkö löydä itseäsi johtotaulukosta? Sinun MMR saattaa sijoittaa sinut korkeampaan liigaan, mutta sinulla ei ole tarpeeksi pelejä alla sinne. MMR lasketaan ennenkuin tarkastetaan onko pelaaja sopiva kyseiseen liigaan.</value>
+  </data>
+  <data name="MMRInfoMessageLine12" xml:space="preserve">
+    <value>Sijoitus pelit</value>
+  </data>
+  <data name="MMRInfoMessageLine13" xml:space="preserve">
+    <value>Kun pelaat ensimmäistä peliäsi, järjestelmä ei tiedä kuinka hyvä olet, joten aloitat normaalista MMR:stä. Ensimmäiset pelisi painavat enemmän nopeuttaakseen prosessia oikean MMR:n löytämiseksi, kun pelaat enemmän pelejä, niillä on vähemmän ja vähemmän vaikutusta MMR:si.</value>
+  </data>
+  <data name="MMRInfoMessageLine14" xml:space="preserve">
+    <value>Tämä tarkoittaa sitä että voittosi ja häviösi alussa muuttavat MMR:si merkittävästi molempiin suuntiin.</value>
+  </data>
+  <data name="MMRInfoMessageLine15" xml:space="preserve">
+    <value>Tämä on normaalia peleille mitkä käyttää matchmaking:iä, yleensä se auttaa sinua saavuttamaan samantasoiset pelaajat nopeammin. </value>
+  </data>
+  <data name="MMRInfoMessageLine16" xml:space="preserve">
+    <value>Tämä ei tarkoita sitä että olisit "jumissa" pelattuasi pari sataa peliä, vaan sitä että MMR ei nouse niin rajusti ensimmäisten peliesi jälkeen.</value>
+  </data>
+  <data name="MMRInfoMessageLine17" xml:space="preserve">
+    <value>Häviöputki 'sijoitus peleissä'</value>
+  </data>
+  <data name="MMRInfoMessageLine18" xml:space="preserve">
+    <value>Jotkut pelaajat ovat ottaneet yhteyttä ja pyytäneet poistamaan tiettyjä pelejä tai kysyäkseen voinko antaa "tuoreen alun", Koska he eivät tienneet että ensimmäiset pelit olivat "sijoitus pelejä".</value>
+  </data>
+  <data name="MMRInfoMessageLine19" xml:space="preserve">
+    <value> Aloittaminen häviö putkella on epäonnista, mutta niin myös voittoputkella. Esimerkiksi minä voiton kaikki 5 sijoitus peliä Starcraft 2:ssa, ja pääsin kulta liigaan. Olin todella innostunut, kehuskelin kavereilleni ketkä päätyivät pronssi ja hopea liigoihin. Tiesin että tuuri oli auttanut minua hieman, mutta loppu tulos oli se mikä ratkaisi. Ja sitten hävisin 13 peliä putkeen vain pudotakseni pronssi liigaan. Minun ei olisi pitänyt päästä kulta liigaan alunperinkään, mutta kun aikaa kului matchmakingistä tuli tarkempi ja rupesin voittamaan 50% peleistäni.</value>
+  </data>
+  <data name="MMRInfoMessageLine20" xml:space="preserve">
+    <value>Tämä toimii myös toiseen suuntaan: jos sinulla oli häviö putki "sijoitus peleissäsi" HOTS log:sissa, aloitat alhaiselta MMR:ltä. Jos tämä on virheellistä, ja MMR:si kuuluisi oikeasti olla korkeampi, Blizzard antaa sinulle pelejä korkeampi MMR:siä vastustajia vastaan. Jos voitat 50% peleistä korkeampi tasoisia pelaajia vastaan, MMR:si nousee hiljalleen heidän tasolle.</value>
+  </data>
+  <data name="MMRInfoMessageLine21" xml:space="preserve">
+    <value>Valitettavasti, jos MMR:si tosiaankin on liian alhainen häviö putken takia "sijoitus peleissäsi", ainut tapa on pelata lisää nostaaksesi sen. Se voi viedä useamman pelin aikaa, kuin jos olisit voittanut osan "sijoitus peleissäsi", mutta MMR:si tulee loppujen lopuksi olemaan siellä missä pitääkin. Ratkaisu ei ole poistaa peliuusintoja, vaikkakin: tämä poistaisi pelin myös 9 muulta pelaajalta, ja tarvitsen useita peliuusintoja laskeakseni MMR:n tarkkaan.</value>
+  </data>
+  <data name="MMRInfoMessageLine22" xml:space="preserve">
+    <value>MMR:n tarkkuus</value>
+  </data>
+  <data name="MMRInfoMessageLine23" xml:space="preserve">
+    <value>Jotkut pelaajat ovat ottaneet minuun yhteyttä, koska uskovat että kuuluvat korkeammalla johtotaulokoihin</value>
+  </data>
+  <data name="MMRInfoMessageLine24" xml:space="preserve">
+    <value>Ensimmäiseksi, varmista että olet pelannut tarpeeksi monta peliä. Kun aloitat, MMR:si on tuntematon minulle, järjestelmän täytyy arvata. Älä käytä liikaa aikaa miettiäksesi MMR:ää jos et ole lähettänyt ainakin 100 peliuusintaa ja mieluummin useampaa.</value>
+  </data>
+  <data name="MMRInfoMessageLine25" xml:space="preserve">
+    <value>Jos sinulla on paljon lähetettyjä uusintoja, kuinka voit tietää onko laskemani MMR tarkka? Katsele yksittäisten pelaajien MMR:ää peleissäsi ja joukkueiden keskimääräistä MMR:ää. Yleensä, molempien joukkueiden keskimääräinen MMR pitäisi olla samalla tasolla.</value>
+  </data>
+  <data name="MMRInfoMessageLine26" xml:space="preserve">
+    <value>On myös kertoja milloin MMR ei ole tarkka. On tapauksia missä vakiintunut pelaaja on lähettänyt vain muutaman pelin, heidän oikea MMR ei ole minun tiedossa, mutta blizzardilla luultavasti on hyvä idea siitä. Jos pelaajan MMR muutos pelin jälkeen on suuri(suurempi kuin ~50), sen pelaajan MMR on vielä jollain tasolla tuntematon minulle ja minun täytyy arvailla mikä heidän MMR mahtaisi olla.</value>
+  </data>
+  <data name="MMRInfoMessageLine27" xml:space="preserve">
+    <value>Paras tapa kasvattaa MMR:n tarkkuutta on lähettää enemmän peliuusintoja :) Pyydä ystäviäsi lähettämään peliuusintoja; mitä enemmän uusintoja pystyn käymään läpi, sen tarkemmin voin arvioida taitosi.</value>
+  </data>
+  <data name="MMRInfoMessageLine28" xml:space="preserve">
+    <value>On myös kannustavaa nähdä monet kuuluisat pro tason pelaajat listojen top 100:ssa, kuin myös peleissä vastakkain.</value>
+  </data>
+  <data name="MMRInfoTitle" xml:space="preserve">
+    <value>MMR informaatio</value>
+  </data>
+  <data name="PlayerSearchNoPlayersFound" xml:space="preserve">
+    <value>Yhtään pelaajaa ei löytynyt, kokeile hakea uudelleen käyttäen haku kenttää sivun ylälaidassa.</value>
+  </data>
+  <data name="PlayerSearchTitle" xml:space="preserve">
+    <value>Pelaaja haku</value>
+  </data>
+  <data name="ProfileCurrentLeagueRank" xml:space="preserve">
+    <value>Tämän hetkinen liiga sijoitus</value>
+  </data>
+  <data name="ProfileCurrentMMR" xml:space="preserve">
+    <value>Tämän hetkinen MMR</value>
+  </data>
+  <data name="ProfileTotalGamesPlayed" xml:space="preserve">
+    <value>Pelien kokonaismäärä</value>
+  </data>
+  <data name="ProfileTotalTimePlayed" xml:space="preserve">
+    <value>Kokonaisuudessaan pelattu</value>
+  </data>
+  <data name="RegisterConfirmPassword" xml:space="preserve">
+    <value>Vahvista salasana</value>
+  </data>
+  <data name="RegisterErrorDuplicateEmail" xml:space="preserve">
+    <value>Valitsemasi sähköposti on jo käytössä. Vaihda toiseen sähköposti osoitteeseen.</value>
+  </data>
+  <data name="RegisterErrorDuplicateUsername" xml:space="preserve">
+    <value>Valitse toinen käyttäjänimi.</value>
+  </data>
+  <data name="RegisterMessageLine1" xml:space="preserve">
+    <value>Käytä lomaketta luodaksesi uuden käyttäjätunnuksen.</value>
+  </data>
+  <data name="RegisterPasswordRequirement" xml:space="preserve">
+    <value>Salasanojen täytyy olla vähintääm {0} merkkiä pitkiä.</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Rekisteröidy</value>
+  </data>
+  <data name="ResetPasswordMessage" xml:space="preserve">
+    <value>Kirjoita käyttäjätunnuksesi vaihtaaksesi salasanasi.</value>
+  </data>
+  <data name="ResetPasswordTitle" xml:space="preserve">
+    <value>Vaihda salasana</value>
+  </data>
+  <data name="SitewideHeroAndMapStatisticsTitle" xml:space="preserve">
+    <value>Hahmojen ja kenttien tilastot kokonaisuudessaan</value>
+  </data>
+  <data name="SitewideHeroStatistics" xml:space="preserve">
+    <value>Sivuston kattavat sankaritilastot viimeisistä kahdesta korjaustiedostosta</value>
+  </data>
+  <data name="SitewideMapStatistics" xml:space="preserve">
+    <value>Kaikkien kenttien tilastot edeltävältä 7 päivältä</value>
+  </data>
+  <data name="SitewidePremiumTitle" xml:space="preserve">
+    <value>Premium</value>
+  </data>
+  <data name="SitewideStatisticsTitle" xml:space="preserve">
+    <value>Tilastot</value>
+  </data>
+  <data name="SitewideTalentsTitle" xml:space="preserve">
+    <value>Kyvyt</value>
+  </data>
+  <data name="SitewideUploadReplaysTitle" xml:space="preserve">
+    <value>Lähetä peliuusintoja!</value>
+  </data>
+  <data name="SpecialThanksLine1" xml:space="preserve">
+    <value>Erityiskiitos Jonille HotS log:in suomentamisesta</value>
+  </data>
+  <data name="UploadMessageLine1" xml:space="preserve">
+    <value>Lue tämä ennenkuin alat lähettämään uusintoja:</value>
+  </data>
+  <data name="UploadMessageLine2" xml:space="preserve">
+    <value>Suunnitelmani on tehdä uusintojen datasta niin käytettävää kuin suinkin mahdollista, paitsi chatti saa jäädä pois, mitä en ikinä tee avoimeksi. Kaikki muu data tulee avoimeksi ennen pitkää.</value>
+  </data>
+  <data name="UploadMessageLine3" xml:space="preserve">
+    <value>Kelpuutan ainoastaan normaaleja, täysmittaisia versus moodin peliuusintoja.</value>
+  </data>
+  <data name="UploadMessageLine4" xml:space="preserve">
+    <value>Kunnolla parsitut uusinnat pitää lähettää vain kerran. Tallennan uusinta tiedoston ja, kun teen parannuksia dataan mitä voin ottaa uusinnoista, päivitän automaattisesti peliuusinta statsisi.</value>
+  </data>
+  <data name="UploadMessageLine5" xml:space="preserve">
+    <value>Jos saat 'duplikaatti' errorin kun lähetät uusintaa, se tarkoittaa sitä joku on jo lähettänyt kyseisen uusinnan.</value>
+  </data>
+  <data name="UploadMessageLine6" xml:space="preserve">
+    <value>Jos saat erroria, kun yrität lähettää uusintaa, yritä myöhemmin uudelleen. Yritän koko ajan korjailla vikoja, pystyn ehkä ottamaan datan epäonnistuneista lähetyksistä myöhemmin.</value>
+  </data>
+  <data name="UploadMessageSingleReplayHeader" xml:space="preserve">
+    <value>Lähetä yksittäinen peliuusinta</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine1" xml:space="preserve">
+    <value>Note: Oletuskansio peliuusinnoille on:</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine2" xml:space="preserve">
+    <value>Windows: '...\Documents\Heroes of the Storm\Accounts\########\#-Hero-#-######\Replays\'</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine3" xml:space="preserve">
+    <value>Mac: '~/Library/Application Support/Blizzard/Heroes of the Storm/Accounts/########/#-Hero-#-######/Replays/'</value>
+  </data>
+  <data name="UploadMessageUploaderLine1" xml:space="preserve">
+    <value>HOTS Logs Uploader sovellus</value>
+  </data>
+  <data name="UploadMessageUploaderLine2" xml:space="preserve">
+    <value>Suosittelen käyttämään kevyttä Windows sovellusta jonka tein peliuusintojen automaattista lähetystä varten:</value>
+  </data>
+  <data name="UploadMessageUploaderLine3" xml:space="preserve">
+    <value>Paina tästä ladataksesi ja asentaaksesi the HOTS Logs Uploader</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>Lähetä peliuusintoja</value>
+  </data>
+</root>

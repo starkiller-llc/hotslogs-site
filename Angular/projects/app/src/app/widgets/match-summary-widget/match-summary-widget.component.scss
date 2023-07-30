@@ -1,0 +1,25 @@
+mat-expansion-panel {
+  background-color: transparent;
+  border-radius: 0;
+  margin-top: 5px;
+  // overflow: visible;
+}
+
+mat-expansion-panel-header {
+  background-color: #1a1537 !important;
+  border: 1px solid #494794 !important;
+  border-radius: 0;
+  font-family: "Lato", "Open Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.mat-expansion-panel-header, .mat-expansion-panel-header.mat-expanded {
+  height: 36.5px;
+  padding: 0 15px;
+}
+
+.content {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

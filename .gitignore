@@ -1,0 +1,99 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+#Visual Studio files
+*.[Oo]bj
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.sdf
+*.opensdf
+*.unsuccessfulbuild
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+Ankh.NoLoad
+*.filters
+
+#MonoDevelop
+*.pidb
+*.userprefs
+
+#Tooling
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+*.sass-cache
+
+#Project files
+[Bb]uild/
+!Heroes.WebApplication/assets/js/nx-base-ng/build
+
+#Subversion files
+.svn
+
+# Office Temp Files
+~$*
+
+#NuGet
+packages/
+
+#node modules
+node_modules/
+
+#replay files
+*.StormReplay
+
+#ncrunch
+*ncrunch*
+*crunch*.local.xml
+
+# visual studio database projects
+*.dbmdl
+
+#Test files
+*.testsettings
+
+#MS Access Lock File
+*.ldb
+.vs/
+
+.idea/
+[Pp]ublish/
+HOTSLogsWeb.Core/wwwroot/css/*.css 
+HotsAdminConsole.Test/connStrings.config
+Heroes.WebApplication/secret.config
+PremiumUpdater/connstring.txt
+HotsAdminConsole/secret.config 
+publish-webhook/hookurl.txt 
+HotsAdminConsole.Test/secret.config 
+PremiumUpdater/secret.config 
+node_modules/
+XNetCore/TalentsCli/appsettings.json
+.angular/
+HotsLogsApi/connStrings.config
+HelperCore/connStrings.config
+HotsLogsApi/appsettings.json
+HotsLogsApi.BL.Test/connStrings.config
+Angular/projects/elesapp/dist/
+PremiumUpdater/appsettings.json
+HotsAdminConsole/appsettings.json
+HOTSLogsUploader.Core/DeployScripts/HotsLogsUploaderSetup.exe
+HOTSLogsUploader.Core/DeployScripts/files2.tgz

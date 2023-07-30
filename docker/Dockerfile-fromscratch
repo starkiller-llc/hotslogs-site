@@ -1,0 +1,20 @@
+FROM mysql:8.0.27
+
+ENV MYSQL_ROOT_PASSWORD yourpassword
+
+COPY . .
+COPY mysql.hotslogs.cnf /etc/mysql/conf.d
+
+RUN mkdir /hotslogs
+
+RUN mysqld --initialize-insecure ; \
+    sh -c "(/usr/local/bin/docker-entrypoint.sh mysqld &) 2>&1 | sed '/mysqld: ready for connections/q'" ; \
+    echo Creating 'root'@'%' user ; \
+    mysql -u root mysql -e "CREATE USER 'root'@'%' IDENTIFIED BY 'yourpassword';" ; \
+    echo Granting all to 'root'@'%' ; \
+    mysql -u root mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';" ; \
+    /usr/bin/mysqladmin -u root shutdown
+
+ENTRYPOINT [ "docker-entrypoint.sh" ]
+
+CMD [ "mysqld" ]

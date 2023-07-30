@@ -1,0 +1,14 @@
+<div class="tournament-card">
+    <h3>{{tournament.tournamentName}}</h3>
+    <h4>{{tournament.tournamentDescription.length > 100 ? tournament.tournamentDescription.substring(0, 100)+'...' : tournament.tournamentDescription}}</h4>
+    <p>
+        <span *ngIf="has_started; else notStartedBlock">Tournament started!</span>
+        <ng-template #notStartedBlock><span class="bold">Registration Deadline:</span>{{registration_deadline}}</ng-template>
+    </p>
+    <p *ngIf="tournament.maxNumTeams > 0">
+        <span class="bold">Number of Teams:</span> {{ tournament.numTeams }}<span *ngIf="!has_started"> / {{ tournament.maxNumTeams }}</span>
+    </p>
+    <p *ngIf="!(tournament.maxNumTeams > 0)"><span class="bold">Number of Teams:</span> {{ tournament.numTeams }}</p>
+    <p *ngIf="tournament.entryFee > 0"><span class="bold">Entry Fee:</span> ${{ tournament.entryFee }}</p>
+    <p *ngIf="!(tournament.entryFee > 0)"><span class="bold">Entry Fee:</span> Free</p>
+</div>

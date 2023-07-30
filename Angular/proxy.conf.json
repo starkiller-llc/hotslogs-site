@@ -1,0 +1,38 @@
+{
+  "/Images": {
+    "target": "https://localhost:44321",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/images": {
+    "target": "https://localhost:44373",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/Root/Images": {
+    "target": "https://localhost:44373",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/api": {
+    "target": "https://localhost:44321",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "/profileimage": {
+    "target": "https://localhost:44321/mig/Auth",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

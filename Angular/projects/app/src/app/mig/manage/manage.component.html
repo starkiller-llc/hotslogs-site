@@ -1,0 +1,158 @@
+<app-title>Manage Account</app-title>
+<ng-container *ngIf="data$ | async as data">
+
+  <h2 *ngIf="result.Main">Main Player: {{result.Main.Name}}#{{result.Main.BattleTag}}</h2>
+  <div *ngIf="result.Alts.length">
+    <h3>Confirmed Alts</h3>
+    <table>
+      <tr *ngFor="let alt of result.Alts">
+        <td>
+          <button class="btn btn-primary btn-sm" (click)="makeMain(alt)">Make Main</button>
+        </td>
+        <td>
+          <button class="btn btn-primary btn-sm" (click)="removeAlt(alt)">Remove Alt</button>
+        </td>
+        <td>
+          <span>
+            <a routerLink="/Player/Profile" [queryParams]="{PlayerID:alt.Id}">{{alt.Name}}#{{alt.BattleTag}}</a>
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <h2>Premium Account</h2>
+  <div *ngIf="user.isPremium">
+    <strong style="color: green;">Thank you for your support!</strong> Your Premium features are active until: <strong>
+      {{user.premiumExpiration | date:'mediumDate'}}</strong>
+    <br />
+    <ng-container *ngIf="result.SubscriptionId">
+      To cancel your subscription, click <a routerLink="/CancelSubscription"
+        [queryParams]="{subid:result.SubscriptionId}">here</a>.
+    </ng-container>
+    <ng-container *ngIf="!result.SubscriptionId && !showPaypal">
+      You have no active subscription. If you would like to renew it, please <button class="btn btn-primary"
+        (click)="showPaypal=true">click here.</button>
+    </ng-container>
+  </div>
+  <!-- Disable subscription -- Aviad 23-Nov-2022 -->
+  <!-- <div *ngIf="!user.isPremium || showPaypal">
+    <ul>
+      <li style="border-bottom: none;">No web advertisements throughout the site</li>
+      <li style="border-bottom: none;">Ability to view a Match History of games you played with specific players</li>
+      <li style="border-bottom: none;">Gold Star recognizing you on the Leaderboard, Player Search, Profile, and Match
+        History pages (Leaderboard is updated weekly)</li>
+    </ul>
+
+    <div class="panel panel-success" style="width: 500px; background-color: transparent; margin-bottom: 0;">
+      <div>Monthly Subscription - $2.95 / month</div>
+      <div id="paypal-button-container-3" [paypal]="result.PayPal.MonthlyPlan"></div>
+      <div>&nbsp;<br /></div>
+      <div>Yearly Subscription - $24.95 / year - 30% OFF!</div>
+      <div id="paypal-button-container2-3" [paypal]="result.PayPal.YearlyPlan"></div>
+    </div>
+  </div> -->
+
+  <h2>Authenticate using Battle.Net</h2>
+  <div id="divBattleNetVerified" *ngIf="user.isBnetAuthorized">
+    <p><strong>Status: </strong><strong style="color: green;">Verified</strong></p>
+    <button class="btn btn-border btn-ar btn-sm btn-primary" (click)="addAlt(result.Main.Region)">Add Alt Account</button>
+    <p>
+      If this button appears to do nothing,
+      <span class="advice" (click)="showAltNote=true"> we have some advice for you! </span>
+    </p>
+    <p id="altnote" *ngIf="showAltNote" style="margin: 0 50px;">
+      <strong>Note:</strong> Battle.Net might remember your last login (which was with your main account probably),
+      so if you want to re-log in to Battle.Net with your alt account, you must remove all battle.net cookies, or -
+      alternatively -
+      reopen this page in an in-private browsing window and register your alt from there
+      (Ctrl+Shift+N on Chrome, or Ctrl+Shift+P on FireFox will open an in-private browsing window).
+      <br />
+      Or you may log out from Battle.Net <a class="btn btn-sm btn-info" href="https://battle.net/login/logout">here</a>.
+    </p>
+    <div id="AccountRegion" *ngIf="result.Regions.length > 1">
+      <h2>Link to Different Region</h2>
+      <mat-form-field>
+        <mat-select #slctRegion panelClass="aviad-select">
+          <mat-option [value]="1">US Region</mat-option>
+          <mat-option [value]="2">EU Region</mat-option>
+          <mat-option [value]="3">KR Region</mat-option>
+          <mat-option [value]="5">CN Region</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <h2>Account Privacy</h2>
+    <mat-checkbox #cbx (change)="changeOptOut(cbx.checked)" [checked]="user.isOptOut">Opt Out of Public Listings
+      (Profile, Player Search, Leaderboard, etc)</mat-checkbox>
+  </div>
+  <div id="divBattleNetUnverified" *ngIf="!user.isBnetAuthorized">
+    <p>
+      Some features on this site, such as sharing replays, requires that you first verify you are the owner of this
+      Battle.Net account.
+    </p>
+    <p>
+      To verify, click the button below, and you will be redirected to a Battle.Net login page, which gives HOTS Logs
+      permission to view and verify your Battle.Net Account ID and BattleTag
+    </p>
+    <p>
+      As you are logging on the Battle.Net site, your Battle.Net password is never shared with HOTS Logs.
+    </p>
+    <button class="btn btn-border btn-ar btn-sm btn-primary" (click)="showVerify=true">Verify your Battle.Net
+      Account</button>
+    <div *ngIf="showVerify">
+      <mat-form-field appearance="outline" hintLabel="Battle Tag">
+        <input #btag matInput placeholder="Name#123"
+          value="{{result.Main?.Name || 'Name'}}#{{result.Main?.BattleTag || 123}}">
+      </mat-form-field>
+      &nbsp;
+      <mat-form-field hintLabel="Region">
+        <mat-select #rgn panelClass="aviad-select" [value]="result.Main?.Region || 1">
+          <mat-option [value]="1">US Region</mat-option>
+          <mat-option [value]="2">EU Region</mat-option>
+          <mat-option [value]="3">KR Region</mat-option>
+          <mat-option [value]="5">CN Region</mat-option>
+        </mat-select>
+      </mat-form-field>
+      &nbsp;
+      <button type="submit" class="btn btn-primary" style="vertical-align: initial;"
+        (click)="verifyBnet(btag.value, rgn.value)">Submit</button>
+    </div>
+  </div>
+
+  <h2>User Preferences</h2>
+  <span>Default Game Mode: </span>
+  <mat-form-field>
+    <mat-select #slctGameMode panelClass="aviad-select" [value]="user.defaultGameMode"
+      (valueChange)="changeGameMode(slctGameMode.value)">
+      <mat-option [value]="8">Storm League</mat-option>
+      <mat-option [value]="6">Unranked Draft</mat-option>
+      <mat-option [value]="3">Quick Match</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br />
+
+  <h2 localize="ManageAccountChangePasswordMessage"></h2>
+  <app-change-password [user]="user"></app-change-password>
+
+  <div id="divProfileSignatureImage" runat="server" *ngIf="result.Main">
+    <h2>Profile Signature Image</h2>
+    <div>
+      <p>Here is an automatically generated image showing a summary of your Profile, feel free to share this wherever
+        you want!</p>
+      <p>If you share this on the web, use the HTML code shown below whenever possible, as this will link the image to
+        your Profile, as well as make sure the image continues to update as you upload new games.</p>
+      <img id="ImgPlayerProfile" runat="server" width="563" height="125" style="margin: 10px;"
+        alt="HOTS Logs Player Profile" [src]="profileImageUrl" />
+      <br />
+      <div style="white-space: nowrap;">
+        <span class="glyphicon glyphicon-link"></span>
+        &lt;a href="https://hotslogs.com/profileimage/{{result.Main.Id}}"&gt;&lt;img alt="HOTS Logs
+        Player Profile" src="https://hotslogs.com/profileimage/{{result.Main.Id}}" width="563"
+        height="125" /&gt;&lt;/a&gt;
+        <!-- <asp:Label ID="LabelImgPlayerProfileLink" runat="server" Width="100%"></asp:Label> -->
+      </div>
+    </div>
+    <br />
+  </div>
+</ng-container>

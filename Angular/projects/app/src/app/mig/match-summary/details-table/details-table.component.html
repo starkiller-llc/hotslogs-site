@@ -1,0 +1,81 @@
+<div class="aspGrid RadGrid RadGrid_Black">
+  <table class="MatchSummaryControl">
+    <thead>
+      <tr>
+        <th class="rgHeader"></th>
+        <th class="rgHeader">Player</th>
+        <th class="rgHeader">Hero</th>
+        <th class="rgHeader">Lvl</th>
+        <th class="rgHeader center">1</th>
+        <th class="rgHeader center">4</th>
+        <th class="rgHeader center">7</th>
+        <th class="rgHeader center">10</th>
+        <th class="rgHeader center">13</th>
+        <th class="rgHeader center">16</th>
+        <th class="rgHeader center">20</th>
+        <th class="rgHeader">MMR</th>
+        <th class="rgHeader">MMR Δ</th>
+        <th class="rgHeader">Match History</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let d of stats">
+        <tr class="rgGroupHeader" *ngIf="d.HeaderStart">
+          <td colspan="14" class="header">{{d.HeaderStart}}</td>
+        </tr>
+        <tr class="rgRow" [class.talent-tier-header]="d.HeaderStart">
+          <td>
+            <app-award-sprite *ngFor="let aw of d.MatchAwards2" [award]="aw.Code" [tooltip]="'Award: '+aw.Text">
+            </app-award-sprite>
+          </td>
+          <td class="nametag" [class.winner]="d.Team">
+            <a routerLink="/Player/Profile" [queryParams]="{PlayerID:d.PlayerID}" title="Reputation: {{d.Reputation}}">{{d.PlayerName}}</a>
+            <i *ngIf="d.ShowVoteIcons" class="vote vote-down fa fa-thumbs-down" [class.active]="d.VoteDown"
+              aria-hidden="true" (click)="voteDown.emit([d.PlayerID,!d.VoteDown])"></i>
+            <i *ngIf="d.ShowVoteIcons" class="vote vote-up fa fa-thumbs-up" [class.active]="d.VoteUp" aria-hidden="true"
+              (click)="voteUp.emit([d.PlayerID,!d.VoteUp])"></i>
+          </td>
+          <td><a routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:d.CharacterURL}">{{d.Character}}</a></td>
+          <td><span *ngIf="d.CharacterLevel">{{d.CharacterLevel}}</span></td>
+          <td>
+            <app-talent-sprite [hero]="d.CharacterURL" [talent]="d.TalentName01" [tooltip]="d.TalentNameDescription01">
+            </app-talent-sprite>
+          </td>
+          <td>
+            <app-talent-sprite [hero]="d.CharacterURL" [talent]="d.TalentName04" [tooltip]="d.TalentNameDescription04">
+            </app-talent-sprite>
+          </td>
+          <td>
+            <app-talent-sprite [hero]="d.CharacterURL" [talent]="d.TalentName07" [tooltip]="d.TalentNameDescription07">
+            </app-talent-sprite>
+          </td>
+          <td>
+            <app-talent-sprite [hero]="d.CharacterURL" [talent]="d.TalentName10" [tooltip]="d.TalentNameDescription10">
+            </app-talent-sprite>
+          </td>
+          <td>
+            <app-talent-sprite [hero]="d.CharacterURL" [talent]="d.TalentName13" [tooltip]="d.TalentNameDescription13">
+            </app-talent-sprite>
+          </td>
+          <td>
+            <app-talent-sprite [hero]="d.CharacterURL" [talent]="d.TalentName16" [tooltip]="d.TalentNameDescription16">
+            </app-talent-sprite>
+          </td>
+          <td>
+            <app-talent-sprite [hero]="d.CharacterURL" [talent]="d.TalentName20" [tooltip]="d.TalentNameDescription20">
+            </app-talent-sprite>
+          </td>
+          <td>
+            {{d.MMRBefore|number:'0.0-0'}}
+          </td>
+          <td>
+            <span class="grn" [class.neg]="d.MMRChange<0">{{d.MMRChange|number:'0.0-0'}}</span>
+          </td>
+          <td>
+            <a routerLink="/Player/MatchHistory" [queryParams]="{PlayerID:d.PlayerID}">View Match History</a>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

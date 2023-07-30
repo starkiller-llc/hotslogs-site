@@ -1,0 +1,1 @@
+select p.Name, count(*) as Count from Player p join ReplayCharacter rc on rc.PlayerID = p.PlayerID where p.BattleNetRegionId = 1 group by p.PlayerID order by count(*) desc

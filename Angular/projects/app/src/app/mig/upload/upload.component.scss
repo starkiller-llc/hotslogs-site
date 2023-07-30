@@ -1,0 +1,31 @@
+.my-drop-zone {
+  border: dotted 3px lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  .inner {
+    text-align: center;
+    font-size: xx-large;
+  }
+}
+.nv-file-over {
+  border: dotted 3px red;
+} /* Default class applied to drop zones on over */
+.another-file-over-class {
+  border: dotted 3px green;
+}
+.well {
+  background-color: black;
+}
+.queue-progress.sticky {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  max-width: 80%;
+  width: 800px;
+  margin: auto;
+  background: #2b1c56;
+  padding: 10px 30px;
+}

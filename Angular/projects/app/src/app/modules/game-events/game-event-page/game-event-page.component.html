@@ -1,0 +1,103 @@
+<div *ngIf="gameEvent$ | async as ge">
+  <h1>{{ge.gameEvent.name}}</h1>
+  <ng-container *ngIf="!selectedTeamGames">
+    <h2>Participating Teams</h2>
+    <div class="teams">
+      <mat-card appearance="outlined" *ngFor="let t of ge.teams">
+        <mat-card-title>{{t.name}}</mat-card-title>
+        <mat-card-content>
+          <div *ngFor="let p of t.players">
+            <a routerLink="/Player/Profile" [queryParams]="{PlayerID:p.playerId}">
+              {{p.name || p.battleTag}}
+            </a>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="selectTeam(ge, t)">Show Matches</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </ng-container>
+  <div *ngIf="selectedTeamGames">
+    <div class="team-summary">
+      <h2>{{selectedTeam.name}}</h2>
+      <div>
+        <img [src]="selectedTeam.logoUrl">
+      </div>
+    </div>
+    <div class="show-matches-spoiler" *ngIf="!showSpoiler">
+      <button mat-button (click)="doShowSpoiler()">Show Matches (Spoiler)</button>
+    </div>
+    <ng-container *ngIf="showSpoiler">
+      <h2 #matches>Matches for {{selectedTeam.name}}</h2>
+      <div>
+        <mat-form-field [style.width.%]="100">
+          <input #srch matInput placeholder="Filter..." (input)="selectedTeamGames.filter=srch.value">
+        </mat-form-field>
+      </div>
+      <table #tbl="matSort" mat-table [dataSource]="selectedTeamGames" matSort>
+
+        <!-- Column Map -->
+        <ng-container matColumnDef="map">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Map Name</span> </th>
+          <td mat-cell *matCellDef="let r"> {{r.map}} </td>
+        </ng-container>
+        <!-- Column Date -->
+        <ng-container matColumnDef="dateTime">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Date</span> </th>
+          <td mat-cell *matCellDef="let r"> {{r.dateTime | date:'dd-MMM-yy HH:mm'}} </td>
+        </ng-container>
+        <!-- Column Winner -->
+        <ng-container matColumnDef="winner">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Winner</span> </th>
+          <td mat-cell *matCellDef="let r"> {{teamsMap[r.winningTeamId].name}} </td>
+        </ng-container>
+        <!-- Column Loser -->
+        <ng-container matColumnDef="loser">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Loser</span> </th>
+          <td mat-cell *matCellDef="let r"> {{teamsMap[r.losingTeamId].name}} </td>
+        </ng-container>
+        <!-- Column Winner -->
+        <ng-container matColumnDef="vs">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Versus</span> </th>
+          <td mat-cell *matCellDef="let r" class="result" [class.win]="gamesMap[r.replayId].win">
+            {{gamesMap[r.replayId].vs}} </td>
+        </ng-container>
+        <!-- Column Operations -->
+        <ng-container matColumnDef="ops">
+          <th mat-header-cell *matHeaderCellDef localize> Open </th>
+          <td mat-cell *matCellDef="let r">
+            <a mat-icon-button routerLink="/Player/MatchSummaryContainer" [queryParams]="{ReplayID:r.replayId}">
+              <mat-icon>input</mat-icon>
+            </a>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </ng-container>
+  </div>
+  <div class="unassigned" *ngIf="unassignedGames?.length">
+    <h2>Games with Unassigned Teams</h2>
+    <div *ngFor="let g of unassignedGames">
+      <h2>Match Details</h2>
+      <div>
+        Map: {{g.map}}<br />
+        Date: {{g.dateTime | date:'dd-MMM-yyyy HH:mm'}}<br />
+        <a routerLink="/Player/MatchSummaryContainer" [queryParams]="{ReplayID:g.replayId}" localize>Match Summary</a>
+      </div>
+      <div>
+        Teams:
+        <app-team-assign [isAdmin]="isAdmin$ | async" [teamsMap]="teamsMap" [teamId]="g.winningTeamId"
+          [replayId]="g.replayId" (assignTeam)="assignTeam(g.replayId, true, $event)"></app-team-assign>
+        vs.
+        <app-team-assign [isAdmin]="isAdmin$ | async" [teamsMap]="teamsMap" [teamId]="g.losingTeamId"
+          [replayId]="g.replayId" (assignTeam)="assignTeam(g.replayId, false, $event)"></app-team-assign>
+      </div>
+    </div>
+  </div>
+  <datalist id="teams-list">
+    <option *ngFor="let t of ge.teams">{{t.name}}</option>
+  </datalist>
+</div>

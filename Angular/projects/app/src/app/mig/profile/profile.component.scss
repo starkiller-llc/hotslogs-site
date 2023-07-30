@@ -1,0 +1,22 @@
+.flex {
+  display: flex;
+  column-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  cursor: pointer;
+}
+
+.DivProfilePlayerRoleStatistic {
+  overflow: hidden;
+}
+
+.DivProfilePlayerRoleStatistic table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.DivProfilePlayerRoleStatistic td {
+  text-align: center;
+}

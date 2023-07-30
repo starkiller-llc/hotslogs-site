@@ -1,0 +1,28 @@
+.tournament-bracket {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box !important;
+}
+.tournament-bracket > .ng-star-inserted:not(:first-child) .match:before {
+    display: flex;
+    flex-grow: 1;
+    left: 0;
+    top: 50%;
+    position: absolute;
+    width: 25px;
+    border-top: 2px solid #daa520;
+    content: '';
+    box-sizing: border-box !important;
+    
+}
+.tournament-bracket > .ng-star-inserted:not(:last-child) .match:after {
+    display: flex;
+    flex-grow: 1;
+    right: 0;
+    position: absolute;
+    width: 25px;
+    height: 50%;
+    border-right: 2px solid #daa520;
+    content: '';
+    box-sizing: border-box !important;
+}

@@ -1,0 +1,237 @@
+/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
+$my-primary: mat.define-palette(mat.$indigo-palette, 500);
+$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$my-level: mat.define-typography-level(24px, 24px, 700);
+$normal-level: mat.define-typography-level(13px, 13px, 400);
+
+$my-typography: mat.define-typography-config(
+  $font-family: "Lato",
+  // $display-4: $my-level,
+  // $display-3: $my-level,
+  // $display-2: $my-level,
+  // $display-1: $my-level,
+  // $headline: $my-level,
+  // $title: $my-level,
+  // $subheading-2: $my-level,
+  // $subheading-1: $my-level,
+  $body-1: $normal-level,
+  $body-2: $normal-level,
+  // $caption: $my-level,
+  $button: $normal-level,
+  // $input: $my-level,,,,
+);
+
+// TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.
+//  The following line adds:
+//    1. Default typography styles for all components
+//    2. Styles for typography hierarchy classes (e.g. .mat-headline-1)
+//  If you specify typography styles for the components you use elsewhere, you should delete this line.
+//  If you don't need the default component typographies but still want the hierarchy styles,
+//  you can delete this line and instead use:
+//    `@include mat.legacy-typography-hierarchy($my-typography);`
+// @include mat.all-component-typographies($my-typography);
+@include mat.core();
+
+// $my-light-theme: mat.define-light-theme(
+//   (
+//     color: (
+//       primary: $my-primary,
+//       accent: $my-accent,
+//       surface: red,
+//       on-surface: green,
+//     ),
+//     typography: $my-typography,
+//   )
+// );
+
+$my-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+    ),
+    typography: $my-typography,
+    density: -1,
+  )
+);
+
+@include mat.all-component-themes($my-dark-theme);
+
+// @include mat.all-component-typographies($my-dark-theme);
+body {
+  font-size: 16px;
+  overflow-y: scroll;
+}
+
+body.theme-dark {
+  background-color: black;
+  color: white;
+  line-height: 1.75em;
+
+  // @include mat.all-component-colors($my-dark-theme);
+}
+
+body.theme-light {
+  background-color: initial;
+  color: initial;
+  line-height: 1.75em;
+
+  // @include mat.all-component-colors($my-light-theme);
+}
+
+a.plain,
+a.plain:hover,
+a.plain:visited,
+a.plain:active,
+a.plain:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+@import "./assets/css/style-blue";
+@import "./assets/css/dark-theme";
+@import "./assets/css/hotslogs";
+@import "./assets/css/reputation";
+@import "./assets/css/slick";
+@import "./assets/css/portraits";
+@import "./assets/css/talents";
+@import "./assets/css/maps";
+@import "./assets/css/roles";
+@import "./assets/css/awards";
+
+// .mat-toolbar-row,
+// .mat-toolbar-single-row {
+//   height: 61px;
+// }
+
+.mat-mdc-menu-trigger:not(.mat-mdc-icon-button) {
+  /* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
+  .mdc-button__label {
+    padding-right: 23px;
+    font-size: 16px;
+    padding-top: 8px;
+    font-weight: normal;
+    &:after {
+      top: 9px;
+      right: 5px;
+      content: "\f107";
+      font-size: 11px;
+      position: absolute;
+      font-weight: normal;
+      display: inline-block;
+      font-family: FontAwesome;
+    }
+  }
+}
+
+.sortable {
+  cursor: pointer;
+}
+
+table[mat-table] {
+  width: 100%;
+}
+
+.aspGrid {
+  .mat-mdc-table {
+    font-family: Ubuntu, Helvetica, sans-serif !important;
+  }
+
+  .mat-mdc-header-cell,
+  .mat-mdc-cell {
+    font-size: 14px;
+  }
+
+  td.mat-mdc-cell,
+  td.mat-cell:first-of-type {
+    padding: 3px 5px;
+  }
+
+  th.mat-mdc-header-cell {
+    padding: 8px 5px;
+  }
+
+  tr.mat-mdc-header-row {
+    height: initial;
+  }
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.portrait {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 2px solid #593a99;
+}
+
+.talent {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+}
+
+.map {
+  width: 75px;
+  height: 39px;
+  border-radius: 3px;
+  border: none;
+}
+
+.role {
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.award {
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.mat-expansion-panel-content {
+  line-height: unset;
+}
+
+app-match-summary-widget {
+  display: block;
+}
+
+.mat-mdc-paginator {
+  background-color: transparent;
+  border: 2px solid #593a99;
+  border-top: none;
+}
+
+.search-menu {
+  max-width: unset !important;
+}
+
+.divLeagueImage {
+  width: 23px;
+  margin-left: 5px;
+}
+
+* {
+  overflow-anchor: none;
+}
+
+/* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 0.8em 0 0.5em 0;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: unset;
+}
+
+.mat-mdc-form-field-focus-overlay {
+  background-color: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,29 @@
+<app-title>{{title.getTitle()}}</app-title>
+<app-player-nav-menu *ngIf="playerId" [playerId]="playerId"></app-player-nav-menu>
+<app-team-logos *ngIf="result?.Teams" [teams]="result.Teams"></app-team-logos>
+<div class="flex">
+  <mat-form-field>
+    <mat-select #slct panelClass="aviad-select" value="table" [(value)]="type" (selectionChange)="sel()">
+      <mat-option [value]="0">Standard Awards</mat-option>
+      <mat-option [value]="1">Map Objective Awards</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <lib-dropdown *ngIf="gameModeEx!=='0'" [items]="leagueFilter" caption="Leagues" [(value)]="league"
+    (selectionchanged)="sel()">
+  </lib-dropdown>
+  <lib-dropdown #g [items]="gameModeExFilter" caption="Game Mode" [(value)]="gameModeEx" (selectionchanged)="sel()">
+  </lib-dropdown>
+  <lib-dropdown *ngIf="g.value==='0'" [items]="tournamentFilter" caption="Tournament" [(value)]="tournament"
+    (selectionchanged)="sel()"></lib-dropdown>
+</div>
+<p *ngIf="result?.MostRecentDaysVisible">Using the most recent 15 days of data.</p>
+<table>
+  <tr>
+    <td>
+      <p>{{result?.LastUpdatedText}}</p>
+    </td>
+  </tr>
+</table>
+<ng-container *ngIf="data$ | async as data">
+  <app-awards-table [standard]="type===0" [stats]="result.Stats"></app-awards-table>
+</ng-container>

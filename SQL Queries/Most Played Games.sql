@@ -1,0 +1,1 @@
+select p.PlayerID, p.Name, count(*) from ReplayCharacter rc join Player p on p.PlayerID = rc.PlayerID group by p.PlayerID, p.Name order by count(*) desc limit 1000

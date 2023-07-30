@@ -1,0 +1,1 @@
+﻿server=realdb.yourcompany.com;port=3306;user id=youruserid;password=yourpassword;persistsecurityinfo=True;database=HeroesData

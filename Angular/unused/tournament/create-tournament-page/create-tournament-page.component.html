@@ -1,0 +1,58 @@
+<div class="create-tournament-page">
+    <h1>Create a Tournament</h1>
+    <div *ngIf="submitSuccess; else formBlock">
+      <h2>You have successfully created a tournament!</h2>
+  </div>
+    <ng-template #formBlock>
+      <form (ngSubmit)="onSubmit()" [formGroup]="tournamentForm">
+          <div class="form-group col-md-6">
+            <div class="form-group">
+                <label for="tournament_name">Tournament Name</label>
+                <input type="text" class="form-control" id="tournament_name" formControlName="tournament_name" />
+                <span class="text-danger"
+                    *ngIf="(tournamentFormControl.tournament_name.touched || submitted) && tournamentFormControl.tournament_name.errors?.required">
+                    Enter a valid tournament name
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="tournament_description">Tournament Description</label>
+                <input type="text" class="form-control" id="tournament_description" formControlName="tournament_description" />
+                <span class="text-danger"
+                    *ngIf="(tournamentFormControl.tournament_description.touched || submitted) && tournamentFormControl.tournament_description.errors?.required">
+                    Enter a valid tournament description
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="registration_deadline">Registration Deadline</label>
+                <input type="text" class="form-control" id="registration_deadline" formControlName="registration_deadline" />
+                <span class="text-danger"
+                    *ngIf="(tournamentFormControl.registration_deadline.touched || submitted) && tournamentFormControl.registration_deadline.errors?.required">
+                    Enter a valid tournament description
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="max_num_teams">Max Number of Teams</label>
+                <input type="text" class="form-control" id="max_num_teams" formControlName="max_num_teams" />
+                <span class="text-danger"
+                    *ngIf="(tournamentFormControl.max_num_teams.touched || submitted) && tournamentFormControl.max_num_teams.errors?.required">
+                    Enter a valid number of teams
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="entry_fee">Entry Fee</label>
+                <input type="text" class="form-control" id="entry_fee" formControlName="entry_fee" />
+                <span class="text-danger"
+                    *ngIf="(tournamentFormControl.entry_fee.touched || submitted) && tournamentFormControl.entry_fee.errors?.required">
+                    Enter a valid entry fee
+                </span>
+            </div>
+              <button *ngIf="tournamentForm.valid" type="submit" class="btn btn-success" >Submit</button>
+              <button *ngIf="!tournamentForm.valid" disabled type="submit" class="btn btn-success" >Submit</button>
+              <div class="text-danger padding-top-10 padding-bottom-50">
+                  {{submitError}}
+              </div>
+          </div>
+      </form>
+    </ng-template>
+  </div>
+  

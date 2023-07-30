@@ -1,0 +1,11 @@
+<ng-container class="container">
+    <div class="container">
+        <div class="row" >
+            <div class="col col-lg-4" *ngFor="let t of tournaments">
+                <a class="link" routerLink="/tournament/{{t.tournamentId}}">
+                    <app-tournament-card [tournament]="t" ></app-tournament-card>
+                </a>
+            </div>
+        </div>
+    </div>
+</ng-container>

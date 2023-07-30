@@ -1,0 +1,25 @@
+.about table {
+  border: 2px solid black;
+  margin: 3px;
+}
+
+.about table th,
+.about table td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.about table th {
+  text-align: center;
+  border: 1px solid black;
+  color: black;
+}
+
+.about table td {
+  border: 1px solid gray;
+}
+
+#tableTeamLevelExperienceRequired tr:first-child td,
+#tableTeamLevelExperienceRequired tr td:first-child {
+  font-weight: bold;
+}

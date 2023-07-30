@@ -1,0 +1,227 @@
+﻿{
+   "ContextClassName": "HeroesdataContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": "Data",
+   "OutputPath": "Models",
+   "ProjectRootNamespace": "Heroes.DataAccessLayer",
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "HasPrimaryKey": true,
+         "Name": "amazonreplacementbucket"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "blogposts"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "buildnumbers"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "dataupdate"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "event"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "fingerprint_date"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "groupfinderlisting"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "heroiconinformation"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "herotalentinformation"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "hotsapireplays"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "hotsapitalents"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "leaderboardoptout"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "leaderboardranking"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "league"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "localizationalias"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "logerror"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "missingtalents"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "mmrrecalc"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "mountinformation"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "net48_users"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "player"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "playeraggregate"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "playeralt"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "playerbanned"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "playerbannedleaderboard"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "playerdisablenamechange"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "playermmrmilestonev3"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "playermmrreset"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "premiumpayment"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replay"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replay_dups"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replay_dups2"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replay_mirror"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replay_notalents"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replay_playertalentbuilds"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replaycharacter"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replaycharacterdraftorder"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replaycharactermatchaward"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replaycharacterscoreresult"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replaycharactersilenced"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replaycharactertalent"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replaycharacterupgradeeventreplaylengthpercent"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replayperiodicxpbreakdown"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replayshare"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replayteamheroban"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "replayteamobjective"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "reputation"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "talentimagemapping"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "unknowndata"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "votes"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "zamuser"
+      }
+   ],
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseNodaTime": false,
+   "UseSpatial": false,
+   "UseStoredProcedures": false
+}

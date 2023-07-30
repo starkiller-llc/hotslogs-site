@@ -1,0 +1,25 @@
+.flex {
+  display: flex;
+  column-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  cursor: pointer;
+}
+
+.team-members {
+  background: transparent;
+  width: 70%;
+}
+
+.custom-team {
+  margin-bottom: 7px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.custom-team textarea {
+  flex-basis: 100%;
+}

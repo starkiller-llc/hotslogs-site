@@ -1,0 +1,87 @@
+<div class="aspGrid RadGrid RadGrid_Black">
+  <table mat-table matSort [migSort]="stats">
+
+    <ng-container matColumnDef="GamesPlayed">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Games Played</span> </th>
+      <td mat-cell *matCellDef="let d">
+        <div [innerHTML]="d.GamesPlayed | safeHtml"></div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="WinPercent">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Win Percent</span> </th>
+      <td mat-cell *matCellDef="let d">
+        <div [innerHTML]="d.WinPercent | safeHtml"></div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="t1">
+      <th mat-header-cell *matHeaderCellDef class="center"> 1 </th>
+      <td mat-cell *matCellDef="let d">
+        <app-talent-sprite *ngIf="d.TalentNameDescription01 && d.TalentNameDescription01!=='Player\'s Choice'"
+          [hero]="hero" [talent]="d.TalentName01" [tooltip]="d.TalentNameDescription01"></app-talent-sprite>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="t4">
+      <th mat-header-cell *matHeaderCellDef class="center"> 4 </th>
+      <td mat-cell *matCellDef="let d">
+        <app-talent-sprite *ngIf="d.TalentNameDescription04 && d.TalentNameDescription04!=='Player\'s Choice'"
+          [hero]="hero" [talent]="d.TalentName04" [tooltip]="d.TalentNameDescription04"></app-talent-sprite>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="t7">
+      <th mat-header-cell *matHeaderCellDef class="center"> 7 </th>
+      <td mat-cell *matCellDef="let d">
+        <app-talent-sprite *ngIf="d.TalentNameDescription07 && d.TalentNameDescription07!=='Player\'s Choice'"
+          [hero]="hero" [talent]="d.TalentName07" [tooltip]="d.TalentNameDescription07"></app-talent-sprite>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="t10">
+      <th mat-header-cell *matHeaderCellDef class="center"> 10 </th>
+      <td mat-cell *matCellDef="let d">
+        <app-talent-sprite *ngIf="d.TalentNameDescription10 && d.TalentNameDescription10!=='Player\'s Choice'"
+          [hero]="hero" [talent]="d.TalentName10" [tooltip]="d.TalentNameDescription10"></app-talent-sprite>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="t13">
+      <th mat-header-cell *matHeaderCellDef class="center"> 13 </th>
+      <td mat-cell *matCellDef="let d">
+        <app-talent-sprite *ngIf="d.TalentNameDescription13 && d.TalentNameDescription13!=='Player\'s Choice'"
+          [hero]="hero" [talent]="d.TalentName13" [tooltip]="d.TalentNameDescription13"></app-talent-sprite>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="t16">
+      <th mat-header-cell *matHeaderCellDef class="center"> 16 </th>
+      <td mat-cell *matCellDef="let d">
+        <app-talent-sprite *ngIf="d.TalentNameDescription16 && d.TalentNameDescription16!=='Player\'s Choice'"
+          [hero]="hero" [talent]="d.TalentName16" [tooltip]="d.TalentNameDescription16"></app-talent-sprite>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="t20">
+      <th mat-header-cell *matHeaderCellDef class="center"> 20 </th>
+      <td mat-cell *matCellDef="let d">
+        <app-talent-sprite *ngIf="d.TalentNameDescription20 && d.TalentNameDescription20!=='Player\'s Choice'"
+          [hero]="hero" [talent]="d.TalentName20" [tooltip]="d.TalentNameDescription20"></app-talent-sprite>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="copyBuild">
+      <th mat-header-cell *matHeaderCellDef localize> Copy Build </th>
+      <td mat-cell *matCellDef="let d">
+        <lib-talent-build hero="{{hero}}" [build]="d.Export"></lib-talent-build>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row
+      *matHeaderRowDef="['GamesPlayed','WinPercent','t1','t4','t7','t10','t13','t16','t20','copyBuild']"></tr>
+    <tr mat-row
+      *matRowDef="let row; columns: ['GamesPlayed','WinPercent','t1','t4','t7','t10','t13','t16','t20','copyBuild'];">
+    </tr>
+  </table>
+</div>

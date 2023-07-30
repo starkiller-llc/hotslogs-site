@@ -1,0 +1,4 @@
+<ng-container *ifView="'large'">
+  <button type="button" *ngFor="let b of roles" class="HeroRoleInfoLink btn"
+    (click)="roleClick.emit(b.Key)">{{b.Key | localize:'GenericRole-' }}</button>
+</ng-container>

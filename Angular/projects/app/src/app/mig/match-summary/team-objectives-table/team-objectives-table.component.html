@@ -1,0 +1,43 @@
+<div class="aspGrid RadGrid RadGrid_Black">
+  <table #tbl="migSort" mat-table matSort [migSort]="stats">
+    <ng-container matColumnDef="TimeSpan">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> <span localize>Time</span> </th>
+      <td mat-cell *matCellDef="let d">
+        {{d.TimeSpan|date:'H:mm:ss'}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Team">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> </th>
+      <td mat-cell *matCellDef="let d">
+        {{d.Team ? 'Winning Team' : 'Losing Team'}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="heroImg">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> </th>
+      <td mat-cell *matCellDef="let d">
+        <app-portrait-sprite *ngIf="d.CharacterURL" [hero]="d.CharacterURL" [tooltip]="d.PlayerName">
+        </app-portrait-sprite>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="TeamObjectiveType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> </th>
+      <td mat-cell *matCellDef="let d">
+        {{d.TeamObjectiveType}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Value">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> </th>
+      <td mat-cell *matCellDef="let d">
+        {{d.Value}}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns">
+    </tr>
+    <tr mat-row class="rgRow" *matRowDef="let row; columns: columns;">
+  </table>
+</div>

@@ -1,0 +1,30 @@
+<app-title>Hero Leaderboard | HOTS Logs</app-title>
+<div class="flex">
+  <mat-form-field>
+    <mat-select #slct panelClass="aviad-select" value="table" [(value)]="region" (selectionChange)="sel()">
+      <mat-option [value]="1">US Region</mat-option>
+      <mat-option [value]="2">EU Region</mat-option>
+      <mat-option [value]="3">KR Region</mat-option>
+      <mat-option [value]="5">CN Region</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <lib-dropdown [items]="heroFilter" caption="Heroes" [(value)]="hero" (selectionchanged)="sel()">
+  </lib-dropdown>
+  <lib-dropdown [items]="seasonFilter" caption="Seasons" [(value)]="season" (selectionchanged)="sel()">
+  </lib-dropdown>
+  <mat-form-field>
+    <mat-select #slct panelClass="aviad-select" value="table" [(value)]="gameMode" (selectionChange)="sel()">
+      <mat-option value="8">Storm League</mat-option>
+      <mat-option value="6">Unranked Draft</mat-option>
+      <mat-option value="3">Quick Match</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<p>
+  Hero Leaderboards are a fun way of showing some of the best players for each Hero.<br />
+</p>
+<p>{{result?.LastUpdatedText}}</p>
+<ng-container *ngIf="data$ | async as data">
+  <app-hero-rankings-table [stats]="result.Stats" (filterChange)="filterChange($event)" (page)="pageChange($event)"
+    (sortChange)="sortChange($event)" [total]="result.Total"></app-hero-rankings-table>
+</ng-container>

@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutMessageLine1" xml:space="preserve">
+    <value> A nevem Ben Barrett, nappal szoftverfejlesztõ, éjjel lelkes gamer.</value>
+  </data>
+  <data name="AboutMessageLine2" xml:space="preserve">
+    <value>Ennek a projektnek az elsõdleges célja, hogy betöltse a játékon belüli profil szerepén, de mivel szerintem a HotS nagyon népszerû játék lesz, így szeretném a HOTS Logs-t tovább bõvíteni, hogy minél részletesebb elemzést tehessünk elérhetõvé a replayekrõl. Szeretném, ha ez az oldal motiválna benneteket, hogy jobbak legyetek és hogy tanuljatok mások játékstílusaiból és csapatösszeállításaiból.</value>
+  </data>
+  <data name="AboutMessageLine3" xml:space="preserve">
+    <value>Javaslatok, segítség:</value>
+  </data>
+  <data name="ChooseBattleNetIdErrorMessage1" xml:space="preserve">
+    <value>Sajnáljuk, de nem találjuk a HotS Battle.Net azonosító számodat. Az azonosítód így kell hogy kinézzen:  '##-Hero-#-######'</value>
+  </data>
+  <data name="ChooseBattleNetIdErrorMessage2" xml:space="preserve">
+    <value>Nem találtunk replayeket ezzel a Battle.Net azonosítóval. Kérlek kattints az alábbi linkre és erõsítsd meg a felhasználói fiókod.</value>
+  </data>
+  <data name="ChooseBattleNetIdMessageLine1" xml:space="preserve">
+    <value>Please enter your Heroes of the Storm BattleTag:</value>
+  </data>
+  <data name="ChooseBattleNetIdTextBox" xml:space="preserve">
+    <value>Üsd be a játékon belüli neved</value>
+  </data>
+  <data name="ChooseBattleNetIdTitle" xml:space="preserve">
+    <value>Válaszd ki a Battle.Net azonosítód</value>
+  </data>
+  <data name="DefaultHeader" xml:space="preserve">
+    <value>Üdvözlünk a HOTS Logs oldalon!</value>
+  </data>
+  <data name="DefaultIntroMessageLine1" xml:space="preserve">
+    <value>Ez az elsõ weboldal amely a Heroes of the Storm replay fájlok elemzésével foglalkozik.</value>
+  </data>
+  <data name="DefaultIntroMessageLine2" xml:space="preserve">
+    <value>Az oldal még meglehetõsen friss, de így is sok információval tud szolgálni számotokra és még többel fog tudni a jövõben.</value>
+  </data>
+  <data name="DefaultIntroMessageLine3Part1" xml:space="preserve">
+    <value>Kattints a fentebbi menüpontra a jelenleg elérhetõ információkért.</value>
+  </data>
+  <data name="DefaultIntroMessageLine3Part2" xml:space="preserve">
+    <value>A regisztráció ingyenes, tehát regisztrálj nyugodtan és kezdd kielemezni a replayeidet!</value>
+  </data>
+  <data name="DefaultIntroMessageTotalGames" xml:space="preserve">
+    <value>Mindenkinek köszönjük a részvételt! Eddig összesen {0} meccset töltöttetek fel!</value>
+  </data>
+  <data name="DefaultTitle" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
+  <data name="ErrorPageMessageLine1" xml:space="preserve">
+    <value>Úgy tûnik hiba lépett fel! Üzentünk egy adminnak aki majd utánajár.</value>
+  </data>
+  <data name="ErrorPageMessageLine2" xml:space="preserve">
+    <value>Kérjük, próbálkozz újra késõbb.</value>
+  </data>
+  <data name="ErrorPageTitle" xml:space="preserve">
+    <value>Hoppá!</value>
+  </data>
+  <data name="FAQMessageLine01" xml:space="preserve">
+    <value>Miért hiányoznak replayek a korábbi meccsem közül?</value>
+  </data>
+  <data name="FAQMessageLine02" xml:space="preserve">
+    <value>Van egy opció a Heroes of the Storm játékon belül, hogy elmentse az összes replayt.Sajnos ha errõl eddig nem tudtál, vagy csak nem rég alkalmaztad ezt az opciót, csak az azt követõ játékok lesznek elmentve.</value>
+  </data>
+  <data name="FAQMessageLine03" xml:space="preserve">
+    <value>A jó hír azonban az, hogy ha egy másik játékos már korábban feltöltötte azoknak a meccseknek a replay-ét amelyekben te is részt vettél, akkor azokat is hozzáadjuk a profilodhoz.</value>
+  </data>
+  <data name="FAQMessageLine04" xml:space="preserve">
+    <value>Mikor számolják ki az MMR-t? Mikor frissül a ranglista?</value>
+  </data>
+  <data name="FAQMessageLine05" xml:space="preserve">
+    <value>Az MMR folyamatosan újratervezésre kerül. Két különálló prioritás van itt: A lejátszástól számított {0} napon belül feltöltött visszajátszásokat általában néhány órán belül kiszámítják. Az újonnan feltöltött játékokat, amelyeket az előző két hónapban játszottak, általában pár héten belül számolják. Az újonnan feltöltött játékoknál, amelyeket több mint két hónappal ezelőtt játszottak, sajnos nem lesz kiszámítva az MMR. Ennek oka az, hogy jelenleg túlságosan igényes az összes korábbi játék újraszámítása. Ezt a rendszert úgy állították fel, hogy az MMR-t a lehető legfrissebb állapotban tartsa azon játékosok számára, akik legalább háromnaponként használják a HOTS Naplókat :)</value>
+  </data>
+  <data name="FAQMessageLine06" xml:space="preserve">
+    <value>Megtehetik-e egyes játékosok, hogy csak a gyõztes meccseiket töltik fel, hogy elõrébb juttassák magukat a ranglistán?</value>
+  </data>
+  <data name="FAQMessageLine07" xml:space="preserve">
+    <value>Igen és nem. Ha csak a gyõztes meccseket töltik fel, az MMRjük rendellenesen megnõ. De ennek ellenére a játékon belüli MMRjük nem nõ és továbbra is megfelelõ ellenfelek ellen fognak játszani.</value>
+  </data>
+  <data name="FAQMessageLine08" xml:space="preserve">
+    <value>Ugyanakkor a korábban említett 'jó hír' itt is érvényes, tehát ha valaki feltöltötte a játékos elvesztett meccsét is, akkor mindkét játékos profiljájoz hozzáadódik a meccs.</value>
+  </data>
+  <data name="FAQMessageLine09" xml:space="preserve">
+    <value>Átnéztem elég sok játékos profilját és szerencsére senkit sem találtam, akinek rendellenesen hosszú gyõzelmi sorozattal.</value>
+  </data>
+  <data name="FAQMessageLine10" xml:space="preserve">
+    <value>Miért kap néhány replayem 'Duplicate' jelölést?</value>
+  </data>
+  <data name="FAQMessageLine11" xml:space="preserve">
+    <value>Ez csak azt jelenti, hogy valaki a másik 9 játékos közül már elõtted feltöltötte annak a meccsnek a replay-ét. Ne aggódj, a meccs minden játékos profilján megjelenik majd, így a tiéden is.</value>
+  </data>
+  <data name="FAQTitle" xml:space="preserve">
+    <value>Gyakori Kérdések</value>
+  </data>
+  <data name="GenericAboutUs" xml:space="preserve">
+    <value>Rólunk</value>
+  </data>
+  <data name="GenericAllLeagues" xml:space="preserve">
+    <value>Minden liga</value>
+  </data>
+  <data name="GenericAverageLength" xml:space="preserve">
+    <value>Átlagos hosszúság</value>
+  </data>
+  <data name="GenericContactUs" xml:space="preserve">
+    <value>Kapcsolat</value>
+  </data>
+  <data name="GenericDataCurrentlyUnavailable" xml:space="preserve">
+    <value>Nem megjeleníthetõ adat</value>
+  </data>
+  <data name="GenericDateTime" xml:space="preserve">
+    <value>Dátum és idõ</value>
+  </data>
+  <data name="GenericEmailAddress" xml:space="preserve">
+    <value>Email cím</value>
+  </data>
+  <data name="GenericErrorConfirmPasswordDoesntMatch" xml:space="preserve">
+    <value>A két jelszó nem egyezik.</value>
+  </data>
+  <data name="GenericErrorConfirmPasswordRequired" xml:space="preserve">
+    <value>Töltsd ki a 'Jelszó megerõsítése' sort!</value>
+  </data>
+  <data name="GenericErrorEmailRequired" xml:space="preserve">
+    <value>Töltsd ki az 'Email cím' sort!</value>
+  </data>
+  <data name="GenericErrorPasswordRequired" xml:space="preserve">
+    <value>Töltsd ki a 'Jelszó' sort!</value>
+  </data>
+  <data name="GenericErrorUserNameRequired" xml:space="preserve">
+    <value>Töltsd ki a 'Felhasználónév' sort!</value>
+  </data>
+  <data name="GenericExcludingMirrorMatchupsAndTalentGatedHeroes" xml:space="preserve">
+    <value>Nem számítva a Mirror meccseket és a Talent Gated hõsöket</value>
+  </data>
+  <data name="GenericExcludingTalentGatedGamesAndAutoSelectGames" xml:space="preserve">
+    <value>Nem számítva a Talent Gated és az Auto Select meccseket</value>
+  </data>
+  <data name="GenericGameLength" xml:space="preserve">
+    <value>Meccs hossza</value>
+  </data>
+  <data name="GenericGamesPlayed" xml:space="preserve">
+    <value>Lejátszott meccsek</value>
+  </data>
+  <data name="GenericGamesPlayedAgainst" xml:space="preserve">
+    <value>Ellene lejátszott meccsek</value>
+  </data>
+  <data name="GenericGetPremium" xml:space="preserve">
+    <value>Get Premium</value>
+  </data>
+  <data name="GenericHero" xml:space="preserve">
+    <value>Hõs</value>
+  </data>
+  <data name="GenericHeroAbathur" xml:space="preserve">
+    <value>Abathur</value>
+  </data>
+  <data name="GenericHeroAnubarak" xml:space="preserve">
+    <value>Anub'arak</value>
+  </data>
+  <data name="GenericHeroArthas" xml:space="preserve">
+    <value>Arthas</value>
+  </data>
+  <data name="GenericHeroAutoSelect" xml:space="preserve">
+    <value>Auto Select</value>
+  </data>
+  <data name="GenericHeroAzmodan" xml:space="preserve">
+    <value>Azmodan</value>
+  </data>
+  <data name="GenericHeroBrightwing" xml:space="preserve">
+    <value>Brightwing</value>
+  </data>
+  <data name="GenericHeroChen" xml:space="preserve">
+    <value>Chen</value>
+  </data>
+  <data name="GenericHeroDiablo" xml:space="preserve">
+    <value>Diablo</value>
+  </data>
+  <data name="GenericHeroETC" xml:space="preserve">
+    <value>E.T.C.</value>
+  </data>
+  <data name="GenericHeroFalstad" xml:space="preserve">
+    <value>Falstad</value>
+  </data>
+  <data name="GenericHeroGazlowe" xml:space="preserve">
+    <value>Gazlowe</value>
+  </data>
+  <data name="GenericHeroIllidan" xml:space="preserve">
+    <value>Illidan</value>
+  </data>
+  <data name="GenericHeroJaina" xml:space="preserve">
+    <value>Jaina</value>
+  </data>
+  <data name="GenericHeroKerrigan" xml:space="preserve">
+    <value>Kerrigan</value>
+  </data>
+  <data name="GenericHeroLevel" xml:space="preserve">
+    <value>Hõs szintje</value>
+  </data>
+  <data name="GenericHeroLiLi" xml:space="preserve">
+    <value>Li Li</value>
+  </data>
+  <data name="GenericHeroMalfurion" xml:space="preserve">
+    <value>Malfurion</value>
+  </data>
+  <data name="GenericHeroMuradin" xml:space="preserve">
+    <value>Muradin</value>
+  </data>
+  <data name="GenericHeroMurky" xml:space="preserve">
+    <value>Murky</value>
+  </data>
+  <data name="GenericHeroNazeebo" xml:space="preserve">
+    <value>Nazeebo</value>
+  </data>
+  <data name="GenericHeroNova" xml:space="preserve">
+    <value>Nova</value>
+  </data>
+  <data name="GenericHeroRaynor" xml:space="preserve">
+    <value>Raynor</value>
+  </data>
+  <data name="GenericHeroRehgar" xml:space="preserve">
+    <value>Rehgar</value>
+  </data>
+  <data name="GenericHeroSgtHammer" xml:space="preserve">
+    <value>Sgt. Hammer</value>
+  </data>
+  <data name="GenericHeroSonya" xml:space="preserve">
+    <value>Sonya</value>
+  </data>
+  <data name="GenericHeroStatistics" xml:space="preserve">
+    <value>Hõs statisztikák</value>
+  </data>
+  <data name="GenericHeroStitches" xml:space="preserve">
+    <value>Stitches</value>
+  </data>
+  <data name="GenericHeroTassadar" xml:space="preserve">
+    <value>Tassadar</value>
+  </data>
+  <data name="GenericHeroTheButcher" xml:space="preserve">
+    <value>The Butcher</value>
+  </data>
+  <data name="GenericHeroTheLostVikings" xml:space="preserve">
+    <value>The Lost Vikings</value>
+  </data>
+  <data name="GenericHeroThrall" xml:space="preserve">
+    <value>Thrall</value>
+  </data>
+  <data name="GenericHeroTychus" xml:space="preserve">
+    <value>Tychus</value>
+  </data>
+  <data name="GenericHeroTyrael" xml:space="preserve">
+    <value>Tyrael</value>
+  </data>
+  <data name="GenericHeroTyrande" xml:space="preserve">
+    <value>Tyrande</value>
+  </data>
+  <data name="GenericHeroUther" xml:space="preserve">
+    <value>Uther</value>
+  </data>
+  <data name="GenericHeroValla" xml:space="preserve">
+    <value>Valla</value>
+  </data>
+  <data name="GenericHeroZagara" xml:space="preserve">
+    <value>Zagara</value>
+  </data>
+  <data name="GenericHeroZeratul" xml:space="preserve">
+    <value>Zeratul</value>
+  </data>
+  <data name="GenericInformation" xml:space="preserve">
+    <value>Információ</value>
+  </data>
+  <data name="GenericLastUpdatedMinutesAgo" xml:space="preserve">
+    <value>Legutóbb frissítve {0} perce</value>
+  </data>
+  <data name="GenericLeaderboard" xml:space="preserve">
+    <value>Ranglista</value>
+  </data>
+  <data name="GenericLeague" xml:space="preserve">
+    <value>Liga</value>
+  </data>
+  <data name="GenericLeague0" xml:space="preserve">
+    <value>Master</value>
+  </data>
+  <data name="GenericLeague1" xml:space="preserve">
+    <value>Diamond</value>
+  </data>
+  <data name="GenericLeague2" xml:space="preserve">
+    <value>Platinum</value>
+  </data>
+  <data name="GenericLeague3" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="GenericLeague4" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="GenericLeague5" xml:space="preserve">
+    <value>Bronze</value>
+  </data>
+  <data name="GenericLeagueRank" xml:space="preserve">
+    <value>Liga rang</value>
+  </data>
+  <data name="GenericLogIn" xml:space="preserve">
+    <value>Bejelentkezés</value>
+  </data>
+  <data name="GenericLogOff" xml:space="preserve">
+    <value>Kijelentkezés</value>
+  </data>
+  <data name="GenericLose" xml:space="preserve">
+    <value>Vereség</value>
+  </data>
+  <data name="GenericLosingTeam" xml:space="preserve">
+    <value>Vesztes csapat</value>
+  </data>
+  <data name="GenericMapName" xml:space="preserve">
+    <value>Pálya neve</value>
+  </data>
+  <data name="GenericMapNameBattlefieldofEternity" xml:space="preserve">
+    <value>Battlefield of Eternity</value>
+  </data>
+  <data name="GenericMapNameBlackheartsBay" xml:space="preserve">
+    <value>Blackheart's Bay</value>
+  </data>
+  <data name="GenericMapNameCursedHollow" xml:space="preserve">
+    <value>Cursed Hollow</value>
+  </data>
+  <data name="GenericMapNameDragonShire" xml:space="preserve">
+    <value>Dragon Shire</value>
+  </data>
+  <data name="GenericMapNameGardenofTerror" xml:space="preserve">
+    <value>Garden of Terror</value>
+  </data>
+  <data name="GenericMapNameHauntedMines" xml:space="preserve">
+    <value>Haunted Mines</value>
+  </data>
+  <data name="GenericMapNameSkyTemple" xml:space="preserve">
+    <value>Sky Temple</value>
+  </data>
+  <data name="GenericMapStatistics" xml:space="preserve">
+    <value>Pálya statisztikák</value>
+  </data>
+  <data name="GenericMatchHistory" xml:space="preserve">
+    <value>Korábbi meccsek</value>
+  </data>
+  <data name="GenericMMRBefore" xml:space="preserve">
+    <value>Korábbi MMR</value>
+  </data>
+  <data name="GenericMMRChange" xml:space="preserve">
+    <value>MMR változás</value>
+  </data>
+  <data name="GenericMMRMilestones" xml:space="preserve">
+    <value>MMR mérföldkövek</value>
+  </data>
+  <data name="GenericMyAccount" xml:space="preserve">
+    <value>Fiókom</value>
+  </data>
+  <data name="GenericNews" xml:space="preserve">
+    <value>Hírek</value>
+  </data>
+  <data name="GenericNextUpdateInMinutes" xml:space="preserve">
+    <value>Következõ frissítés {0} perc múlva</value>
+  </data>
+  <data name="GenericOpposingHero" xml:space="preserve">
+    <value>ellenfél hõse</value>
+  </data>
+  <data name="GenericPassword" xml:space="preserve">
+    <value>Jelszó</value>
+  </data>
+  <data name="GenericPlayer" xml:space="preserve">
+    <value>Játékos</value>
+  </data>
+  <data name="GenericPlayerSearchButton" xml:space="preserve">
+    <value>Keresés</value>
+  </data>
+  <data name="GenericPlayerSearchHelperText" xml:space="preserve">
+    <value>Játékos keresése</value>
+  </data>
+  <data name="GenericProfile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="GenericRating" xml:space="preserve">
+    <value>Besorolás(MMR)</value>
+  </data>
+  <data name="GenericRegion" xml:space="preserve">
+    <value>Régió</value>
+  </data>
+  <data name="GenericResult" xml:space="preserve">
+    <value>Eredmény</value>
+  </data>
+  <data name="GenericSitewide" xml:space="preserve">
+    <value>Oldal szerte</value>
+  </data>
+  <data name="GenericSpecialThanks" xml:space="preserve">
+    <value>Külön köszönet</value>
+  </data>
+  <data name="GenericSubmitButton" xml:space="preserve">
+    <value>Bead</value>
+  </data>
+  <data name="GenericTeam" xml:space="preserve">
+    <value>Csapat</value>
+  </data>
+  <data name="GenericTimeSpanDay" xml:space="preserve">
+    <value>{0} nap</value>
+  </data>
+  <data name="GenericTimeSpanDayPlural" xml:space="preserve">
+    <value>{0} nap</value>
+  </data>
+  <data name="GenericTimeSpanHour" xml:space="preserve">
+    <value>{0} óra</value>
+  </data>
+  <data name="GenericTimeSpanHourPlural" xml:space="preserve">
+    <value>{0} óra</value>
+  </data>
+  <data name="GenericTimeSpanMinute" xml:space="preserve">
+    <value>{0} perc</value>
+  </data>
+  <data name="GenericTimeSpanMinutePlural" xml:space="preserve">
+    <value>{0} perc</value>
+  </data>
+  <data name="GenericUserName" xml:space="preserve">
+    <value>Felhasználónév</value>
+  </data>
+  <data name="GenericViewMatchHistory" xml:space="preserve">
+    <value>Korábbi meccsek megtekintése</value>
+  </data>
+  <data name="GenericViewProfile" xml:space="preserve">
+    <value>Profil megtekintése</value>
+  </data>
+  <data name="GenericWeekOfDate" xml:space="preserve">
+    <value>{0}. hét</value>
+  </data>
+  <data name="GenericWin" xml:space="preserve">
+    <value>Gyõzelem</value>
+  </data>
+  <data name="GenericWinningTeam" xml:space="preserve">
+    <value>Gyõztes csapat</value>
+  </data>
+  <data name="GenericWinPercent" xml:space="preserve">
+    <value>Gyõzelmi arány</value>
+  </data>
+  <data name="HeroDetailsMessageLine1" xml:space="preserve">
+    <value>Gyõzelmi arány hetekre lebontva</value>
+  </data>
+  <data name="HeroDetailsTitle" xml:space="preserve">
+    <value>Hősök részletesen</value>
+  </data>
+  <data name="HeroDetailsWinRateVsOtherHeroes" xml:space="preserve">
+    <value>Gyõzelmi arány más hõsök ellen</value>
+  </data>
+  <data name="LeaderboardCurrentPlayerRank" xml:space="preserve">
+    <value>A jelenlegi liga rangod: {0}</value>
+  </data>
+  <data name="LeaderboardLeagueGamesPlayedRequirement" xml:space="preserve">
+    <value>Ahhoz hogy ebbe a ligába kerülj, legalább {0} replayre van szükséged</value>
+  </data>
+  <data name="LeaderboardMMRInfoLink" xml:space="preserve">
+    <value>Ha szeretnél többet tudni arról, hogy hogyan számolom az MMR-t, itt találsz magyarázatot.</value>
+  </data>
+  <data name="LogInCheckboxRememberMe" xml:space="preserve">
+    <value>Emlékezz rám!</value>
+  </data>
+  <data name="LogInForgotPassword" xml:space="preserve">
+    <value>Elfelejtetted a jelszavad? Kattints ide.</value>
+  </data>
+  <data name="LogInNewUser" xml:space="preserve">
+    <value>Regisztrálj, ha még nincs fiókod.</value>
+  </data>
+  <data name="ManageAccountChangePasswordMessage" xml:space="preserve">
+    <value>Jelszóváltás.</value>
+  </data>
+  <data name="ManageAccountChangePasswordSuccess" xml:space="preserve">
+    <value>A jelszavad megváltozott.</value>
+  </data>
+  <data name="ManageAccountCurrentPassword" xml:space="preserve">
+    <value>Jelenlegi jelszó</value>
+  </data>
+  <data name="ManageAccountErrorCurrentPasswordRequired" xml:space="preserve">
+    <value>A 'Jelenlegi jelszó' sort töltsd ki!</value>
+  </data>
+  <data name="ManageAccountErrorNewPasswordRequired" xml:space="preserve">
+    <value>Az 'Új jelszó' sort töltsd ki!.</value>
+  </data>
+  <data name="ManageAccountNewPassword" xml:space="preserve">
+    <value>Új jelszó</value>
+  </data>
+  <data name="ManageAccountTitle" xml:space="preserve">
+    <value>Fiók kezelése</value>
+  </data>
+  <data name="MatchHistoryMessageLine1" xml:space="preserve">
+    <value>Kattints a bal szélsõ oszlopon található nyílra, további részletekért.</value>
+  </data>
+  <data name="MatchHistoryMessageLine2" xml:space="preserve">
+    <value>A meccsek MMR-jét három óránként a mai meccsek esetében, és minden este a régebbi meccsek esetében.</value>
+  </data>
+  <data name="MMRInfoMessageLine01" xml:space="preserve">
+    <value>Hogyan számoljuk ki az MMR-t?</value>
+  </data>
+  <data name="MMRInfoMessageLine02" xml:space="preserve">
+    <value>Egy olyan algoritmust használok amely hasonló a Microsoft TrueSkill-jéhez, mivel ez az általánosan elfogadott vélemény szerint jobb mint az ELO csapatjátékok esetében.</value>
+  </data>
+  <data name="MMRInfoMessageLine03" xml:space="preserve">
+    <value>Az MMR értékelésed mutatja meg a játákbeli tudásod más játékosokhoz képest. Mivel az MMR a játéktudást hivatott megmutatni, így nem nõ automatikusan ahogy egyre több meccset játszol. Ha növelni akarod az MMR-ed, ügyesebbé kell hogy válj :)</value>
+  </data>
+  <data name="MMRInfoMessageLine04" xml:space="preserve">
+    <value>Minden meccs után az MMR-ed a meccs eredményétõl függõen frissül, akárcsak a csapatok jelenlegi átlag MMR-je.</value>
+  </data>
+  <data name="MMRInfoMessageLine05" xml:space="preserve">
+    <value>Ha egy olyan csapat ellen játszol akiknek magasabb az MMR-je és nyersz, akkor a ti MMR-etek többet fog emelkedni mint normális esetben. Ugyanígy, ha egy alacsonyabb MMR-el rendelkezõ csapat ellen veszítetek, több MMR-t fogtok bukni.</value>
+  </data>
+  <data name="MMRInfoMessageLine06" xml:space="preserve">
+    <value>Az ennyire változékony MMR miatt, több meccs lejátszása után lehet pontos MMR-t és egy 50%-hoz közeli gyõzelmi arányt kapni.</value>
+  </data>
+  <data name="MMRInfoMessageLine07" xml:space="preserve">
+    <value>Ligák</value>
+  </data>
+  <data name="MMRInfoMessageLine08" xml:space="preserve">
+    <value>Különbözõ ligákat raktam össze azért, hogy a ranglétrát fel tudjuk osztani.Azt szeretném ha minden játéktudású ember találjon értéket az oldalban és egy felosztatlan ranglétrán elég lesújtó tud lenni ha az ember az alján tanáyzik. Így a ligák az átláthatóság mellett egy motiváló elemként is hatnak.I've put together different 'leagues,' which essentially breaks up the leaderboard. </value>
+  </data>
+  <data name="MMRInfoMessageLine09" xml:space="preserve">
+    <value>A ligákba való felosztás azt is jelenti hogy bizonyos követelményeket támaszthatok minden liga felé. Mivel ahogy teli kaz idõ és egyre több replay-t töltötök fel,elvárható egy top ligás játékostól egy bizonyos összesített meccsszám. Ez a követelmény természetesen az alsóbb ligákban alacsonyabb lesz, hogy minél könnyebben tudjatok a ligák közt felemelkedni.</value>
+  </data>
+  <data name="MMRInfoMessageLine10" xml:space="preserve">
+    <value>A ligák MMR alapján osztják fel a játkosokat csoportokba. Miután kihagyjuk a számításból azokat a játékosokat akik 10-nél kevesebb meccset játszottak, a Master liga a játékosok 1%-át a Diamond 9%-át öleli fel. A többi liga népessége egyenlõbben oszlik meg.</value>
+  </data>
+  <data name="MMRInfoMessageLine11" xml:space="preserve">
+    <value>Nem találod magad a ranglistán? Az MMR-ed alapján lehet hogy egy magasabb ligában lenne a helyed, de a lejátszott meccseid száma nem érik el a megkövetelt mennyiséget. Az MMR küszöb megállapítása egy bizonyos ligának mindig a lejátszott meccsek figyelembe vétele elõtt történik meg.</value>
+  </data>
+  <data name="MMRInfoMessageLine12" xml:space="preserve">
+    <value>Helyezési meccsek</value>
+  </data>
+  <data name="MMRInfoMessageLine13" xml:space="preserve">
+    <value>Amikor elõször játszol a játékkal, a rendszer nem tudja mennyire vagy ügyes így egy alap MMR-rõl kezdesz. Az elsõ meccseidnek nagyobb befolyása van az MMR-edre hogy minél gyorsabban megtaláljuk a neked való szintet. Ez a hatás fokozatosan csökken minél több meccset játszol</value>
+  </data>
+  <data name="MMRInfoMessageLine14" xml:space="preserve">
+    <value>Ez azt jelenti, hogy az elsõ meccseiden elért gyõzelmek vagy vereségek jelentõsebb hatást gyakorolnak az MMR-edre.</value>
+  </data>
+  <data name="MMRInfoMessageLine15" xml:space="preserve">
+    <value>Ez egy bevett szokás egy matchmakinggel rendelkezõ játékoknál és általában segít gyorsan megtalálni a te szintednek megfelelõ játékosokat.</value>
+  </data>
+  <data name="MMRInfoMessageLine16" xml:space="preserve">
+    <value>Ugyanakkor ez nem jelenti azt, hogy egy pár száz meccs után 'megragadsz' egy helyen, csupán annyit jelent, hogy egy-egy meccsnek nem lesznek olyan drasztikus hatásai az MMR-edre mint az elsõ pár meccsednek.</value>
+  </data>
+  <data name="MMRInfoMessageLine17" xml:space="preserve">
+    <value>Vereségi sorozatok a helyezési meccsek alatt.</value>
+  </data>
+  <data name="MMRInfoMessageLine18" xml:space="preserve">
+    <value>Pár játékos megkért arra, hogy töröljem pár meccsüket hogy 'tiszta lappal' tudjanak kezdeni, mert nem tudták hogy az elsõ meccseik egyben a helyezési meccseik is voltak.</value>
+  </data>
+  <data name="MMRInfoMessageLine19" xml:space="preserve">
+    <value>Egy vereségi sorozattal kezdeni nem épp szerencsés, de ugyanígy gyõzelmi sorozattal kezdeni sem az. Például, Starcraft 2-ben a helyezési meccseimbõl mind az ötöt megnyertem és így a Gold ligába helyezett a játék. Nagyon büszke voltam magamra, el is dicsekedtem vele a Silver és Bronze ligás barátaimnak, bár tudtam hogy nagyon szerencsések voltak a meccseim, de végtére is csak az eredmény számít. Ezek után vesztettem sorban 13 meccset és a játék végül a Bronze ligáig sorolt vissza. Nyilván nem kellett volna hogy a Gold ligába soroljon a játék, de ahogy egyre több meccset játszottam annál pontosabb lett a tudásomhoz mért helyezésem és végül elértem az 50%-os gyõzelmi arányt.</value>
+  </data>
+  <data name="MMRInfoMessageLine20" xml:space="preserve">
+    <value>Természetesen ennek a fordítottja is igaz: ha sok meccset vesztes a helyezési meccseid alatt akkor helytelenül alacsony lesz az MMR-ed és ahogy magasabb MMR szintû játékosok ellen 50%-ban nyersz meccseket, akkor hamar a számodra megfelelõ szintre fogsz kerülni</value>
+  </data>
+  <data name="MMRInfoMessageLine21" xml:space="preserve">
+    <value>Sajnos az egyetlen megoldás ha az MMR-ed pontatlan lesz egy vereségi sorozat miatt a helyezési meccsek alatt az az, ha több meccset játszol. Lehet, hogy több meccsre lesz szükséged mintha megnyertél volna párat a helyezési meccseid közül, de elõbb-utóbb a megfelelõ szintre fogsz kerülni. Az nem megoldás ha szimplán kitörlöd a replayét egy vesztes helyezési meccsnek, mert azzal 9 más ember besorolását is kompromittálod és nekünk pedig minél több replayre van szükségünk hogy pontos MMR számításokat hajtsunk végre.</value>
+  </data>
+  <data name="MMRInfoMessageLine22" xml:space="preserve">
+    <value>MMR pontosság</value>
+  </data>
+  <data name="MMRInfoMessageLine23" xml:space="preserve">
+    <value>Néhány játkos megkeresett már azzal, hogy pontos-e az MMR-jük mivel õk úgy gondolják hogy magasabb pozícióban lenne a helyük.</value>
+  </data>
+  <data name="MMRInfoMessageLine24" xml:space="preserve">
+    <value>Elõször is gyõzõdj meg arról, hogy kellõ mennyiségû meccset játszottál le. Amikor elkezded a játékot az MMR-ed számomra ismeretlen és a rendszernek kell találgatni a te játéktudásat illetõen. Ne morfondírozz sokat az MMR-eden ha még nem játszottál le 100 meccset, vagy lehetõleg még többet.</value>
+  </data>
+  <data name="MMRInfoMessageLine25" xml:space="preserve">
+    <value>Ha sok replayt töltöttél fel, hogyan gyõzõdhetsz meg arról, hogy az általam számított MMR pontos-e? Nézd meg a többi játékos MMR-jét és a két csapat átlagos MMR-jét. Alapvetõen az egyes csapatok átlag MMR-jének azonosnak kell lennie.</value>
+  </data>
+  <data name="MMRInfoMessageLine26" xml:space="preserve">
+    <value>Elõfordulhat, hogy az MMR nem pontos. Abban az esetben hogy ha képzett játékosol kevés replayt töltenek fel, a valódi MMR-jük számomra ismeretlen a Blizzard valószínûleg jobban ismeri azt. Ha egy játékos MMR változása egy meccs után magas (kb 50) akkor a valódi tudása számomra ismertlen, találgatnom kell, hogy a valódi MMR-jéneknek mennyinek kéne lennie.</value>
+  </data>
+  <data name="MMRInfoMessageLine27" xml:space="preserve">
+    <value>A legjobb módja az MMR számítás pontosságának a javításának az az, hogy minél több meccset feltöltesz :) Kérd meg a barátaidat hogy õk is töltsék fel replayeiket, hogy minél biztosabban megállapíthassuk a játéktudásotokat.</value>
+  </data>
+  <data name="MMRInfoMessageLine28" xml:space="preserve">
+    <value>Ehhez kapcsolódóan megjegyezném, hogy nagyon biztató sok híres pro-gamert látni a ranglista top 100 helyezésein és élvezet nézni az õ egymás elleni replayeiket :)</value>
+  </data>
+  <data name="MMRInfoTitle" xml:space="preserve">
+    <value>MMR Információ</value>
+  </data>
+  <data name="PlayerSearchNoPlayersFound" xml:space="preserve">
+    <value>Nem találtunk játékosokat, próbálj keresni újra a Keresés dobozban az oldal tetején.</value>
+  </data>
+  <data name="PlayerSearchTitle" xml:space="preserve">
+    <value>Játékos keresése</value>
+  </data>
+  <data name="ProfileCurrentLeagueRank" xml:space="preserve">
+    <value>Jelenlegi liga rang</value>
+  </data>
+  <data name="ProfileCurrentMMR" xml:space="preserve">
+    <value>Jelenlegi MMR</value>
+  </data>
+  <data name="ProfileTotalGamesPlayed" xml:space="preserve">
+    <value>Összes lejátszott meccs</value>
+  </data>
+  <data name="ProfileTotalTimePlayed" xml:space="preserve">
+    <value>Összesített játszott idõ</value>
+  </data>
+  <data name="RegisterConfirmPassword" xml:space="preserve">
+    <value>Jelszó megerõsítése</value>
+  </data>
+  <data name="RegisterErrorDuplicateEmail" xml:space="preserve">
+    <value>Az általad beütött e-mail cím már használatban van. Kérlek írj be egy másik e-mail címet.</value>
+  </data>
+  <data name="RegisterErrorDuplicateUsername" xml:space="preserve">
+    <value>Kérlek válassz egy másik felhasználói nevet.</value>
+  </data>
+  <data name="RegisterMessageLine1" xml:space="preserve">
+    <value>Töltsd ki az alábbi formulát hogy egy új fiókot hozz létre.</value>
+  </data>
+  <data name="RegisterPasswordRequirement" xml:space="preserve">
+    <value>A jelszónak minimum {0} karakter hosszúnak kell lennie.</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Regisztráció</value>
+  </data>
+  <data name="ResetPasswordMessage" xml:space="preserve">
+    <value>Írd be a felhasználói nevedet és jelszavad.</value>
+  </data>
+  <data name="ResetPasswordTitle" xml:space="preserve">
+    <value>Jelszó visszaállítása</value>
+  </data>
+  <data name="SitewideHeroAndMapStatisticsTitle" xml:space="preserve">
+    <value>Hõs és pálya statisztikák oldalszerte</value>
+  </data>
+  <data name="SitewideHeroStatistics" xml:space="preserve">
+    <value>Hõs statisztikák az elmúlt 2 javításról</value>
+  </data>
+  <data name="SitewideMapStatistics" xml:space="preserve">
+    <value>Pálya statisztikák az elmúlt 7 napban oldalszerte</value>
+  </data>
+  <data name="SitewidePremiumTitle" xml:space="preserve">
+    <value>Premium</value>
+  </data>
+  <data name="SitewideStatisticsTitle" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="SitewideTalentsTitle" xml:space="preserve">
+    <value>Talents</value>
+  </data>
+  <data name="SitewideUploadReplaysTitle" xml:space="preserve">
+    <value>Upload Replays!</value>
+  </data>
+  <data name="SpecialThanksLine1" xml:space="preserve">
+    <value>Külön köszönet Rónyai Gábornak a HOTS Logs magyar nyelvre való fordításáért</value>
+  </data>
+  <data name="UploadMessageLine1" xml:space="preserve">
+    <value>Mielõtt elkezdenéd a feltöltögetést, kérlek olvasd el az alábbiakat:</value>
+  </data>
+  <data name="UploadMessageLine2" xml:space="preserve">
+    <value>Szeretném mindenki replayeit annyira hozzáférhetõvé tenni amennyire csak lehetséges, a játékbeli chat kivételével, amit sosem fogok elérhetõvé tenni. Ezt a kivételt leszámítva, a replayek gyakorlatilag publikusak.</value>
+  </data>
+  <data name="UploadMessageLine3" xml:space="preserve">
+    <value>Jelenleg csak a sztenderd, teljess terjedelmû Versus módban készült replayeket fogadom el.</value>
+  </data>
+  <data name="UploadMessageLine4" xml:space="preserve">
+    <value>A sikeresen elõkészített replayeket elég egyszer feltölteni. Én elmentem a replay fájlokat és amint össze tudom gyûjteni az adatokat a replaybõl, automatikusan frissítem a replay statisztkádat.</value>
+  </data>
+  <data name="UploadMessageLine5" xml:space="preserve">
+    <value>Ha a 'Duplicate' hibaüzenet kapod miután feltöltöttél egy replayt, az azt jelenti hogy te vagy más már feltöltötte az azt a meccset tartalmazó replayt.</value>
+  </data>
+  <data name="UploadMessageLine6" xml:space="preserve">
+    <value>Ha egy hibaüzenetet kapsz egy fájl feltöltése közben, próbálkozz újra késõbb. Folyamatosan dolgozom a hibák kijavításán és talán a sikertelen feltöltésekkel is tudok kezdeni valamit.</value>
+  </data>
+  <data name="UploadMessageSingleReplayHeader" xml:space="preserve">
+    <value>Egy replay feltöltése</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine1" xml:space="preserve">
+    <value>Megjegyzés: A mappa amelyben alapesetben a replayeket tárolják:</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine2" xml:space="preserve">
+    <value>Windows: '...\Dokumentumok\Heroes of the Storm\Accounts\########\#-Hero-#-######\Replays\'</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine3" xml:space="preserve">
+    <value>Mac: '~/Könyvtár/Application Support/Blizzard/Heroes of the Storm/Accounts/########/#-Hero-#-######/Replays/'</value>
+  </data>
+  <data name="UploadMessageUploaderLine1" xml:space="preserve">
+    <value>HoTS Logs Uploader (feltöltõ) alkalmazás</value>
+  </data>
+  <data name="UploadMessageUploaderLine2" xml:space="preserve">
+    <value>Javaslom, hogy használjátok ezt a kis Windows alkalmazást amit írtam, hogy az összes replayeteket feltöltsétek:</value>
+  </data>
+  <data name="UploadMessageUploaderLine3" xml:space="preserve">
+    <value>Kattints ide a HOTS Logs Uploader letöltéséhez és telepítéséhez</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>Replayek feltöltése</value>
+  </data>
+</root>

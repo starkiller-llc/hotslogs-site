@@ -1,0 +1,8 @@
+<div class="dataTables_filter">
+  <label>
+    Search:<input #flt type="text" [value]="query" (keydown.enter)="$event.preventDefault()"
+      (input)="filter(flt.value)">
+    <div class="clear"></div>
+    <app-role-buttons *ngIf="showRoles" (roleClick)="flt.value=$event;filter($event)"></app-role-buttons>
+  </label>
+</div>

@@ -1,0 +1,798 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutMessageLine1" xml:space="preserve">
+    <value>Jmenuji se Ben Barrett, přes den pracuji jako softwarový inženýr a v noci jsem vášnivým hráčem.</value>
+  </data>
+  <data name="AboutMessageLine2" xml:space="preserve">
+    <value>Cílem tohoto projektu je především sloužit jako in-game profil, ale věřím, že v budoucnu HotS bude velmi populární, a tak bych rád rozšířil HOTS Logs o detailnější analýzy individuálních záznamů.  Chci, aby tato stránka inspirovala hráče, aby se zlepšili a dozvěděli se o svém herním stylu či složení týmu.</value>
+  </data>
+  <data name="AboutMessageLine3" xml:space="preserve">
+    <value>Návrhy a podpora:</value>
+  </data>
+  <data name="ChooseBattleNetIdErrorMessage1" xml:space="preserve">
+    <value>Omlouváme se, Vaše Battle.Net ID číslo nebylo nalezeno.  Mělo by být ve formátu: '##-Hero-#-######'</value>
+  </data>
+  <data name="ChooseBattleNetIdErrorMessage2" xml:space="preserve">
+    <value>Záznamy pod tímto Battle.Net Id nenalezeny.  Použijte, prosím, tento odkaz k nahrání záznamů a ověření uživatele.</value>
+  </data>
+  <data name="ChooseBattleNetIdMessageLine1" xml:space="preserve">
+    <value>Vložte svůj Heroes of the Storm BattleTag:</value>
+  </data>
+  <data name="ChooseBattleNetIdTextBox" xml:space="preserve">
+    <value>Zadejte Vaše herní jméno</value>
+  </data>
+  <data name="ChooseBattleNetIdTitle" xml:space="preserve">
+    <value>Zvolte Battle.Net Id</value>
+  </data>
+  <data name="DefaultHeader" xml:space="preserve">
+    <value>Vítejte na HOTS Logs!</value>
+  </data>
+  <data name="DefaultIntroMessageLine1" xml:space="preserve">
+    <value>První stránka věnovaná analýze záznamů z Heroes of the Storm.</value>
+  </data>
+  <data name="DefaultIntroMessageLine2" xml:space="preserve">
+    <value>Stránky jsou stále ve vývoji, ale již poskytují cenné informace a další budou přibývat.</value>
+  </data>
+  <data name="DefaultIntroMessageLine3Part1" xml:space="preserve">
+    <value>Pro momentálně dostupné informace zkontrolujte menu nahoře.</value>
+  </data>
+  <data name="DefaultIntroMessageLine3Part2" xml:space="preserve">
+    <value>Registrace je zdarma, přihlaste se a začněte analyzovat své záznamy!</value>
+  </data>
+  <data name="DefaultIntroMessageTotalGames" xml:space="preserve">
+    <value>Děkuji všem za Vaši účast!  Doposud všichni dohromady nahráli {0} záznamů!</value>
+  </data>
+  <data name="DefaultTitle" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
+  <data name="ErrorPageMessageLine1" xml:space="preserve">
+    <value>Nejspíš došlo k chybě!  Administrátorovi byl zaslán e-mail a na problém se podívá.</value>
+  </data>
+  <data name="ErrorPageMessageLine2" xml:space="preserve">
+    <value>Opakujte, prosím, později.</value>
+  </data>
+  <data name="ErrorPageTitle" xml:space="preserve">
+    <value>Hups!</value>
+  </data>
+  <data name="FAQMessageLine01" xml:space="preserve">
+    <value>Proč chybí záznamy v mé historii her?</value>
+  </data>
+  <data name="FAQMessageLine02" xml:space="preserve">
+    <value>V Heroes of the Storm je možnost ukládat všechny Vaše záznamy.  Pokud jste o tomto nastavení nevěděli či nepovolili jej dříve, pouze Vaše nejnovější záznamy budou uloženy.</value>
+  </data>
+  <data name="FAQMessageLine03" xml:space="preserve">
+    <value>Dobrá zpráva je, že pokud jiný hráč nahraje záznamy her, v kterých jste byli, budou tyto záznamy přidány také do Vašeho profilu.</value>
+  </data>
+  <data name="FAQMessageLine04" xml:space="preserve">
+    <value>Jak je MMR počítán?  Kdy je žebříček aktualizován?</value>
+  </data>
+  <data name="FAQMessageLine05" xml:space="preserve">
+    <value>MMR je neustále přepočítáván.  První na řadě jsou nejstarší nespočítané záznamy a postupuje se k nejnovějším.  Tento proces je proveden pro každý region a poté jsou sestaveny žebříčky.  Momentálně tento proces trvá přibližně jeden den.</value>
+  </data>
+  <data name="FAQMessageLine06" xml:space="preserve">
+    <value>Můžou hráči nahrát pouze záznamy s výhrou a posunout se tak v žebříčku?</value>
+  </data>
+  <data name="FAQMessageLine07" xml:space="preserve">
+    <value>Ano a ne. Pokud nahrají pouze výhry, jejich MMR bude nepřirozeně navýšen.  Ale Blizzard ví svoje a bude je i nadále patřičně párovat.  Výhry proti hráčům s nižším MMR než falešné bude znamenat pouze malé navýšení.</value>
+  </data>
+  <data name="FAQMessageLine08" xml:space="preserve">
+    <value>A také zde platí již zmíněná „dobrá zpráva“: pokud ostatní hráči nahrají prohrané zápasy, tak budou započítány všem profilům.</value>
+  </data>
+  <data name="FAQMessageLine09" xml:space="preserve">
+    <value>Prošel jsem mnoho profilů a nenarazil jsem na žádný s vysokým počtem výher v řadě.</value>
+  </data>
+  <data name="FAQMessageLine10" xml:space="preserve">
+    <value>Proč se některé z mých nahraných záznamů ukazují jako duplikované?</value>
+  </data>
+  <data name="FAQMessageLine11" xml:space="preserve">
+    <value>Znamená to, že některý z devíti hráčů v dané hře již nahrál tento záznam.  Tento záznam bude přidán k profilům všech hráčů daného zápasu.</value>
+  </data>
+  <data name="FAQTitle" xml:space="preserve">
+    <value>Často kladené dotazy</value>
+  </data>
+  <data name="GenericAboutUs" xml:space="preserve">
+    <value>O nás</value>
+  </data>
+  <data name="GenericAllLeagues" xml:space="preserve">
+    <value>Všechny ligy</value>
+  </data>
+  <data name="GenericAverageLength" xml:space="preserve">
+    <value>Průměrná délka</value>
+  </data>
+  <data name="GenericContactUs" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="GenericDataCurrentlyUnavailable" xml:space="preserve">
+    <value>Data momentálně nedostupná</value>
+  </data>
+  <data name="GenericDateTime" xml:space="preserve">
+    <value>Datum a čas</value>
+  </data>
+  <data name="GenericEmailAddress" xml:space="preserve">
+    <value>Emailová adresa</value>
+  </data>
+  <data name="GenericErrorConfirmPasswordDoesntMatch" xml:space="preserve">
+    <value>Heslo a ověření hesla se neshoduje.</value>
+  </data>
+  <data name="GenericErrorConfirmPasswordRequired" xml:space="preserve">
+    <value>Je nutné vyplnit pole ověření hesla.</value>
+  </data>
+  <data name="GenericErrorEmailRequired" xml:space="preserve">
+    <value>Je nutné vyplnit pole emailová adresa</value>
+  </data>
+  <data name="GenericErrorPasswordRequired" xml:space="preserve">
+    <value>Je nutné vyplnit pole heslo</value>
+  </data>
+  <data name="GenericErrorUserNameRequired" xml:space="preserve">
+    <value>Je nutné vyplnit pole uživatelské jméno</value>
+  </data>
+  <data name="GenericExcludingMirrorMatchupsAndTalentGatedHeroes" xml:space="preserve">
+    <value>Vyjma Mirror Matchups a hrdinů bez odemknutých talentů</value>
+  </data>
+  <data name="GenericExcludingTalentGatedGamesAndAutoSelectGames" xml:space="preserve">
+    <value>Vyjma her s hrdiny bez odemknutých talentů a s automaticky zvolenými hrdiny</value>
+  </data>
+  <data name="GenericGameLength" xml:space="preserve">
+    <value>délka hry</value>
+  </data>
+  <data name="GenericGamesPlayed" xml:space="preserve">
+    <value>Odehrané zápasy proti</value>
+  </data>
+  <data name="GenericGetPremium" xml:space="preserve">
+    <value>Pojistné</value>
+  </data>
+  <data name="GenericHero" xml:space="preserve">
+    <value>Hrdina</value>
+  </data>
+  <data name="GenericHeroAbathur" xml:space="preserve">
+    <value>Abathur</value>
+  </data>
+  <data name="GenericHeroAnubarak" xml:space="preserve">
+    <value>Anub'arak</value>
+  </data>
+  <data name="GenericHeroArthas" xml:space="preserve">
+    <value>Arthas</value>
+  </data>
+  <data name="GenericHeroAutoSelect" xml:space="preserve">
+    <value>Automatický výběr</value>
+  </data>
+  <data name="GenericHeroAzmodan" xml:space="preserve">
+    <value>Azmodan</value>
+  </data>
+  <data name="GenericHeroBrightwing" xml:space="preserve">
+    <value>Brightwing</value>
+  </data>
+  <data name="GenericHeroChen" xml:space="preserve">
+    <value>Chen</value>
+  </data>
+  <data name="GenericHeroDiablo" xml:space="preserve">
+    <value>Diablo</value>
+  </data>
+  <data name="GenericHeroETC" xml:space="preserve">
+    <value>E.T.C.</value>
+  </data>
+  <data name="GenericHeroFalstad" xml:space="preserve">
+    <value>Falstad</value>
+  </data>
+  <data name="GenericHeroGazlowe" xml:space="preserve">
+    <value>Gazlowe</value>
+  </data>
+  <data name="GenericHeroIllidan" xml:space="preserve">
+    <value>Illidan</value>
+  </data>
+  <data name="GenericHeroJaina" xml:space="preserve">
+    <value>Jaina</value>
+  </data>
+  <data name="GenericHeroKerrigan" xml:space="preserve">
+    <value>Kerrigan</value>
+  </data>
+  <data name="GenericHeroLevel" xml:space="preserve">
+    <value>Level hrdiny</value>
+  </data>
+  <data name="GenericHeroLiLi" xml:space="preserve">
+    <value>Li Li</value>
+  </data>
+  <data name="GenericHeroMalfurion" xml:space="preserve">
+    <value>Malfurion</value>
+  </data>
+  <data name="GenericHeroMuradin" xml:space="preserve">
+    <value>Muradin</value>
+  </data>
+  <data name="GenericHeroMurky" xml:space="preserve">
+    <value>Murky</value>
+  </data>
+  <data name="GenericHeroNazeebo" xml:space="preserve">
+    <value>Nazeebo</value>
+  </data>
+  <data name="GenericHeroNova" xml:space="preserve">
+    <value>Nova</value>
+  </data>
+  <data name="GenericHeroRaynor" xml:space="preserve">
+    <value>Raynor</value>
+  </data>
+  <data name="GenericHeroRehgar" xml:space="preserve">
+    <value>Rehgar</value>
+  </data>
+  <data name="GenericHeroSgtHammer" xml:space="preserve">
+    <value>Sgt. Hammer</value>
+  </data>
+  <data name="GenericHeroSonya" xml:space="preserve">
+    <value>Sonya</value>
+  </data>
+  <data name="GenericHeroStatistics" xml:space="preserve">
+    <value>Statistiky hrdiny</value>
+  </data>
+  <data name="GenericHeroStitches" xml:space="preserve">
+    <value>Stitches</value>
+  </data>
+  <data name="GenericHeroTassadar" xml:space="preserve">
+    <value>Tassadar</value>
+  </data>
+  <data name="GenericHeroTheButcher" xml:space="preserve">
+    <value>The Butcher</value>
+  </data>
+  <data name="GenericHeroTheLostVikings" xml:space="preserve">
+    <value>The Lost Vikings</value>
+  </data>
+  <data name="GenericHeroThrall" xml:space="preserve">
+    <value>Thrall</value>
+  </data>
+  <data name="GenericHeroTychus" xml:space="preserve">
+    <value>Tychus</value>
+  </data>
+  <data name="GenericHeroTyrael" xml:space="preserve">
+    <value>Tyrael</value>
+  </data>
+  <data name="GenericHeroTyrande" xml:space="preserve">
+    <value>Tyrande</value>
+  </data>
+  <data name="GenericHeroUther" xml:space="preserve">
+    <value>Uther</value>
+  </data>
+  <data name="GenericHeroValla" xml:space="preserve">
+    <value>Valla</value>
+  </data>
+  <data name="GenericHeroZagara" xml:space="preserve">
+    <value>Zagara</value>
+  </data>
+  <data name="GenericHeroZeratul" xml:space="preserve">
+    <value>Zeratul</value>
+  </data>
+  <data name="GenericInformation" xml:space="preserve">
+    <value>Informace</value>
+  </data>
+  <data name="GenericLastUpdatedMinutesAgo" xml:space="preserve">
+    <value>Naposledy aktualizováno před {0} minuty</value>
+  </data>
+  <data name="GenericLeaderboard" xml:space="preserve">
+    <value>Žebříček</value>
+  </data>
+  <data name="GenericLeague" xml:space="preserve">
+    <value>Ligy</value>
+  </data>
+  <data name="GenericLeague0" xml:space="preserve">
+    <value>Master</value>
+  </data>
+  <data name="GenericLeague1" xml:space="preserve">
+    <value>Diamond</value>
+  </data>
+  <data name="GenericLeague2" xml:space="preserve">
+    <value>Platinum</value>
+  </data>
+  <data name="GenericLeague3" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="GenericLeague4" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="GenericLeague5" xml:space="preserve">
+    <value>Bronze</value>
+  </data>
+  <data name="GenericLeagueRank" xml:space="preserve">
+    <value>Umístění v lize</value>
+  </data>
+  <data name="GenericLogIn" xml:space="preserve">
+    <value>Přihlásit se</value>
+  </data>
+  <data name="GenericLogOff" xml:space="preserve">
+    <value>Odhlásit se</value>
+  </data>
+  <data name="GenericLose" xml:space="preserve">
+    <value>Prohry</value>
+  </data>
+  <data name="GenericLosingTeam" xml:space="preserve">
+    <value>Poražený tým</value>
+  </data>
+  <data name="GenericMapName" xml:space="preserve">
+    <value>Mapa</value>
+  </data>
+  <data name="GenericMapNameBattlefieldofEternity" xml:space="preserve">
+    <value>Battlefield of Eternity</value>
+  </data>
+  <data name="GenericMapNameBlackheartsBay" xml:space="preserve">
+    <value>Blackheart's Bay</value>
+  </data>
+  <data name="GenericMapNameCursedHollow" xml:space="preserve">
+    <value>Cursed Hollow</value>
+  </data>
+  <data name="GenericMapNameDragonShire" xml:space="preserve">
+    <value>Dragon Shire</value>
+  </data>
+  <data name="GenericMapNameGardenofTerror" xml:space="preserve">
+    <value>Garden of Terror</value>
+  </data>
+  <data name="GenericMapNameHauntedMines" xml:space="preserve">
+    <value>Haunted Mines</value>
+  </data>
+  <data name="GenericMapNameSkyTemple" xml:space="preserve">
+    <value>Sky Temple</value>
+  </data>
+  <data name="GenericMapStatistics" xml:space="preserve">
+    <value>Statistiky mapy</value>
+  </data>
+  <data name="GenericMatchHistory" xml:space="preserve">
+    <value>Historie zápasů</value>
+  </data>
+  <data name="GenericMMRBefore" xml:space="preserve">
+    <value>MMR před</value>
+  </data>
+  <data name="GenericMMRChange" xml:space="preserve">
+    <value>MMR změna</value>
+  </data>
+  <data name="GenericMMRMilestones" xml:space="preserve">
+    <value>MMR mezníky</value>
+  </data>
+  <data name="GenericMyAccount" xml:space="preserve">
+    <value>Můj účet</value>
+  </data>
+  <data name="GenericNews" xml:space="preserve">
+    <value>Novinky</value>
+  </data>
+  <data name="GenericNextUpdateInMinutes" xml:space="preserve">
+    <value>Další aktualizace za {0} minut</value>
+  </data>
+  <data name="GenericOpposingHero" xml:space="preserve">
+    <value>Protivníkův hrdina</value>
+  </data>
+  <data name="GenericPassword" xml:space="preserve">
+    <value>Heslo</value>
+  </data>
+  <data name="GenericPlayer" xml:space="preserve">
+    <value>Hráč</value>
+  </data>
+  <data name="GenericPlayerSearchButton" xml:space="preserve">
+    <value>Hledat</value>
+  </data>
+  <data name="GenericPlayerSearchHelperText" xml:space="preserve">
+    <value>Najít hráče</value>
+  </data>
+  <data name="GenericProfile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="GenericRating" xml:space="preserve">
+    <value>Hodnocení (MMR)</value>
+  </data>
+  <data name="GenericRegion" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="GenericResult" xml:space="preserve">
+    <value>Výsledek</value>
+  </data>
+  <data name="GenericSitewide" xml:space="preserve">
+    <value>Celkový přehled</value>
+  </data>
+  <data name="GenericSpecialThanks" xml:space="preserve">
+    <value>Poděkování</value>
+  </data>
+  <data name="GenericSubmitButton" xml:space="preserve">
+    <value>Předložit</value>
+  </data>
+  <data name="GenericTeam" xml:space="preserve">
+    <value>Tým</value>
+  </data>
+  <data name="GenericTimeSpanDay" xml:space="preserve">
+    <value>{0} Den</value>
+  </data>
+  <data name="GenericTimeSpanDayPlural" xml:space="preserve">
+    <value>{0} Dní</value>
+  </data>
+  <data name="GenericTimeSpanHour" xml:space="preserve">
+    <value>{0} Hodina</value>
+  </data>
+  <data name="GenericTimeSpanHourPlural" xml:space="preserve">
+    <value>{0} Hodin</value>
+  </data>
+  <data name="GenericTimeSpanMinute" xml:space="preserve">
+    <value>{0} Minuta</value>
+  </data>
+  <data name="GenericTimeSpanMinutePlural" xml:space="preserve">
+    <value>{0} Minut</value>
+  </data>
+  <data name="GenericUserName" xml:space="preserve">
+    <value>Uživatelské jméno</value>
+  </data>
+  <data name="GenericViewMatchHistory" xml:space="preserve">
+    <value>Historie zápasů</value>
+  </data>
+  <data name="GenericViewProfile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="GenericWeekOfDate" xml:space="preserve">
+    <value>Týden {0}</value>
+  </data>
+  <data name="GenericWin" xml:space="preserve">
+    <value>Výhra</value>
+  </data>
+  <data name="GenericWinningTeam" xml:space="preserve">
+    <value>Vyhrávající tým</value>
+  </data>
+  <data name="GenericWinPercent" xml:space="preserve">
+    <value>Procento výher</value>
+  </data>
+  <data name="HeroDetailsMessageLine1" xml:space="preserve">
+    <value>Úspěšnost hrdiny za týden</value>
+  </data>
+  <data name="HeroDetailsTitle" xml:space="preserve">
+    <value>Podrobnosti hrdiny</value>
+  </data>
+  <data name="HeroDetailsWinRateVsOtherHeroes" xml:space="preserve">
+    <value>Úspešnost proti jiným hrdinům</value>
+  </data>
+  <data name="LeaderboardCurrentPlayerRank" xml:space="preserve">
+    <value>Vaše současné umístění v lize: {0}</value>
+  </data>
+  <data name="LeaderboardLeagueGamesPlayedRequirement" xml:space="preserve">
+    <value>Tato liga vyžaduje nejméně {0} nahraných záznamů</value>
+  </data>
+  <data name="LeaderboardMMRInfoLink" xml:space="preserve">
+    <value>Pokud vás zajímá, jak MMR počítám, tak tady je vysvětlení</value>
+  </data>
+  <data name="LogInCheckboxRememberMe" xml:space="preserve">
+    <value>Pamatovat si mě?</value>
+  </data>
+  <data name="LogInForgotPassword" xml:space="preserve">
+    <value>Zapomněli jste heslo? Klikněte zde pro resetování přihlašovacích údajů.</value>
+  </data>
+  <data name="LogInNewUser" xml:space="preserve">
+    <value>Pokud nemáte účet, zaregistrujte se.</value>
+  </data>
+  <data name="ManageAccountChangePasswordMessage" xml:space="preserve">
+    <value>Změna hesla</value>
+  </data>
+  <data name="ManageAccountChangePasswordSuccess" xml:space="preserve">
+    <value>Vaše heslo bylo změněno.</value>
+  </data>
+  <data name="ManageAccountCurrentPassword" xml:space="preserve">
+    <value>Současné heslo</value>
+  </data>
+  <data name="ManageAccountErrorCurrentPasswordRequired" xml:space="preserve">
+    <value>Je nutné vyplnit pole současné heslo.</value>
+  </data>
+  <data name="ManageAccountErrorNewPasswordRequired" xml:space="preserve">
+    <value>Je nutné vyplnit nové heslo.</value>
+  </data>
+  <data name="ManageAccountNewPassword" xml:space="preserve">
+    <value>Nové heslo</value>
+  </data>
+  <data name="ManageAccountTitle" xml:space="preserve">
+    <value>Spravovat účet</value>
+  </data>
+  <data name="MatchHistoryMessageLine1" xml:space="preserve">
+    <value>Pro detailnější informace klikněte na šipku v levém sloupci</value>
+  </data>
+  <data name="MatchHistoryMessageLine2" xml:space="preserve">
+    <value>MMR je neustálé přepočítáván, což u některých zápasů může trvat 1 až dva dny.</value>
+  </data>
+  <data name="MMRInfoMessageLine01" xml:space="preserve">
+    <value>Jak je MMR počítán?</value>
+  </data>
+  <data name="MMRInfoMessageLine02" xml:space="preserve">
+    <value>Používám algoritmus podobný Microsoft‘s TrueSkill, který je pro týmové hry obecně uznáván jako lepší než ELO.</value>
+  </data>
+  <data name="MMRInfoMessageLine03" xml:space="preserve">
+    <value>Váš MMR ukazuje, jak si stojíte v porovnání s ostatními hráči.  Jelikož odráží zručnost, čistě hraní více her nepovede ke zvýšení Vašeho MMR.  Pokud chcete zvýšit Vaše MMR, musíte hrát lépe :)</value>
+  </data>
+  <data name="MMRInfoMessageLine04" xml:space="preserve">
+    <value>Po každém zápase je Vaše MMR aktualizováno na základě výsledku daného zápasu, stejně tak současný průměrný MMR každého týmu.</value>
+  </data>
+  <data name="MMRInfoMessageLine05" xml:space="preserve">
+    <value>Pokud jste čelili týmu s vyšším MMR než Vaše a vyhráli jste, Vaše MMR bude navýšeno o více než běžně.  Stejně tak pokud čelíte týmu s nižším MMR a prohrajete, Vaše MMR bude sníženo o více než běžně.</value>
+  </data>
+  <data name="MMRInfoMessageLine06" xml:space="preserve">
+    <value>Po odehrání určité doby by Vaše MMR mělo být velmi přesné a Váš poměr výhry/prohry přibližně 50 %.</value>
+  </data>
+  <data name="MMRInfoMessageLine07" xml:space="preserve">
+    <value>Ligy</value>
+  </data>
+  <data name="MMRInfoMessageLine08" xml:space="preserve">
+    <value>Dal jsem dohromady různé „ligy“, které rozdělují žebříček.  Chci, aby hráči všech úrovní nalezli na této stránce hodnotné informace a začít na spodku jediného žebříčku může být odrazující.  Existence lig představuje cíl, za kterým si můžete jít.</value>
+  </data>
+  <data name="MMRInfoMessageLine09" xml:space="preserve">
+    <value>Různé ligy také znamenají, že můžu mít různé požadavky pro jednotlivé ligy.  S přibývajícím množstvím nahraných záznamů bude nejspíš umístění v top lize vyžadovat odehraný určitý počet zápasů.  Požadavky pro nižší ligy budou vždy menší, aby noví hráči měli motivaci se v nich brzy ukázat.</value>
+  </data>
+  <data name="MMRInfoMessageLine10" xml:space="preserve">
+    <value>Ligy dělí hráče do skupin podle MMR.  Bez hráčů s méně než 10 zápasy, Master liga tvoří top 1 % a Diamond liga dalších 9 %.  Platinum / Gold / Silver tvoří 20% každá a Bronze je posledních 30% hráčů.</value>
+  </data>
+  <data name="MMRInfoMessageLine11" xml:space="preserve">
+    <value>Nevidíte se v žebříčku?  Vaše MMR Vás může umístit do vyšší ligy, ale nesplňujete požadovaný počet odehraných zápasů.  MMR jednotlivých lig je počítáno před kontrolou, zdali hráči mají odehrané požadované množství zápasů.</value>
+  </data>
+  <data name="MMRInfoMessageLine12" xml:space="preserve">
+    <value>Rozřazovací zápasy</value>
+  </data>
+  <data name="MMRInfoMessageLine13" xml:space="preserve">
+    <value>Při Vaší první hře systém neví, jak dobří jste, a tak začínáte s výchozím MMR.  Vaše první hry mají pro výpočet MMR větší význam tak, aby byl proces Vašeho umístění rychlejší. Čím více her odehrajete, tím méně budou mít vliv na Váš MMR.</value>
+  </data>
+  <data name="MMRInfoMessageLine14" xml:space="preserve">
+    <value>To znamená, že Vaše první výhry a prohry výrazně změní Váš MMR v obou směrech.</value>
+  </data>
+  <data name="MMRInfoMessageLine15" xml:space="preserve">
+    <value>Toto je běžné u her s matchmakingem a slouží k rychlejšímu zařazení Vás s hráči na Vaší úrovní.</value>
+  </data>
+  <data name="MMRInfoMessageLine16" xml:space="preserve">
+    <value>Neznamená to ale, že po odehrání pár stovek her jste „zaseklí“ - pouze to znamená, že Vaše MMR se nemění tak drasticky jako po prvních hrách.</value>
+  </data>
+  <data name="MMRInfoMessageLine17" xml:space="preserve">
+    <value>Prohry v řadě v „rozřazovacích zápasech“</value>
+  </data>
+  <data name="MMRInfoMessageLine18" xml:space="preserve">
+    <value>Někteří hráči mě kontaktovali s prosbou o odstranění některých zápasů či s žádostí o „nový start“, jelikož si nebyli vědomi toho, že jejich první zápasy jsou „rozřazovací“.</value>
+  </data>
+  <data name="MMRInfoMessageLine19" xml:space="preserve">
+    <value>Začít se šňůrou proher je nešťastné, ale stejně tak se šňůrou výher.  Já jsem například vyhrál všech pět rozřazovacích her ve Starcraftu 2 a umístil jsem se v Gold lize.  Byl jsem z toho nadšený a chlubil se přátelům, kteří se umístili v Bronze či Silver.  Věděl jsem, že jsem měl štěstí v některých hrách, ale byl to výsledek, na čem záleželo.  Ale poté jsem prohrál 13 her v řadě a propadl jsem do Bronze ligy.  Neměl jsem vůbec být umístěn v Gold lize a jak jsem časem odehrál víc her, Blizzardí matchmaking se stal přesnějším a já začal vyhrávat 50 % zápasů.</value>
+  </data>
+  <data name="MMRInfoMessageLine20" xml:space="preserve">
+    <value>Opak je zde pravdou: Pokud jste měli šňůru proher v „rozřazovacích hrách“ na HOTS Logs, začněte s nízkým MMR.  Pokud je tento MMR nepřesný a mel by být vyšší, Blizzard Vás bude stavit proti týmům s vyšším MMR.  Pokud vyhrajete 50 % Vašich zápasů proti hráčům s vyšším MMR než je Vaše, Vaše MMR se pomalu přiblíží jejich.</value>
+  </data>
+  <data name="MMRInfoMessageLine21" xml:space="preserve">
+    <value>V případě, že Vaše MMR bylo skutečně nepřesně ovlivněno šňůrou proher v rozřazovacích zápasech, jediné řešení je odehrát více her.  To může zabrat více her než kdybyste vyhráli některé z Vašich rozřazovacích zápasů, ale i tak Vaše MMR dosáhne správné hodnoty.  Řešením není vymazat záznamy, to by vymazalo záznam pro dalších devět hráčů v daném zápasu a velký počet záznamů je nutný k přesnějším MMR výpočtům.</value>
+  </data>
+  <data name="MMRInfoMessageLine22" xml:space="preserve">
+    <value>MMR přesnost</value>
+  </data>
+  <data name="MMRInfoMessageLine23" xml:space="preserve">
+    <value>Někteří hráči mě kontaktovali s tím, že se domnívají, že by měli být v žebříčku umístění výš.</value>
+  </data>
+  <data name="MMRInfoMessageLine24" xml:space="preserve">
+    <value>Zaprvé, ujistěte se, že máte odehraný dostatečný počet her.  Když začínáte, Vaše MMR je neznámé a systém jej musí hádat.  Nezabývejte se moc MMR pokud jste neodehráli alespoň 100 a více her.</value>
+  </data>
+  <data name="MMRInfoMessageLine25" xml:space="preserve">
+    <value>Pokud máte nahraných dostatek záznamů, jak je možné zjistit, že MMR je vypočítáno přesně?  Podívejte se na MMR jednotlivých hráčů v zápase a na průměrný MMR týmů.  Průměrný MMR obou týmů by měl být podobný.</value>
+  </data>
+  <data name="MMRInfoMessageLine26" xml:space="preserve">
+    <value>Stane se, že MMR není přesné.  V případě, že zavedení hráči nahráli pouze několik záznamů, jejich skutečné MMR je pro mě neznámé, zatímco Blizzard má o něm nejspíš velmi dobrou představu.  Pokud je změna v hráčově MMR velká (větší než ~50), jeho úroveň je pro mě stále neznámá a musím hádat, jaký by jeho MMR měl být.</value>
+  </data>
+  <data name="MMRInfoMessageLine27" xml:space="preserve">
+    <value>Nejlepším způsobem, jak zlepšit přesnost mého MMR je nahrát více záznamů :) Požádejte Vaše přátele, aby nahráli jejich. Čím více záznamů budu mít k dispozici, tím přesnější budou výpočty.</value>
+  </data>
+  <data name="MMRInfoMessageLine28" xml:space="preserve">
+    <value>Je skvělé vidět stále více známých pro-hráčů v top 100, stejně tak v zápasech proti sobě :)</value>
+  </data>
+  <data name="MMRInfoTitle" xml:space="preserve">
+    <value>MMR informace</value>
+  </data>
+  <data name="PlayerSearchNoPlayersFound" xml:space="preserve">
+    <value>Hráč nenalezen, zkuste použít vyhledávací box v horní části stránky.</value>
+  </data>
+  <data name="PlayerSearchTitle" xml:space="preserve">
+    <value>Vyhledat hráče</value>
+  </data>
+  <data name="ProfileCurrentLeagueRank" xml:space="preserve">
+    <value>Současné umístění v lize</value>
+  </data>
+  <data name="ProfileCurrentMMR" xml:space="preserve">
+    <value>Současný MMR</value>
+  </data>
+  <data name="ProfileTotalGamesPlayed" xml:space="preserve">
+    <value>Celkový počet odehraných her</value>
+  </data>
+  <data name="ProfileTotalTimePlayed" xml:space="preserve">
+    <value>Celkový odehraný čas</value>
+  </data>
+  <data name="RegisterConfirmPassword" xml:space="preserve">
+    <value>Potvrďte heslo</value>
+  </data>
+  <data name="RegisterErrorDuplicateEmail" xml:space="preserve">
+    <value>E-mailová adresa, kterou jste zadali, již byla použita. Zadejte, prosím, jinou e-mailovou adresu.</value>
+  </data>
+  <data name="RegisterErrorDuplicateUsername" xml:space="preserve">
+    <value>Zadejte, prosím, jiné uživatelské jméno.</value>
+  </data>
+  <data name="RegisterMessageLine1" xml:space="preserve">
+    <value>Použijte formulář pro vytvoření nového účtu.</value>
+  </data>
+  <data name="RegisterPasswordRequirement" xml:space="preserve">
+    <value>Délka hesla musí být nejméně {0} znaků.</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Zaregistrovat se</value>
+  </data>
+  <data name="ResetPasswordMessage" xml:space="preserve">
+    <value>Pro změnu Vašeho hesla zadejte Vaše uživatelské jméno.</value>
+  </data>
+  <data name="ResetPasswordTitle" xml:space="preserve">
+    <value>Resetovat heslo</value>
+  </data>
+  <data name="SitewideHeroAndMapStatisticsTitle" xml:space="preserve">
+    <value>Celkové statistiky hrdinů a map</value>
+  </data>
+  <data name="SitewideHeroStatistics" xml:space="preserve">
+    <value>Statistiky hrdiny za poslední 2 záplaty</value>
+  </data>
+  <data name="SitewideMapStatistics" xml:space="preserve">
+    <value>Statistiky mapy za posledních 7 dní</value>
+  </data>
+  <data name="SitewidePremiumTitle" xml:space="preserve">
+    <value>Předplatné</value>
+  </data>
+  <data name="SitewideStatisticsTitle" xml:space="preserve">
+    <value>Statistika</value>
+  </data>
+  <data name="SitewideTalentsTitle" xml:space="preserve">
+    <value>Talenty</value>
+  </data>
+  <data name="SitewideUploadReplaysTitle" xml:space="preserve">
+    <value>Nahrajte záznamy!</value>
+  </data>
+  <data name="SpecialThanksLine1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UploadMessageLine1" xml:space="preserve">
+    <value>Než začnete nahrávat, tak prosím čtěte:</value>
+  </data>
+  <data name="UploadMessageLine2" xml:space="preserve">
+    <value>Plánuji, aby data všech záznamů byla co nejpřístupnější, s výjimkou herního chatu, který nikdy nezveřejním.  Ostatní data ze záznamů budou prakticky veřejná.</value>
+  </data>
+  <data name="UploadMessageLine3" xml:space="preserve">
+    <value>V současné přijímám záznamy ze Storm League (původně HL/TL), QM a Custom módu. Custom hry jsou soukromé a viditelné jen hráčům, kteří si ověřili účet přes Battle.net</value>
+  </data>
+  <data name="UploadMessageLine4" xml:space="preserve">
+    <value>Záznamy stačí být nahrány jednou.  Záznamy uložím a při použití dat z těchto záznamů automaticky aktualizuji Vaše statistiky.</value>
+  </data>
+  <data name="UploadMessageLine5" xml:space="preserve">
+    <value>Pokud se Vám při nahrávání záznamu zobrazí „duplikát“, znamená to, že jste již vy nebo někdo jiný daný záznam nahrál.</value>
+  </data>
+  <data name="UploadMessageLine6" xml:space="preserve">
+    <value>V případě chyby při nahrávání, můžete zkusit znovu později.  Neustále opravuji chyby a je šance, že extrakce dat z chybných záznamů bude možná později.</value>
+  </data>
+  <data name="UploadMessageSingleReplayHeader" xml:space="preserve">
+    <value>Nahrát jeden záznam</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine1" xml:space="preserve">
+    <value>Poznámka: Výchozí složka záznamů je:</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine2" xml:space="preserve">
+    <value>Windows: '...\Documents\Heroes of the Storm\Accounts\########\#-Hero-#-######\Replays\'</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine3" xml:space="preserve">
+    <value>Mac: '~/Library/Application Support/Blizzard/Heroes of the Storm/Accounts/########/#-Hero-#-######/Replays/'</value>
+  </data>
+  <data name="UploadMessageUploaderLine1" xml:space="preserve">
+    <value>Aplikace HOTS Logs Uploader</value>
+  </data>
+  <data name="UploadMessageUploaderLine2" xml:space="preserve">
+    <value>Pro automatické nahrávání záznamů doporučuji používat malou aplikaci pro Windows, kterou jsem napsal:</value>
+  </data>
+  <data name="UploadMessageUploaderLine3" xml:space="preserve">
+    <value>Klikněte zde pro stažení HOTS Logs Uploaderu</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>Nahrát záznamy</value>
+  </data>
+</root>

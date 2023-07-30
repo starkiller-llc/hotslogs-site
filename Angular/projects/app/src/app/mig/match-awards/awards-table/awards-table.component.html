@@ -1,0 +1,45 @@
+<div class="aspGrid RadGrid RadGrid_Black">
+  <app-table-filter [showRoles]="false" (filterChange)="tbl.filter($event)"></app-table-filter>
+  <table #tbl="migSort" mat-table matSort [migSort]="stats" [filterFields]="['Character','Role']">
+    <ng-container matColumnDef="heroImg">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let d" class="ImageGradientBorder HeroImg">
+        <app-portrait-sprite [hero]="d.CharacterURL"></app-portrait-sprite>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Character">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> <span localize>Hero</span> </th>
+      <td mat-cell *matCellDef="let d"> <a routerLink="/Sitewide/TalentDetails"
+          [queryParams]="{Hero:d.CharacterURL}">{{d.Character}}</a>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="GamesPlayedTotal">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Games Played</span> </th>
+      <td mat-cell *matCellDef="let d">
+        <div [innerHTML]="d.GamesPlayedTotal | safeHtml"></div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="GamesPlayedWithAward">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Games With Award</span> </th>
+      <td mat-cell *matCellDef="let d">
+        <div [innerHTML]="d.GamesPlayedWithAward | safeHtml"></div>
+      </td>
+    </ng-container>
+
+    <ng-container *ngFor="let c of allCols" [matColumnDef]="c">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        <app-award-sprite [award]="colIcons[c]" [tooltip]="colTooltips[c]"></app-award-sprite>
+      </th>
+      <td mat-cell *matCellDef="let d">
+        <div [innerHTML]="d[c] | safeHtml"></div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns">
+    </tr>
+    <tr mat-row class="rgRow" *matRowDef="let row; columns: columns;">
+  </table>
+</div>

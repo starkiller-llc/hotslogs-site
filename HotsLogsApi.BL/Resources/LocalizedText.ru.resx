@@ -1,0 +1,981 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutMessageLine1" xml:space="preserve">
+    <value>Меня зовут Бен Баррет. Я программист днем и заядлый геймер ночью.</value>
+  </data>
+  <data name="AboutMessageLine2" xml:space="preserve">
+    <value>Моя задача в этом проекте заключается в том, чтобы каждый игрок видел свою полную статистику по результатам всех игр. Я уверен, что Hots станет очень популярной игрой, и, в связи с этим, я хочу расширить функционал HOTS Logs и реализовать возможность детального анализа по каждому реплею. Мне бы хотелось, чтобы этот сайт помог каждому из Вас улучшить свою игру. Вы сможете понять не только свои ошибки (в стиле ли игры, в комбинациях ли героев), но и увидеть, что именно привело вас к победе!</value>
+  </data>
+  <data name="AboutMessageLine3" xml:space="preserve">
+    <value>Предложения и Поддержка:</value>
+  </data>
+  <data name="ChooseBattleNetIdErrorMessage1" xml:space="preserve">
+    <value>Упс! Мы не можем найти Ваш HotS Battle.Net ID.  Он должен быть в виде: '##-Hero-#-######'</value>
+  </data>
+  <data name="ChooseBattleNetIdErrorMessage2" xml:space="preserve">
+    <value>Мы не смогли найти ни одного реплея для данного Battle.Net Id.  Пройдите по данной ссылке для загрузки реплеев и подтверждения имени пользователя.</value>
+  </data>
+  <data name="ChooseBattleNetIdMessageLine1" xml:space="preserve">
+    <value>Please enter your Heroes of the Storm BattleTag:</value>
+  </data>
+  <data name="ChooseBattleNetIdTextBox" xml:space="preserve">
+    <value>Введите Ваше игровое имя</value>
+  </data>
+  <data name="ChooseBattleNetIdTitle" xml:space="preserve">
+    <value>Choose Battle.Net Id</value>
+  </data>
+  <data name="DefaultHeader" xml:space="preserve">
+    <value>Добро пожаловать на HOTS Logs!</value>
+  </data>
+  <data name="DefaultIntroMessageLine1" xml:space="preserve">
+    <value>Первый сайт, созданный для ранка игроков, сбора статистики по реплеям и их анализу в игре Heroes of the Storm.</value>
+  </data>
+  <data name="DefaultIntroMessageLine2" xml:space="preserve">
+    <value>Мы постоянно работаем над добавлением новых полезных функций, и уже сейчас вы можете многое узнать по Вашим реплеям, увидеть расширенную статистику, а скоро сможете еще больше!.</value>
+  </data>
+  <data name="DefaultIntroMessageLine3Part1" xml:space="preserve">
+    <value>В меню выше вы можете увидеть доступную на данный момент информацию.</value>
+  </data>
+  <data name="DefaultIntroMessageLine3Part2" xml:space="preserve">
+    <value>Регистрация абсолютна бесплатна! Присоединяйтесь к нам, изучайте статистику ваших игр, проводите анализ реплеев и улучшайте свою игру!</value>
+  </data>
+  <data name="DefaultIntroMessageTotalGames" xml:space="preserve">
+    <value>Большое спасибо за участие! На HOTS Logs уже загрузили {0} игр!</value>
+  </data>
+  <data name="DefaultTitle" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="ErrorPageMessageLine1" xml:space="preserve">
+    <value>Походу возникла ошибка! Не плачем – админ в курсе, все поправит!</value>
+  </data>
+  <data name="ErrorPageMessageLine2" xml:space="preserve">
+    <value>Пожалуйста, повторите позднее.</value>
+  </data>
+  <data name="ErrorPageTitle" xml:space="preserve">
+    <value>Опа-па!</value>
+  </data>
+  <data name="FAQMessageLine01" xml:space="preserve">
+    <value>Почему некоторые реплеи исчезают из моей истории игр? </value>
+  </data>
+  <data name="FAQMessageLine02" xml:space="preserve">
+    <value>В Heroes of the Storm есть возможность сохранять все свои реплеи. К сожалению, если вы не знали об этом и не включили эту функцию, то только самые последние реплеи будут загружены.</value>
+  </data>
+  <data name="FAQMessageLine03" xml:space="preserve">
+    <value>Но не спешите расстраиваться! Если хотя бы один из людей, с которыми вы играли, загрузили реплей на HOTS Logs, то он появится в Вашем профиле!.</value>
+  </data>
+  <data name="FAQMessageLine04" xml:space="preserve">
+    <value>Когда считается MMR? Когда обновляется ранковая таблица?</value>
+  </data>
+  <data name="FAQMessageLine05" xml:space="preserve">
+    <value>На данный момент MMR для сегодняшних игр считается каждые 3 часа, для более поздних игр каждую ночь.</value>
+  </data>
+  <data name="FAQMessageLine06" xml:space="preserve">
+    <value>Могут ли игроки загружать только победные матчи для повышения рейтинга?</value>
+  </data>
+  <data name="FAQMessageLine07" xml:space="preserve">
+    <value>И да и нет. Если загружать только победные матчи, MMR будет неправдоподобно высок. Но сама Blizzard это учитывает и все равно будет вести подсчет верно. Поэтому смысла в таком виде жульничества не будет. Побеждая игроков с MMR ниже, чем у тебя, количество получаемых очков будет все меньше и меньше.</value>
+  </data>
+  <data name="FAQMessageLine08" xml:space="preserve">
+    <value>Также не забывайте, что если один из игроков загрузит реплей, то он будет добавлен в профили всех 10 человек, которые играли в том матче.</value>
+  </data>
+  <data name="FAQMessageLine09" xml:space="preserve">
+    <value>Кстати, я просмотрел огромное количество профилей и не нашел ни одного с неправдоподобным винрейтом. Спасибо за честную игру!</value>
+  </data>
+  <data name="FAQMessageLine10" xml:space="preserve">
+    <value>Почему некоторые загруженные мною реплеи отображаются как Duplicated?</value>
+  </data>
+  <data name="FAQMessageLine11" xml:space="preserve">
+    <value>Это значит, что кто-то из игроков Вашего матча уже загрузил его и он отобразится в профиле у всех, кто с Вами играл.</value>
+  </data>
+  <data name="FAQTitle" xml:space="preserve">
+    <value>Вопросы и Ответы</value>
+  </data>
+  <data name="GenericAboutUs" xml:space="preserve">
+    <value>О проекте</value>
+  </data>
+  <data name="GenericAllLeagues" xml:space="preserve">
+    <value>Все Лиги</value>
+  </data>
+  <data name="GenericAverageLength" xml:space="preserve">
+    <value>Средняя продолжительность игры</value>
+  </data>
+  <data name="GenericContactUs" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
+  <data name="GenericDataCurrentlyUnavailable" xml:space="preserve">
+    <value>Данные временно не доступны</value>
+  </data>
+  <data name="GenericDateTime" xml:space="preserve">
+    <value>Дата и время</value>
+  </data>
+  <data name="GenericEmailAddress" xml:space="preserve">
+    <value>Электронная почта</value>
+  </data>
+  <data name="GenericErrorConfirmPasswordDoesntMatch" xml:space="preserve">
+    <value>Пароль и подтверждение пароля не совпадают.</value>
+  </data>
+  <data name="GenericErrorConfirmPasswordRequired" xml:space="preserve">
+    <value>Заполните графу подтверждения пароля.</value>
+  </data>
+  <data name="GenericErrorEmailRequired" xml:space="preserve">
+    <value>Необходимо ввести адрес электронной почты</value>
+  </data>
+  <data name="GenericErrorPasswordRequired" xml:space="preserve">
+    <value>Необходимо ввести пароль</value>
+  </data>
+  <data name="GenericErrorUserNameRequired" xml:space="preserve">
+    <value>Необходимо ввести имя пользователя</value>
+  </data>
+  <data name="GenericExcludingMirrorMatchupsAndTalentGatedHeroes" xml:space="preserve">
+    <value>Исключены зеркальные игры (одинаковые герои в каждой команде) и герои без полностью открытых талантов</value>
+  </data>
+  <data name="GenericExcludingTalentGatedGamesAndAutoSelectGames" xml:space="preserve">
+    <value>Исключены герои без полностью открытых талантов</value>
+  </data>
+  <data name="GenericGameLength" xml:space="preserve">
+    <value>Продолжительность игры</value>
+  </data>
+  <data name="GenericGamesPlayed" xml:space="preserve">
+    <value>Количество игр</value>
+  </data>
+  <data name="GenericGamesPlayedAgainst" xml:space="preserve">
+    <value>Игры Против</value>
+  </data>
+  <data name="GenericGetPremium" xml:space="preserve">
+    <value>Get Premium</value>
+  </data>
+  <data name="GenericHero" xml:space="preserve">
+    <value>Герой</value>
+  </data>
+  <data name="GenericHeroAbathur" xml:space="preserve">
+    <value>Абатур</value>
+  </data>
+  <data name="GenericHeroAlarak" xml:space="preserve">
+    <value>Аларак</value>
+  </data>
+  <data name="GenericHeroAlexstrasza" xml:space="preserve">
+    <value>Алекстраза</value>
+  </data>
+  <data name="GenericHeroAna" xml:space="preserve">
+    <value>Ana</value>
+  </data>
+  <data name="GenericHeroAnubarak" xml:space="preserve">
+    <value>Ануб'арак</value>
+  </data>
+  <data name="GenericHeroArtanis" xml:space="preserve">
+    <value>Артанис</value>
+  </data>
+  <data name="GenericHeroArthas" xml:space="preserve">
+    <value>Артас</value>
+  </data>
+  <data name="GenericHeroAuriel" xml:space="preserve">
+    <value>Ауриэль</value>
+  </data>
+  <data name="GenericHeroAutoSelect" xml:space="preserve">
+    <value>Автовыбор</value>
+  </data>
+  <data name="GenericHeroAzmodan" xml:space="preserve">
+    <value>Азмодан</value>
+  </data>
+  <data name="GenericHeroBlaze" xml:space="preserve">
+    <value>Блэйз</value>
+  </data>
+  <data name="GenericHeroBrightwing" xml:space="preserve">
+    <value>Светик</value>
+  </data>
+  <data name="GenericHeroCassia" xml:space="preserve">
+    <value>Кассия</value>
+  </data>
+  <data name="GenericHeroChen" xml:space="preserve">
+    <value>Чэнь</value>
+  </data>
+  <data name="GenericHeroCho" xml:space="preserve">
+    <value>Чо</value>
+  </data>
+  <data name="GenericHeroChogall" xml:space="preserve">
+    <value>ЧоГалл</value>
+  </data>
+  <data name="GenericHeroChromie" xml:space="preserve">
+    <value>Хроми</value>
+  </data>
+  <data name="GenericHeroDeckard" xml:space="preserve">
+    <value>Декард</value>
+  </data>
+  <data name="GenericHeroDehaka" xml:space="preserve">
+    <value>Дехака</value>
+  </data>
+  <data name="GenericHeroDiablo" xml:space="preserve">
+    <value>Диабло</value>
+  </data>
+  <data name="GenericHeroDVa" xml:space="preserve">
+    <value>D.Va</value>
+  </data>
+  <data name="GenericHeroETC" xml:space="preserve">
+    <value>E.T.C.</value>
+  </data>
+  <data name="GenericHeroFalstad" xml:space="preserve">
+    <value>Фалстад</value>
+  </data>
+  <data name="GenericHeroFenix" xml:space="preserve">
+    <value>Феникс</value>
+  </data>
+  <data name="GenericHeroGall" xml:space="preserve">
+    <value>Галл</value>
+  </data>
+  <data name="GenericHeroGarrosh" xml:space="preserve">
+    <value>Гаррош</value>
+  </data>
+  <data name="GenericHeroGazlowe" xml:space="preserve">
+    <value>Газлоу</value>
+  </data>
+  <data name="GenericHeroGenji" xml:space="preserve">
+    <value>Гэндзи</value>
+  </data>
+  <data name="GenericHeroGreymane" xml:space="preserve">
+    <value>Седогрив</value>
+  </data>
+  <data name="GenericHeroGuldan" xml:space="preserve">
+    <value>Гул'дан</value>
+  </data>
+  <data name="GenericHeroHanzo" xml:space="preserve">
+    <value>Хандзо</value>
+  </data>
+  <data name="GenericHeroIllidan" xml:space="preserve">
+    <value>Иллидан</value>
+  </data>
+  <data name="GenericHeroJaina" xml:space="preserve">
+    <value>Джайна</value>
+  </data>
+  <data name="GenericHeroJohanna" xml:space="preserve">
+    <value>Джоанна</value>
+  </data>
+  <data name="GenericHeroJunkrat" xml:space="preserve">
+    <value>Крысавчик</value>
+  </data>
+  <data name="GenericHeroKaelthas" xml:space="preserve">
+    <value>Кель'тас</value>
+  </data>
+  <data name="GenericHeroKelThuzad" xml:space="preserve">
+    <value>Кел'Тузад</value>
+  </data>
+  <data name="GenericHeroKerrigan" xml:space="preserve">
+    <value>Керриган</value>
+  </data>
+  <data name="GenericHeroKharazim" xml:space="preserve">
+    <value>Каразим</value>
+  </data>
+  <data name="GenericHeroLeoric" xml:space="preserve">
+    <value>Леорик</value>
+  </data>
+  <data name="GenericHeroLevel" xml:space="preserve">
+    <value>Уровень героя</value>
+  </data>
+  <data name="GenericHeroLiLi" xml:space="preserve">
+    <value>Ли ли</value>
+  </data>
+  <data name="GenericHeroLiMing" xml:space="preserve">
+    <value>Ли-Мин</value>
+  </data>
+  <data name="GenericHeroLtMorales" xml:space="preserve">
+    <value>Лейтенант Моралес</value>
+  </data>
+  <data name="GenericHeroLunara" xml:space="preserve">
+    <value>Лунара</value>
+  </data>
+  <data name="GenericHeroLúcio" xml:space="preserve">
+    <value>Лусио</value>
+  </data>
+  <data name="GenericHeroMaiev" xml:space="preserve">
+    <value>Майев</value>
+  </data>
+  <data name="GenericHeroMalfurion" xml:space="preserve">
+    <value>Малфурион</value>
+  </data>
+  <data name="GenericHeroMalthael" xml:space="preserve">
+    <value>Малтаэль</value>
+  </data>
+  <data name="GenericHeroMedivh" xml:space="preserve">
+    <value>Медив</value>
+  </data>
+  <data name="GenericHeroMuradin" xml:space="preserve">
+    <value>Мурадин</value>
+  </data>
+  <data name="GenericHeroMurky" xml:space="preserve">
+    <value>Мурчаль</value>
+  </data>
+  <data name="GenericHeroNazeebo" xml:space="preserve">
+    <value>Назибо</value>
+  </data>
+  <data name="GenericHeroNova" xml:space="preserve">
+    <value>Нова</value>
+  </data>
+  <data name="GenericHeroProbius" xml:space="preserve">
+    <value>Пробиус</value>
+  </data>
+  <data name="GenericHeroRagnaros" xml:space="preserve">
+    <value>Рагнарос</value>
+  </data>
+  <data name="GenericHeroRaynor" xml:space="preserve">
+    <value>Рейнор</value>
+  </data>
+  <data name="GenericHeroRehgar" xml:space="preserve">
+    <value>Регар</value>
+  </data>
+  <data name="GenericHeroRexxar" xml:space="preserve">
+    <value>Рексар</value>
+  </data>
+  <data name="GenericHeroSamuro" xml:space="preserve">
+    <value>Самуро</value>
+  </data>
+  <data name="GenericHeroSgtHammer" xml:space="preserve">
+    <value>Сержант Кувалда</value>
+  </data>
+  <data name="GenericHeroSonya" xml:space="preserve">
+    <value>Соня</value>
+  </data>
+  <data name="GenericHeroStatistics" xml:space="preserve">
+    <value>Статистика героя</value>
+  </data>
+  <data name="GenericHeroStitches" xml:space="preserve">
+    <value>Стежок</value>
+  </data>
+  <data name="GenericHeroStukov" xml:space="preserve">
+    <value>Стуков</value>
+  </data>
+  <data name="GenericHeroSylvanas" xml:space="preserve">
+    <value>Сильвана</value>
+  </data>
+  <data name="GenericHeroTassadar" xml:space="preserve">
+    <value>Тассадар</value>
+  </data>
+  <data name="GenericHeroTheButcher" xml:space="preserve">
+    <value>Мясник</value>
+  </data>
+  <data name="GenericHeroTheLostVikings" xml:space="preserve">
+    <value>Потерявшиеся викинги</value>
+  </data>
+  <data name="GenericHeroThrall" xml:space="preserve">
+    <value>Тралл</value>
+  </data>
+  <data name="GenericHeroTracer" xml:space="preserve">
+    <value>Трейсер</value>
+  </data>
+  <data name="GenericHeroTychus" xml:space="preserve">
+    <value>Тайкус</value>
+  </data>
+  <data name="GenericHeroTyrael" xml:space="preserve">
+    <value>Тираэль</value>
+  </data>
+  <data name="GenericHeroTyrande" xml:space="preserve">
+    <value>Тиранда</value>
+  </data>
+  <data name="GenericHeroUther" xml:space="preserve">
+    <value>Утер</value>
+  </data>
+  <data name="GenericHeroValeera" xml:space="preserve">
+    <value>Валира</value>
+  </data>
+  <data name="GenericHeroValla" xml:space="preserve">
+    <value>Валла</value>
+  </data>
+  <data name="GenericHeroVarian" xml:space="preserve">
+    <value>Вариан</value>
+  </data>
+  <data name="GenericHeroWhitemane" xml:space="preserve">
+    <value>Whitemane</value>
+  </data>
+  <data name="GenericHeroXul" xml:space="preserve">
+    <value>Зул</value>
+  </data>
+  <data name="GenericHeroYrel" xml:space="preserve">
+    <value>Ирель</value>
+  </data>
+  <data name="GenericHeroZagara" xml:space="preserve">
+    <value>Загара</value>
+  </data>
+  <data name="GenericHeroZarya" xml:space="preserve">
+    <value>Заря</value>
+  </data>
+  <data name="GenericHeroZeratul" xml:space="preserve">
+    <value>Зератул</value>
+  </data>
+  <data name="GenericHeroZuljin" xml:space="preserve">
+    <value>Зул'джин</value>
+  </data>
+  <data name="GenericInformation" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="GenericLastUpdatedMinutesAgo" xml:space="preserve">
+    <value>Обновлено {0} минут назад</value>
+  </data>
+  <data name="GenericLeaderboard" xml:space="preserve">
+    <value>Лига</value>
+  </data>
+  <data name="GenericLeague" xml:space="preserve">
+    <value>Лига</value>
+  </data>
+  <data name="GenericLeague0" xml:space="preserve">
+    <value>Мастер Лига</value>
+  </data>
+  <data name="GenericLeague1" xml:space="preserve">
+    <value>Алмазная Лига</value>
+  </data>
+  <data name="GenericLeague2" xml:space="preserve">
+    <value>Платиновая Лига</value>
+  </data>
+  <data name="GenericLeague3" xml:space="preserve">
+    <value>Золотая Лига</value>
+  </data>
+  <data name="GenericLeague4" xml:space="preserve">
+    <value>Серебряная Лига</value>
+  </data>
+  <data name="GenericLeague5" xml:space="preserve">
+    <value>Бронзовая Лига</value>
+  </data>
+  <data name="GenericLeagueRank" xml:space="preserve">
+    <value>Ранк в Лиге</value>
+  </data>
+  <data name="GenericLogIn" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="GenericLogOff" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="GenericLose" xml:space="preserve">
+    <value>Поражение</value>
+  </data>
+  <data name="GenericLosingTeam" xml:space="preserve">
+    <value>Проигравшая команда</value>
+  </data>
+  <data name="GenericMapName" xml:space="preserve">
+    <value>Название карты</value>
+  </data>
+  <data name="GenericMapNameAlteracPass" xml:space="preserve">
+    <value>Alterac Pass</value>
+  </data>
+  <data name="GenericMapNameBattlefieldofEternity" xml:space="preserve">
+    <value>Вечная битва</value>
+  </data>
+  <data name="GenericMapNameBlackheartsBay" xml:space="preserve">
+    <value>Бухта Черносерда</value>
+  </data>
+  <data name="GenericMapNameBraxisHoldout" xml:space="preserve">
+    <value>Бойня на Браксисе</value>
+  </data>
+  <data name="GenericMapNameBraxisOutpost" xml:space="preserve">
+    <value>Аванпост на Браксисе</value>
+  </data>
+  <data name="GenericMapNameCheckpointHanamura" xml:space="preserve">
+    <value>Контрольная точка: Ханамура</value>
+  </data>
+  <data name="GenericMapNameCursedHollow" xml:space="preserve">
+    <value>Проклятая Лощина</value>
+  </data>
+  <data name="GenericMapNameDragonShire" xml:space="preserve">
+    <value>Драконий Край</value>
+  </data>
+  <data name="GenericMapNameGardenofTerror" xml:space="preserve">
+    <value>Сад Ужасов</value>
+  </data>
+  <data name="GenericMapNameHanamura" xml:space="preserve">
+    <value>Ханамура</value>
+  </data>
+  <data name="GenericMapNameHauntedMines" xml:space="preserve">
+    <value>Призрачные Копи</value>
+  </data>
+  <data name="GenericMapNameInfernalShrines" xml:space="preserve">
+    <value>Оскверненные святилища</value>
+  </data>
+  <data name="GenericMapNameLostCavern" xml:space="preserve">
+    <value>Затерянный грот</value>
+  </data>
+  <data name="GenericMapNamePullParty" xml:space="preserve">
+    <value>Притягательные личности</value>
+  </data>
+  <data name="GenericMapNameSilverCity" xml:space="preserve">
+    <value>Серебряный город</value>
+  </data>
+  <data name="GenericMapNameSkyTemple" xml:space="preserve">
+    <value>Небесный Храм</value>
+  </data>
+  <data name="GenericMapNameTomboftheSpiderQueen" xml:space="preserve">
+    <value>Гробница королевы пауков</value>
+  </data>
+  <data name="GenericMapNameTowersofDoom" xml:space="preserve">
+    <value>Башни Рока</value>
+  </data>
+  <data name="GenericMapNameVolskaya" xml:space="preserve">
+    <value>Volskaya</value>
+  </data>
+  <data name="GenericMapNameWarheadJunction" xml:space="preserve">
+    <value>Ядерный полигон</value>
+  </data>
+  <data name="GenericMapStatistics" xml:space="preserve">
+    <value>Статистика карт</value>
+  </data>
+  <data name="GenericMatchHistory" xml:space="preserve">
+    <value>История матчей</value>
+  </data>
+  <data name="GenericMMRBefore" xml:space="preserve">
+    <value>MMR до</value>
+  </data>
+  <data name="GenericMMRChange" xml:space="preserve">
+    <value>Динамика MMR</value>
+  </data>
+  <data name="GenericMMRMilestones" xml:space="preserve">
+    <value>Изменение MMR</value>
+  </data>
+  <data name="GenericMyAccount" xml:space="preserve">
+    <value>Моя учетная запись</value>
+  </data>
+  <data name="GenericNews" xml:space="preserve">
+    <value>Новости</value>
+  </data>
+  <data name="GenericNextUpdateInMinutes" xml:space="preserve">
+    <value>Обновление через {0} минут</value>
+  </data>
+  <data name="GenericOpposingHero" xml:space="preserve">
+    <value>Играли против</value>
+  </data>
+  <data name="GenericPassword" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="GenericPlayer" xml:space="preserve">
+    <value>Игрок</value>
+  </data>
+  <data name="GenericPlayerSearchButton" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="GenericPlayerSearchHelperText" xml:space="preserve">
+    <value>Найти игрока</value>
+  </data>
+  <data name="GenericProfile" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="GenericRating" xml:space="preserve">
+    <value>Рейтинг (MMR)</value>
+  </data>
+  <data name="GenericRegion" xml:space="preserve">
+    <value>Регион</value>
+  </data>
+  <data name="GenericResult" xml:space="preserve">
+    <value>Результат</value>
+  </data>
+  <data name="GenericSitewide" xml:space="preserve">
+    <value>Общая статистика</value>
+  </data>
+  <data name="GenericSpecialThanks" xml:space="preserve">
+    <value>Отдельное спасибо</value>
+  </data>
+  <data name="GenericSubmitButton" xml:space="preserve">
+    <value>Подтвердить</value>
+  </data>
+  <data name="GenericTeam" xml:space="preserve">
+    <value>Команда</value>
+  </data>
+  <data name="GenericTimeSpanDay" xml:space="preserve">
+    <value>{0} дня</value>
+  </data>
+  <data name="GenericTimeSpanDayPlural" xml:space="preserve">
+    <value>{0} дней</value>
+  </data>
+  <data name="GenericTimeSpanHour" xml:space="preserve">
+    <value>{0} час</value>
+  </data>
+  <data name="GenericTimeSpanHourPlural" xml:space="preserve">
+    <value>{0} часов</value>
+  </data>
+  <data name="GenericTimeSpanMinute" xml:space="preserve">
+    <value>{0} минута</value>
+  </data>
+  <data name="GenericTimeSpanMinutePlural" xml:space="preserve">
+    <value>{0} минут</value>
+  </data>
+  <data name="GenericUserName" xml:space="preserve">
+    <value>Имя пользователя</value>
+  </data>
+  <data name="GenericViewMatchHistory" xml:space="preserve">
+    <value>Посмотреть историю игр</value>
+  </data>
+  <data name="GenericViewProfile" xml:space="preserve">
+    <value>Просмотреть профиль</value>
+  </data>
+  <data name="GenericWeekOfDate" xml:space="preserve">
+    <value>{0} -ая неделя</value>
+  </data>
+  <data name="GenericWin" xml:space="preserve">
+    <value>Победа</value>
+  </data>
+  <data name="GenericWinningTeam" xml:space="preserve">
+    <value>Победившая команда</value>
+  </data>
+  <data name="GenericWinPercent" xml:space="preserve">
+    <value>Процент побед</value>
+  </data>
+  <data name="HeroDetailsMessageLine1" xml:space="preserve">
+    <value>Рейт побед за неделю</value>
+  </data>
+  <data name="HeroDetailsTitle" xml:space="preserve">
+    <value>Информация по герою</value>
+  </data>
+  <data name="HeroDetailsWinRateVsOtherHeroes" xml:space="preserve">
+    <value>Рейт побед против других героев</value>
+  </data>
+  <data name="LeaderboardCurrentPlayerRank" xml:space="preserve">
+    <value>Твой ранк в Лиге: {0}</value>
+  </data>
+  <data name="LeaderboardLeagueGamesPlayedRequirement" xml:space="preserve">
+    <value>Для этой Лиги необходимо {0} реплеев</value>
+  </data>
+  <data name="LeaderboardMMRInfoLink" xml:space="preserve">
+    <value>Если Вам хочется знать как я считаю MMR, я написал небольшое объяснение здесь</value>
+  </data>
+  <data name="LogInCheckboxRememberMe" xml:space="preserve">
+    <value>Запомнить меня?</value>
+  </data>
+  <data name="LogInForgotPassword" xml:space="preserve">
+    <value>Забыли пароль? Нажмите здесь для сброса.</value>
+  </data>
+  <data name="LogInNewUser" xml:space="preserve">
+    <value>Зарегистрируйтесь, если у Вас еще нет аккаунта.</value>
+  </data>
+  <data name="ManageAccountChangePasswordMessage" xml:space="preserve">
+    <value>Смените пароль</value>
+  </data>
+  <data name="ManageAccountChangePasswordSuccess" xml:space="preserve">
+    <value>Ваш пароль был изменен.</value>
+  </data>
+  <data name="ManageAccountCurrentPassword" xml:space="preserve">
+    <value>Старый пароль</value>
+  </data>
+  <data name="ManageAccountErrorCurrentPasswordRequired" xml:space="preserve">
+    <value>Необходимо ввести старый пароль.</value>
+  </data>
+  <data name="ManageAccountErrorNewPasswordRequired" xml:space="preserve">
+    <value>Необходимо ввести новый пароль.</value>
+  </data>
+  <data name="ManageAccountNewPassword" xml:space="preserve">
+    <value>Новый пароль</value>
+  </data>
+  <data name="ManageAccountTitle" xml:space="preserve">
+    <value>Управление аккаунтом</value>
+  </data>
+  <data name="MatchHistoryMessageLine1" xml:space="preserve">
+    <value>Нажмите на стрелку в крайнем левом столбце таблицы, чтобы развернуть историю мачта и просмотреть статистику игрока подробнее</value>
+  </data>
+  <data name="MatchHistoryMessageLine2" xml:space="preserve">
+    <value>MMR для сегодняшних игр пересчитывается каждые три часа, для более поздних игр – каждую ночь.</value>
+  </data>
+  <data name="MMRInfoMessageLine01" xml:space="preserve">
+    <value>Как считается MMR?</value>
+  </data>
+  <data name="MMRInfoMessageLine02" xml:space="preserve">
+    <value>Я использую алгоритм похожий на Microsoft TrueSkill, так как для командных игр это лучше, чем ELO.</value>
+  </data>
+  <data name="MMRInfoMessageLine03" xml:space="preserve">
+    <value>Ваш рейтинг MMR показывает уровень Вашей игры по сравнению с другими игроками.  Так как рейтинг отражает мастерство, то большое количество игр не гарантирует высокий рейтинг. Если хотите повысить MMR – играйте лучше :)</value>
+  </data>
+  <data name="MMRInfoMessageLine04" xml:space="preserve">
+    <value>Каждый раз MMR обновляется по результатам игры, аналогично MMR для каждой из команд.</value>
+  </data>
+  <data name="MMRInfoMessageLine05" xml:space="preserve">
+    <value>Если вы победили команду с большим MMR, чем у Вас, то вы получите больше очков, чем обычно. То же правило действует при победе над противником с меньшим MMR. В этом случае Вы получите меньше очков.</value>
+  </data>
+  <data name="MMRInfoMessageLine06" xml:space="preserve">
+    <value>Так как MMR колеблется, то сыграв достаточное матчей, Вы получите весьма точный MMR, при этом количество ваших побед будет около 50%.</value>
+  </data>
+  <data name="MMRInfoMessageLine07" xml:space="preserve">
+    <value>Лиги</value>
+  </data>
+  <data name="MMRInfoMessageLine08" xml:space="preserve">
+    <value>Я сделал Лиги таким образом, чтобы каждый смог быть в топе любой из них. Любой игрок сможет найти какое место он занимает и стремиться занять позицию выше. При переходе из одной лиги в другую (соответственно при повышении MMR) Вы будете начинать с самого низа. Лиги дают Вам стимул улучшать уровень своей игры и желание сменить клешни на руки ;).</value>
+  </data>
+  <data name="MMRInfoMessageLine09" xml:space="preserve">
+    <value>Различные Лиги подразумевают различные требования для каждой из них. Со временем и ростом количества загруженных реплеев я установлю в качестве требования большее количество сыгранных игр для попадания в определенные лиги. Я всегда буду стараться устанавливать требования таким образом, чтобы каждый мог попасть в лигу довольно таки быстро.</value>
+  </data>
+  <data name="MMRInfoMessageLine10" xml:space="preserve">
+    <value>Лиги, по сути, разбивают игроков по группам в зависимости от их MMR. В Героическую Лигу входит 1% игроков, в Алмазную 9 %. В остальных лигах распределение более равномерное.</value>
+  </data>
+  <data name="MMRInfoMessageLine11" xml:space="preserve">
+    <value>Не можете найти себя в таблице? Вашего MMR может хватать для попадания в Лигу, но у Вас может не хватать количества игр для отображения в таблице.</value>
+  </data>
+  <data name="MMRInfoMessageLine12" xml:space="preserve">
+    <value>Определение места в рейтинге</value>
+  </data>
+  <data name="MMRInfoMessageLine13" xml:space="preserve">
+    <value>Если Вы новичок и только сыграли свой первый матч, то система не знает насколько Вы круты, поэтому Вы начнете со стартовым MMR. Первые игры будут приносить Вам больше MMR, чем поздние (для того, чтобы Ваше место в Лиге было определено максимально точно).</value>
+  </data>
+  <data name="MMRInfoMessageLine14" xml:space="preserve">
+    <value>Это значит, что Ваши победы и поражения будут менять Ваш MMR значительно в обоих случаях.</value>
+  </data>
+  <data name="MMRInfoMessageLine15" xml:space="preserve">
+    <value>Такая система характерна для всех игр с автоматическим подбором противников и сделана для того, чтобы Вам побиралась команда и противники с аналогичным уровнем игры.</value>
+  </data>
+  <data name="MMRInfoMessageLine16" xml:space="preserve">
+    <value>Это не значит, что вы застрянете на одном месте в Лиге после, скажем, нескольких сотен матчей. Это значит что Ваш MMR не будет расти (или падать) также быстро, как в ранних играх.</value>
+  </data>
+  <data name="MMRInfoMessageLine17" xml:space="preserve">
+    <value>Влияние поражений на определение места в рейтинге</value>
+  </data>
+  <data name="MMRInfoMessageLine18" xml:space="preserve">
+    <value>Многие игроки связывались со мной с требованиями удалить некоторые игры или позволить им «начать с чистого листа», объясняя это тем, что они не знали о влиянии результата первых игр на определение их места в рейтинге.</value>
+  </data>
+  <data name="MMRInfoMessageLine19" xml:space="preserve">
+    <value>Начинать только с проигрышей плохо, но также плохо начинать исключительно с побед. К примеру: я выиграл во всех первых пяти матчах, после которых определяется мое положение в рейтинге и вошел в Золотую Лигу. Я был поражен и доволен этим, обзывал своих друзей, сидящих в Бронзовой и Серебряной Лигой раками и всячески издевался над ними:) Я знал, что мне скорее всего повезло, но результат-то ведь важнее! Потом я проиграл подряд 13 игр и скатился в Бронзовую лигу. Я не должен был попасть в Золотую Лигу с самого начала, ведь я сыграл совсем мало игр! Так как мне подбирались противники с намного лучшим скиллом игры, я быстро скатился вниз. Близзард это учли и поменяли систему подбора игроков. Теперь мне попадаются примерно равные с моим скиллом противники и процент побед стал около 50.</value>
+  </data>
+  <data name="MMRInfoMessageLine20" xml:space="preserve">
+    <value>Обратное верно и в таком случае:  начав с поражений, у Вас будет более низкий MMR. И какое-то время вы будете играть с более слабыми противниками. Но в итоге Близзард будут кидать Вас в игры с противником, имеющим более высокий MMR, чем Ваш. Когда вы будете побеждать противников с более высоким MMR, Ваш MMR будет расти до их уровня быстрее.</value>
+  </data>
+  <data name="MMRInfoMessageLine21" xml:space="preserve">
+    <value>К сожалению, если Вам не повезло, и вы начали с цепочки поражений (из-за чего Ваш MMR не соответствует Вашему реальному скиллу), то Вам остается только одно – играть больше. Увеличение MMR до Вашего реального уровня игры может потребовать времени. В любом случае, чем больше реплеев будет загружено, тем точнее будет MMR каждого из игроков.</value>
+  </data>
+  <data name="MMRInfoMessageLine22" xml:space="preserve">
+    <value>Точность MMR</value>
+  </data>
+  <data name="MMRInfoMessageLine23" xml:space="preserve">
+    <value>Многие игроки обращались ко мне по поводу точности расчета MMR, полагая, что уровень их игры выше, чем их MMR и они заслуживают быть выше в Лиге.</value>
+  </data>
+  <data name="MMRInfoMessageLine24" xml:space="preserve">
+    <value>Для начала убедитесь, что вы сыграли довольно таки большое количество игр. Когда Вы начинаете, Ваш MMR неизвестен и системе нужно «догадаться» об уровне Вашей игры. Даже не думайте об MMR, пока вы не сыграете как минимум 100 игр, желательно, конечно, больше!</value>
+  </data>
+  <data name="MMRInfoMessageLine25" xml:space="preserve">
+    <value>Если у Вас загружено много реплеев, то как быть уверенным, что MMR считается точно? Посмотрите на MMR игроков Вашей команды и противников и на MMR команды в целом. В общем MMR каждой команды будет примерно одинаков.</value>
+  </data>
+  <data name="MMRInfoMessageLine26" xml:space="preserve">
+    <value>Бывает, когда MMR не точен. Это бывает в том случае, когда игр было сыграно много, а реплеев загружено мало. В этом случае, реальный MMR мне остается неизвестен, в то время как Близзард имеют точно представление об этом.  Если изменение MMR игрока после матча значительно (более 50), это значит что реальный MMR игрока все еще остается мне неизвестен и мне нужно догадываться о том, каков реальный MMR игрока.</value>
+  </data>
+  <data name="MMRInfoMessageLine27" xml:space="preserve">
+    <value>Лучший способ сделать MMR на HOTS Logs максимально точным, это загружать как можно больше реплеев. Просите друзей и знакомых всегда загружать свои реплеи! Это поможет мне считать MMR правильно и иметь верное представление об уровне игры каждого!</value>
+  </data>
+  <data name="MMRInfoMessageLine28" xml:space="preserve">
+    <value>Я рад видеть, что основные про-игроки находятся в топ 100 по рейтингу.</value>
+  </data>
+  <data name="MMRInfoTitle" xml:space="preserve">
+    <value>Информация об MMR</value>
+  </data>
+  <data name="PlayerSearchNoPlayersFound" xml:space="preserve">
+    <value>Игрок не найден. Попробуйте найти используя Search box наверху страницы.</value>
+  </data>
+  <data name="PlayerSearchTitle" xml:space="preserve">
+    <value>Поиск игрока</value>
+  </data>
+  <data name="ProfileCurrentLeagueRank" xml:space="preserve">
+    <value>Ваше место в Лиге</value>
+  </data>
+  <data name="ProfileCurrentMMR" xml:space="preserve">
+    <value>Ваш MMR</value>
+  </data>
+  <data name="ProfileTotalGamesPlayed" xml:space="preserve">
+    <value>Всего игр</value>
+  </data>
+  <data name="ProfileTotalTimePlayed" xml:space="preserve">
+    <value>Общее время в игре</value>
+  </data>
+  <data name="RegisterConfirmPassword" xml:space="preserve">
+    <value>Подтвердите пароль</value>
+  </data>
+  <data name="RegisterErrorDuplicateEmail" xml:space="preserve">
+    <value>Данный e-mail уже используется. Введите другой.</value>
+  </data>
+  <data name="RegisterErrorDuplicateUsername" xml:space="preserve">
+    <value>Пожалуйста, выберите другое имя пользователя.</value>
+  </data>
+  <data name="RegisterMessageLine1" xml:space="preserve">
+    <value>Заполните форму ниже для создания аккаунта.</value>
+  </data>
+  <data name="RegisterPasswordRequirement" xml:space="preserve">
+    <value>В пароле должно быть минимум {0} букв или знаков.</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Регистрация</value>
+  </data>
+  <data name="ResetPasswordMessage" xml:space="preserve">
+    <value>Введите Ваше имя пользователя для сброса пароля.</value>
+  </data>
+  <data name="ResetPasswordTitle" xml:space="preserve">
+    <value>Сбросить пароль</value>
+  </data>
+  <data name="SitewideHeroAndMapStatisticsTitle" xml:space="preserve">
+    <value>Расширенная статистика по героям и картам</value>
+  </data>
+  <data name="SitewideHeroStatistics" xml:space="preserve">
+    <value>Общая статистика по героям за 2 патча</value>
+  </data>
+  <data name="SitewideMapStatistics" xml:space="preserve">
+    <value>Общая статистика по картам за 7 дней</value>
+  </data>
+  <data name="SitewidePremiumTitle" xml:space="preserve">
+    <value>Premium</value>
+  </data>
+  <data name="SitewideStatisticsTitle" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="SitewideTalentsTitle" xml:space="preserve">
+    <value>Talents</value>
+  </data>
+  <data name="SitewideUploadReplaysTitle" xml:space="preserve">
+    <value>Upload Replays!</value>
+  </data>
+  <data name="SpecialThanksLine1" xml:space="preserve">
+    <value>Огромное спасибо FlyTheDragon SuperatorAeternitas за перевод сайта</value>
+  </data>
+  <data name="UploadMessageLine1" xml:space="preserve">
+    <value>ВНИМАНИЕ! Прочтите перед загрузкой реплеев:</value>
+  </data>
+  <data name="UploadMessageLine2" xml:space="preserve">
+    <value>Я планирую сделать всеобщую информацию по играм максимально доступной для каждого (за исключением чата – я никогда не буду делать его доступным).</value>
+  </data>
+  <data name="UploadMessageLine3" xml:space="preserve">
+    <value>В настоящее время возможно загружать только полные реплеи и только в режиме PVP.</value>
+  </data>
+  <data name="UploadMessageLine4" xml:space="preserve">
+    <value>Каждый реплей может быть загружен только один раз. После его сохранения на сервер, я вытаскиваю из него всю статистическую информацию и автоматически обновляю Ваш профиль.</value>
+  </data>
+  <data name="UploadMessageLine5" xml:space="preserve">
+    <value>Когда вы видите, что напротив Вашего реплея висит надпись 'Duplicate', это значит что кто-то уже загрузил реплей этой игры.</value>
+  </data>
+  <data name="UploadMessageLine6" xml:space="preserve">
+    <value>Если во время загрузки возникли проблемы, попробуйте загрузить реплей позднее. Иногда могут возникать проблемы, но я продолжаю фиксить баги. В любом случае – все данные позднее попадут на сервер и отобразятся в Вашем профиле.</value>
+  </data>
+  <data name="UploadMessageSingleReplayHeader" xml:space="preserve">
+    <value>Загрузка реплеев</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine1" xml:space="preserve">
+    <value>Внимание: по умолчанию папка для реплеев находится здесь:</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine2" xml:space="preserve">
+    <value>Windows: '...\Documents\Heroes of the Storm\Accounts\########\#-Hero-#-######\Replays\'</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine3" xml:space="preserve">
+    <value>Mac: '~/Library/Application Support/Blizzard/Heroes of the Storm/Accounts/########/#-Hero-#-######/Replays/'</value>
+  </data>
+  <data name="UploadMessageUploaderLine1" xml:space="preserve">
+    <value>Приложение HOTS Logs Uploader</value>
+  </data>
+  <data name="UploadMessageUploaderLine2" xml:space="preserve">
+    <value>Советую использовать небольшое приложение для автоматической загрузки реплеев, которое я написал:</value>
+  </data>
+  <data name="UploadMessageUploaderLine3" xml:space="preserve">
+    <value>Нажмите здесь, чтобы скачать и установить HOTS Logs Uploader</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>Загрузить реплей</value>
+  </data>
+</root>

@@ -1,0 +1,89 @@
+@import url("https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css");
+
+// mat-toolbar {
+//   .spacer {
+//     flex-grow: 1;
+//   }
+//   .container {
+//     display: flex;
+//   }
+//   .content-wrapper {
+//     width: 100%;
+//   }
+// }
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar.container {
+  width: 1170px;
+  margin: auto;
+  background: transparent;
+}
+
+.margin-10x {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.social-link {
+  display: flex;
+  .fa {
+    font-size: 18px;
+  }
+}
+
+.bold-gold {
+  color: gold;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.dark-stars {
+  background: #0d0119 url("/assets/Images/Background.jpg") center 0 no-repeat;
+  background-position: top;
+  overflow-y: visible;
+  height: 100%;
+}
+.dark-stars > div {
+  min-height: calc(100% - 102px);
+}
+
+.show-narrow {
+  display: none;
+}
+
+section.main-content {
+  position: relative;
+}
+
+.premium-star {
+  position: absolute;
+  left: -38px;
+}
+
+@media (max-width: 400px) {
+  .show-narrow {
+    display: initial;
+  }
+  .hide-narrow {
+    display: none;
+  }
+  .container {
+    width: 100%;
+  }
+  .premium-star {
+    left: initial;
+    right: 0;
+  }
+}
+
+#body {
+  min-height: 800px;
+  margin-bottom: 56px;
+}
+
+.flex {
+  display: flex;
+}

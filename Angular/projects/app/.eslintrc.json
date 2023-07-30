@@ -1,0 +1,64 @@
+{
+  "extends": "../../.eslintrc.json",
+  "ignorePatterns": [
+    "!**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "projects/app/tsconfig.app.json",
+          "projects/app/tsconfig.spec.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "rules": {
+        "prefer-const": "warn",
+        "eol-last": "warn",
+        "@angular-eslint/no-empty-lifecycle-method": "off",
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "variableLike",
+            "format": ["camelCase"]
+          },
+          {
+            "selector": "typeLike",
+            "format": ["PascalCase"]
+          },
+          {
+            "selector": "classProperty",
+            "modifiers": ["private"],
+            "format": ["camelCase"],
+            "leadingUnderscore": "require"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "rules": {}
+    }
+  ]
+}

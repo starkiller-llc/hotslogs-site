@@ -1,0 +1,5 @@
+<mat-form-field>
+  <input type="number" matInput placeholder="Replay Id" value="149957906" #rid>
+</mat-form-field>
+<button mat-button (click)="replayId=+rid.value">Fetch Replay</button>
+<lib-match-log *ngIf="replayId" [rid]="''+replayId" (replayNotFound)="replayId=0"></lib-match-log>

@@ -1,0 +1,26 @@
+<ng-container [ngSwitch]="step">
+  <ng-container *ngSwitchCase="1">
+    <form (submit)="submit()">
+      Please enter the email address associated with your account to reset your password. You will need access to this
+      account
+      to complete the password reset.
+      <br />
+      Email:
+      <input name="email" type="text" [(ngModel)]="email">
+      <button type="submit" class="btn btn-primary">Ok</button>
+    </form>
+
+    <re-captcha (resolved)="resolved($event)" [siteKey]="captchaKey"></re-captcha>
+  </ng-container>
+  <ng-container *ngSwitchCase="2">
+    <app-choose-password [id]="id" [token]="token"></app-choose-password>
+  </ng-container>
+  <ng-container *ngSwitchCase="3">
+    <h1 class="center">Password reset link sent by mail</h1>
+    <h3 class="center"><a routerLink="/">Back Home</a></h3>
+  </ng-container>
+  <ng-container *ngSwitchCase="4">
+    <h1 class="center">Password changed successfully</h1>
+    <h3 class="center"><a routerLink="/">Back Home</a></h3>
+  </ng-container>
+</ng-container>

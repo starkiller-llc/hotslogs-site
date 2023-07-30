@@ -1,0 +1,24 @@
+.tournament-bracket-round {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 250px;
+    box-sizing: border-box !important;
+    height: 100%;
+    .ng-star-inserted {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+    }
+}
+.match:not(:last-of-type):after {
+    display: flex;
+    flex-grow: 1;
+    right: 0;
+    position: absolute;
+    width: 25px;
+    height: 50%;
+    border-right: 2px solid #daa520;
+    content: '';
+    box-sizing: border-box !important;
+}

@@ -1,0 +1,37 @@
+<div class="aspGrid RadGrid RadGrid_Black">
+  <table style="width:100%;border-collapse:collapse;">
+    <thead>
+      <tr>
+        <th class="rgHeader"></th>
+        <th class="rgHeader center"></th>
+        <th class="rgHeader" localize>Talent</th>
+        <th class="rgHeader" localize>Games Played</th>
+        <th class="rgHeader" localize>Popularity</th>
+        <th class="rgHeader" localize>Win Percent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let d of stats">
+        <tr class="rgGroupHeader" *ngIf="d.HeaderStart">
+          <td class="rgGroupCol"></td>
+          <td colspan="5"><span class="rgGroupHeaderText">{{d.HeaderStart}}</span></td>
+        </tr>
+        <tr class="rgRow" [title]="d.TalentDescription">
+          <td class="rgGroupCol"></td>
+          <td class="center">
+            <app-talent-sprite [hero]="hero" [talent]="d.TalentName"></app-talent-sprite>
+          </td>
+          <td>{{d.TalentName}}</td>
+          <td *ngIf="!gamesPlayedIsHtml">{{d.GamesPlayed | number:'0.0-0'}}</td>
+          <td *ngIf="gamesPlayedIsHtml"><span [innerHTML]="d.GamesPlayed | safeHtml"></span></td>
+          <td>
+            <div [innerHTML]="d.Popularity|safeHtml"></div>
+          </td>
+          <td>
+            <div [innerHTML]="d.WinPercent|safeHtml"></div>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

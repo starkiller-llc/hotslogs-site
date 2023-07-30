@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+
+  redis:
+    image: redis
+    volumes:
+      - hotslogs-redis:/data
+    ports:
+      - "6379:6379"
+
+  db:
+    image: hotslogs
+    volumes:
+      - hotslogs-sql:/var/lib/mysql
+    security_opt:
+      - seccomp:unconfined
+    ports:
+      - "3306:3306"
+
+volumes:
+  hotslogs-redis:
+    external: true
+  hotslogs-sql:
+    external: true

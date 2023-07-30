@@ -1,0 +1,35 @@
+<div class="tournament-bracket-match">
+    <div [ngClass]="{'odd': odd, 'even' : !odd }" class="match">
+        <div *ngIf="match.team1Id === null; else isMatchBlock">
+            <div class="team-name"></div>
+            <div class="result"><div class="delineator"></div><div>TBD</div><div class="delineator"></div></div>
+            <div class="team-name"></div>
+        </div>
+        <ng-template #isMatchBlock>
+            <div *ngIf="match.team1Id === match.team2Id; else notByeBlock">
+                <div [ngClass]="match.team1Name.length >= 17 ? 'team-name small' : 'team-name'">{{ match.team1Name }}</div>
+                <div class="result"><div class="delineator"></div><div>BYE</div><div class="delineator"></div></div>
+                <div class="team-name"></div>
+            </div>
+            <ng-template #notByeBlock>
+                <div *ngIf="match.team1Id === match.winningTeamId; else elseBlock">
+                    <div [ngClass]="match.team1Name.length >= 17 ? 'team-name small' : 'team-name'">{{ match.team1Name }}</div>
+                    <div class="result"><div class="delineator"></div><div>DEFEATED</div><div class="delineator"></div></div>
+                    <div [ngClass]="match.team2Name.length >= 17 ? 'team-name small' : 'team-name'">{{ match.team2Name }}</div>
+                </div>
+                <ng-template #elseBlock>
+                    <div *ngIf="match.team2Id === match.winningTeamId; else notPlayed">
+                        <div [ngClass]="match.team2Name.length >= 17 ? 'team-name small' : 'team-name'">{{ match.team2Name }}</div>
+                        <div class="result"><div class="delineator"></div><div>DEFEATED</div><div class="delineator"></div></div>
+                        <div [ngClass]="match.team1Name.length >= 17 ? 'team-name small' : 'team-name'">{{ match.team1Name }}</div>
+                    </div>
+                    <ng-template #notPlayed>
+                        <div [ngClass]="match.team1Name.length >= 17 ? 'team-name small' : 'team-name'">{{ match.team1Name }}</div>
+                        <div class="result"><div class="delineator"></div><div>VS</div><div class="delineator"></div></div>
+                        <div [ngClass]="match.team2Name.length >= 17 ? 'team-name small' : 'team-name'">{{ match.team2Name }}</div>
+                    </ng-template>
+                </ng-template>
+            </ng-template>
+        </ng-template>
+    </div>
+</div>

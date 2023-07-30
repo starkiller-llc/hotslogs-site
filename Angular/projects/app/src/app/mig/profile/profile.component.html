@@ -1,0 +1,93 @@
+<app-title>{{title.getTitle()}} | HOTS Logs</app-title>
+<app-player-nav-menu *ngIf="playerId" [playerId]="playerId"></app-player-nav-menu>
+<div class="flex">
+  <lib-dropdown [items]="gameModeFilter" caption="Game Mode" [(value)]="gameMode" (selectionchanged)="sel()">
+  </lib-dropdown>
+  <lib-dropdown [items]="timeFilter" caption="Times" [(value)]="time" (selectionchanged)="sel()"></lib-dropdown>
+</div>
+<div class="row" *ngIf="result?.GeneralInformation">
+  <div class="col-md-6" style="margin-bottom: 20px;">
+    <div class="aspGrid RadGrid RadGrid_Black">
+      <table [style.width.%]="100">
+        <thead>
+          <tr>
+            <th colspan="2" class="rgHeader"><span localize>General Information</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="rgRow" *ngFor="let r of result.GeneralInformation">
+            <td>{{r[0]}}</td>
+            <td><span [innerHTML]="r[1] | safeHtml"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br />
+<div class="row DivProfilePlayerRoleStatistic">
+  <ng-container *ngFor="let role of result?.RoleStats">
+    <ng-container *ngTemplateOutlet="roleinfo; context: role"></ng-container>
+  </ng-container>
+</div>
+<br />
+
+<div>
+  <ul id="nav1" class="nav nav-tabs">
+    <li *ngFor="let tab of tabs; let i=index" class="tab" [class.active]="activeTab===i">
+      <a (click)="tabClick(i)">{{tab | localize}}</a>
+  </ul>
+</div>
+<div [style.min-height.px]="600">
+  <ng-container *ngIf="data$ | async as result">
+    <ng-container [ngSwitch]="activeTab">
+      <div *ngSwitchCase="0">
+        <app-profile-hero-table [stats]="result.CharacterStats" (detailsRequested)="expandHero($event)">
+        </app-profile-hero-table>
+      </div>
+      <div *ngSwitchCase="1">
+        <app-profile-map-table [stats]="result.MapStats" (detailsRequested)="expandMap($event)"></app-profile-map-table>
+      </div>
+      <div *ngSwitchCase="2">
+        <app-win-rate-vs [stats]="result.WinRateVsStats" [squarePortrait]="true"></app-win-rate-vs>
+      </div>
+      <div *ngSwitchCase="3">
+        <app-win-rate-with [stats]="result.WinRateWithStats" [squarePortrait]="true"></app-win-rate-with>
+      </div>
+      <div *ngSwitchCase="4">
+        <div class="flex">
+          <lib-dropdown [items]="gameModeFilter2" caption="Game Mode" [(value)]="gameMode2" (selectionchanged)="sel()">
+          </lib-dropdown>
+        </div>
+        <lib-rad-chart [jsondata]="result.MilestoneChart"></lib-rad-chart>
+      </div>
+      <div *ngSwitchCase="5">
+        <lib-rad-chart [jsondata]="result.WinRateChart"></lib-rad-chart>
+      </div>
+      <div *ngSwitchCase="6">
+        <app-friends-table [stats]="result.FriendsStats"></app-friends-table>
+      </div>
+      <div *ngSwitchCase="7">
+        <app-friends-table [stats]="result.RivalsStats" [rivals]="true"></app-friends-table>
+      </div>
+      <div *ngSwitchCase="8">
+      </div>
+    </ng-container>
+  </ng-container>
+</div>
+<ng-template #roleinfo let-role="Role" let-gamesPlayed="GamesPlayed" let-winPercent="WinPercent">
+  <div class="col-xs-6 col-sm-2">
+    <table>
+      <tr>
+        <td><img src="/assets/Images/{{role|hlSanitize}}.png" [alt]="role" class="divLeagueImage" [title]="role"
+            style="width: 100px;"></td>
+      </tr>
+      <tr>
+        <td><strong><span localize>Games Played</span>: </strong>{{gamesPlayed|number:'0.0-0'}}</td>
+      </tr>
+      <tr>
+        <td><strong><span localize>Win Percent</span>: </strong>{{winPercent|percent:'1.0-1'}}</td>
+      </tr>
+    </table>
+  </div>
+</ng-template>

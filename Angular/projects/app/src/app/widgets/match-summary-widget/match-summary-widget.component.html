@@ -1,0 +1,84 @@
+<div style="text-align: center; margin: 15px;">
+  <h3 id="h3MapName" style="display: inline;">{{result.MapName}}</h3>
+  <a *ngIf="result.ReplayDownloadVisible" [href]="result.ReplayDownloadHref" class="btn btn-border btn-ar btn-primary"
+    style="padding: 4px; margin-left: 10px; margin-bottom: 7px;">Download Replay</a>
+  <a *ngIf="result.PermalinkVisible" [href]="result.PermalinkHref" class="btn btn-border btn-ar btn-primary"
+    style="padding: 4px; margin-left: 10px; margin-bottom: 7px;" title="Permalink" target="_blank"><i class="fa fa-link"
+      style="margin-right: 0;"></i></a>
+</div>
+<app-details-table [stats]="result.MatchDetails" (voteDown)="voteDown.emit($event)" (voteUp)="voteUp.emit($event)">
+</app-details-table>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Score Results
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="content">
+    <app-match-score-table [stats]="result.ScoreResults"></app-match-score-table>
+    <br />
+    <app-score-totals-table [stats]="result.CharacterScoreResultsTotals"></app-score-totals-table>
+  </div>
+</mat-expansion-panel>
+<mat-expansion-panel *ngIf="result.PanelMatchLogVisible">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Match Log
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="content">
+    <lib-match-log rid="{{replayId}}"></lib-match-log>
+  </div>
+</mat-expansion-panel>
+<mat-expansion-panel *ngIf="!result.PanelMatchLogVisible">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Experience Summary
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="content">
+    <lib-rad-xp-chart [jsondata]="result.ChartXpSummaryJson"></lib-rad-xp-chart>
+  </div>
+</mat-expansion-panel>
+<mat-expansion-panel *ngIf="result.TalentUpgrades || result.TalentUpgradesStacks">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Talent Upgrades
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="content">
+    <app-match-talent-upgrades *ngIf="result.TalentUpgrades" [stats]="result.TalentUpgrades">
+    </app-match-talent-upgrades>
+    <app-match-talent-upgrade-stacks *ngIf="result.TalentUpgradesStacks" [stats]="result.TalentUpgradesStacks">
+    </app-match-talent-upgrade-stacks>
+  </div>
+</mat-expansion-panel>
+<mat-expansion-panel *ngIf="result.HeroBans">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Hero Bans
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="content">
+    <app-hero-bans-table [stats]="result.HeroBans"></app-hero-bans-table>
+  </div>
+</mat-expansion-panel>
+<mat-expansion-panel *ngIf="result.TeamObjectives">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Team Objectives
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="content">
+    <app-team-objectives-table [stats]="result.TeamObjectives"></app-team-objectives-table>
+  </div>
+</mat-expansion-panel>
+<!-- <mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Replay Viewer
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="content">
+  </div>
+</mat-expansion-panel> -->

@@ -1,0 +1,25 @@
+.about table {
+  display: inline-table;
+  border: 1px solid black;
+  margin: 3px 3px 20px 3px;
+}
+
+section.Dark table {
+  background-color: #4f4f4f;
+}
+
+.about table th,
+.about table td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.about table th {
+  text-align: center;
+  border: 1px solid black;
+  color: black;
+}
+
+.about table td {
+  border: 1px solid gray;
+}

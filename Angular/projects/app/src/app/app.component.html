@@ -1,0 +1,412 @@
+<div class="dark-stars">
+  <div [class]="theme$ | async">
+    <mat-toolbar class="navbar navbar-static-top navbar-default no-print navbar-dark">
+      <mat-toolbar class="container">
+        <span>
+          <a class="plain" routerLink="/">
+            <img id="imgLogo" class="hotslogs-logo" src="/assets/Images/logo.png" alt="HOTS Logs">
+          </a>
+        </span>
+        <div class="spacer"></div>
+        <ng-container *ngIf="narrow$ | async">
+          <button mat-icon-button [matMenuTriggerFor]="rest">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </ng-container>
+        <ng-container *ngIf="(narrow$ | async)===false">
+          <button mat-button [matMenuTriggerFor]="menuStats">
+            <span localize="SitewideStatisticsTitle">Statistics</span>
+          </button>
+          <button mat-button [matMenuTriggerFor]="menuTalents">
+            <span localize="SitewideTalentsTitle">Talents</span>
+          </button>
+          <button mat-button [matMenuTriggerFor]="menuLeaderboard">
+            <span localize>Leaderboard</span>
+          </button>
+          <button mat-button [matMenuTriggerFor]="menuTournaments">
+            <span>esports</span>
+          </button>
+          <button mat-button><a class="bold-gold" routerLink="/Upload" localize="SitewideUploadReplaysTitle">Upload
+              Replays!</a></button>
+          <!-- Disable subscription -- Aviad 23-Nov-2022 -->
+          <!-- <button *ngIf="(isLoggedIn$ | async) && ((isPremium$ | async)===false)" mat-button><a class="bold-gold"
+              routerLink="/Account/Manage" localize>Get Premium</a></button> -->
+          <button mat-icon-button class="margin-10x" [matMenuTriggerFor]="menuAccount">
+            <mat-icon>manage_accounts</mat-icon>
+          </button>
+          <a mat-icon-button class="margin-10x" href="mailto:bugreport@hotslogs.com">
+            <mat-icon>mail</mat-icon>
+          </a>
+          <button mat-icon-button class="margin-10x" [matMenuTriggerFor]="menuSearchBox"
+            (menuOpened)="srcha.focus();srcha.value=''">
+            <mat-icon>search</mat-icon>
+          </button>
+        </ng-container>
+        <mat-menu #menuSearchBox xPosition="before" class="search-menu">
+          <div #clck class="flex">
+            <input #srcha type="text" (keyup.enter)="doSearch(srcha.value);click(clck)"
+              (click)="stopPropagation($event)">
+            <button mat-button (click)="doSearch(srcha.value)">Search</button>
+          </div>
+        </mat-menu>
+
+        <!-- ----------- -->
+        <!-- Mobile Menu -->
+        <!-- ----------- -->
+        <mat-menu #rest class="mobile-menu">
+          <button mat-menu-item [matMenuTriggerFor]="menuStats">
+            Statistics
+          </button>
+          <button mat-menu-item [matMenuTriggerFor]="menuTalents">
+            Talents
+          </button>
+          <button mat-menu-item [matMenuTriggerFor]="menuLeaderboard">
+            Leaderboard
+          </button>
+          <button mat-menu-item [matMenuTriggerFor]="menuTournaments">
+            CCL
+          </button>
+          <button mat-menu-item><a class="bold-gold" routerLink="/Upload">Upload Replays!</a></button>
+          <button mat-menu-item class="margin-10x" [matMenuTriggerFor]="menuAccount">
+            <mat-icon>manage_accounts</mat-icon>
+          </button>
+          <a mat-icon-button class="margin-10x" href="mailto:bugreport@hotslogs.com">
+            <mat-icon>mail</mat-icon>
+          </a>
+          <a mat-menu-item class="margin-10x" [matMenuTriggerFor]="menuSearchBoxb"
+            (menuOpened)="focus(srchb);srchb.value=''">
+            <mat-icon>search</mat-icon>
+          </a>
+        </mat-menu>
+        <mat-menu #menuSearchBoxb xPosition="before" class="search-menu">
+          <div #clckb class="flex">
+            <input #srchb type="text" (keyup.enter)="doSearch(srchb.value);click(clckb)"
+              (click)="stopPropagation($event)">
+            <button mat-button (click)="doSearch(srchb.value)">Search</button>
+          </div>
+        </mat-menu>
+        <mat-menu #menuStats>
+          <a routerLink="/Sitewide/TalentDetails" mat-menu-item>Talent Details</a>
+          <a routerLink="/Sitewide/HeroAndMapStatistics" mat-menu-item><span
+              localize="SitewideHeroAndMapStatisticsTitle">Hero
+              and Map Statistics</span></a>
+          <a routerLink="/Sitewide/MapObjectives" mat-menu-item>Map Objectives</a>
+          <a routerLink="/Sitewide/ScoreResultStatistics" mat-menu-item>Score Results</a>
+          <a routerLink="/Sitewide/TeamCompositions" mat-menu-item>Team Compositions</a>
+          <a routerLink="/Sitewide/MatchAwards" mat-menu-item>Match Awards</a>
+        </mat-menu>
+        <mat-menu #menuTalents>
+          <a mat-menu-item [matMenuTriggerFor]="menuTalentsSubTank">Tank</a>
+          <a mat-menu-item [matMenuTriggerFor]="menuTalentsSubBruiser">Bruiser</a>
+          <a mat-menu-item [matMenuTriggerFor]="menuTalentsSubRanged">Ranged Assassin</a>
+          <a mat-menu-item [matMenuTriggerFor]="menuTalentsSubMelee">Melee Assassin</a>
+          <a mat-menu-item [matMenuTriggerFor]="menuTalentsSubHealer">Healer</a>
+          <a mat-menu-item [matMenuTriggerFor]="menuTalentsSubSupport">Support</a>
+        </mat-menu>
+        <mat-menu #menuTalentsSubTank>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Anub\'arak'}"><span
+              localize="GenericHero-">Anub'arak</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Arthas'}"><span
+              localize="GenericHero-">Arthas</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Blaze'}"><span
+              localize="GenericHero-">Blaze</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Cho'}"><span
+              localize="GenericHero-">Cho</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Diablo'}"><span
+              localize="GenericHero-">Diablo</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'E.T.C.'}"><span
+              localize="GenericHero-">E.T.C.</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Garrosh'}"><span
+              localize="GenericHero-">Garrosh</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Johanna'}"><span
+              localize="GenericHero-">Johanna</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Mal\'Ganis'}"><span
+              localize="GenericHero-">Mal'Ganis</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Mei'}"><span
+              localize="GenericHero-">Mei</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Muradin'}"><span
+              localize="GenericHero-">Muradin</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Stitches'}"><span
+              localize="GenericHero-">Stitches</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Tyrael'}"><span
+              localize="GenericHero-">Tyrael</span></a>
+        </mat-menu>
+        <mat-menu #menuTalentsSubBruiser>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Artanis'}"><span
+              localize="GenericHero-">Artanis</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Chen'}"><span
+              localize="GenericHero-">Chen</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'D.Va'}"><span
+              localize="GenericHero-">D.Va</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Deathwing'}"><span
+              localize="GenericHero-">Deathwing</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Dehaka'}"><span
+              localize="GenericHero-">Dehaka</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Gazlowe'}"><span
+              localize="GenericHero-">Gazlowe</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Hogger'}"><span
+              localize="GenericHero-">Hogger</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Imperius'}"><span
+              localize="GenericHero-">Imperius</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Leoric'}"><span
+              localize="GenericHero-">Leoric</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Malthael'}"><span
+              localize="GenericHero-">Malthael</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Ragnaros'}"><span
+              localize="GenericHero-">Ragnaros</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Rexxar'}"><span
+              localize="GenericHero-">Rexxar</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Sonya'}"><span
+              localize="GenericHero-">Sonya</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Thrall'}"><span
+              localize="GenericHero-">Thrall</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Varian'}"><span
+              localize="GenericHero-">Varian</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Xul'}"><span
+              localize="GenericHero-">Xul</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Yrel'}"><span
+              localize="GenericHero-">Yrel</span></a>
+        </mat-menu>
+        <mat-menu #menuTalentsSubRanged>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Azmodan'}"><span
+              localize="GenericHero-">Azmodan</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Cassia'}"><span
+              localize="GenericHero-">Cassia</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Chromie'}"><span
+              localize="GenericHero-">Chromie</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Falstad'}"><span
+              localize="GenericHero-">Falstad</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Fenix'}"><span
+              localize="GenericHero-">Fenix</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Gall'}"><span
+              localize="GenericHero-">Gall</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Genji'}"><span
+              localize="GenericHero-">Genji</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Greymane'}"><span
+              localize="GenericHero-">Greymane</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Gul\'dan'}"><span
+              localize="GenericHero-">Gul'dan</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Hanzo'}"><span
+              localize="GenericHero-">Hanzo</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Jaina'}"><span
+              localize="GenericHero-">Jaina</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Junkrat'}"><span
+              localize="GenericHero-">Junkrat</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Kael\'thas'}"><span
+              localize="GenericHero-">Kael'thas</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Kel\'Thuzad'}"><span
+              localize="GenericHero-">Kel'Thuzad</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Li-Ming'}"><span
+              localize="GenericHero-">Li-Ming</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Lunara'}"><span
+              localize="GenericHero-">Lunara</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Mephisto'}"><span
+              localize="GenericHero-">Mephisto</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Nazeebo'}"><span
+              localize="GenericHero-">Nazeebo</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Nova'}"><span
+              localize="GenericHero-">Nova</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Orphea'}"><span
+              localize="GenericHero-">Orphea</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Probius'}"><span
+              localize="GenericHero-">Probius</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Raynor'}"><span
+              localize="GenericHero-">Raynor</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Sgt. Hammer'}"><span
+              localize="GenericHero-">Sgt. Hammer</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Sylvanas'}"><span
+              localize="GenericHero-">Sylvanas</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Tassadar'}"><span
+              localize="GenericHero-">Tassadar</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Tracer'}"><span
+              localize="GenericHero-">Tracer</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Tychus'}"><span
+              localize="GenericHero-">Tychus</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Valla'}"><span
+              localize="GenericHero-">Valla</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Zagara'}"><span
+              localize="GenericHero-">Zagara</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Zul\'jin'}"><span
+              localize="GenericHero-">Zul'jin</span></a>
+        </mat-menu>
+        <mat-menu #menuTalentsSubMelee>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Alarak'}"><span
+              localize="GenericHero-">Alarak</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Illidan'}"><span
+              localize="GenericHero-">Illidan</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Kerrigan'}"><span
+              localize="GenericHero-">Kerrigan</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Maiev'}"><span
+              localize="GenericHero-">Maiev</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Murky'}"><span
+              localize="GenericHero-">Murky</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Qhira'}"><span
+              localize="GenericHero-">Qhira</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Samuro'}"><span
+              localize="GenericHero-">Samuro</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'The Butcher'}"><span
+              localize="GenericHero-">The Butcher</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Valeera'}"><span
+              localize="GenericHero-">Valeera</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Zeratul'}"><span
+              localize="GenericHero-">Zeratul</span></a>
+        </mat-menu>
+        <mat-menu #menuTalentsSubHealer>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Alexstrasza'}"><span
+              localize="GenericHero-">Alexstrasza</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Ana'}"><span
+              localize="GenericHero-">Ana</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Anduin'}"><span
+              localize="GenericHero-">Anduin</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Auriel'}"><span
+              localize="GenericHero-">Auriel</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Brightwing'}"><span
+              localize="GenericHero-">Brightwing</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Deckard'}"><span
+              localize="GenericHero-">Deckard</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Kharazim'}"><span
+              localize="GenericHero-">Kharazim</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Li Li'}"><span
+              localize="GenericHero-">Li Li</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Lt. Morales'}"><span
+              localize="GenericHero-">Lt. Morales</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Lúcio'}"><span
+              localize="GenericHero-">Lúcio</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Malfurion'}"><span
+              localize="GenericHero-">Malfurion</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Rehgar'}"><span
+              localize="GenericHero-">Rehgar</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Stukov'}"><span
+              localize="GenericHero-">Stukov</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Tyrande'}"><span
+              localize="GenericHero-">Tyrande</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Uther'}"><span
+              localize="GenericHero-">Uther</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Whitemane'}"><span
+              localize="GenericHero-">Whitemane</span></a>
+        </mat-menu>
+        <mat-menu #menuTalentsSubSupport>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Abathur'}"><span
+              localize="GenericHero-">Abathur</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Medivh'}"><span
+              localize="GenericHero-">Medivh</span></a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'The Lost Vikings'}"><span
+              localize="GenericHero-">The </span>Lost
+            Vikings</a>
+          <a mat-menu-item routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:'Zarya'}"><span
+              localize="GenericHero-">Zarya</span></a>
+        </mat-menu>
+        <mat-menu #menuLeaderboard>
+          <a mat-menu-item routerLink="/Rankings" [queryParams]="{GameMode:8}">Storm League</a>
+          <a mat-menu-item routerLink="/Rankings" [queryParams]="{GameMode:6}">Unranked Draft</a>
+          <a mat-menu-item routerLink="/Rankings" [queryParams]="{GameMode:3}">Quick Match</a>
+          <a mat-menu-item routerLink="/HeroRankings">Hero Leaderboards</a>
+          <a mat-menu-item routerLink="/Sitewide/ReputationLeaderboard">Reputation Leaderboards</a>
+        </mat-menu>
+        <mat-menu #menuTournaments>
+          <a *ngIf="isAdmin$ | async" mat-menu-item routerLink="/events">Admin</a>
+          <ng-container *ngIf="gameEvents$ | async as ges">
+            <a *ngFor="let ge of ges" mat-menu-item routerLink="/Sitewide/HeroAndMapStatistics"
+              [queryParams]="{GameModeEx:0, Event:ge.id}">{{ge.name}}</a>
+          </ng-container>
+        </mat-menu>
+        <mat-menu #menuAccount>
+          <!-- <a mat-menu-item routerLink="/Player/Profile2">Profile</a>
+      <a href="/Account/Logout" mat-menu-item>Logout</a> -->
+          <a mat-menu-item routerLink="/Player/Profile" localize>Profile</a>
+          <a mat-menu-item routerLink="/Player/HeroOverview">Hero Overview</a>
+          <a mat-menu-item routerLink="/Team/Overview">Team Overview</a>
+          <a mat-menu-item routerLink="/Player/MatchAwards">Match Awards</a>
+          <a mat-menu-item routerLink="/Player/MatchHistory">Match History</a>
+          <!-- <a mat-menu-item href="/Social/GuessTheVictor">Guess the Victor</a> -->
+          <!-- <a mat-menu-item routerLink="/Player/MatchHistory">Share Replay</a> -->
+          <a mat-menu-item routerLink="/Account/Manage" localize="ManageAccountTitle">Manage Account</a>
+          <a mat-menu-item routerLink="/Account/Logout" localize="GenericLogOff">Log Out</a>
+        </mat-menu>
+      </mat-toolbar>
+    </mat-toolbar>
+    <ng-container *ngIf="(isPremium$ | async) === false">
+      <div id="advertisementBannerMonkeyBrokerRight" style="width: 300px;">
+        <div class="anyclip"></div>
+
+        <div #adslot1 id="mb_adslot_1" class="advertisementBannerMonkeyBrokerRight">
+        </div>
+      </div>
+      <div id="advertisementBannerMonkeyBrokerRightThin" style="width: 130px;">
+        <div id="mb_adslot_2" class="advertisementBannerMonkeyBrokerRightThin"></div>
+      </div>
+    </ng-container>
+    <div id="body" class="container">
+      <ng-container *ngIf="(isPremium$ | async) === false">
+        <div id="advertisementPlaceholder"></div>
+        <div id="advertisementBannerMonkeyBrokerTop" class="advertisementBanner advertisementBannerMonkeyBrokerTop">
+        </div>
+        <div class="anyclip-mobile"></div>
+      </ng-container>
+      <section class="content-wrapper main-content clear-fix">
+        <img class="premium-star" *ngIf="isPremium$ | async"
+          title="HOTS Logs Supporter since {{supporterSince$ | async | date:'shortDate'}}"
+          src="/assets/Images/GoldStar.png" />
+        <router-outlet></router-outlet>
+        <div id="advertisementBannerMonkeyBrokerBottom" style="text-align: center; margin-top: 15px;"
+          class="advertisementBannerMonkeyBrokerBottom"></div>
+      </section>
+    </div>
+  </div>
+  <aside id="footer-widgets" class="no-print">
+    <div class="main-footer container">
+      <div class="sites">
+
+        <!-- <a class="logo"  href="" target="_blank"><img width="100" src="/Images/logo.png" alt="Logo" /></a> -->
+        <!-- Removed Logo -12/15/2019 -DR -->
+
+      </div>
+
+      <div class="clear"></div>
+      <mat-form-field style="color: white; margin: auto;">
+        <mat-select #slct panelClass="aviad-select" [value]="lang" (selectionChange)="changeLanguage($event.value)">
+          <mat-option value="en">English</mat-option>
+          <mat-option value="cs">Ceština</mat-option>
+          <mat-option value="da">Dansk</mat-option>
+          <mat-option value="de">Deutsch</mat-option>
+          <mat-option value="es">Español</mat-option>
+          <mat-option value="fi">Suomi</mat-option>
+          <mat-option value="fr">Français</mat-option>
+          <mat-option value="hu">Magyar</mat-option>
+          <mat-option value="ko">한국어</mat-option>
+          <mat-option value="nl">Nederlands</mat-option>
+          <mat-option value="pl">Polski</mat-option>
+          <mat-option value="ru">Pусский</mat-option>
+          <mat-option value="zh-Hans">简体中文</mat-option>
+          <mat-option value="zh-Hant">繁體中文</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="container" *ngIf="false">
+      <div class="row">
+        <div class="col-md-4">
+          <div id="divAdmin" visible="false">
+            <ul class="list-unstyled">
+              <li><a href="/Replays/DownloadReplay">Download Replay (ReplayID)</a></li>
+              <li><a href="/ReimportStrangeNames?Count=10">Reimport Strange Names</a></li>
+              <li><a href="/Admin/ManageHomePageMessage">Manage Home Page Message</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container -->
+  </aside>
+</div>
+<div *ngIf="(isPremium$ | async) === false" appMonkeyBroker>
+  <div id="back-top"><a href="#header"><i class="fa fa-chevron-up"></i></a></div>
+</div>
+
+<div *ngIf="ovl.overlay$ | async as o">
+  <div class="progress-overlay">
+    <div class="progress-text">
+      <mat-spinner></mat-spinner>
+    </div>
+  </div>
+</div>

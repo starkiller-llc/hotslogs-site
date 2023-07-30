@@ -1,0 +1,15 @@
+<app-title>Match Summary</app-title>
+<ng-container *ngIf="data$ | async as data">
+  <strong>
+    <span localize="GenericGameLength"></span>:
+  </strong>
+  {{result.ReplayLength|date:'H:mm:ss'}}
+  <br />
+  <strong>
+    <span localize="GenericDateTime"></span>:
+  </strong>
+  {{result.ReplayTime|date:'short'}}
+  <br />
+  <app-match-summary-widget [result]="result" [replayId]="replayId" (voteDown)="voteDown($event)"
+    (voteUp)="voteUp($event)"></app-match-summary-widget>
+</ng-container>

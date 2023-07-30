@@ -1,0 +1,49 @@
+<div class="aspGrid RadGrid RadGrid_Black">
+  <table #tbl="migSort" mat-table matSort [migSort]="stats">
+    <ng-container matColumnDef="PlayerName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> <span localize>Player</span> </th>
+      <td mat-cell *matCellDef="let d">
+        <a routerLink="/Player/Profile" [queryParams]="{PlayerID:d.PlayerID}">{{d.PlayerName}}</a>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="heroImg">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> </th>
+      <td mat-cell *matCellDef="let d">
+        <app-portrait-sprite [hero]="d.CharacterURL"></app-portrait-sprite>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Character">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> <span localize>Hero</span> </th>
+      <td mat-cell *matCellDef="let d">
+        <a routerLink="/Sitewide/TalentDetails" [queryParams]="{Hero:d.CharacterURL}">{{d.Character}}</a>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="talentImg">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> </th>
+      <td mat-cell *matCellDef="let d">
+        <app-talent-sprite [hero]="d.CharacterURL" [talent]="d.TalentName"></app-talent-sprite>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="TalentName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> <span localize>Talent Name</span> </th>
+      <td mat-cell *matCellDef="let d">
+        {{d.TalentName}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Stacks">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Stacks</span> </th>
+      <td mat-cell *matCellDef="let d">
+        {{d.Stacks}}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns">
+    </tr>
+    <tr mat-row class="rgRow" *matRowDef="let row; columns: columns;">
+  </table>
+</div>

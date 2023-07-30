@@ -1,0 +1,185 @@
+html, body {
+  background: #0d0119 url("../Images/BackgroundStripe.jpg") center 0 repeat-y;
+  background-color: #0d0117;
+  color: #ddd !important;
+}
+
+.navbar-dark,
+.navbar-dark li li {
+  border-bottom: 1px solid #593a99;
+}
+
+ul.nav-tabs {
+  margin-bottom: 20px;
+}
+
+ul.nav-tabs > li {
+  border: 2px solid #593a99;
+  margin: 3px;
+  user-select: none;
+}
+
+.nav-tabs li a,
+.nav-tabs li a:hover {
+  color: white !important;
+}
+
+.nav-tabs > li > a {
+  border: none !important;
+}
+
+.navbar-dark,
+.navbar-dark li,
+.navbar-dark,
+.navbar-dark li a,
+.nav-tabs li {
+  background-color: #1a1537 !important;
+}
+
+.navbar-nav li a:hover,
+.nav-tabs li a:hover,
+.nav-tabs li.active a {
+  text-shadow: 0 0 1rem #593a99;
+  background: radial-gradient(ellipse at bottom, #593a99 5%, transparent 75%) !important;
+}
+
+.navbar-nav li a:hover {
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  background-color: #1a1537;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 1rem #000;
+}
+
+a:hover,
+a:visited {
+  color: #8fdeff;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+select {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 5px;
+  border: 1px solid #9393f5;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.25);
+  height: 31px;
+  border-radius: 1px !important;
+}
+
+body .RadGrid_Black {
+  color: white;
+  background-color: rgba(32, 12, 59, 0.9);
+}
+
+.RadGrid_Black thead tr {
+  background: #4a307f;
+}
+
+.RadHtmlChart_Black {
+  overflow: hidden;
+}
+
+.section-title,
+.nav-tabs {
+  border-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.k-chart-tooltip {
+  color: black !important;
+}
+
+.MatchSummaryControl td {
+  border-bottom: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+.MatchSummaryControl td a {
+  color: #fff;
+}
+
+#divIntroNote > div,
+#divMatchSummaryPrevious > div,
+#divScoreboard {
+  background-color: rgba(32, 12, 59, 0.9);
+  border: 2px solid #593a99;
+  border-radius: 0px !important;
+}
+
+/* Datatables Styles */
+
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+  background-image: none;
+  background: linear-gradient(to top, #020202, #060606 50%, #262628 51%, #5f5f5f);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #fff !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+  color: #fff !important;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+  color: #fff;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  color: #49edff !important;
+  text-shadow: 0px 0px 20px #49edff;
+  background: unset !important;
+}
+.rgHeader,
+.rgHeaderDiv,
+th.rgResizeCol {
+  border: 0;
+  border-bottom: 1px solid #000;
+  background: none !important;
+}
+
+.panel-heading.panel-heading-link {
+  background-color: #1a1537 !important;
+  border: 1px solid #494794 !important;
+}
+
+.panel-heading.panel-heading-link a {
+  color: white !important;
+}
+
+.panel.panel-default {
+  background-color: transparent !important;
+}
+
+.panel,
+.panel-body {
+  border: none !important;
+}
+
+.section-title:first-letter {
+  color: #fff !important;
+}

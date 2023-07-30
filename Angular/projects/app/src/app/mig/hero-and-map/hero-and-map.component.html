@@ -1,0 +1,66 @@
+<app-title>Heroes of the Storm Hero & Map Statistics | HOTS Logs</app-title>
+<app-team-logos *ngIf="result?.Teams" [teams]="result.Teams"></app-team-logos>
+<div class="flex">
+  <ng-container *ngIf="!(level.length || gameLength.length) && gameModeEx!=='0'">
+    <lib-checkbox-list #tms [items]="timeFilter" caption="Times" [(value)]="time"
+      (selectionchanged)="sel();ptchs.clear()">
+    </lib-checkbox-list>
+    <lib-checkbox-list #ptchs [items]="patchFilter" caption="Patches" [(value)]="patch"
+      (selectionchanged)="sel();tms.clear()">
+    </lib-checkbox-list>
+  </ng-container>
+  <lib-checkbox-list *ngIf="gameModeEx!=='0'" [items]="leagueFilter" caption="Leagues" [(value)]="league"
+    (selectionchanged)="sel()">
+  </lib-checkbox-list>
+  <mat-form-field *ngIf="!(level.length || gameLength.length)">
+    <mat-select #slct panelClass="aviad-select" value="table" [(value)]="talent" (selectionChange)="sel()">
+      <mat-option value="AllTalents">All Talents</mat-option>
+      <mat-option value="MostPopular">Most Popular Talent Build</mat-option>
+      <mat-option value="HighestWinRate">Highest Winrate Talent Build</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div class="flex">
+  <lib-dropdown #g [items]="gameModeExFilter" caption="Game Mode" [(value)]="gameModeEx" (selectionchanged)="sel()">
+  </lib-dropdown>
+  <lib-dropdown *ngIf="g.value==='0'" [items]="tournamentFilter" caption="Tournament" [(value)]="tournament"
+    (selectionchanged)="sel()"></lib-dropdown>
+  <lib-checkbox-list *ngIf="!(level.length || gameLength.length)" [items]="mapFilter" caption="Maps" [(value)]="map"
+    (selectionchanged)="sel()">
+  </lib-checkbox-list>
+  <lib-checkbox-list *ngIf="!level.length" [items]="gameLengthFilter" caption="Game Lengths" [(value)]="gameLength"
+    (selectionchanged)="sel()">
+  </lib-checkbox-list>
+  <lib-checkbox-list *ngIf="gameModeEx!=='0' && !gameLength.length" [items]="levelFilter" caption="Levels"
+    [(value)]="level" (selectionchanged)="sel()">
+  </lib-checkbox-list>
+</div>
+<table>
+  <tr>
+    <td>
+      <p>{{result?.LastUpdatedText}}</p>
+    </td>
+  </tr>
+</table>
+<p *ngIf="result?.GameLengthFilterNotice"><strong>Note: </strong>When filtering by Game Length, the most recent 30 days
+  of data is used.</p>
+<p *ngIf="result?.CharacterLevelFilterNotice"><strong>Note: </strong>When filtering by Character Level, the most recent
+  30 days of data is used.</p>
+<p *ngIf="result?.PopularityNotice"><strong>Note: </strong>When filtering by a specific League, Popularity and Games
+  Banned may be inflated some. This is because of games where not all players are in the same league.</p>
+<p *ngIf="result?.RecentPatchNoteVisible && talent!=='AllTalents'"><strong>Note: </strong>Data is currently limited.
+  This is likely due to a
+  recent patch or hotfix, or perhaps a low popularity Hero.<br />Try widening the date range, or wait a few days for
+  more data to be collected.</p>
+<ng-container *ngIf="data$ | async as data">
+  <div *ngIf="talent==='AllTalents' || level.length || gameLength.length; else tlnts">
+    <app-stats *ngIf="result.Stats.length" [stats]="result.Stats" [showBanned]="result.BanDataAvailable"
+      [showDelta]="!gameLength.length && !level.length" [roles]="result.Roles" [gameModeEx]="gameModeEx"
+      [tournament]="tournament"></app-stats>
+  </div>
+  <ng-template #tlnts>
+    <app-popular-talent-builds *ngIf="result.PopularTalentBuilds.length" [stats]="result.PopularTalentBuilds"
+      [roles]="result.Roles">
+    </app-popular-talent-builds>
+  </ng-template>
+</ng-container>

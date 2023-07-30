@@ -1,0 +1,245 @@
+<section class="about Dark">
+  <p>Currently there is only a few available endpoints, but more will be added in the future. No API keys are needed at
+    this point, but I may change this in the future as well.</p>
+  <br />
+
+  <header>
+    <h3>Raw Data Export</h3>
+  </header>
+
+  <p>I also have an automated data export that shares a 30 day segment of raw data: <a
+      href="/assets/Data/HOTSLogs Data Export Current.zip">Download Link</a>, Last Updated: <span
+      id="spanReplayDownload" runat="server"></span></p>
+  <br />
+
+  <header>
+    <h3>Available Endpoints</h3>
+  </header>
+
+  <table>
+    <tr>
+      <td><a href="/api/Data/Heroes"><strong>https://www.hotslogs.com/api/Data/Heroes</strong></a>
+      </td>
+      <td>Hero List</td>
+    </tr>
+    <tr>
+      <td><a href="/api/Data/Maps"><strong>https://www.hotslogs.com/api/Data/Maps</strong></a>
+      </td>
+      <td>Map List</td>
+    </tr>
+    <!-- <tr>
+              <td><a href="/api/Events"><strong>https://www.hotslogs.com/api/Events</strong></a></td>
+              <td>Tournament List</td>
+          </tr>
+          <tr>
+              <td><a href="/api/Events/1026"><strong>https://www.hotslogs.com/api/Events/</strong><em>{EventID}</em></a></td>
+              <td>Tournament Details</td>
+          </tr> -->
+    <tr>
+      <td><a
+          href="/api/Players/12827662"><strong>https://www.hotslogs.com/api/Players/</strong><em>{{'{'}}PlayerID{{'}'}}</em></a>
+      </td>
+      <td>Player Summary - PlayerID</td>
+    </tr>
+    <tr>
+      <td><a
+          href="/api/Players/1/Benthor_1644"><strong>https://www.hotslogs.com/api/Players/</strong><em>{{'{'}}Region{{'}'}}</em>/<em>{{'{'}}BattleTag{{'}'}}</em></a>
+      </td>
+      <td>Player Summary - Region (1=US, 2=EU, 3=KR, 5=CN) and BattleTag (Name_1234)</td>
+    </tr>
+  </table>
+  <br />
+
+  <!-- <header>
+      <h3>JSON Property Acronyms</h3>
+  </header>
+
+      <p><strong>Players</strong></p>
+      <table>
+          <tr>
+              <td>PID</td>
+              <td>PlayerID</td>
+          </tr>
+          <tr>
+              <td>PN</td>
+              <td>Player Name</td>
+          </tr>
+      </table>
+
+      <p><strong>Replays</strong></p>
+      <table>
+          <tr>
+              <td>RID</td>
+              <td>ReplayID</td>
+          </tr>
+          <tr>
+              <td>GM</td>
+              <td>Game Mode or EventID</td>
+          </tr>
+          <tr>
+              <td>M</td>
+              <td>Map</td>
+          </tr>
+          <tr>
+              <td>RL</td>
+              <td>Replay Length</td>
+          </tr>
+          <tr>
+              <td>TR</td>
+              <td>Timestamp Replay</td>
+          </tr>
+          <tr>
+              <td>PXPB</td>
+              <td>Periodic XP Breakdown (Not Yet Available)</td>
+          </tr>
+          <tr>
+              <td>RCs</td>
+              <td>Replay Characters - 1 per Player per Game</td>
+          </tr>
+      </table>
+
+      <p><strong>Replay Characters - 1 per Player per Game</strong></p>
+      <table>
+          <tr>
+              <td>IsAS</td>
+              <td>Is Auto Select</td>
+          </tr>
+          <tr>
+              <td>C</td>
+              <td>Character (Hero Name)</td>
+          </tr>
+          <tr>
+              <td>CL</td>
+              <td>Character Level</td>
+          </tr>
+          <tr>
+              <td>IsW</td>
+              <td>Is Winner</td>
+          </tr>
+          <tr>
+              <td>MMRB</td>
+              <td>MMR Before</td>
+          </tr>
+          <tr>
+              <td>MMRC</td>
+              <td>MMR Change</td>
+          </tr>
+          <tr>
+              <td>SR</td>
+              <td>Score Result - 1 per Player per Game since ~Feb 2016</td>
+          </tr>
+      </table>
+
+      <p><strong>Score Result - 1 per Player per Game since ~Feb 2016</strong></p>
+      <table>
+          <tr>
+              <td>T</td>
+              <td>Takedowns</td>
+          </tr>
+          <tr>
+              <td>S</td>
+              <td>Solo Kills (Killing Blows)</td>
+          </tr>
+          <tr>
+              <td>A</td>
+              <td>Assists</td>
+          </tr>
+          <tr>
+              <td>D</td>
+              <td>Deaths</td>
+          </tr>
+          <tr>
+              <td>HD</td>
+              <td>Hero Damage</td>
+          </tr>
+          <tr>
+              <td>SiD</td>
+              <td>Siege Damage (Includes Structure, Minion, and Creep)</td>
+          </tr>
+          <tr>
+              <td>StD</td>
+              <td>Structure Damage</td>
+          </tr>
+          <tr>
+              <td>MD</td>
+              <td>Minion Damage</td>
+          </tr>
+          <tr>
+              <td>CD</td>
+              <td>Creep Damage</td>
+          </tr>
+          <tr>
+              <td>SuD</td>
+              <td>Summon Damage</td>
+          </tr>
+          <tr>
+              <td>TCCdEH</td>
+              <td>Time CC'd Enemy Hero - Not Available, <a href="https://github.com/Blizzard/heroprotocol/issues/21">Known Issue</a></td>
+          </tr>
+          <tr>
+              <td>H</td>
+              <td>Healing - <a href="https://github.com/Blizzard/heroprotocol/issues/29">Known Issue</a></td>
+          </tr>
+          <tr>
+              <td>SH</td>
+              <td>Self Healing - <a href="https://github.com/Blizzard/heroprotocol/issues/30">Known Issue</a></td>
+          </tr>
+          <tr>
+              <td>DT</td>
+              <td>Damage Taken</td>
+          </tr>
+          <tr>
+              <td>EC</td>
+              <td>Experience Contribution</td>
+          </tr>
+          <tr>
+              <td>TK</td>
+              <td>Town Kills (Fort/Keep Killing Blows)</td>
+          </tr>
+          <tr>
+              <td>TSD</td>
+              <td>Time Spent Dead - <a href="https://github.com/Blizzard/heroprotocol/issues/31">Known Issue</a></td>
+          </tr>
+          <tr>
+              <td>MCC</td>
+              <td>Merc Camps Captured</td>
+          </tr>
+          <tr>
+              <td>WTC</td>
+              <td>Watch Tower Captures</td>
+          </tr>
+          <tr>
+              <td>ME</td>
+              <td>Meta Experience (XP added to the player's account and Hero level after the match)</td>
+          </tr>
+      </table>
+
+      <p><strong>Team Profile Player Average Replay Character Upgrade Event Replay Length Percents</strong></p>
+      <p>This shows the average percent of a match a player spends at each stack of 'Gathering Power'-style talents.</p>
+      <p>Currently this is only available for a couple talents that are tracked in the replay file.  I'll add new ones if Blizzard makes them available in the replay file.</p>
+      <p>Nova Snipe Master = 1</p>
+      <p>Gall Dark Descent = 2</p>
+      <table>
+          <tr>
+              <td>T</td>
+              <td>Upgrade Event Type (See Above)</td>
+          </tr>
+          <tr>
+              <td>V</td>
+              <td>Upgrade Event Value</td>
+          </tr>
+          <tr>
+              <td>P</td>
+              <td>Replay Length Percent</td>
+          </tr>
+          <tr>
+              <td>GP</td>
+              <td>Games Played</td>
+          </tr>
+          <tr>
+              <td>GW</td>
+              <td>Games Won</td>
+          </tr>
+      </table> -->
+
+</section>

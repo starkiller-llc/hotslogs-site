@@ -1,0 +1,8 @@
+<div class="tournament-bracket">
+    <div *ngIf="matches.length === 0; else elseBlock" ><h1>Tournament Has Been Filled</h1></div>
+    <ng-template #elseBlock>
+        <div *ngFor="let ms of matches; let column = index">
+            <app-tournament-bracket-round [matches]="ms"></app-tournament-bracket-round>
+        </div>
+    </ng-template>
+</div>

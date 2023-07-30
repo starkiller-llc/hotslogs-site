@@ -1,0 +1,7 @@
+<mat-form-field>
+  <mat-label>{{caption}}</mat-label>
+  <mat-select #slct [formControl]="toppings" [multiple]="true"
+    (openedChange)="onSelectionChange($event)" (selectionChange)="selChangeWhileClosed($event)" panelClass="aviad-select">
+    <mat-option *ngFor="let topping of toppingList" [value]="topping.value">{{topping.key}}</mat-option>
+  </mat-select>
+</mat-form-field>

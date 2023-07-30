@@ -1,0 +1,57 @@
+<div class="aspGrid RadGrid RadGrid_Black">
+  <app-table-filter [showRoles]="true" (filterChange)="tbl.filter($event)"></app-table-filter>
+  <table #tbl="migSort" mat-table matSort [migSort]="stats" [filterFields]="['Character','Role']">
+    <ng-container matColumnDef="heroImg">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let d" class="ImageGradientBorder HeroImg">
+        <app-portrait-sprite [hero]="d.CharacterURL"></app-portrait-sprite>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Character">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header start="asc"> <span localize>Hero</span> </th>
+      <td mat-cell *matCellDef="let d">
+        <a routerLink="/Sitewide/TalentDetails" [queryParams]="getQueryParams(d.CharacterURL)">{{d.Character}}</a>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="GamesPlayed">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Games Played</span> </th>
+      <td mat-cell *matCellDef="let d">
+        {{d.GamesPlayed|number:'0.0-0'}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="GamesBanned">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Games Banned</span> </th>
+      <td mat-cell *matCellDef="let d">
+        {{d.GamesBanned|number:'0.0-0'}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Popularity">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Popularity</span> </th>
+      <td mat-cell *matCellDef="let d">
+        <div [innerHTML]="d.Popularity | safeHtml"></div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="WinPercent">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span localize>Win Percent</span> </th>
+      <td mat-cell *matCellDef="let d">
+        <div [innerHTML]="d.WinPercent | safeHtml"></div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="WinPercentDelta">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> % Δ </th>
+      <td mat-cell *matCellDef="let d">
+        <span><span class="grn" [class.neg]="d.WinPercentDelta<0">{{d.WinPercentDelta | percent:'1.0-1'}}</span></span>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns">
+    </tr>
+    <tr mat-row class="rgRow" *matRowDef="let row; columns: columns;">
+  </table>
+</div>

@@ -1,0 +1,1035 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutMessageLine1" xml:space="preserve">
+    <value>我叫班．巴雷特（Ben Barrett），在白天是個軟體工程師，而晚上則是個遊戲狂熱者。</value>
+  </data>
+  <data name="AboutMessageLine2" xml:space="preserve">
+    <value>我對這個專案的主要目標是補足關於遊戲內個人資訊不足的部分，我相信暴雪英霸在未來一定會成為非常熱門的遊戲，所以我想要擴展暴雪英霸日誌站，讓每個遊戲錄像都能有更多的細節分析。我希望這個網站能激發玩家們變更得更好，並且能互相學習他們的打法風格及團隊配合方式。</value>
+  </data>
+  <data name="AboutMessageLine3" xml:space="preserve">
+    <value>建議或支援：</value>
+  </data>
+  <data name="AdditionalFiltersLine" xml:space="preserve">
+    <value>點擊此處查看額外選項</value>
+  </data>
+  <data name="ChooseBattleNetIdErrorMessage1" xml:space="preserve">
+    <value>抱歉，我們無法找到你的暴雪英霸Battle.Net ID。它應該是要這樣的格式：「##-Hero-#-######」</value>
+  </data>
+  <data name="ChooseBattleNetIdErrorMessage2" xml:space="preserve">
+    <value>這個Battle.Net ID找不到相關錄像，請跟著這個連結來上傳錄像並認證使用者。</value>
+  </data>
+  <data name="ChooseBattleNetIdMessageLine1" xml:space="preserve">
+    <value>Please enter your Heroes of the Storm BattleTag:</value>
+  </data>
+  <data name="ChooseBattleNetIdTextBox" xml:space="preserve">
+    <value>輸入你在遊戲內的名字</value>
+  </data>
+  <data name="ChooseBattleNetIdTitle" xml:space="preserve">
+    <value>選擇Battle.Net Id</value>
+  </data>
+  <data name="DefaultHeader" xml:space="preserve">
+    <value>歡迎來到暴雪英霸日誌站！</value>
+  </data>
+  <data name="DefaultIntroMessageLine1" xml:space="preserve">
+    <value>第一個專注於分析暴雪英霸遊戲錄像的網站。</value>
+  </data>
+  <data name="DefaultIntroMessageLine2" xml:space="preserve">
+    <value>這個網站還在初步階段，但這裡已經有你想要的好資訊，並且將會越來越多。</value>
+  </data>
+  <data name="DefaultIntroMessageLine3Part1" xml:space="preserve">
+    <value>查看上方的選單來看看目前有什麼可用的資訊。</value>
+  </data>
+  <data name="DefaultIntroMessageLine3Part2" xml:space="preserve">
+    <value>註冊是免費的，所以請現在就註冊並開始分析你的遊戲錄像！</value>
+  </data>
+  <data name="DefaultIntroMessageTotalGames" xml:space="preserve">
+    <value>感謝每個人的參與！截至目前為止，大家總共上傳了 {0} 場遊戲！</value>
+  </data>
+  <data name="DefaultTitle" xml:space="preserve">
+    <value>首頁</value>
+  </data>
+  <data name="ErrorPageMessageLine1" xml:space="preserve">
+    <value>看來我們似乎有個錯誤！一個管理員已經被通知了，他將會看看發生了什麼事。</value>
+  </data>
+  <data name="ErrorPageMessageLine2" xml:space="preserve">
+    <value>請您稍後再嘗試一次。</value>
+  </data>
+  <data name="ErrorPageTitle" xml:space="preserve">
+    <value>哎呀！</value>
+  </data>
+  <data name="FAQMessageLine01" xml:space="preserve">
+    <value>為什麼我的遊戲錄像在對戰紀綠中消失了？</value>
+  </data>
+  <data name="FAQMessageLine02" xml:space="preserve">
+    <value>暴雪英霸中有一個選項可以儲存你所有的遊戲錄像。不幸的是，如果你之前不知道有這個選項或沒有打開它，那麼就只有你最近的錄像會被保存。</value>
+  </data>
+  <data name="FAQMessageLine03" xml:space="preserve">
+    <value>好消息是，如果跟你一起進行遊戲的其他玩家上傳了錄像，那麼它也會被添加到你的資料中。</value>
+  </data>
+  <data name="FAQMessageLine04" xml:space="preserve">
+    <value>MMR什麼時候會進行計算？排行榜什麼時候更新？</value>
+  </data>
+  <data name="FAQMessageLine05" xml:space="preserve">
+    <value>MMR會一直不斷地重新計算。它每次會從還沒計算到的地方開始算起，然後一直計算到最新的部分。整個流程會跑遍每一個區域，接著就會建立排行榜。目前這個流程大約需要花一天時間。</value>
+  </data>
+  <data name="FAQMessageLine06" xml:space="preserve">
+    <value>玩家可以只上傳他們贏的錄像來提升他們的在排行榜的名次嗎？</value>
+  </data>
+  <data name="FAQMessageLine07" xml:space="preserve">
+    <value>可以說是也可以說不是。如果他們只上傳贏的場次，那麼MMR就會不正常地上升。但是Blizzard仍會知道他們的實力，並將他們分配給合適的對手。接著就會因為對手的MMR較低，導致他們能獲得的MMR也會越來越少。</value>
+  </data>
+  <data name="FAQMessageLine08" xml:space="preserve">
+    <value>這裡還有一個好消息，如果有同場的其他玩家上傳了輸的錄像檔，那麼也會被添加到他們的紀錄裡的。</value>
+  </data>
+  <data name="FAQMessageLine09" xml:space="preserve">
+    <value>幸運的是，我已經看過許多玩家的資料並且還沒有發現任何人有大量不正常的連勝紀錄。</value>
+  </data>
+  <data name="FAQMessageLine10" xml:space="preserve">
+    <value>為什麼有些我上傳的錄像顯示重複？</value>
+  </data>
+  <data name="FAQMessageLine11" xml:space="preserve">
+    <value>這只是因為跟你同場的其他9個玩家當中有人已經先上傳了那場錄像。別擔心，紀錄會被新增到同場所有玩家裡，包括你的。</value>
+  </data>
+  <data name="FAQTitle" xml:space="preserve">
+    <value>常見問題</value>
+  </data>
+  <data name="GenericAboutUs" xml:space="preserve">
+    <value>關於我們</value>
+  </data>
+  <data name="GenericAllLeagues" xml:space="preserve">
+    <value>所有級別</value>
+  </data>
+  <data name="GenericAverageLength" xml:space="preserve">
+    <value>平均時間</value>
+  </data>
+  <data name="GenericContactUs" xml:space="preserve">
+    <value>聯絡我們</value>
+  </data>
+  <data name="GenericDataCurrentlyUnavailable" xml:space="preserve">
+    <value>資料目前無法使用</value>
+  </data>
+  <data name="GenericDateTime" xml:space="preserve">
+    <value>日期及時間</value>
+  </data>
+  <data name="GenericEmailAddress" xml:space="preserve">
+    <value>Email地址</value>
+  </data>
+  <data name="GenericErrorConfirmPasswordDoesntMatch" xml:space="preserve">
+    <value>密碼和確認密碼欄位不相同。</value>
+  </data>
+  <data name="GenericErrorConfirmPasswordRequired" xml:space="preserve">
+    <value>確認密碼欄位是必填的。</value>
+  </data>
+  <data name="GenericErrorEmailRequired" xml:space="preserve">
+    <value>Email地址欄位是必填的。</value>
+  </data>
+  <data name="GenericErrorPasswordRequired" xml:space="preserve">
+    <value>密碼欄位是必填的。</value>
+  </data>
+  <data name="GenericErrorUserNameRequired" xml:space="preserve">
+    <value>使用者名稱欄位是必填的。</value>
+  </data>
+  <data name="GenericExcludingMirrorMatchupsAndTalentGatedHeroes" xml:space="preserve">
+    <value>已排除同角色對決及天賦未全開的場次</value>
+  </data>
+  <data name="GenericExcludingTalentGatedGamesAndAutoSelectGames" xml:space="preserve">
+    <value>已排除天賦未全開及自動選擇英雄的場次</value>
+  </data>
+  <data name="GenericGameLength" xml:space="preserve">
+    <value>遊戲時間</value>
+  </data>
+  <data name="GenericGamesBanned" xml:space="preserve">
+    <value>被禁用次數</value>
+  </data>
+  <data name="GenericGamesPlayed" xml:space="preserve">
+    <value>已玩的場數</value>
+  </data>
+  <data name="GenericGamesPlayedAgainst" xml:space="preserve">
+    <value>遊戲對抗</value>
+  </data>
+  <data name="GenericGetPremium" xml:space="preserve">
+    <value>高級會員</value>
+  </data>
+  <data name="GenericHero" xml:space="preserve">
+    <value>英雄</value>
+  </data>
+  <data name="GenericHeroAbathur" xml:space="preserve">
+    <value>阿巴瑟</value>
+  </data>
+  <data name="GenericHeroAlarak" xml:space="preserve">
+    <value>亞拉瑞克</value>
+  </data>
+  <data name="GenericHeroAlexstrasza" xml:space="preserve">
+    <value>雅立史卓莎</value>
+  </data>
+  <data name="GenericHeroAna" xml:space="preserve">
+    <value>安娜</value>
+  </data>
+  <data name="GenericHeroAnduin" xml:space="preserve">
+    <value>安杜因</value>
+  </data>
+  <data name="GenericHeroAnubarak" xml:space="preserve">
+    <value>阿努巴拉克</value>
+  </data>
+  <data name="GenericHeroArtanis" xml:space="preserve">
+    <value>亞坦尼斯</value>
+  </data>
+  <data name="GenericHeroArthas" xml:space="preserve">
+    <value>阿薩斯</value>
+  </data>
+  <data name="GenericHeroAuriel" xml:space="preserve">
+    <value>奧莉爾</value>
+  </data>
+  <data name="GenericHeroAutoSelect" xml:space="preserve">
+    <value>自動選擇</value>
+  </data>
+  <data name="GenericHeroAzmodan" xml:space="preserve">
+    <value>阿茲莫丹</value>
+  </data>
+  <data name="GenericHeroBlaze" xml:space="preserve">
+    <value>爆焰</value>
+  </data>
+  <data name="GenericHeroBrightwing" xml:space="preserve">
+    <value>亮翼</value>
+  </data>
+  <data name="GenericHeroCassia" xml:space="preserve">
+    <value>卡西雅</value>
+  </data>
+  <data name="GenericHeroChen" xml:space="preserve">
+    <value>老陳</value>
+  </data>
+  <data name="GenericHeroCho" xml:space="preserve">
+    <value>丘</value>
+  </data>
+  <data name="GenericHeroChogall" xml:space="preserve">
+    <value>丘加利</value>
+  </data>
+  <data name="GenericHeroChromie" xml:space="preserve">
+    <value>克羅米</value>
+  </data>
+  <data name="GenericHeroDeathwing" xml:space="preserve">
+    <value>死亡之翼</value>
+  </data>
+  <data name="GenericHeroDeckard" xml:space="preserve">
+    <value>凱恩</value>
+  </data>
+  <data name="GenericHeroDehaka" xml:space="preserve">
+    <value>德哈卡</value>
+  </data>
+  <data name="GenericHeroDiablo" xml:space="preserve">
+    <value>迪亞布羅</value>
+  </data>
+  <data name="GenericHeroDVa" xml:space="preserve">
+    <value>D.Va</value>
+  </data>
+  <data name="GenericHeroETC" xml:space="preserve">
+    <value>精英牛頭大佬</value>
+  </data>
+  <data name="GenericHeroFalstad" xml:space="preserve">
+    <value>弗斯塔德</value>
+  </data>
+  <data name="GenericHeroFenix" xml:space="preserve">
+    <value>菲尼克斯</value>
+  </data>
+  <data name="GenericHeroGall" xml:space="preserve">
+    <value>加利</value>
+  </data>
+  <data name="GenericHeroGarrosh" xml:space="preserve">
+    <value>卡爾洛斯</value>
+  </data>
+  <data name="GenericHeroGazlowe" xml:space="preserve">
+    <value>加茲魯維</value>
+  </data>
+  <data name="GenericHeroGenji" xml:space="preserve">
+    <value>源氏</value>
+  </data>
+  <data name="GenericHeroGreymane" xml:space="preserve">
+    <value>葛雷邁恩</value>
+  </data>
+  <data name="GenericHeroGuldan" xml:space="preserve">
+    <value>古爾丹</value>
+  </data>
+  <data name="GenericHeroHanzo" xml:space="preserve">
+    <value>半藏</value>
+  </data>
+  <data name="GenericHeroHogger" xml:space="preserve">
+    <value>霍格</value>
+  </data>
+  <data name="GenericHeroIllidan" xml:space="preserve">
+    <value>伊利丹</value>
+  </data>
+  <data name="GenericHeroImperius" xml:space="preserve">
+    <value>英普瑞斯</value>
+  </data>
+  <data name="GenericHeroJaina" xml:space="preserve">
+    <value>珍娜</value>
+  </data>
+  <data name="GenericHeroJohanna" xml:space="preserve">
+    <value>喬安娜</value>
+  </data>
+  <data name="GenericHeroJunkrat" xml:space="preserve">
+    <value>炸彈鼠</value>
+  </data>
+  <data name="GenericHeroKaelthas" xml:space="preserve">
+    <value>凱爾薩斯</value>
+  </data>
+  <data name="GenericHeroKelThuzad" xml:space="preserve">
+    <value>科爾蘇加德</value>
+  </data>
+  <data name="GenericHeroKerrigan" xml:space="preserve">
+    <value>凱莉根</value>
+  </data>
+  <data name="GenericHeroKharazim" xml:space="preserve">
+    <value>克拉辛</value>
+  </data>
+  <data name="GenericHeroLeoric" xml:space="preserve">
+    <value>李奥瑞克</value>
+  </data>
+  <data name="GenericHeroLevel" xml:space="preserve">
+    <value>英雄等級</value>
+  </data>
+  <data name="GenericHeroLiLi" xml:space="preserve">
+    <value>莉莉</value>
+  </data>
+  <data name="GenericHeroLiMing" xml:space="preserve">
+    <value>李敏</value>
+  </data>
+  <data name="GenericHeroLtMorales" xml:space="preserve">
+    <value>莫拉萊斯中尉</value>
+  </data>
+  <data name="GenericHeroLunara" xml:space="preserve">
+    <value>露娜拉</value>
+  </data>
+  <data name="GenericHeroLúcio" xml:space="preserve">
+    <value>路西歐</value>
+  </data>
+  <data name="GenericHeroMaiev" xml:space="preserve">
+    <value>瑪翼夫</value>
+  </data>
+  <data name="GenericHeroMalfurion" xml:space="preserve">
+    <value>瑪法里恩</value>
+  </data>
+  <data name="GenericHeroMalGanis" xml:space="preserve">
+    <value>瑪爾加尼斯</value>
+  </data>
+  <data name="GenericHeroMalthael" xml:space="preserve">
+    <value>瑪瑟爾</value>
+  </data>
+  <data name="GenericHeroMedivh" xml:space="preserve">
+    <value>麥迪文</value>
+  </data>
+  <data name="GenericHeroMei" xml:space="preserve">
+    <value>小美</value>
+  </data>
+  <data name="GenericHeroMephisto" xml:space="preserve">
+    <value>墨菲斯托</value>
+  </data>
+  <data name="GenericHeroMuradin" xml:space="preserve">
+    <value>穆拉丁</value>
+  </data>
+  <data name="GenericHeroMurky" xml:space="preserve">
+    <value>莫奇</value>
+  </data>
+  <data name="GenericHeroNazeebo" xml:space="preserve">
+    <value>納奇班</value>
+  </data>
+  <data name="GenericHeroNova" xml:space="preserve">
+    <value>諾娃</value>
+  </data>
+  <data name="GenericHeroOrphea" xml:space="preserve">
+    <value>歐菲亞</value>
+  </data>
+  <data name="GenericHeroProbius" xml:space="preserve">
+    <value>普羅比斯</value>
+  </data>
+  <data name="GenericHeroQhira" xml:space="preserve">
+    <value>奇菈</value>
+  </data>
+  <data name="GenericHeroRagnaros" xml:space="preserve">
+    <value>拉格納羅斯</value>
+  </data>
+  <data name="GenericHeroRaynor" xml:space="preserve">
+    <value>雷諾</value>
+  </data>
+  <data name="GenericHeroRehgar" xml:space="preserve">
+    <value>雷加</value>
+  </data>
+  <data name="GenericHeroRexxar" xml:space="preserve">
+    <value>雷克薩</value>
+  </data>
+  <data name="GenericHeroSamuro" xml:space="preserve">
+    <value>萨穆罗</value>
+  </data>
+  <data name="GenericHeroSgtHammer" xml:space="preserve">
+    <value>榔頭中士</value>
+  </data>
+  <data name="GenericHeroSonya" xml:space="preserve">
+    <value>桑雅</value>
+  </data>
+  <data name="GenericHeroStatistics" xml:space="preserve">
+    <value>英雄統計</value>
+  </data>
+  <data name="GenericHeroStitches" xml:space="preserve">
+    <value>縫合怪</value>
+  </data>
+  <data name="GenericHeroStukov" xml:space="preserve">
+    <value>斯杜科夫</value>
+  </data>
+  <data name="GenericHeroSylvanas" xml:space="preserve">
+    <value>希瓦娜斯</value>
+  </data>
+  <data name="GenericHeroTassadar" xml:space="preserve">
+    <value>塔薩達</value>
+  </data>
+  <data name="GenericHeroTheButcher" xml:space="preserve">
+    <value>屠夫</value>
+  </data>
+  <data name="GenericHeroTheLostVikings" xml:space="preserve">
+    <value>失落的維京人</value>
+  </data>
+  <data name="GenericHeroThrall" xml:space="preserve">
+    <value>索爾</value>
+  </data>
+  <data name="GenericHeroTracer" xml:space="preserve">
+    <value>閃光</value>
+  </data>
+  <data name="GenericHeroTychus" xml:space="preserve">
+    <value>泰科斯</value>
+  </data>
+  <data name="GenericHeroTyrael" xml:space="preserve">
+    <value>泰瑞爾</value>
+  </data>
+  <data name="GenericHeroTyrande" xml:space="preserve">
+    <value>泰蘭妲</value>
+  </data>
+  <data name="GenericHeroUther" xml:space="preserve">
+    <value>烏瑟</value>
+  </data>
+  <data name="GenericHeroValeera" xml:space="preserve">
+    <value>瓦麗拉</value>
+  </data>
+  <data name="GenericHeroValla" xml:space="preserve">
+    <value>維拉</value>
+  </data>
+  <data name="GenericHeroVarian" xml:space="preserve">
+    <value>瓦里安</value>
+  </data>
+  <data name="GenericHeroWhitemane" xml:space="preserve">
+    <value>懷特邁恩</value>
+  </data>
+  <data name="GenericHeroXul" xml:space="preserve">
+    <value>蘇爾</value>
+  </data>
+  <data name="GenericHeroYrel" xml:space="preserve">
+    <value>伊芮爾</value>
+  </data>
+  <data name="GenericHeroZagara" xml:space="preserve">
+    <value>札迦拉</value>
+  </data>
+  <data name="GenericHeroZarya" xml:space="preserve">
+    <value>札莉雅</value>
+  </data>
+  <data name="GenericHeroZeratul" xml:space="preserve">
+    <value>澤拉圖</value>
+  </data>
+  <data name="GenericHeroZuljin" xml:space="preserve">
+    <value>祖爾金</value>
+  </data>
+  <data name="GenericInformation" xml:space="preserve">
+    <value>資訊</value>
+  </data>
+  <data name="GenericLastUpdatedMinutesAgo" xml:space="preserve">
+    <value>最後更新於 {0} 分鐘前</value>
+  </data>
+  <data name="GenericLeaderboard" xml:space="preserve">
+    <value>排行榜</value>
+  </data>
+  <data name="GenericLeague" xml:space="preserve">
+    <value>級別</value>
+  </data>
+  <data name="GenericLeague0" xml:space="preserve">
+    <value>大師</value>
+  </data>
+  <data name="GenericLeague1" xml:space="preserve">
+    <value>鑽石</value>
+  </data>
+  <data name="GenericLeague2" xml:space="preserve">
+    <value>白金</value>
+  </data>
+  <data name="GenericLeague3" xml:space="preserve">
+    <value>金牌</value>
+  </data>
+  <data name="GenericLeague4" xml:space="preserve">
+    <value>銀牌</value>
+  </data>
+  <data name="GenericLeague5" xml:space="preserve">
+    <value>銅牌</value>
+  </data>
+  <data name="GenericLeagueRank" xml:space="preserve">
+    <value>級別排行</value>
+  </data>
+  <data name="GenericLogIn" xml:space="preserve">
+    <value>登入</value>
+  </data>
+  <data name="GenericLogOff" xml:space="preserve">
+    <value>登出</value>
+  </data>
+  <data name="GenericLose" xml:space="preserve">
+    <value>失敗</value>
+  </data>
+  <data name="GenericLosingTeam" xml:space="preserve">
+    <value>失敗隊伍</value>
+  </data>
+  <data name="GenericMapName" xml:space="preserve">
+    <value>地圖名稱</value>
+  </data>
+  <data name="GenericMapNameAlteracPass" xml:space="preserve">
+    <value>奧特蘭克隘口</value>
+  </data>
+  <data name="GenericMapNameBattlefieldofEternity" xml:space="preserve">
+    <value>永恆戰場</value>
+  </data>
+  <data name="GenericMapNameBlackheartsBay" xml:space="preserve">
+    <value>黑心灣</value>
+  </data>
+  <data name="GenericMapNameBraxisHoldout" xml:space="preserve">
+    <value>布萊西斯實驗所</value>
+  </data>
+  <data name="GenericMapNameBraxisOutpost" xml:space="preserve">
+    <value>布萊西斯哨站</value>
+  </data>
+  <data name="GenericMapNameCheckpointHanamura" xml:space="preserve">
+    <value>激戰花村</value>
+  </data>
+  <data name="GenericMapNameCursedHollow" xml:space="preserve">
+    <value>詛咒谷地</value>
+  </data>
+  <data name="GenericMapNameDragonShire" xml:space="preserve">
+    <value>巨龍郡</value>
+  </data>
+  <data name="GenericMapNameGardenofTerror" xml:space="preserve">
+    <value>恐怖花園</value>
+  </data>
+  <data name="GenericMapNameHanamura" xml:space="preserve">
+    <value>花村</value>
+  </data>
+  <data name="GenericMapNameHauntedMines" xml:space="preserve">
+    <value>亡骸礦坑</value>
+  </data>
+  <data name="GenericMapNameInfernalShrines" xml:space="preserve">
+    <value>煉獄聖壇</value>
+  </data>
+  <data name="GenericMapNameLostCavern" xml:space="preserve">
+    <value>失落洞窟</value>
+  </data>
+  <data name="GenericMapNamePullParty" xml:space="preserve">
+    <value>拉钩派对</value>
+  </data>
+  <data name="GenericMapNameSilverCity" xml:space="preserve">
+    <value>銀光之城</value>
+  </data>
+  <data name="GenericMapNameSkyTemple" xml:space="preserve">
+    <value>天空神殿</value>
+  </data>
+  <data name="GenericMapNameTomboftheSpiderQueen" xml:space="preserve">
+    <value>蛛后之墓</value>
+  </data>
+  <data name="GenericMapNameTowersofDoom" xml:space="preserve">
+    <value>厄運之塔</value>
+  </data>
+  <data name="GenericMapNameVolskaya" xml:space="preserve">
+    <value>伏斯凱亞鑄造廠</value>
+  </data>
+  <data name="GenericMapNameWarheadJunction" xml:space="preserve">
+    <value>弹头枢纽站</value>
+  </data>
+  <data name="GenericMapStatistics" xml:space="preserve">
+    <value>地圖統計</value>
+  </data>
+  <data name="GenericMatchHistory" xml:space="preserve">
+    <value>對戰紀錄</value>
+  </data>
+  <data name="GenericMMRBefore" xml:space="preserve">
+    <value>原MMR</value>
+  </data>
+  <data name="GenericMMRChange" xml:space="preserve">
+    <value>MMR變動</value>
+  </data>
+  <data name="GenericMMRMilestones" xml:space="preserve">
+    <value>MMR里程碑</value>
+  </data>
+  <data name="GenericMyAccount" xml:space="preserve">
+    <value>我的帳號</value>
+  </data>
+  <data name="GenericNews" xml:space="preserve">
+    <value>最新消息</value>
+  </data>
+  <data name="GenericNextUpdateInMinutes" xml:space="preserve">
+    <value>下次更新於 {0} 分鐘</value>
+  </data>
+  <data name="GenericOpposingHero" xml:space="preserve">
+    <value>對上英雄</value>
+  </data>
+  <data name="GenericPassword" xml:space="preserve">
+    <value>密碼</value>
+  </data>
+  <data name="GenericPlayer" xml:space="preserve">
+    <value>玩家</value>
+  </data>
+  <data name="GenericPlayerSearchButton" xml:space="preserve">
+    <value>搜尋</value>
+  </data>
+  <data name="GenericPlayerSearchHelperText" xml:space="preserve">
+    <value>搜尋玩家</value>
+  </data>
+  <data name="GenericPopularity" xml:space="preserve">
+    <value>熱度</value>
+  </data>
+  <data name="GenericProfile" xml:space="preserve">
+    <value>個人資訊</value>
+  </data>
+  <data name="GenericRating" xml:space="preserve">
+    <value>評分 (MMR)</value>
+  </data>
+  <data name="GenericRegion" xml:space="preserve">
+    <value>地區</value>
+  </data>
+  <data name="GenericResult" xml:space="preserve">
+    <value>結果</value>
+  </data>
+  <data name="GenericSitewide" xml:space="preserve">
+    <value>全站</value>
+  </data>
+  <data name="GenericSpecialThanks" xml:space="preserve">
+    <value>特別感謝</value>
+  </data>
+  <data name="GenericSubmitButton" xml:space="preserve">
+    <value>送出</value>
+  </data>
+  <data name="GenericTeam" xml:space="preserve">
+    <value>隊伍</value>
+  </data>
+  <data name="GenericTimeSpanDay" xml:space="preserve">
+    <value>{0} 天</value>
+  </data>
+  <data name="GenericTimeSpanDayPlural" xml:space="preserve">
+    <value>{0} 天</value>
+  </data>
+  <data name="GenericTimeSpanHour" xml:space="preserve">
+    <value>{0} 小時</value>
+  </data>
+  <data name="GenericTimeSpanHourPlural" xml:space="preserve">
+    <value>{0} 小時</value>
+  </data>
+  <data name="GenericTimeSpanMinute" xml:space="preserve">
+    <value>{0} 分鐘</value>
+  </data>
+  <data name="GenericTimeSpanMinutePlural" xml:space="preserve">
+    <value>{0} 分鐘</value>
+  </data>
+  <data name="GenericUserName" xml:space="preserve">
+    <value>使用者名稱</value>
+  </data>
+  <data name="GenericViewMatchHistory" xml:space="preserve">
+    <value>查看對戰紀錄</value>
+  </data>
+  <data name="GenericViewProfile" xml:space="preserve">
+    <value>查看個人資訊</value>
+  </data>
+  <data name="GenericWeekOfDate" xml:space="preserve">
+    <value>{0} 周</value>
+  </data>
+  <data name="GenericWin" xml:space="preserve">
+    <value>勝利</value>
+  </data>
+  <data name="GenericWinningTeam" xml:space="preserve">
+    <value>勝利隊伍</value>
+  </data>
+  <data name="GenericWinPercent" xml:space="preserve">
+    <value>勝率</value>
+  </data>
+  <data name="HeroDetailsMessageLine1" xml:space="preserve">
+    <value>每周英雄勝率</value>
+  </data>
+  <data name="HeroDetailsTitle" xml:space="preserve">
+    <value>英雄細節</value>
+  </data>
+  <data name="HeroDetailsWinRateVsOtherHeroes" xml:space="preserve">
+    <value>對上其他英雄的勝率</value>
+  </data>
+  <data name="IncludesStormLeagueMatchesLine" xml:space="preserve">
+    <value>註意：其中包含風暴聯賽數據</value>
+  </data>
+  <data name="LeaderboardCurrentPlayerRank" xml:space="preserve">
+    <value>你目前的級別排行：{0}</value>
+  </data>
+  <data name="LeaderboardLeagueGamesPlayedRequirement" xml:space="preserve">
+    <value>這個級別需要玩家至少上傳{0}個錄像</value>
+  </data>
+  <data name="LeaderboardMMRInfoLink" xml:space="preserve">
+    <value>如果你想知道更多關於我如何計算MMR的資訊，我寫了一些說明在這裡</value>
+  </data>
+  <data name="LogInCheckboxRememberMe" xml:space="preserve">
+    <value>記住我？</value>
+  </data>
+  <data name="LogInForgotPassword" xml:space="preserve">
+    <value>忘記你的密碼？按這裡來重設你的登入認證。</value>
+  </data>
+  <data name="LogInNewUser" xml:space="preserve">
+    <value>進行註冊，如果你還沒有帳號</value>
+  </data>
+  <data name="ManageAccountChangePasswordMessage" xml:space="preserve">
+    <value>更換密碼</value>
+  </data>
+  <data name="ManageAccountChangePasswordSuccess" xml:space="preserve">
+    <value>你的密碼已經更新了</value>
+  </data>
+  <data name="ManageAccountCurrentPassword" xml:space="preserve">
+    <value>目前的密碼</value>
+  </data>
+  <data name="ManageAccountErrorCurrentPasswordRequired" xml:space="preserve">
+    <value>目前的密碼為密填項目。</value>
+  </data>
+  <data name="ManageAccountErrorNewPasswordRequired" xml:space="preserve">
+    <value>新的密碼為必填項目。</value>
+  </data>
+  <data name="ManageAccountNewPassword" xml:space="preserve">
+    <value>新密碼</value>
+  </data>
+  <data name="ManageAccountTitle" xml:space="preserve">
+    <value>管理帳號</value>
+  </data>
+  <data name="MatchHistoryMessageLine1" xml:space="preserve">
+    <value>點擊每列最左邊的鍵頭來展開對戰細節及查看玩家資料</value>
+  </data>
+  <data name="MatchHistoryMessageLine2" xml:space="preserve">
+    <value>對戰紀錄的MMR會不斷地被計算，但可能會需要花上1-2天來計算目前的場次。</value>
+  </data>
+  <data name="MMRInfoMessageLine01" xml:space="preserve">
+    <value>MMR是如何被計算的？</value>
+  </data>
+  <data name="MMRInfoMessageLine02" xml:space="preserve">
+    <value>我使用一個類似微軟的TrueSkill的演算法，對團隊遊戲來說，這普遍被認為是比ELO更好的算法。</value>
+  </data>
+  <data name="MMRInfoMessageLine03" xml:space="preserve">
+    <value>你的MMR顯示了你相較於其他玩家的水平。由於這是展現你的技術水準，所以只玩更多的遊戲並不會讓你的MMR提升。如果你想要提升MMR，你需要的是變得更厲害 :)</value>
+  </data>
+  <data name="MMRInfoMessageLine04" xml:space="preserve">
+    <value>每場遊戲結束後，你的MMR會根據遊戲結果，以及雙方隊伍的平均MMR來進行更新。</value>
+  </data>
+  <data name="MMRInfoMessageLine05" xml:space="preserve">
+    <value>如果你和一個MMR比你的隊伍還要高的隊伍對戰，並且你打贏了，那麼你的MMR就會上升的比平常更多；同樣地，如果你對上一個MMR比你還要低的隊伍，而你打輸了，那麼你的MMR將會下降的比平時更多。</value>
+  </data>
+  <data name="MMRInfoMessageLine06" xml:space="preserve">
+    <value>有像這樣的MMR變動方式，在玩了一段時間之後，你應該能得到一個滿精準的MMR，並且你的勝率應該會接近於50%。</value>
+  </data>
+  <data name="MMRInfoMessageLine07" xml:space="preserve">
+    <value>級別</value>
+  </data>
+  <data name="MMRInfoMessageLine08" xml:space="preserve">
+    <value>我放了一些不同的「級別」，用來區隔排行榜。我希望所有等級的玩家都能在這個網站找到自己的價值，如果只有一個排行榜，那就有點像是被淹沒一樣的從非常底層開始。有了級別就能給你一個里程碑的方式來激厲你前進。</value>
+  </data>
+  <data name="MMRInfoMessageLine09" xml:space="preserve">
+    <value>有不同的級別同樣意味著每個級別我可以設置不同的場次需求，隨著時間的推移及越來越多的錄像被上傳，我可能會提升較高組別的需求場次。我會確保較低級別的場次需求少一點，好讓新玩家可以盡快看到他們被列在清單上。</value>
+  </data>
+  <data name="MMRInfoMessageLine10" xml:space="preserve">
+    <value>級別只是以MMR來把玩家分開到各小組，在排除掉場次少於10場的玩家後，大師級別是最頂層的1%，鑽石則是接下來的9%，在這兩個級別之後的其他組別就會分散的比較平均一些。</value>
+  </data>
+  <data name="MMRInfoMessageLine11" xml:space="preserve">
+    <value>無法在排行榜上找到你嗎？你的MMR可能將你放進了更高的級別裡，但是你還沒達到該級別的需求場次數量。每個級別會優先參考MMR，之後才會檢查玩家是否達到足夠的需求場次。</value>
+  </data>
+  <data name="MMRInfoMessageLine12" xml:space="preserve">
+    <value>排位評比賽</value>
+  </data>
+  <data name="MMRInfoMessageLine13" xml:space="preserve">
+    <value>當你開始你的第一場遊戲時，因為系統還不知道你的實力在哪個水準，所以你會先有一個預設的MMR。你早期的場次將會非常顯著地影響你的MMR，好加速找到最適合你的水準等級，隨著你越玩越多場，它們對你MMR的影響將會越來越小。</value>
+  </data>
+  <data name="MMRInfoMessageLine14" xml:space="preserve">
+    <value>這意味著在遊戲初期無論輸贏都會大大影響你的MMR。</value>
+  </data>
+  <data name="MMRInfoMessageLine15" xml:space="preserve">
+    <value>這在匹配制的遊戲是非常普遍的，通常有助於更快找到跟你實力相當的對手。</value>
+  </data>
+  <data name="MMRInfoMessageLine16" xml:space="preserve">
+    <value>這並不代表你玩了幾百場後就會被「卡」在某個位置，這只是代表MMR的變化不會像初期那樣明顯而已。</value>
+  </data>
+  <data name="MMRInfoMessageLine17" xml:space="preserve">
+    <value>在「排位評比賽」中連敗</value>
+  </data>
+  <data name="MMRInfoMessageLine18" xml:space="preserve">
+    <value>有些玩家曾經聯絡我，要求我刪除某些特定的場次，或讓他們可以「重新開始」，因為他們並不知道前幾場是他們的排位賽。</value>
+  </data>
+  <data name="MMRInfoMessageLine19" xml:space="preserve">
+    <value>在前幾場連敗是很不幸的，但在初期連勝一樣不幸。舉例來說，我在星海2的前五場都贏了，然後被分配到了金牌組。我非常興奮，我向那些銅牌組、銀牌組的朋友們吹噓。我知道我其實只是有點運氣好，之後的結局才是事實。我連輸了13場然後掉到銅牌。我一開始根本就不該在金牌組裡，後來隨著時間經過和玩了更多的遊戲，Blizzard的匹配系統越來越精準，而我開始有接近50%的勝率。</value>
+  </data>
+  <data name="MMRInfoMessageLine20" xml:space="preserve">
+    <value>反之亦然：如果你在一開始的排位賽連敗並傳到本站上，那麼你會以一個非常低的MMR的開始。如果這是錯誤的，你的MMR應該要更高，Blizzard還是會把你分配給較高MMR的隊伍。如果你面對這些MMR較高的隊伍還能取得50%左右的勝率，那麼你的MMR也會慢慢提升到與他們相當的。</value>
+  </data>
+  <data name="MMRInfoMessageLine21" xml:space="preserve">
+    <value>不幸的是，如果你的MMR確實被初期的連敗所影響，唯一的解決辦法就是玩更多場遊戲。你可能會需要贏比連敗數更多的遊戲，但你的MMR最終都會到達它應得的位置。刪除錄像並不是解決辦法，因為這也會影響到同場的其他9個玩家。而且為了有更精準的MMR計算，我們需要更多的錄像被上傳。</value>
+  </data>
+  <data name="MMRInfoMessageLine22" xml:space="preserve">
+    <value>MMR精確度</value>
+  </data>
+  <data name="MMRInfoMessageLine23" xml:space="preserve">
+    <value>有些玩家曾告訴我關於MMR準確度的事，說他們應該要更高才對。</value>
+  </data>
+  <data name="MMRInfoMessageLine24" xml:space="preserve">
+    <value>首先，請確認你已經玩了夠多場的遊戲。剛開始玩時，你的MMR是未知的，而系統就必須先猜測你的技術水準。請不要花太多時間去想關於MMR的事，如果你還沒上傳超過100個對戰紀錄，甚至更多的話。</value>
+  </data>
+  <data name="MMRInfoMessageLine25" xml:space="preserve">
+    <value>如果你已經上傳了大量的錄像，那麼你要如何確定我所計算的MMR是否夠準確呢？請去看看你的場次裡每個玩家的MMR，以及整隊的平均MMR。一般而言，每一隊的平均MMR應該要非常接近才對。</value>
+  </data>
+  <data name="MMRInfoMessageLine26" xml:space="preserve">
+    <value>有些時候MMR並不是太準確。像是只上傳了幾個錄像的玩家，他們真正的MMR是未知的，Blizzard對於這件事可能有更好的主意。如果一個玩家在一場遊戲後的MMR變動很大（變動大於50）時，則那個玩家的技術水準也算是有些不明的，而我就需要去猜測他們真正的MMR應該是多少。</value>
+  </data>
+  <data name="MMRInfoMessageLine27" xml:space="preserve">
+    <value>要增加我計算的MMR的準確度，最好的方式就是上傳更多的錄像:) 請叫你的朋友們也上傳他們的錄像吧，有越多紀錄我可以參考，我就越有信心可以算出精確的技術水準。</value>
+  </data>
+  <data name="MMRInfoMessageLine28" xml:space="preserve">
+    <value>一個相關的小註記，看到許多知名的專業玩家在排行榜上，以及他們彼此對抗的紀錄是非常激勵人的 :)</value>
+  </data>
+  <data name="MMRInfoTitle" xml:space="preserve">
+    <value>MMR資訊</value>
+  </data>
+  <data name="PlayerSearchNoPlayersFound" xml:space="preserve">
+    <value>查無玩家，請試著用頁面最上方的搜尋框進行搜尋。</value>
+  </data>
+  <data name="PlayerSearchTitle" xml:space="preserve">
+    <value>搜尋玩家</value>
+  </data>
+  <data name="PremiumTitle" xml:space="preserve">
+    <value>高級會員</value>
+  </data>
+  <data name="ProfileCurrentLeagueRank" xml:space="preserve">
+    <value>目前的級別排行</value>
+  </data>
+  <data name="ProfileCurrentMMR" xml:space="preserve">
+    <value>目前的MMR</value>
+  </data>
+  <data name="ProfileTotalGamesPlayed" xml:space="preserve">
+    <value>總遊戲場數</value>
+  </data>
+  <data name="ProfileTotalTimePlayed" xml:space="preserve">
+    <value>總遊戲時間</value>
+  </data>
+  <data name="RegisterConfirmPassword" xml:space="preserve">
+    <value>確認密碼</value>
+  </data>
+  <data name="RegisterErrorDuplicateEmail" xml:space="preserve">
+    <value>這個郵件地址已經被使用了，請輸入一個不同的郵件地址。</value>
+  </data>
+  <data name="RegisterErrorDuplicateUsername" xml:space="preserve">
+    <value>請輸入一個不同的使用者名稱。</value>
+  </data>
+  <data name="RegisterMessageLine1" xml:space="preserve">
+    <value>透過下方表單創建一個新帳號。</value>
+  </data>
+  <data name="RegisterPasswordRequirement" xml:space="preserve">
+    <value>密碼最少要有{0}個字元長度。</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>註冊</value>
+  </data>
+  <data name="ResetPasswordMessage" xml:space="preserve">
+    <value>輸入你的使用者名稱來重設密碼</value>
+  </data>
+  <data name="ResetPasswordTitle" xml:space="preserve">
+    <value>重設密碼</value>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="SitewideHeroAndMapStatisticsTitle" xml:space="preserve">
+    <value>全站英雄及地圖統計</value>
+  </data>
+  <data name="SitewideHeroStatistics" xml:space="preserve">
+    <value>最近2個補丁的全站英雄統計</value>
+  </data>
+  <data name="SitewideHeroStatsLine" xml:space="preserve">
+    <value>自上個補丁以來全站英雄數據統計</value>
+  </data>
+  <data name="SitewideMapStatistics" xml:space="preserve">
+    <value>最近7天內的全站地圖統計</value>
+  </data>
+  <data name="SitewidePremiumTitle" xml:space="preserve">
+    <value>高級會員</value>
+  </data>
+  <data name="SitewideStatisticsTitle" xml:space="preserve">
+    <value>數據統計</value>
+  </data>
+  <data name="SitewideTalentsTitle" xml:space="preserve">
+    <value>天賦</value>
+  </data>
+  <data name="SitewideUploadReplaysTitle" xml:space="preserve">
+    <value>上傳錄像</value>
+  </data>
+  <data name="SpecialThanksLine1" xml:space="preserve">
+    <value>感謝CodinCat的繁體中文翻譯！他的遊戲ID為angrycat#3463，歡迎一起遊玩。</value>
+  </data>
+  <data name="StatisticsTitle" xml:space="preserve">
+    <value>數據統計</value>
+  </data>
+  <data name="TalentsTitle" xml:space="preserve">
+    <value>天賦</value>
+  </data>
+  <data name="UploadMessageLine1" xml:space="preserve">
+    <value>在你開始上傳之前，請先閱讀：</value>
+  </data>
+  <data name="UploadMessageLine2" xml:space="preserve">
+    <value>我計畫讓每個人遊戲錄像的資料都是可及的，除了對話內容之外，我永遠不會讓它們公開。除了這個限制，其他錄像內的資料都是完全公開的。</value>
+  </data>
+  <data name="UploadMessageLine3" xml:space="preserve">
+    <value>我目前只接受完整的對決模式的錄像。</value>
+  </data>
+  <data name="UploadMessageLine4" xml:space="preserve">
+    <value>要成功地解析遊戲錄像只需要上傳一次。我會直接儲存該錄像檔，當我可以從錄像檔中取出更多資訊時，會自動把你舊的錄像資料也一起更新。</value>
+  </data>
+  <data name="UploadMessageLine5" xml:space="preserve">
+    <value>如果你上傳錄像後得到一個「重複（Duplicate）」訊息，代表你或跟你同場的其他玩家已經上傳過那一場的錄像了。</value>
+  </data>
+  <data name="UploadMessageLine6" xml:space="preserve">
+    <value>如果你上傳錄像後得到錯誤訊息，你可以稍後再嘗試一次看看。我會不斷地修正錯誤，並可能在之後從上傳失敗的錄像中提取出資訊來。</value>
+  </data>
+  <data name="UploadMessageSingleReplayHeader" xml:space="preserve">
+    <value>上傳單一的遊戲錄像</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine1" xml:space="preserve">
+    <value>備註：預設的錄像資料夾位置：</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine2" xml:space="preserve">
+    <value>Windows: '...\Documents\Heroes of the Storm\Accounts\########\#-Hero-#-######\Replays\'</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine3" xml:space="preserve">
+    <value>Mac: '~/Library/Application Support/Blizzard/Heroes of the Storm/Accounts/########/#-Hero-#-######/Replays/'</value>
+  </data>
+  <data name="UploadMessageUploaderLine1" xml:space="preserve">
+    <value>暴雪英霸錄像上傳器</value>
+  </data>
+  <data name="UploadMessageUploaderLine2" xml:space="preserve">
+    <value>我建議用這個我寫的小程式來自動上傳你所有的對戰錄像檔：</value>
+  </data>
+  <data name="UploadMessageUploaderLine3" xml:space="preserve">
+    <value>點擊這裡來下載並安裝暴雪英霸錄像上傳器</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>上傳錄像</value>
+  </data>
+</root>

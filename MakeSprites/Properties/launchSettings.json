@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MakeSprites": {
+      "commandName": "Project",
+      "workingDirectory": "c:\\myprojects\\hotslogs\\hotslogs"
+    }
+  }
+}

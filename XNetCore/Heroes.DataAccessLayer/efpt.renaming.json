@@ -1,0 +1,209 @@
+[
+  {
+    "Tables": [
+      {
+        "Name": "amazonreplacementbucket",
+        "NewName": "AmazonReplacementBucket"
+      },
+      {
+        "Name": "blogposts",
+        "NewName": "BlogPosts"
+      },
+      {
+        "Name": "buildnumbers",
+        "NewName": "BuildNumbers"
+      },
+      {
+        "Name": "dataupdate",
+        "NewName": "DataUpdate"
+      },
+      {
+        "Name": "event"
+      },
+      {
+        "Name": "fingerprint_date",
+        "NewName": "FingerprintDate"
+      },
+      {
+        "Name": "groupfinderlisting",
+        "NewName": "GroupFinderListing"
+      },
+      {
+        "Name": "heroiconinformation",
+        "NewName": "HeroIconInformation"
+      },
+      {
+        "Name": "herotalentinformation",
+        "NewName": "HeroTalentInformation"
+      },
+      {
+        "Name": "hotsapireplays",
+        "NewName": "HotsApiReplays"
+      },
+      {
+        "Name": "hotsapitalents",
+        "NewName": "HotsApiTalents"
+      },
+      {
+        "Name": "leaderboardoptout",
+        "NewName": "LeaderboardOptOut"
+      },
+      {
+        "Name": "leaderboardranking",
+        "NewName": "LeaderboardRanking"
+      },
+      {
+        "Name": "league",
+        "NewName": "League"
+      },
+      {
+        "Name": "localizationalias",
+        "NewName": "LocalizationAlias"
+      },
+      {
+        "Name": "logerror",
+        "NewName": "LogError"
+      },
+      {
+        "Name": "missingtalents",
+        "NewName": "MissingTalents"
+      },
+      {
+        "Name": "mmrrecalc",
+        "NewName": "MmrRecalc"
+      },
+      {
+        "Name": "mountinformation",
+        "NewName": "MountInformation"
+      },
+      {
+        "Name": "net48_users",
+        "NewName": "Net48Users"
+      },
+      {
+        "Name": "player",
+        "NewName": "Player"
+      },
+      {
+        "Name": "playeraggregate",
+        "NewName": "PlayerAggregate"
+      },
+      {
+        "Name": "playeralt",
+        "NewName": "PlayerAlt"
+      },
+      {
+        "Name": "playerbanned",
+        "NewName": "PlayerBanned"
+      },
+      {
+        "Name": "playerbannedleaderboard",
+        "NewName": "PlayerBannedLeaderboard"
+      },
+      {
+        "Name": "playerdisablenamechange",
+        "NewName": "PlayerDisableNameChange"
+      },
+      {
+        "Name": "playermmrmilestonev3",
+        "NewName": "PlayerMmrMilestoneV3"
+      },
+      {
+        "Name": "playermmrreset",
+        "NewName": "PlayerMmrReset"
+      },
+      {
+        "Name": "premiumpayment",
+        "NewName": "PremiumPayment"
+      },
+      {
+        "Name": "replay",
+        "NewName": "Replay"
+      },
+      {
+        "Name": "replay_dups",
+        "NewName": "ReplayDups"
+      },
+      {
+        "Name": "replay_dups2",
+        "NewName": "ReplayDups2"
+      },
+      {
+        "Name": "replay_mirror",
+        "NewName": "ReplayMirror"
+      },
+      {
+        "Name": "replay_notalents",
+        "NewName": "ReplayNoTalents"
+      },
+      {
+        "Name": "replay_playertalentbuilds",
+        "NewName": "ReplayPlayerTalentBuilds"
+      },
+      {
+        "Name": "replaycharacter",
+        "NewName": "ReplayCharacter"
+      },
+      {
+        "Name": "replaycharacterdraftorder",
+        "NewName": "ReplayCharacterDraftOrder"
+      },
+      {
+        "Name": "replaycharactermatchaward",
+        "NewName": "ReplayCharacterMatchAward"
+      },
+      {
+        "Name": "replaycharacterscoreresult",
+        "NewName": "ReplayCharacterScoreResult"
+      },
+      {
+        "Name": "replaycharactersilenced",
+        "NewName": "ReplayCharacterSilenced"
+      },
+      {
+        "Name": "replaycharactertalent",
+        "NewName": "ReplayCharacterTalent"
+      },
+      {
+        "Name": "replaycharacterupgradeeventreplaylengthpercent",
+        "NewName": "ReplayCharacterUpgradeEventReplayLengthPercent"
+      },
+      {
+        "Name": "replayperiodicxpbreakdown",
+        "NewName": "ReplayPeriodicXpBreakdown"
+      },
+      {
+        "Name": "replayshare",
+        "NewName": "ReplayShare"
+      },
+      {
+        "Name": "replayteamheroban",
+        "NewName": "ReplayTeamHeroBan"
+      },
+      {
+        "Name": "replayteamobjective",
+        "NewName": "ReplayTeamObjective"
+      },
+      {
+        "Name": "reputation",
+        "NewName": "Reputation"
+      },
+      {
+        "Name": "talentimagemapping",
+        "NewName": "TalentImageMapping"
+      },
+      {
+        "Name": "unknowndata",
+        "NewName": "UnknownData"
+      },
+      {
+        "Name": "votes",
+        "NewName": "Votes"
+      },
+      {
+        "Name": "zamuser",
+        "NewName": "ZamUser"
+      }
+    ]
+  }
+]

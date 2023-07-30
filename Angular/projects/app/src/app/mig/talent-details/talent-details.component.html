@@ -1,0 +1,91 @@
+<app-title><span localize>Hero Details</span>: <span>{{hero | localize:'GenericHero-'}}</span></app-title>
+<app-team-logos *ngIf="result?.Teams" [teams]="result.Teams"></app-team-logos>
+<div class="flex">
+  <lib-dropdown #g [items]="gameModeExFilter" caption="Game Mode" [(value)]="gameModeEx" (selectionchanged)="sel()">
+  </lib-dropdown>
+  <lib-dropdown *ngIf="g.value==='0'" [items]="tournamentFilter" caption="Tournament" [(value)]="tournament"
+    (selectionchanged)="sel()"></lib-dropdown>
+  <lib-dropdown #hro [items]="heroFilter" caption="Hero" [(value)]="hero" (selectionchanged)="sel()">
+  </lib-dropdown>
+  <lib-checkbox-list [items]="leagueFilter" caption="Leagues" [(value)]="league" (selectionchanged)="sel()">
+  </lib-checkbox-list>
+</div>
+<p>
+  <strong>Note: </strong> Win Percent is hidden for talents without enough games played
+</p>
+<div>
+  <ul id="nav1" class="nav nav-tabs">
+    <li *ngFor="let tab of tabs" class="tab" [class.active]="activeTab===tab.value">
+      <a (click)="tabClick(tab)">{{tab.key | localize}}</a>
+  </ul>
+</div>
+<ng-container *ngIf="data$ | async as data">
+  <ng-container [ngSwitch]="activeTab">
+    <div *ngSwitchCase="0">
+      <div class="flex">
+        <lib-checkbox-list [items]="mapFilter" caption="Maps" [(value)]="map" (selectionchanged)="sel()">
+        </lib-checkbox-list>
+        <ng-container *ngIf="gameModeEx!=='0'">
+          <lib-checkbox-list #tms [items]="timeFilter" caption="Times" [(value)]="time"
+            (selectionchanged)="sel();ptchs.clear()"></lib-checkbox-list>
+          <lib-checkbox-list #ptchs [items]="patchFilter" caption="Patches" [(value)]="patch"
+            (selectionchanged)="sel();tms.clear()"></lib-checkbox-list>
+        </ng-container>
+      </div>
+      <div>
+        <app-talent-builds [stats]="result.TalentStatistics" [hero]="hero"></app-talent-builds>
+
+        <br />
+        <h2>Popular Talent Builds
+          <div class="btn btn-info" style="padding: 1px; margin-left: 5px;"
+            title="Similar builds are grouped together by the least impactful talent.<br>This is done to help show a greater variety of builds.<br>Pick your favorite talent for the missing tier!">
+            <i class="fa fa-question"></i>
+          </div>
+        </h2>
+        <p id="pRecentPatchNote" *ngIf="result.RecentPatchNotesVisible"><strong>Note: </strong>Data is currently
+          limited. This is likely due to a recent patch or hotfix, or perhaps a low popularity Hero.<br />
+          Try widening the date range, or wait a few days for more data to be collected.</p>
+        <mat-form-field>
+          <!-- <mat-label>Display Style</mat-label> -->
+          <mat-select #slct panelClass="aviad-select" value="table">
+            <mat-option value="table">Display as a Table</mat-option>
+            <mat-option value="carousel">Display as a Carousel</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br />
+        <br />
+
+        <app-popular-talent-builds-carousel *ngIf="slct.value==='carousel'" [stats]="result.TalentBuildStatistics"
+          [hero]="hro.value">
+        </app-popular-talent-builds-carousel>
+
+        <app-popular-talent-builds-table [stats]="result.PopularTalentBuilds" [hero]="hro.value"
+          *ngIf="slct.value==='table'"></app-popular-talent-builds-table>
+      </div>
+    </div>
+    <div *ngSwitchCase="1">
+      <lib-rad-chart [jsondata]="data.WinRatesByDate"></lib-rad-chart>
+    </div>
+    <div *ngSwitchCase="2">
+      <lib-rad-chart [jsondata]="data.WinRatesByGameLength"></lib-rad-chart>
+    </div>
+    <div *ngSwitchCase="3">
+      <app-win-rate-vs [stats]="result.WinRateVs"></app-win-rate-vs>
+    </div>
+    <div *ngSwitchCase="4">
+      <app-win-rate-with [stats]="result.WinRateWith"></app-win-rate-with>
+    </div>
+    <div *ngSwitchCase="5">
+      <app-map-stats [stats]="result.MapStatistics"></app-map-stats>
+    </div>
+    <div *ngSwitchCase="6">
+      <lib-rad-chart [jsondata]="data.WinRateByHeroLevel"></lib-rad-chart>
+    </div>
+    <div *ngSwitchCase="7">
+      <ng-container *ngIf="data.WinRateByTalentUpgrade">
+        <h2>{{data.TalentUpgradeTypes[0].Text}}</h2>
+        <lib-rad-chart [jsondata]="data.WinRateByTalentUpgrade"></lib-rad-chart>
+      </ng-container>
+    </div>
+  </ng-container>
+</ng-container>

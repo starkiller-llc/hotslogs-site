@@ -1,0 +1,813 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutMessageLine1" xml:space="preserve">
+    <value>Mein Name ist Ben Barrett; bei Tag bin ich ein Software-Entwickler, bei Nacht ein leidenschaftlicher Gamer.</value>
+  </data>
+  <data name="AboutMessageLine2" xml:space="preserve">
+    <value>Mein Ziel bei diesem Projekt war es, die Rolle eine Ingame-Profils auszufüllen, doch bin ich der Ansicht, dass aus Heroes in Zukunft ein sehr erfolgreicher Titel werden wird, weshalb ich HOTS Logs so ausbauen möchte, dass noch detailreichere Analysen von Replays möglich werden. Ich möchte, dass diese Seite Spieler dazu inspiriert, sich zu verbessern und etwas über ihren Spielstil und die Teamzusammenstellungen herauszufinden.</value>
+  </data>
+  <data name="AboutMessageLine3" xml:space="preserve">
+    <value>Vorschläge und Support:</value>
+  </data>
+  <data name="ChooseBattleNetIdErrorMessage1" xml:space="preserve">
+    <value>Es tut uns leid, die Nummer deiner Heroes-Battle.net-ID konnte mit diesen Angaben nicht gefunden werden. Das Format sollte so aussehen: '##-Hero-#-######'</value>
+  </data>
+  <data name="ChooseBattleNetIdErrorMessage2" xml:space="preserve">
+    <value>Zu dieser Battle.net-ID konnten keine Replays gefunden werden. Bitte folge diesem Link, um ein Replay hochzuladen und diesen Benutzer zu verifizieren.</value>
+  </data>
+  <data name="ChooseBattleNetIdMessageLine1" xml:space="preserve">
+    <value>Please enter your Heroes of the Storm BattleTag:</value>
+  </data>
+  <data name="ChooseBattleNetIdTextBox" xml:space="preserve">
+    <value>Gib deinen im Spiel verwendeten Namen ein.</value>
+  </data>
+  <data name="ChooseBattleNetIdTitle" xml:space="preserve">
+    <value>Wähle deine Battle.Net-ID aus.</value>
+  </data>
+  <data name="DefaultHeader" xml:space="preserve">
+    <value>Willkommen bei HOTS Logs!</value>
+  </data>
+  <data name="DefaultIntroMessageLine1" xml:space="preserve">
+    <value>Dies ist die erste Seite, die sich der Replay-Analyse von Heroes of the Storm widmet.</value>
+  </data>
+  <data name="DefaultIntroMessageLine2" xml:space="preserve">
+    <value>Die Seite befindet sich noch in einem frühen Stadium, doch es gibt bereits viele interessante Informationen zu entdecken - und viele weitere werden noch folgen.</value>
+  </data>
+  <data name="DefaultIntroMessageLine3Part1" xml:space="preserve">
+    <value>Wirf einen Blick auf das obenstehende Menü, um die derzeit verfügbaren Informationen einzusehen.</value>
+  </data>
+  <data name="DefaultIntroMessageLine3Part2" xml:space="preserve">
+    <value>Die Anmeldung ist vollkommen kostenlos, also trag dich am besten gleich ein und beginne mit der Analyse deiner Replays!</value>
+  </data>
+  <data name="DefaultIntroMessageTotalGames" xml:space="preserve">
+    <value>Vielen Dank an alle für eure Unterstützung! Bislang wurden {0} Spiele hochgeladen!</value>
+  </data>
+  <data name="DefaultTitle" xml:space="preserve">
+    <value>Startseite</value>
+  </data>
+  <data name="ErrorPageMessageLine1" xml:space="preserve">
+    <value>Da ist wohl ein Fehler aufgetreten! Ein Administrator wurde per E-Mail benachrichtigt und wird sich das mal ansehen.</value>
+  </data>
+  <data name="ErrorPageMessageLine2" xml:space="preserve">
+    <value>Bitte versuche den Vorgang zu einem späteren Zeitpunkt erneut.</value>
+  </data>
+  <data name="ErrorPageTitle" xml:space="preserve">
+    <value>Ups!</value>
+  </data>
+  <data name="FAQMessageLine01" xml:space="preserve">
+    <value>Warum fehlen Replays in meiner Spielübersicht?</value>
+  </data>
+  <data name="FAQMessageLine02" xml:space="preserve">
+    <value>In Heroes of the Storm gibt es eine Option, alle Replays automatisch zu speichern. Falls du von dieser Option noch nicht wusstest oder sie nicht zu Beginn aktiviert hattest, dann werden nur deine jüngsten Replays gespeichert.</value>
+  </data>
+  <data name="FAQMessageLine03" xml:space="preserve">
+    <value>Die gute Nachricht ist jedoch, dass falls ein anderer Spieler eines der älteren Spiele hochlädt, an denen du beteiligt warst, dann wird es deinem Profil automatisch hinzugefügt.</value>
+  </data>
+  <data name="FAQMessageLine04" xml:space="preserve">
+    <value>Wann wird die Spielerzuweisungswertung (MMR) berechnet? Wann wird die Tabelle aktualisiert?</value>
+  </data>
+  <data name="FAQMessageLine05" xml:space="preserve">
+    <value>MMR wird ständig neu berechnet. Hier gibt es zwei verschiedene Prioritäten: Wiederholungen, die innerhalb von {0} Tagen nach dem Spielen hochgeladen wurden, werden normalerweise innerhalb weniger Stunden berechnet. Neu hochgeladene Spiele, die in den letzten zwei Monaten gespielt wurden, werden normalerweise innerhalb weniger Wochen berechnet. Bei neu hochgeladenen Spielen, die vor mehr als zwei Monaten gespielt wurden, wird die MMR leider nicht berechnet. Dies liegt daran, dass es derzeit zu anspruchsvoll ist, alle vergangenen Spiele neu berechnen zu müssen. Dieses System ist so eingerichtet, dass MMR für Spieler, die HOTS Logs mindestens alle drei Tage verwenden, so aktuell wie möglich bleibt :)</value>
+  </data>
+  <data name="FAQMessageLine06" xml:space="preserve">
+    <value>Können Spieler nur ihre Siege hochladen, um in der Tabelle aufzusteigen?</value>
+  </data>
+  <data name="FAQMessageLine07" xml:space="preserve">
+    <value>Jein.  Wenn Spieler nur Siege hochladen, wird ihre Spielerzuweisungswertung (MMR) ungewöhnlich erhöht. Doch Blizzard weiß es besser und paart sie weiter mit angemessenen Partnern. Siege gegen Spieler, die dann unter dem verzerrtem MMR liegen, bringen also zunehmend weniger ein.</value>
+  </data>
+  <data name="FAQMessageLine08" xml:space="preserve">
+    <value>Des Weiteren gilt auch dieselbe "gute Nachricht" wie oben: Wenn andere Spieler die Niederlagen hochladen, werden diese in beiden Profilen hinzugefügt.</value>
+  </data>
+  <data name="FAQMessageLine09" xml:space="preserve">
+    <value>Ich habe mir einige Profile angesehen und erfreulicherweise keine mit ungewöhnlich langen Siegsträhnen entdeckt.</value>
+  </data>
+  <data name="FAQMessageLine10" xml:space="preserve">
+    <value>Warum werden einige meiner hochgeladenen Replays als "Duplicate" (Deutsch: doppelt) angezeigt?</value>
+  </data>
+  <data name="FAQMessageLine11" xml:space="preserve">
+    <value>Dies bedeutet lediglich, dass einer der anderen 9 Spieler das Replay bereits hochgeladen hat. Keine Sorge, es wird zum Profil aller beteiligten Spieler hinzugefügt, deinem eingeschlossen.</value>
+  </data>
+  <data name="FAQTitle" xml:space="preserve">
+    <value>Häufig gestellte Fragen (FAQ)</value>
+  </data>
+  <data name="GenericAboutUs" xml:space="preserve">
+    <value>Über uns</value>
+  </data>
+  <data name="GenericAllLeagues" xml:space="preserve">
+    <value>Alle Ligen</value>
+  </data>
+  <data name="GenericAverageLength" xml:space="preserve">
+    <value>Durchschnittliche Länge</value>
+  </data>
+  <data name="GenericContactUs" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="GenericDataCurrentlyUnavailable" xml:space="preserve">
+    <value>Daten derzeit nicht verfügbar</value>
+  </data>
+  <data name="GenericDateTime" xml:space="preserve">
+    <value>Datum und Uhrzeit</value>
+  </data>
+  <data name="GenericEmailAddress" xml:space="preserve">
+    <value>E-Mail-Adresse</value>
+  </data>
+  <data name="GenericErrorConfirmPasswordDoesntMatch" xml:space="preserve">
+    <value>Das Passwort und die Passwortbestätigung stimmen nicht überein.</value>
+  </data>
+  <data name="GenericErrorConfirmPasswordRequired" xml:space="preserve">
+    <value>Die Passwortbestätigung wird benötigt.</value>
+  </data>
+  <data name="GenericErrorEmailRequired" xml:space="preserve">
+    <value>Die E-Mail-Adresse wird benötigt.</value>
+  </data>
+  <data name="GenericErrorPasswordRequired" xml:space="preserve">
+    <value>Das Passwort wird benötigt.</value>
+  </data>
+  <data name="GenericErrorUserNameRequired" xml:space="preserve">
+    <value>Der Benutzername wird benötigt.</value>
+  </data>
+  <data name="GenericExcludingMirrorMatchupsAndTalentGatedHeroes" xml:space="preserve">
+    <value>Gleiche Heldenzusammenstellungen (Mirrors) und Helden mit gesperrten Talenten werden ausgeschlossen.</value>
+  </data>
+  <data name="GenericExcludingTalentGatedGamesAndAutoSelectGames" xml:space="preserve">
+    <value>Spiele mit gesperrten Talenten und automatisch gewählten Helden werden ausgeschlossen.</value>
+  </data>
+  <data name="GenericGameLength" xml:space="preserve">
+    <value>Spiellänge</value>
+  </data>
+  <data name="GenericGamesPlayed" xml:space="preserve">
+    <value>Gespielte Spiele</value>
+  </data>
+  <data name="GenericGamesPlayedAgainst" xml:space="preserve">
+    <value>Anzahl der Spiele</value>
+  </data>
+  <data name="GenericGetPremium" xml:space="preserve">
+    <value>Get Premium</value>
+  </data>
+  <data name="GenericHero" xml:space="preserve">
+    <value>Held</value>
+  </data>
+  <data name="GenericHeroAbathur" xml:space="preserve">
+    <value>Abathur</value>
+  </data>
+  <data name="GenericHeroAnubarak" xml:space="preserve">
+    <value>Anub'arak</value>
+  </data>
+  <data name="GenericHeroArthas" xml:space="preserve">
+    <value>Arthas</value>
+  </data>
+  <data name="GenericHeroAutoSelect" xml:space="preserve">
+    <value>Automatische Auswahl</value>
+  </data>
+  <data name="GenericHeroAzmodan" xml:space="preserve">
+    <value>Azmodan</value>
+  </data>
+  <data name="GenericHeroBrightwing" xml:space="preserve">
+    <value>Funkelchen</value>
+  </data>
+  <data name="GenericHeroChen" xml:space="preserve">
+    <value>Chen</value>
+  </data>
+  <data name="GenericHeroDiablo" xml:space="preserve">
+    <value>Diablo</value>
+  </data>
+  <data name="GenericHeroETC" xml:space="preserve">
+    <value>E.T.C.</value>
+  </data>
+  <data name="GenericHeroFalstad" xml:space="preserve">
+    <value>Falstad</value>
+  </data>
+  <data name="GenericHeroGazlowe" xml:space="preserve">
+    <value>Gazlowe</value>
+  </data>
+  <data name="GenericHeroGreymane" xml:space="preserve">
+    <value>Graumähne</value>
+  </data>
+  <data name="GenericHeroIllidan" xml:space="preserve">
+    <value>Illidan</value>
+  </data>
+  <data name="GenericHeroJaina" xml:space="preserve">
+    <value>Jaina</value>
+  </data>
+  <data name="GenericHeroKerrigan" xml:space="preserve">
+    <value>Kerrigan</value>
+  </data>
+  <data name="GenericHeroLevel" xml:space="preserve">
+    <value>Heldenstufe</value>
+  </data>
+  <data name="GenericHeroLiLi" xml:space="preserve">
+    <value>Li Li</value>
+  </data>
+  <data name="GenericHeroMalfurion" xml:space="preserve">
+    <value>Malfurion</value>
+  </data>
+  <data name="GenericHeroMuradin" xml:space="preserve">
+    <value>Muradin</value>
+  </data>
+  <data name="GenericHeroMurky" xml:space="preserve">
+    <value>Murky</value>
+  </data>
+  <data name="GenericHeroNazeebo" xml:space="preserve">
+    <value>Nazeebo</value>
+  </data>
+  <data name="GenericHeroNova" xml:space="preserve">
+    <value>Nova</value>
+  </data>
+  <data name="GenericHeroRaynor" xml:space="preserve">
+    <value>Raynor</value>
+  </data>
+  <data name="GenericHeroRehgar" xml:space="preserve">
+    <value>Rehgar</value>
+  </data>
+  <data name="GenericHeroSgtHammer" xml:space="preserve">
+    <value>Sergeant Hammer</value>
+  </data>
+  <data name="GenericHeroSonya" xml:space="preserve">
+    <value>Sonya</value>
+  </data>
+  <data name="GenericHeroStatistics" xml:space="preserve">
+    <value>Heldenstatistiken</value>
+  </data>
+  <data name="GenericHeroStitches" xml:space="preserve">
+    <value>Kleiner</value>
+  </data>
+  <data name="GenericHeroTassadar" xml:space="preserve">
+    <value>Tassadar</value>
+  </data>
+  <data name="GenericHeroTheButcher" xml:space="preserve">
+    <value>Der Schlächter</value>
+  </data>
+  <data name="GenericHeroTheLostVikings" xml:space="preserve">
+    <value>Die verirrten Wikinger</value>
+  </data>
+  <data name="GenericHeroThrall" xml:space="preserve">
+    <value>Thrall</value>
+  </data>
+  <data name="GenericHeroTychus" xml:space="preserve">
+    <value>Tychus</value>
+  </data>
+  <data name="GenericHeroTyrael" xml:space="preserve">
+    <value>Tyrael</value>
+  </data>
+  <data name="GenericHeroTyrande" xml:space="preserve">
+    <value>Tyrande</value>
+  </data>
+  <data name="GenericHeroUther" xml:space="preserve">
+    <value>Uther</value>
+  </data>
+  <data name="GenericHeroValla" xml:space="preserve">
+    <value>Valla</value>
+  </data>
+  <data name="GenericHeroZagara" xml:space="preserve">
+    <value>Zagara</value>
+  </data>
+  <data name="GenericHeroZeratul" xml:space="preserve">
+    <value>Zeratul</value>
+  </data>
+  <data name="GenericInformation" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="GenericLastUpdatedMinutesAgo" xml:space="preserve">
+    <value>Zuletzt vor {0} Minute(n) aktualisiert</value>
+  </data>
+  <data name="GenericLeaderboard" xml:space="preserve">
+    <value>Tabelle</value>
+  </data>
+  <data name="GenericLeague" xml:space="preserve">
+    <value>Liga</value>
+  </data>
+  <data name="GenericLeague0" xml:space="preserve">
+    <value>Meister</value>
+  </data>
+  <data name="GenericLeague1" xml:space="preserve">
+    <value>Diamant</value>
+  </data>
+  <data name="GenericLeague2" xml:space="preserve">
+    <value>Platin</value>
+  </data>
+  <data name="GenericLeague3" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="GenericLeague4" xml:space="preserve">
+    <value>Silber</value>
+  </data>
+  <data name="GenericLeague5" xml:space="preserve">
+    <value>Bronze</value>
+  </data>
+  <data name="GenericLeagueRank" xml:space="preserve">
+    <value>Ligarang</value>
+  </data>
+  <data name="GenericLogIn" xml:space="preserve">
+    <value>Einloggen</value>
+  </data>
+  <data name="GenericLogOff" xml:space="preserve">
+    <value>Ausloggen</value>
+  </data>
+  <data name="GenericLose" xml:space="preserve">
+    <value>Niederlage</value>
+  </data>
+  <data name="GenericLosingTeam" xml:space="preserve">
+    <value>Verliererteam</value>
+  </data>
+  <data name="GenericMapName" xml:space="preserve">
+    <value>Kartenname</value>
+  </data>
+  <data name="GenericMapNameBattlefieldofEternity" xml:space="preserve">
+    <value>Schlachtfeld der Ewigkeit</value>
+  </data>
+  <data name="GenericMapNameBlackheartsBay" xml:space="preserve">
+    <value>Schwarzherzbucht</value>
+  </data>
+  <data name="GenericMapNameCursedHollow" xml:space="preserve">
+    <value>Verfluchtes Tal</value>
+  </data>
+  <data name="GenericMapNameDragonShire" xml:space="preserve">
+    <value>Drachengärten</value>
+  </data>
+  <data name="GenericMapNameGardenofTerror" xml:space="preserve">
+    <value>Garten der Ängste</value>
+  </data>
+  <data name="GenericMapNameHauntedMines" xml:space="preserve">
+    <value>Geisterminen</value>
+  </data>
+  <data name="GenericMapNameInfernalShrines" xml:space="preserve">
+    <value>Höllenschreine</value>
+  </data>
+  <data name="GenericMapNameSkyTemple" xml:space="preserve">
+    <value>Tempel des Himmels</value>
+  </data>
+  <data name="GenericMapNameTomboftheSpiderQueen" xml:space="preserve">
+    <value>Grabkammer der Spinnenkönigin</value>
+  </data>
+  <data name="GenericMapNameTowersofDoom" xml:space="preserve">
+    <value>Türme des Unheils</value>
+  </data>
+  <data name="GenericMapStatistics" xml:space="preserve">
+    <value>Kartenstatistiken</value>
+  </data>
+  <data name="GenericMatchHistory" xml:space="preserve">
+    <value>Spielübersicht</value>
+  </data>
+  <data name="GenericMMRBefore" xml:space="preserve">
+    <value>Vorheriges MMR</value>
+  </data>
+  <data name="GenericMMRChange" xml:space="preserve">
+    <value>MMR-Änderung</value>
+  </data>
+  <data name="GenericMMRMilestones" xml:space="preserve">
+    <value>MMR-Meilensteine</value>
+  </data>
+  <data name="GenericMyAccount" xml:space="preserve">
+    <value>Mein Account</value>
+  </data>
+  <data name="GenericNews" xml:space="preserve">
+    <value>Neuigkeiten</value>
+  </data>
+  <data name="GenericNextUpdateInMinutes" xml:space="preserve">
+    <value>Nächste Aktualisierung in {0} Minuten</value>
+  </data>
+  <data name="GenericOpposingHero" xml:space="preserve">
+    <value>Gegnerischer Held</value>
+  </data>
+  <data name="GenericPassword" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="GenericPlayer" xml:space="preserve">
+    <value>Spieler</value>
+  </data>
+  <data name="GenericPlayerSearchButton" xml:space="preserve">
+    <value>Suchen</value>
+  </data>
+  <data name="GenericPlayerSearchHelperText" xml:space="preserve">
+    <value>Spieler suchen</value>
+  </data>
+  <data name="GenericProfile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="GenericRating" xml:space="preserve">
+    <value>Spielerzuweisungswertung (MMR)</value>
+  </data>
+  <data name="GenericRegion" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="GenericResult" xml:space="preserve">
+    <value>Ergebnis</value>
+  </data>
+  <data name="GenericSitewide" xml:space="preserve">
+    <value>Seitenweit</value>
+  </data>
+  <data name="GenericSpecialThanks" xml:space="preserve">
+    <value>Besonderer Dank an</value>
+  </data>
+  <data name="GenericSubmitButton" xml:space="preserve">
+    <value>Abschicken</value>
+  </data>
+  <data name="GenericTeam" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="GenericTimeSpanDay" xml:space="preserve">
+    <value>{0} Tag</value>
+  </data>
+  <data name="GenericTimeSpanDayPlural" xml:space="preserve">
+    <value>{0} Tage</value>
+  </data>
+  <data name="GenericTimeSpanHour" xml:space="preserve">
+    <value>{0} Stunde</value>
+  </data>
+  <data name="GenericTimeSpanHourPlural" xml:space="preserve">
+    <value>{0} Stunden</value>
+  </data>
+  <data name="GenericTimeSpanMinute" xml:space="preserve">
+    <value>{0} Minute</value>
+  </data>
+  <data name="GenericTimeSpanMinutePlural" xml:space="preserve">
+    <value>{0} Minuten</value>
+  </data>
+  <data name="GenericUserName" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="GenericViewMatchHistory" xml:space="preserve">
+    <value>Spielübersicht anzeigen</value>
+  </data>
+  <data name="GenericViewProfile" xml:space="preserve">
+    <value>Profil einsehen</value>
+  </data>
+  <data name="GenericWeekOfDate" xml:space="preserve">
+    <value>Woche vom {0}</value>
+  </data>
+  <data name="GenericWin" xml:space="preserve">
+    <value>Sieg</value>
+  </data>
+  <data name="GenericWinningTeam" xml:space="preserve">
+    <value>Siegerteam</value>
+  </data>
+  <data name="GenericWinPercent" xml:space="preserve">
+    <value>Siege in %</value>
+  </data>
+  <data name="HeroDetailsMessageLine1" xml:space="preserve">
+    <value>Siegquote des Helden nach Woche</value>
+  </data>
+  <data name="HeroDetailsTitle" xml:space="preserve">
+    <value>Heldendetails</value>
+  </data>
+  <data name="HeroDetailsWinRateVsOtherHeroes" xml:space="preserve">
+    <value>Siegquote gegen andere Helden</value>
+  </data>
+  <data name="LeaderboardCurrentPlayerRank" xml:space="preserve">
+    <value>Deine aktuelle Ligawertung: {0}</value>
+  </data>
+  <data name="LeaderboardLeagueGamesPlayedRequirement" xml:space="preserve">
+    <value>Für diese Liga müssen Spieler mindestens {0} Replays hochladen.</value>
+  </data>
+  <data name="LeaderboardMMRInfoLink" xml:space="preserve">
+    <value>Wenn du weitere Informationen zur Berechnung der Spielerzuweisungswertung (MMR) wünschst, dann wirft einen Blick auf die von mir verfasste Erklärung hier.</value>
+  </data>
+  <data name="LogInCheckboxRememberMe" xml:space="preserve">
+    <value>Merken?</value>
+  </data>
+  <data name="LogInForgotPassword" xml:space="preserve">
+    <value>Passwort vergessen? Klicke hier, um deine Logindaten zurückzusetzen.</value>
+  </data>
+  <data name="LogInNewUser" xml:space="preserve">
+    <value>Melde dich an, wenn du noch keinen Account besitzt.</value>
+  </data>
+  <data name="ManageAccountChangePasswordMessage" xml:space="preserve">
+    <value>Passwort ändern</value>
+  </data>
+  <data name="ManageAccountChangePasswordSuccess" xml:space="preserve">
+    <value>Dein Passwort wurde geändert.</value>
+  </data>
+  <data name="ManageAccountCurrentPassword" xml:space="preserve">
+    <value>Aktuelles Passwort</value>
+  </data>
+  <data name="ManageAccountErrorCurrentPasswordRequired" xml:space="preserve">
+    <value>Das aktuelle Passwort wird benötigt.</value>
+  </data>
+  <data name="ManageAccountErrorNewPasswordRequired" xml:space="preserve">
+    <value>Das neue Passwort wird benötigt.</value>
+  </data>
+  <data name="ManageAccountNewPassword" xml:space="preserve">
+    <value>Neues Passwort</value>
+  </data>
+  <data name="ManageAccountTitle" xml:space="preserve">
+    <value>Account verwalten</value>
+  </data>
+  <data name="MatchHistoryMessageLine1" xml:space="preserve">
+    <value>Klicke auf den Pfeil am linken Rand der Tabelle, um das Spiel aufzuklappen und die Spielerinformationen einzusehen.</value>
+  </data>
+  <data name="MatchHistoryMessageLine2" xml:space="preserve">
+    <value>Die Spielerzuweisungswertung (MMR) der Spielübersicht wird für Replays des heutigen Tages alle drei Stunden neu berechnet. Für ältere Replays erfolgt diese Berechnung über Nacht (US-Zeit).</value>
+  </data>
+  <data name="MMRInfoMessageLine01" xml:space="preserve">
+    <value>Wie wird die Spielerzuweisungswertung (MMR) berechnet?</value>
+  </data>
+  <data name="MMRInfoMessageLine02" xml:space="preserve">
+    <value>Ich verwende einen Algorithmus ähnlich Microsofts TrueSkill, da dieser für Team-Spiele allgemein als besser als ELO-Bewertungen angesehen wird.</value>
+  </data>
+  <data name="MMRInfoMessageLine03" xml:space="preserve">
+    <value>Deine Spielerzuweisungswertung (MMR) drückt deine Spielstärke relativ zu anderen Spielern aus. Da sie spielerische Fertigkeiten widerspiegelt, erhöht sie sich nicht einfach durch eine höhere Anzahl an Spielen. Um dein MMR zu erhöhen, musst dur schon besser werden. :)</value>
+  </data>
+  <data name="MMRInfoMessageLine04" xml:space="preserve">
+    <value>Nach jedem Spiel wird dein MMR basierend auf dem Ergebnis des Spiel sowie dem aktuellen MMR-Durchschnitt jedes Teams aktualisiert.</value>
+  </data>
+  <data name="MMRInfoMessageLine05" xml:space="preserve">
+    <value>Wenn du gegen ein Team gespielt hast, dessen MMR höher war als das deines Teams, und du gewonnen hast, dann wird dein MMR um mehr als den normalen Wert erhöht. Gleichermaßen wird dein MMR um mehr als den normalen Wert verringert, wenn du gegen ein Team verlierst, dessen Spielstärke unter der deines Teams lag.</value>
+  </data>
+  <data name="MMRInfoMessageLine06" xml:space="preserve">
+    <value>Durch diese Fluktuation des MMR sollten sich nach einigen Spielen ein relativ akkurater Wert sowie eine Siegquote von ca. 50% einpendeln.</value>
+  </data>
+  <data name="MMRInfoMessageLine07" xml:space="preserve">
+    <value>Ligen</value>
+  </data>
+  <data name="MMRInfoMessageLine08" xml:space="preserve">
+    <value>Ich habe verschiedene "Ligen" zusammengestellt, die die Tabelle etwas strukturieren. Ich möchte, dass diese Seite für Spieler aller Fertigkeitsstufen wertvoll ist. Und bei nur einer Tabelle kann es etwas erdrückend wirken, wenn man ganz unten beginnen muss. Mit Ligen hat man jedoch Meilensteine, auf die man hinarbeiten kann.</value>
+  </data>
+  <data name="MMRInfoMessageLine09" xml:space="preserve">
+    <value>Verschiedene Ligen bedeuten gleichzeitig, dass ich verschiedene Voraussetzungen für die einzelnen Ligen schaffen kann. Mit fortschreitender Zeit und zunehmender Anzahl hochgeladener Replays, werde ich wahrscheinlich die Anzahl benötigter Replays für die oberen Ligen anheben. Die Einstiegsvoraussetzungen für die unteren Ligen werde ich jedoch immer niedriger halten, damit sich neue Spieler hoffentlich schneller auf der Liste wiederfinden.</value>
+  </data>
+  <data name="MMRInfoMessageLine10" xml:space="preserve">
+    <value>Die Ligen trennen die Spieler lediglich abhängig vom MMR in Gruppen auf. Nach Abzug aller Spieler mit weniger als 10 Spielen setzt sich die Heldenliga dann aus den Top-1% zusammen. Die Diamantliga fasst dann die nächsten 9% zusammen. Nach diesen beiden sind die weiteren Ligen etwas ausgeglichener verteilt.</value>
+  </data>
+  <data name="MMRInfoMessageLine11" xml:space="preserve">
+    <value>Du findest dich nicht in der Tabelle? Es kann sein, dass dich dein MMR in eine höhere Liga einstuft, du jedoch nicht genug Replays hochgeladen hast, um dazu zugelassen zu werden. Die MMR-Grenzen für die Ligen werden berechnet, bevor die Prüfung der benögtigen Replays stattfindet.</value>
+  </data>
+  <data name="MMRInfoMessageLine12" xml:space="preserve">
+    <value>Platzierungsmatches</value>
+  </data>
+  <data name="MMRInfoMessageLine13" xml:space="preserve">
+    <value>Wenn du dein erstes Spiel bestreitest, weiß das System noch nicht, wie gut du eigentlich bist. Deshalb beginnst du mit einer Standardwertung. Deine anfänglichen Spiele werden höher gewichtet, um den Prozess der besten Zuordnung zu beschleunigen. Je mehr du dann spielst, desto geringer wird der Einfluss auf dein MMR.</value>
+  </data>
+  <data name="MMRInfoMessageLine14" xml:space="preserve">
+    <value>Das bedeutet, dass deine ersten Siege und Niederlagen dein MMR maßgebend in beide Richtungen verändern.</value>
+  </data>
+  <data name="MMRInfoMessageLine15" xml:space="preserve">
+    <value>Dies ist etwas, das alle Spiele mit Spielerzuweisungswertung gemein haben, und hilft dabei, schnell auf Spieler ähnlicher Spielstärke zu treffen.</value>
+  </data>
+  <data name="MMRInfoMessageLine16" xml:space="preserve">
+    <value>Das bedeutet jedoch nicht, dass du nach ein paar Hundert Spielen "feststeckst". Es bedeutet lediglich, dass sich dein MMR nicht mehr so drastisch ändert, wie es das in den ersten Spielen tut.</value>
+  </data>
+  <data name="MMRInfoMessageLine17" xml:space="preserve">
+    <value>Niederlagenserien in "Platzierungsmatches"</value>
+  </data>
+  <data name="MMRInfoMessageLine18" xml:space="preserve">
+    <value>Einige Spieler haben mich kontaktiert, um bestimmte Spiele zu entfernen oder für einen Neuanfang zu sorgen, da sie nicht wussten, dass die ersten Spiele ihrer Platzierung dienen.</value>
+  </data>
+  <data name="MMRInfoMessageLine19" xml:space="preserve">
+    <value>Es ist bedauerlich, mit einer Niederlagenserie zu beginnen, doch gleiches gilt für eine Siegesserie. Zum Beispiel habe ich alle 5 Platzierungsmatches in StarCraft II gewonnen und wurde der Goldliga zugeordnet. Ich war überglücklich und habe vor meinen Freunden, die in Bronze und Silber platziert worden waren, damit angegeben. Ich wusste, dass ich in meinen Spielen ziemliches Glück hatte, aber es zählt ja nunmal das Ergebnis. Und dann verlor ich 13 Spiele am Stück und stieg in die Bronzeliga ab. Dabei hätte ich von Anfang an nicht in Gold einsortiert werden sollen. Mit fortschreitender Zeit spielte ich mehr Spiele und Blizzards Zuweisungswertung wurde präziser, sodass ich dann 50 % meiner Spiele gewinnen konnte.</value>
+  </data>
+  <data name="MMRInfoMessageLine20" xml:space="preserve">
+    <value>Hier gilt dann der Umkehrschluss: Wenn du in den Platzierungsmatches auf HOTS Logs eine Niederlagenserie hattest, dann startest du mit einem relativ niedrigen MMR. Falls dieses dann unzutreffend ist und in Wirklichkeit höher liegen sollte, dann weist dich Blizzard gegnerischen Teams mit höherer Wertung zu. Wenn du dann 50% deiner Spiele gegen Spieler mit höherem MMR gewinnst, wird dein MMR langsam auf ihre Stufe klettern.</value>
+  </data>
+  <data name="MMRInfoMessageLine21" xml:space="preserve">
+    <value>Leider ist die einzige Lösung, wenn dein MMR durch eine Niederlagenserie unzutreffend berechnet wurde, mehr Spiele zu spielen. Es wird mehr Spiele benötigen, als wenn du einige deiner Platzierungsmatches gewonnen hättest. Doch früher oder später landet dein MMR dann dort, wo es hingehört. Es wäre allerdings keine Lösung, das Replay zu löschen, da es dann auch bei den 9 anderen Spielern entfernt würde - und wir brauchen mehr Replays, nicht weniger, um präzise MMR-Berechnungen durchzuführen.</value>
+  </data>
+  <data name="MMRInfoMessageLine22" xml:space="preserve">
+    <value>Präzision der Spielerzuweisungswertung (MMR)</value>
+  </data>
+  <data name="MMRInfoMessageLine23" xml:space="preserve">
+    <value>Einige Spieler haben mich in dem Glauben kontaktiert, sie müssten in der Tabelle höher angesiedelt sein.</value>
+  </data>
+  <data name="MMRInfoMessageLine24" xml:space="preserve">
+    <value>Stellt zunächst einmal sicher, dass ihr eine umfassende Menge Spiele gespielt habt. Am Anfang ist mir euer MMR noch unbekannt und das System muss mehr oder weniger eure Fertigkeitsstufe erraten. Macht euch nicht zu viele Gedanken um das MMR, wenn ihr nicht mindestens 100 Replays hochgeladen habt ... vorzugsweise mehr.</value>
+  </data>
+  <data name="MMRInfoMessageLine25" xml:space="preserve">
+    <value>Wenn du viele Replays hochgeladen hast, wie kannst du dann feststellen, ob dein MMR präzise berechnet wurde? Schau dir in deinen Spielen die einzelnen MMRs der anderen Spieler an und berechne den Schnitt jedes Teams. Im Allgemeinen sollte der MMR-Durchschnitt beider Teams relativ ähnlich sein.</value>
+  </data>
+  <data name="MMRInfoMessageLine26" xml:space="preserve">
+    <value>Es kann vorkommen, dass das MMR nicht präzise ist. Wenn etablierte Spieler nur wenige Replays hochgeladen haben, dann ist mir ihr wahres MMR nicht bekannt, obwohl Blizzard wahrscheinlich einen viel besseren Eindruck hat. Sollte die MMR-Änderung nach einem Spiel bedeutsam sein (eine Änderung von ~50 oder mehr), dann ist die Fertigkeitsstufe dieses Spielers noch relativ unbekannt und ich muss raten, wie das eigentliche MMR tatsächlich aussehen sollte.</value>
+  </data>
+  <data name="MMRInfoMessageLine27" xml:space="preserve">
+    <value>Die beste Möglichkeit, das MMR präzise zu berechnen, ist, mehr Spiele hochzuladen. :-) Bitte deine Freunde, ihre Replays auch hochzuladen. Je mehr Replays ich durchsuchen kann, desto zuversichtlicher kann ich bezüglich der Fertigkeitsstufen sein.</value>
+  </data>
+  <data name="MMRInfoMessageLine28" xml:space="preserve">
+    <value>Dazu sei gesagt, dass es Mut macht, berühmte Pro-Spieler in den Top-100 der Tabelle zu sehen, sowie festzustellen, dass diese gegeneinander antreten. :-)</value>
+  </data>
+  <data name="MMRInfoTitle" xml:space="preserve">
+    <value>MMR-Informationen</value>
+  </data>
+  <data name="PlayerSearchNoPlayersFound" xml:space="preserve">
+    <value>Keine Spieler gefunden. Probiere eine erneute Suche, indem du das Suchkästchen im oberen Bereich der Seite verwendest.</value>
+  </data>
+  <data name="PlayerSearchTitle" xml:space="preserve">
+    <value>Spielersuche</value>
+  </data>
+  <data name="ProfileCurrentLeagueRank" xml:space="preserve">
+    <value>Aktueller Ligarang</value>
+  </data>
+  <data name="ProfileCurrentMMR" xml:space="preserve">
+    <value>Aktuelle Spielerzuweisungswertung (MMR)</value>
+  </data>
+  <data name="ProfileTotalGamesPlayed" xml:space="preserve">
+    <value>Gesamtzahl gespielter Spiele</value>
+  </data>
+  <data name="ProfileTotalTimePlayed" xml:space="preserve">
+    <value>Gesamte Spielzeit</value>
+  </data>
+  <data name="RegisterConfirmPassword" xml:space="preserve">
+    <value>Passwort bestätigen</value>
+  </data>
+  <data name="RegisterErrorDuplicateEmail" xml:space="preserve">
+    <value>Die eingegebene E-Mail-Adresse wird bereits verwendet. Bitte gibt eine andere E-Mail-Adresse ein.</value>
+  </data>
+  <data name="RegisterErrorDuplicateUsername" xml:space="preserve">
+    <value>Bitte gib einen anderen Benutzernamen ein.</value>
+  </data>
+  <data name="RegisterMessageLine1" xml:space="preserve">
+    <value>Verwende das untenstehende Formular, um einen neuen Account zu erstellen.</value>
+  </data>
+  <data name="RegisterPasswordRequirement" xml:space="preserve">
+    <value>Passwörter müssen mindestens {0} Zeichen lang sein.</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Anmelden</value>
+  </data>
+  <data name="ResetPasswordMessage" xml:space="preserve">
+    <value>Gib deinen Benutzernamen ein, um dein Passwort zurückzusetzen.</value>
+  </data>
+  <data name="ResetPasswordTitle" xml:space="preserve">
+    <value>Passwort zurücksetzen</value>
+  </data>
+  <data name="SitewideHeroAndMapStatisticsTitle" xml:space="preserve">
+    <value>Seitenweite Helden- und Kartenstatistiken</value>
+  </data>
+  <data name="SitewideHeroStatistics" xml:space="preserve">
+    <value>Seitenweite Heldenstatistiken der letzten 2 Patches</value>
+  </data>
+  <data name="SitewideMapStatistics" xml:space="preserve">
+    <value>Seitenweite Kartenstatistiken der letzten 7 Tage</value>
+  </data>
+  <data name="SitewidePremiumTitle" xml:space="preserve">
+    <value>Premium</value>
+  </data>
+  <data name="SitewideStatisticsTitle" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="SitewideTalentsTitle" xml:space="preserve">
+    <value>Talents</value>
+  </data>
+  <data name="SitewideUploadReplaysTitle" xml:space="preserve">
+    <value>Upload Replays!</value>
+  </data>
+  <data name="SpecialThanksLine1" xml:space="preserve">
+    <value>Besonderer Dank an Neiki (&lt;a href="http://twitter.com/nKNeiki"&gt;http://twitter.com/nKNeiki&lt;/a&gt;) und Thorgaresh für die deutsche Übersetzung dieser Website</value>
+  </data>
+  <data name="UploadMessageLine1" xml:space="preserve">
+    <value>Bevor du mit dem Hochladen beginnst, lies dies bitte:</value>
+  </data>
+  <data name="UploadMessageLine2" xml:space="preserve">
+    <value>Ich plane, Replaysdaten aller Spieler so erreichbar wie möglich zu machen - mit Ausnahme des Spiel-Chats, den ich niemals veröffentlichen werde. Neben dieser Ausnahme sind die Daten der hochgeladenen Replays im Allgemeinen öffentlich.</value>
+  </data>
+  <data name="UploadMessageLine3" xml:space="preserve">
+    <value>Aktuell akzeptiere ich nur standardmäßige Replays des Versus-Modus in voller Länge.</value>
+  </data>
+  <data name="UploadMessageLine4" xml:space="preserve">
+    <value>Erfolgreich ausgelesene Replays müssen nur einmal hochgeladen werden. Ich werde die Replay-Datei speichern, und wenn ich dann Fortschritte in den Daten mache, die ich aus den Replays ziehen kann, dann werde ich deine Replay-Statistiken automatisch aktualisieren.</value>
+  </data>
+  <data name="UploadMessageLine5" xml:space="preserve">
+    <value>Falls du beim Hochladen eines Replays den Fehler "Duplicate" bekommst, heißt das lediglich, dass du ODER ein anderer Spieler dieses Spiels das Replay bereits hochgeladen hat.</value>
+  </data>
+  <data name="UploadMessageLine6" xml:space="preserve">
+    <value>Wenn ein Hochladefehler auftritt, kannst du es später erneut versuchen. Ich behebe fortlaufend Fehler und kann aus deinen fehlgeschlagenen Uploads eventuell später etwas lernen.</value>
+  </data>
+  <data name="UploadMessageSingleReplayHeader" xml:space="preserve">
+    <value>Hochladen einzelner Replays</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine1" xml:space="preserve">
+    <value>Hinweis: Das Standardverzeichnis für Replays ist:</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine2" xml:space="preserve">
+    <value>Windows: "...\Documents\Heroes of the Storm\Accounts\########\#-Hero-#-######\Replays\"</value>
+  </data>
+  <data name="UploadMessageSingleReplayLine3" xml:space="preserve">
+    <value>Mac: "~/Library/Application Support/Blizzard/Heroes of the Storm/Accounts/########/#-Hero-#-######/Replays/"</value>
+  </data>
+  <data name="UploadMessageUploaderLine1" xml:space="preserve">
+    <value>HOTS Logs Uploader Application</value>
+  </data>
+  <data name="UploadMessageUploaderLine2" xml:space="preserve">
+    <value>Ich empfehle die Verwendung einer kleinen Windows-Anwendung, die ich geschrieben habe, um eure Replays automatisch hochzuladen:</value>
+  </data>
+  <data name="UploadMessageUploaderLine3" xml:space="preserve">
+    <value>Klicke hier, um den HOTS Logs Uploader herunterzuladen und zu installieren.</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>Replays hochladen</value>
+  </data>
+</root>

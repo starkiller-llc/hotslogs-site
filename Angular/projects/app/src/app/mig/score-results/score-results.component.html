@@ -1,0 +1,49 @@
+<app-title>Heroes of the Storm Average Hero & Role Scores | HOTS Logs</app-title>
+<app-team-logos *ngIf="result?.Teams" [teams]="result.Teams"></app-team-logos>
+<div class="flex">
+  <lib-dropdown #g [items]="gameModeExFilter" caption="Game Mode" [(value)]="gameModeEx" (selectionchanged)="sel()">
+  </lib-dropdown>
+  <lib-dropdown *ngIf="g.value==='0'" [items]="tournamentFilter" caption="Tournament" [(value)]="tournament"
+    (selectionchanged)="sel()"></lib-dropdown>
+  <lib-checkbox-list *ngIf="gameModeEx!=='0'" [items]="leagueFilter" caption="Leagues" [(value)]="league"
+    (selectionchanged)="sel()">
+  </lib-checkbox-list>
+  <lib-checkbox-list [items]="mapFilter" caption="Maps" [(value)]="map" (selectionchanged)="sel()">
+  </lib-checkbox-list>
+  <ng-container *ngIf="gameModeEx!=='0'">
+    <lib-checkbox-list #tms [items]="timeFilter" caption="Times" [(value)]="time"
+      (selectionchanged)="sel();ptchs.clear()"></lib-checkbox-list>
+    <lib-checkbox-list #ptchs [items]="patchFilter" caption="Patches" [(value)]="patch"
+      (selectionchanged)="sel();tms.clear()"></lib-checkbox-list>
+  </ng-container>
+</div>
+<table>
+  <tr>
+    <td>
+      <p>{{result?.LastUpdatedText}}</p>
+    </td>
+  </tr>
+</table>
+<div>
+  <ul id="nav1" class="nav nav-tabs">
+    <li *ngFor="let tab of tabs" class="tab" [class.active]="activeTab===tab.value">
+      <a (click)="tabClick(tab)">{{tab.key | localize}}</a>
+  </ul>
+</div>
+<div *ngIf="activeTab===1">
+  <ul id="nav1" class="nav nav-tabs">
+    <li *ngFor="let subTab of subTabs" class="tab" [class.active]="activeSubtab===subTab.value">
+      <a (click)="subTabClick(subTab)">{{subTab.key | localize}}</a>
+  </ul>
+</div>
+<ng-container *ngIf="data$ | async as data">
+  <ng-container [ngSwitch]="activeTab">
+    <div *ngSwitchCase="0">
+      <app-score-table [stats]="result.GeneralStats"></app-score-table>
+    </div>
+    <div *ngSwitchCase="1">
+      <app-score-table [stats]="result.RoleStats[subTabs[activeSubtab].key]" [exclude]="subTabs[activeSubtab].exclude">
+      </app-score-table>
+    </div>
+  </ng-container>
+</ng-container>

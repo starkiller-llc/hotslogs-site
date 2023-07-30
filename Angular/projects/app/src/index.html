@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>HOTS Logs - Heroes of the Storm Stats, Builds, & More</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <meta name="google-site-verification" content="uppBa7_BxyMWlp-TuCpqpickJfOIXHAADsiaMobAd5k" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="manifest" href="/assets/manifest.json">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="msapplication-TileImage" content="/assets/ms-icon-144x144.png">
+  <meta name="theme-color" content="#000000">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i);
+
+  </style>
+  <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+  <script>
+    console.log('setting up google_parser');
+    var google_parser = {
+      runSkins: function (skin) {
+        console.log('runSkins', skin);
+
+        // Start original ZAF stuff
+        var target = document.getElementById('main-body');
+        target.classList.add('skinned');
+
+        var takeover = document.getElementById('prelude_skin_div');
+        takeover.classList.remove('prelude');
+        takeover.classList.add('skin');
+
+        target.style.backgroundImage = 'url(' + skin.image + ')';
+
+        var a = target.insertBefore(
+          document.createElement('a'),
+          target.firstChild
+        );
+
+        a.className = 'skin-link';
+        a.target = '_blank';
+        a.href = skin.link;
+        a.style.width = '100%';
+        a.style.height = '100%';
+        a.style.position = 'absolute';
+
+        // Add client tracking pixel(s) if there are any
+        var addImpressionTracker = function (target, url) {
+          console.log('addImpressionTracker', target, url);
+          var img = target.insertBefore(
+            document.createElement('img'),
+            target.firstChild
+          );
+          img.className = 'skin-pixel';
+          img.src = url;
+        };
+        switch (typeof skin.impressionTracking) {
+          case 'string':
+            addImpressionTracker(target, skin.impressionTracking);
+            break;
+          case 'object':
+            for (var j in skin.impressionTracking) {
+              if (skin.impressionTracking.hasOwnProperty(j) && typeof skin.impressionTracking[j] == 'string') {
+                addImpressionTracker(target, skin.impressionTracking[j]);
+              }
+            }
+            break;
+          default:
+            break;
+        }
+      }
+    }
+  </script>
+
+  <!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+  <script type="text/javascript" async=true>
+      (function () {
+        var host = window.location.hostname;
+        var element = document.createElement('script');
+        var firstScript = document.getElementsByTagName('script')[0];
+        var url = 'https://cmp.quantcast.com'
+          .concat('/choice/', 'MWJshQURnDBYL', '/', host, '/choice.js?tag_version=V2');
+        var uspTries = 0;
+        var uspTriesLimit = 3;
+        element.async = true;
+        element.type = 'text/javascript';
+        element.src = url;
+
+        firstScript.parentNode.insertBefore(element, firstScript);
+
+        function makeStub() {
+          var TCF_LOCATOR_NAME = '__tcfapiLocator';
+          var queue = [];
+          var win = window;
+          var cmpFrame;
+
+          function addFrame() {
+            var doc = win.document;
+            var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+            if (!otherCMP) {
+              if (doc.body) {
+                var iframe = doc.createElement('iframe');
+
+                iframe.style.cssText = 'display:none';
+                iframe.name = TCF_LOCATOR_NAME;
+                doc.body.appendChild(iframe);
+              } else {
+                setTimeout(addFrame, 5);
+              }
+            }
+            return !otherCMP;
+          }
+
+          function tcfAPIHandler() {
+            var gdprApplies;
+            var args = arguments;
+
+            if (!args.length) {
+              return queue;
+            } else if (args[0] === 'setGdprApplies') {
+              if (
+                args.length > 3 &&
+                args[2] === 2 &&
+                typeof args[3] === 'boolean'
+              ) {
+                gdprApplies = args[3];
+                if (typeof args[2] === 'function') {
+                  args[2]('set', true);
+                }
+              }
+            } else if (args[0] === 'ping') {
+              var retr = {
+                gdprApplies: gdprApplies,
+                cmpLoaded: false,
+                cmpStatus: 'stub'
+              };
+
+              if (typeof args[2] === 'function') {
+                args[2](retr);
+              }
+            } else {
+              if (args[0] === 'init' && typeof args[3] === 'object') {
+                args[3] = Object.assign(args[3], { tag_version: 'V2' });
+              }
+              queue.push(args);
+            }
+          }
+
+          function postMessageEventHandler(event) {
+            var msgIsString = typeof event.data === 'string';
+            var json = {};
+
+            try {
+              if (msgIsString) {
+                json = JSON.parse(event.data);
+              } else {
+                json = event.data;
+              }
+            } catch (ignore) { }
+
+            var payload = json.__tcfapiCall;
+
+            if (payload) {
+              window.__tcfapi(
+                payload.command,
+                payload.version,
+                function (retValue, success) {
+                  var returnMsg = {
+                    __tcfapiReturn: {
+                      returnValue: retValue,
+                      success: success,
+                      callId: payload.callId
+                    }
+                  };
+                  if (msgIsString) {
+                    returnMsg = JSON.stringify(returnMsg);
+                  }
+                  if (event && event.source && event.source.postMessage) {
+                    event.source.postMessage(returnMsg, '*');
+                  }
+                },
+                payload.parameter
+              );
+            }
+          }
+
+          while (win) {
+            try {
+              if (win.frames[TCF_LOCATOR_NAME]) {
+                cmpFrame = win;
+                break;
+              }
+            } catch (ignore) { }
+
+            if (win === window.top) {
+              break;
+            }
+            win = win.parent;
+          }
+          if (!cmpFrame) {
+            addFrame();
+            win.__tcfapi = tcfAPIHandler;
+            win.addEventListener('message', postMessageEventHandler, false);
+          }
+        };
+
+        makeStub();
+
+        var uspStubFunction = function () {
+          var arg = arguments;
+          if (typeof window.__uspapi !== uspStubFunction) {
+            setTimeout(function () {
+              if (typeof window.__uspapi !== 'undefined') {
+                window.__uspapi.apply(window.__uspapi, arg);
+              }
+            }, 500);
+          }
+        };
+
+        var checkIfUspIsReady = function () {
+          uspTries++;
+          if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+            console.warn('USP is not accessible');
+          } else {
+            clearInterval(uspInterval);
+          }
+        };
+
+        if (typeof window.__uspapi === 'undefined') {
+          window.__uspapi = uspStubFunction;
+          var uspInterval = setInterval(checkIfUspIsReady, 6000);
+        }
+      })();
+  </script>
+  <!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>

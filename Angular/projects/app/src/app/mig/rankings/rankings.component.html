@@ -1,0 +1,30 @@
+<app-title>Heroes of the Storm Leaderboard | HOTS Logs</app-title>
+<div class="flex">
+  <mat-form-field>
+    <mat-select #slct panelClass="aviad-select" value="table" [(value)]="region" (selectionChange)="sel()">
+      <mat-option [value]="1">US Region</mat-option>
+      <mat-option [value]="2">EU Region</mat-option>
+      <mat-option [value]="3">KR Region</mat-option>
+      <mat-option [value]="5">CN Region</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select #slct panelClass="aviad-select" value="table" [(value)]="gameMode" (selectionChange)="sel()">
+      <mat-option value="8">Storm League</mat-option>
+      <mat-option value="6">Unranked Draft</mat-option>
+      <mat-option value="3">Quick Match</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <lib-dropdown [items]="leagueFilter" caption="Leagues" [(value)]="league" (selectionchanged)="sel()">
+  </lib-dropdown>
+</div>
+<p>{{result?.LeagueRequirement}}</p>
+<p *ngIf="result?.CurrentPlayerLeagueRank">{{result.CurrentPlayerLeagueRank}}</p>
+<p>{{result?.LastUpdatedText}}</p>
+<p>
+  <a routerLink="/Info/MMRInformation"><span localize="LeaderboardMMRInfoLink"></span></a>
+</p>
+<ng-container *ngIf="data$ | async as data">
+  <app-rankings-table [stats]="result.Stats" (filterChange)="filterChange($event)" (page)="pageChange($event)"
+    (sortChange)="sortChange($event)" [total]="result.Total"></app-rankings-table>
+</ng-container>

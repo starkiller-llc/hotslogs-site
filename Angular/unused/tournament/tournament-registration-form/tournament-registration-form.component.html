@@ -1,0 +1,127 @@
+<div class="padding-bottom-20">
+    <div *ngIf="submitSuccess; else formBlock">
+        <h2>Thank you. You have registered your team for the tournament! You will receive an email with your 1st matchup once registration concludes on {{registration_deadline}}</h2>
+    </div>
+    <ng-template #formBlock>
+        <form (ngSubmit)="onSubmit()" [formGroup]="teamForm">
+            <div class="form-group col-md-6">
+                <div class="form-group">
+                    <label for="team_name">Team Name</label>
+                    <input type="text" class="form-control" id="team_name" formControlName="team_name" />
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.team_name.touched || submitted) && teamFormControl.team_name.errors?.required">
+                        Enter a valid team name
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="captain_email">Email</label>
+                    <input type="text" class="form-control" formControlName="captain_email" />
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.captain_email.touched || submitted) && teamFormControl.captain_email.errors?.required">
+                        Must enter an email address
+                    </span>
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.captain_email.touched || submitted) && teamFormControl.captain_email.errors?.email">
+                        Enter a valid email address
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="battletag_1">Battletag #1</label>
+                    <input type="text" class="form-control" formControlName="battletag_1" />
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.battletag_1.touched || submitted) && teamFormControl.battletag_1.errors?.required">
+                        Must enter a battletag
+                    </span>
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.battletag_1.touched || submitted) && teamFormControl.battletag_1.errors?.pattern">
+                        Enter a valid battletag
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="battletag_2">Battletag #2</label>
+                    <input type="text" class="form-control" formControlName="battletag_2" />
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.battletag_2.touched || submitted) && teamFormControl.battletag_2.errors?.required">
+                        Must enter a battletag
+                    </span>
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.battletag_2.touched || submitted) && teamFormControl.battletag_2.errors?.pattern">
+                        Enter a valid battletag
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="battletag_3">Battletag #3</label>
+                    <input type="text" class="form-control" formControlName="battletag_3" />
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.battletag_3.touched || submitted) && teamFormControl.battletag_3.errors?.required">
+                        Must enter a battletag
+                    </span>
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.battletag_3.touched || submitted) && teamFormControl.battletag_3.errors?.pattern">
+                        Enter a valid battletag
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="battletag_4">Battletag #4</label>
+                    <input type="text" class="form-control" formControlName="battletag_4" />
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.battletag_4.touched || submitted) && teamFormControl.battletag_4.errors?.required">
+                        Must enter a battletag
+                    </span>
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.battletag_4.touched || submitted) && teamFormControl.battletag_4.errors?.pattern">
+                        Enter a valid battletag
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="battletag_5">Battletag #5</label>
+                    <input type="text" class="form-control" formControlName="battletag_5" />
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.battletag_5.touched || submitted) && teamFormControl.battletag_5.errors?.required">
+                        Must enter a battletag
+                    </span>
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.battletag_5.touched || submitted) && teamFormControl.battletag_5.errors?.pattern">
+                        Enter a valid battletag
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="battletag_6">Battletag #6 (Optional)</label>
+                    <input type="text" class="form-control" formControlName="battletag_6" />
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.battletag_6.touched || submitted) && teamFormControl.battletag_6.errors?.pattern">
+                        Enter a valid battletag
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="battletag_7">Battletag #7 (Optional)</label>
+                    <input type="text" class="form-control" formControlName="battletag_7" />
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.battletag_7.touched || submitted) && teamFormControl.battletag_7.errors?.pattern">
+                        Enter a valid battletag
+                    </span>
+                </div>
+                <div *ngIf="entry_fee" class="form-group">
+                    <label for="paypal_email">Paypal Email</label>
+                    <input type="text" class="form-control" formControlName="paypal_email" />
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.paypal_email.touched || submitted) && teamFormControl.paypal_email.errors?.required">
+                        You must fill out a paypal email
+                    </span>
+                    <span class="text-danger"
+                        *ngIf="(teamFormControl.paypal_email.touched || submitted) && teamFormControl.paypal_email.errors?.email">
+                        Enter a valid paypal email
+                    </span>
+                    <span class="text-info">
+                        Paypal email will be used to determine who has paid their entry fee and for the payouts at the end of the tournament.
+                    </span>
+                </div>
+                <button *ngIf="teamForm.valid" type="submit" class="btn btn-success" >Submit</button>
+                <button *ngIf="!teamForm.valid" disabled type="submit" class="btn btn-success" >Submit</button>
+                <div class="text-danger padding-top-10 padding-bottom-50">
+                    {{submitError}}
+                </div>
+            </div>
+        </form>
+    </ng-template>
+</div>

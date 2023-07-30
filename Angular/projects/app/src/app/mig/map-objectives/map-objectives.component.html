@@ -1,0 +1,20 @@
+<app-title>Heroes of the Storm Map Objectives & Statistics | HOTS Logs</app-title>
+<p>View map objective win rate and balance statistics. Results shown are gathered from the most recent 30 days.</p>
+<app-team-logos *ngIf="result?.Teams" [teams]="result.Teams"></app-team-logos>
+<div class="flex">
+  <lib-dropdown #g [items]="gameModeExFilter" caption="Game Mode" [(value)]="gameModeEx" (selectionchanged)="sel()">
+  </lib-dropdown>
+  <lib-dropdown *ngIf="g.value==='0'" [items]="tournamentFilter" caption="Tournament" [(value)]="tournament"
+    (selectionchanged)="sel()"></lib-dropdown>
+  <lib-dropdown [items]="mapFilter" caption="Maps" [(value)]="map" (selectionchanged)="sel()"></lib-dropdown>
+</div>
+<ng-container *ngIf="data$ | async as data">
+  <div *ngFor="let t of result.Tables">
+    <h3>{{t.Heading}}</h3>
+    <app-generic-table [stats]="t.Data" [fieldName]="t.FieldName"></app-generic-table>
+  </div>
+  <div *ngFor="let c of result.Charts">
+    <h3>{{c.Heading}}</h3>
+    <lib-rad-chart [jsondata]="c.JsonData"></lib-rad-chart>
+  </div>
+</ng-container>

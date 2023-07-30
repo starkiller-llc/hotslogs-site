@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <!--Switches-->
+  <CopyAttributes Enabled="true" />
+  <UnionDuplicates Enabled="false" />
+  <Debug Enabled="1" />
+  <Internalize Enabled="false" />
+  <MergeXml Enabled="false" />
+  <!--Signing-->
+  <Sign Enabled="false" Delay="false"></Sign>
+  <!--Logging-->
+  <Log Enabled="false"></Log>
+  <!--Assemblies-->
+  <Assemblies>
+    <Assembly>C:\Source\HOTSLogs\HOTSLogsUploader\bin\Release\HOTSLogsUploader.exe</Assembly>
+    <Assembly>C:\Source\HOTSLogs\HOTSLogsUploader\bin\Release\AWSSDK.Core.dll</Assembly>
+    <Assembly>C:\Source\HOTSLogs\HOTSLogsUploader\bin\Release\AWSSDK.S3.dll</Assembly>
+    <Assembly>C:\Source\HOTSLogs\HOTSLogsUploader\bin\Release\Heroes.ReplayParser.dll</Assembly>
+    <Assembly>C:\Source\HOTSLogs\HOTSLogsUploader\bin\Release\DotNetZip.dll</Assembly>
+    <Assembly>C:\Source\HOTSLogs\HOTSLogsUploader\bin\Release\MpqTool.dll</Assembly>
+    <Primary>C:\Source\HOTSLogs\HOTSLogsUploader\bin\Release\HOTSLogsUploader.exe</Primary>
+  </Assemblies>
+  <!--Output-->
+  <OutputAssembly>C:\Source\HOTSLogs\Heroes.WebApplication\HOTSLogsUploader\HOTS Logs Uploader.exe</OutputAssembly>
+  <!--.NET Framework-->
+  <Framework>.NET Framework 4.6 Full</Framework>
+  <!--Merge Engine-->
+  <Engine Name="ILMerge" />
+</Settings>

@@ -1,0 +1,101 @@
+<section class="about">
+  <header>
+    <h3>How does HOTS Logs work?</h3>
+  </header>
+  <p>HOTS Logs relies on users to upload their replay files. Using these files, it builds you a personalized Profile and
+    Match History, and calculates an estimated matchmaking rating using everyone's match results.</p>
+  <p>You may find you have a Profile generated before you upload any games; this is because others players have uploaded
+    games that you were in.</p>
+  <p>To upload your full Match History, and generate a Profile using all your games, please upload your replay files
+    here: <a routerLink="/Upload">Upload Replays</a></p>
+  <br />
+
+  <header>
+    <h3><span localize="FAQMessageLine01"></span></h3>
+  </header>
+  <p><span localize="FAQMessageLine02"></span></p>
+  <p><span localize="FAQMessageLine03"></span></p>
+  <br />
+
+  <header>
+    <h3><span localize="FAQMessageLine04"></span></h3>
+  </header>
+  <p>
+    <span localize="FAQMessageLine05" [localizeParameters]="['20']"></span>
+  </p>
+  <br />
+
+  <header>
+    <h3><span localize="FAQMessageLine06"></span></h3>
+  </header>
+  <p><span localize="FAQMessageLine07"></span></p>
+  <p><span localize="FAQMessageLine08"></span></p>
+  <p><span localize="FAQMessageLine09"></span></p>
+  <br />
+
+  <header>
+    <h3><span localize="FAQMessageLine10"></span></h3>
+  </header>
+  <p><span localize="FAQMessageLine11"></span></p>
+  <br />
+
+  <header>
+    <h3>Can I change my BattleTag?</h3>
+  </header>
+  <p>Yes! If you change your BattleTag through Blizzard, all you have to do to update your Profile on HOTS Logs, is to
+    upload a new replay with your new BattleTag in it.</p>
+  <p>Your Profile name will be updated, and all your past games will be preserved.</p>
+  <br />
+
+  <header>
+    <h3>My Battle.Net account was Silenced, why can't I view my HOTS Logs Profile?</h3>
+  </header>
+  <p>In an effort to improve the community, Silenced players will be temporarily hidden on HOTS Logs, and will not be
+    eligible for the HOTS Logs Leaderboard. This will last for the duration of the Silence, plus an additional 15 days.
+    You are welcome to use the rest of HOTSLogs.com during this time.</p>
+  <p>After this player has been restored to good standing, you are welcome to rejoin. You can <a
+      routerLink="/Account/ChooseBattleNetId">select your BattleTag here</a>. You will need to verify your account on the <a
+      routerLink="/Account/Manage">Manage Account</a> page and set your Profile to 'Public' if you want to be re-added to the
+    Leaderboard.</p>
+  <p>Thank you for understanding!</p>
+  <br />
+
+  <header>
+    <h3>Why do Cho and Gall have different 'Games Played'?</h3>
+  </header>
+  <p>For most sitewide statistics, HOTS Logs only counts games where players are at least Hero level 5.</p>
+  <p>If the 'Cho' player is Hero level 5, and the 'Gall' player is Hero level 4, the game will only count towards Cho's
+    games played and win rate.</p>
+  <br />
+
+  <header>
+    <h3>Why doesn't the HOTS Logs Uploader tool automatically update anymore?</h3>
+  </header>
+  <p>Lately, this feature has been causing more problems than solving. I may reimplement this in the future, but I'll
+    have to do a lot of testing first.</p>
+  <br />
+
+  <header>
+    <h3>Why aren't all my Games Played listed in the Player Hero Overview page?</h3>
+  </header>
+  <p>This feature uses the end-game score screen statistics, which have only been available in the replay file since
+    February 2016.</p>
+  <p>Because of this, only Games Played since February 2016 are counted on this page.</p>
+  <p>For more information, you can read Blizzard's <a
+      href="http://us.battle.net/heroes/en/blog/19991410/heroes-of-the-storm-replay-file-improvements-1-28-2016">blog
+      post here</a>.</p>
+  <br />
+
+  <header>
+    <h3>Why did my MMR change at the beginning of a Ranked Play Season?</h3>
+  </header>
+  <p>Blizzard made some changes to their internal player MMR rankings. They've talked about it in their <a
+      href="http://us.battle.net/heroes/en/blog/20111014/ranked-play-revamp-5-6-2016">Ranked Play Revamp</a> blog post,
+    and their <a href="http://us.battle.net/heroes/en/blog/20131413/unranked-draft-mode-and-more-6-1-2016">Unranked
+      Draft Mode and More!</a> blog post.</p>
+  <p>Since HOTS Logs MMR is overall trying to estimate Blizzard's internal MMR, we'll also follow along with these
+    changes.</p>
+  <p>The general idea of these changes is that everyone keeps their current place on the Leaderboard, but the space
+    between players is reduced, and each player's MMR uncertainty is increased.</p>
+  <p>This means it will temporarily be easier for players to ascend or descend the ladder.</p>
+</section>
